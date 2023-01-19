@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:60px;
+	}
+	
+	.bread-list{
+		margin-left:5%;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+	}
+	
+	.main-sub-left{
+		max-width:640px;
+		width:100%;
+		float:none;
+	}
+	
+	.main-sub-ttl h2{
+		font-size:24px;
+		line-height:normal;
+		margin:0 5%;
+	}
+	
+	.main-sub-ttl img{
+		width:94%;
+		margin:0 3%;
+		height:auto;
+	}
+	
+	.main-ct-box{
+		margin:0 1%;
+	}
+	
+	.mgr10{
+		margin:0;
+		margin-right:1%;
+	}
+	
+	.body_reserve textarea{
+		max-width:300px;
+		width:100%;
+	}
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+		margin-top:25px;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

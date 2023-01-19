@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+
+
+
+@media only screen and (max-width:640px){
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:15px;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+		margin:0;
+	}
+	
+	.main-sub-left{
+		float:none;
+		max-width:640px;
+		width:100%;
+	}
+	
+	.main-sub-ttl{
+		margin:25px 0 15px 0;
+	}
+	
+	.main-sub-ttl h2{
+		font-size:33px;
+		line-height:normal;
+		margin:0 5%;
+	}
+	
+	.main-sub-ttl img{
+		width:94%;
+		margin:0 3%;
+		height:auto;
+	}
+	
+	.voice_text{
+		width:86%;
+		padding-bottom:25px;
+	}
+	
+	.lt-article{
+		width:100%;
+	}
+	
+	.voice-left{
+		float:none;
+		width:100%;
+	}
+	
+	.lt-article img{
+		float:none;
+	}
+	
+	.voice-left img{
+		width:100%;
+		height:auto;
+	}
+	
+	.voice-right{
+		float:none;
+		width:100%;
+	}
+	
+	.main-ct-box{
+		margin:0 1%;
+	}
+	
+	.main-ct-01{
+		margin:0 0 40px 0;
+	}
+	
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+		margin-top:45px;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	
+	
+	
+	
+	
+	
+}

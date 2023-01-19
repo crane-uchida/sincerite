@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:15px;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+		margin:0;
+	}
+	
+	.main-sub-left{
+		float:none;
+		max-width:640px;
+		width:100%;
+	}
+	
+	.main-sub-ttl{
+		margin:0;
+	}
+	
+	.intelli_top{
+		max-width:640px;
+		width:100%;
+		padding-top:5px;
+	}
+	
+	.intelli_top img{
+		width:100%;
+	}
+	
+	.btn_inteli{
+		max-width:640px;
+		width:95%;
+		margin:0 auto;
+		padding-top:6px;
+	}
+	
+	.btn_inteli a:link, .btn_inteli a:visited{
+		font-size:13px;
+		padding:0;
+		padding-top:4px;
+		border-radius:4px;
+	}
+	
+	.ttl-text-box{
+		margin:6px 0 11px 0;
+	}
+	
+	.ttl-text-box h2{
+		font-size:19px;
+		line-height:33px;
+	}
+	
+	#top_h2{
+		letter-spacing:-1px;
+	}
+	
+	.ttl-text-box img{
+		width:94%;
+		margin:0 3%;
+		height:auto;
+		display:block;
+	}
+	
+	.ttl-text-box p{
+		width:86%;
+		margin:0 auto;
+		padding-top:10px;
+		font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		line-height:22px;
+	}
+	
+	.intelli_05{
+		max-width:640px;
+		width:100%;
+	}
+	
+	.intelli_05 img{
+		width:100%;
+		display:block;
+		padding-bottom:5px;
+	}
+	
+	#intelli_cost{
+		width:100%;
+	}
+	
+	#intelli_cost img{
+		width:100%;
+		margin:0;
+	}
+	
+	#btn_2{
+		padding-bottom:11px;
+	}
+	
+	
+	
+	.body_intelli h2.members-h2{
+		font-size:20px;
+		line-height:normal;
+	}
+	
+	p.members_1{
+		padding-top:5px;
+	}
+	
+	.status-attention{
+		max-width:640px;
+		width:90%;
+		margin:0 auto;
+		padding:10px 0;
+	}
+	
+	.body_intelli .member-attention p{
+		margin:0 3%;
+	}
+	
+	.body_intelli .member-attention p.uni_mg0{
+		margin:0;
+	}
+	
+	.body_intelli .members-left{
+		width:90%;
+		margin:0 5%;
+		float:none;
+		padding-top:15px;
+	}
+	
+	.members-right{
+		float:none;
+		margin:0 auto;
+		padding-top:20px;
+	}
+	
+	.members-area{
+		padding:0 0 20px 0;
+	}
+	
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:15px;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+		margin:0;
+	}
+	
+	.main-sub-left{
+		max-width:640px;
+		width:100%;
+		float:none;
+	}
+
+	.main-sub-ttl{
+		margin:0;
+	}
+		
+	.main-sub-ttl h2{
+		margin:0 5%;
+		font-size:130%;
+		line-height:normal;
+	}
+	
+	.main-sub-ttl img{
+		width:94%;
+		margin:0 3%;
+		height:auto
+	}
+	
+/*	.main-sub-ttl p{
+		font-size:14px;
+		margin:0 5%;
+	}*/
+
+	.main-sub-ttl p{
+		text-align:start;
+		max-width:640px;
+		width:93%;
+		margin:0 auto;
+/*		color:#000;*/
+		font-size:14px;
+		line-height:normal;
+		font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro","ＭＳ Ｐ明朝", "MS PMincho", serif;
+/*		font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+*/		padding-top:15px;
+	}
+	
+	.main-movie iframe{
+		max-width:640px;
+		width:100%;
+		height:auto;
+	}
+	
+	.main-lr-01 .ttl-box h3{
+		line-height:normal;
+		margin:0 auto;
+		font-size:100%;
+		margin:0;
+	}
+	
+	.img-left-area{
+		float:none;
+/*		padding-bottom:15px;*/
+		width:93%;
+		margin:0 auto 7%;
+	}
+	
+	.img-left-area img{
+/*		width:100%;*/
+		height:auto;
+		display:block;
+		margin:0 auto;
+	}
+	
+	.img-right-area{
+		float:none;
+		width:93%;
+		margin:0 auto;
+	}
+	
+	.img-right-area img{
+/*		width:100%;*/
+		height:auto;
+		display:block;
+		margin:0 auto;
+	}
+	
+	.lr-article{
+		padding-top:5px;
+		margin:0 2% 5%;
+	}
+	
+	.main-ct-box{
+/*		padding:5% 2%;
+*/		line-height:normal;
+	}
+	
+	.main-ct-01 {
+		width:93%;
+		padding:0;
+		margin:0 auto 5%;	
+	}
+	
+	.ttl-box-2{
+		width:100%;
+		margin:0;
+	}
+	
+	.ttl-box-2 img{
+		width:10%;
+		height:auto;
+	
+	}
+	
+	.ttl-box-2 h3{
+		width:100%;
+		float:none;
+		margin:3% auto 0;
+	}
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+		margin-top:25px;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	
+	.cnt_img{
+		max-width:326px;
+		width:100%;
+		padding-bottom:15px;
+	}
+	
+	.cnt_img img{
+		width:100%;
+		display:block;
+	}
+	
+	.youtube {
+		border:0;
+	}
+	
+}

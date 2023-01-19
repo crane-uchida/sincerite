@@ -1,0 +1,185 @@
+.question {
+  padding: 4rem 2rem;
+  background-color: #434343;
+  background-image: url(../../../images/top/question_bg_sp.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+@media screen and (min-width: 768px), print {
+  .question {
+    padding: 80px 0;
+    background-image: url(../../../images/top/question_bg_pc.jpg);
+  }
+}
+.question h2 {
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 0 0 0.8rem #333333;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .question h2 {
+    margin-bottom: 50px;
+    font-size: 4.4rem;
+    font-weight: 500;
+  }
+}
+.question .inner {
+  background-color: #FFF;
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+}
+@media screen and (min-width: 768px), print {
+  .question .inner {
+    width: 80vw;
+    margin-bottom: 60px;
+    padding: 30px 20px;
+  }
+}
+.question .inner .accordion_1 .q_txt,
+.question .inner .accordion_1 .a_txt {
+  font-weight: 500;
+}
+.question .inner .accordion_1 .q_txt span,
+.question .inner .accordion_1 .a_txt span {
+  font-size: 2.6rem;
+  color: #58CABE;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px), print {
+  .question .inner .accordion_1 .q_txt span,
+.question .inner .accordion_1 .a_txt span {
+    font-size: 4rem;
+  }
+}
+.question .inner .accordion_1 .q_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+  position: relative;
+  padding: 1.5rem 4.6rem 1.5rem 1.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .question .inner .accordion_1 .q_txt {
+    gap: 2rem;
+    padding: 15px 60px 15px 15px;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+.question .inner .accordion_1 .q_txt::before, .question .inner .accordion_1 .q_txt::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #58CABE;
+  right: 15px;
+  top: 50%;
+}
+@media screen and (min-width: 768px), print {
+  .question .inner .accordion_1 .q_txt::before, .question .inner .accordion_1 .q_txt::after {
+    width: 28px;
+    height: 2px;
+  }
+}
+.question .inner .accordion_1 .q_txt::before {
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.question .inner .accordion_1 .q_txt::after {
+  -webkit-transform: translate(0, -50%) rotate(90deg);
+          transform: translate(0, -50%) rotate(90deg);
+}
+.question .inner .accordion_1 .q_txt span {
+  margin-bottom: 10px;
+}
+.question .inner .accordion_1 .q_txt .active::after {
+  display: none;
+}
+.question .inner .accordion_1 .q_txt.active::after {
+  display: none;
+}
+.question .inner .accordion_1 .a_txt {
+  background-color: rgba(233, 249, 248, 0.6);
+  display: none;
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+}
+@media screen and (min-width: 768px), print {
+  .question .inner .accordion_1 .a_txt {
+    margin: 6px 10px;
+    padding: 20px 30px 20px 20px;
+  }
+}
+.question .inner .accordion_1 .a_txt div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  text-align: justify;
+  line-height: 2.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .question .inner .accordion_1 .a_txt div {
+    gap: 10px;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+}
+.question .inner .line {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .question .inner .line {
+    padding: 14px 10px;
+  }
+}
+.question .inner .line hr {
+  border-top: 0.1rem dotted #333333;
+}
+.question .btn {
+  margin: 0 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .question .btn {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  main .question .inner {
+    margin: 0 auto 60px;
+  }
+}
+
+.joboffer_question .inner .accordion_1 .a_txt .joboffer_btn {
+  margin: 1rem 2rem;
+  padding: 1rem 2rem;
+  background-color: #58CABE;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px), print {
+  .joboffer_question .inner .accordion_1 .a_txt .joboffer_btn {
+    max-width: 480px;
+    margin: 20px auto 10px;
+    padding: 10px 20px;
+  }
+}
+.joboffer_question .inner .accordion_1 .a_txt .joboffer_btn a {
+  color: #FFF;
+}

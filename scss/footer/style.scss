@@ -1,0 +1,628 @@
+@charset "UTF-8";
+@use "../common/defines/index"as *;
+
+
+// ------ 共通パーツ ------ //
+
+footer {
+	background-color: $white;
+	line-height: normal;
+
+	// ul, li要素の定義（reset.cssが適用されない部分用）
+	ul,
+	li {
+		list-style: none;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
+		padding-inline-start: 0;
+	}
+
+	p,
+	a,
+	div,
+	span,
+	small {
+		color: $txt;
+		@include font-notosans();
+		font-size: 1.4rem;
+		font-weight: 400;
+
+		@media #{$pc} {
+			font-size: 1.6rem;
+		}
+
+		&:link {
+			color: $txt;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	hr {
+		margin: 0 3rem;
+		border-top: 0.1rem dashed $primary;
+
+		@media #{$pc} {
+			color: $primary;
+			margin: 10px;
+		}
+	}
+
+	.inner {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.txt_primary {
+		color: $white;
+	}
+
+	.txt_secondary {
+		color: $txt;
+	}
+
+}
+
+// ------ 共通パーツ end ------ //
+
+
+// ------ footer ------ //
+
+footer {
+
+	// info
+	.info {
+		padding: 1.5rem 2rem 5rem;
+		background-color: $primary;
+
+		@media #{$pc} {
+			padding: 20px 0 40px;
+		}
+
+		h2 {
+			margin-bottom: 2rem;
+			text-align: center;
+
+			@media #{$pc} {
+				margin-bottom: 30px;
+			}
+
+			img {
+				max-width: 10rem;
+
+				@media #{$pc} {
+					max-width: 140px;
+				}
+			}
+		}
+
+		.contents {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-bottom: 1.4rem;
+
+			@media #{$pc} {
+				flex-direction: row;
+				align-items: center;
+				gap: 10px;
+				margin: 0 20px 30px;
+			}
+
+			.pic {
+
+				@media #{$pc} {
+					max-width: 340px;
+				}
+			}
+
+			.txt {
+
+				@media #{$pc} {
+					max-width: 516px;
+				}
+
+				ul {
+
+					.name {
+						margin-bottom: 2rem;
+
+						h3 {
+							@include font-notoserif();
+							font-size: 2.6rem;
+							font-weight: 600;
+							text-align: center;
+							line-height: 3.4rem;
+							letter-spacing: 0.06em;
+
+							span {
+								font-size: 2rem;
+							}
+						}
+					}
+
+					.speechbubble {
+
+						@media #{$pc} {
+							margin-bottom: 14px;
+							text-align: center;
+						}
+
+						div {
+
+							@media #{$pc} {
+								display: inline-block;
+								margin-bottom: 4px;
+								font-size: 1.4rem;
+								text-align: left;
+								letter-spacing: 0.04em;
+							}
+						}
+
+						img {
+							max-width: 420px;
+						}
+					}
+
+					.address {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						gap: 1rem;
+						margin-bottom: 1.8rem;
+						padding: 2rem 0;
+						background-color: $white;
+						border-radius: 0.3rem;
+
+						@media #{$pc} {
+							max-width: 516px;
+							margin-bottom: 14px;
+							padding: 0;
+							background-color: transparent;
+						}
+
+						div {
+							color: #62B9B0;
+							text-align: center;
+							letter-spacing: 0.1em;
+
+							@media #{$pc} {
+								color: $white;
+								@include font-notoserif();
+								letter-spacing: 0.06em;
+								line-height: 1.2em;
+							}
+
+							span {
+								@media #{$pc} {
+									display: inline;
+									color: $white;
+								}
+							}
+						}
+					}
+
+					// metaタグが追加出来たら追加するコード
+					.tel {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 0.6rem;
+
+						img {
+							max-width: 3.8rem;
+						}
+
+						div {
+							color: $white;
+							@include font-notoserif();
+							font-size: 3.6rem;
+							text-decoration: none;
+
+							@media #{$pc} {
+								font-size: 4rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.btn {
+
+			.inquiry {
+
+				a {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 0.14em;
+					margin-bottom: 1.4rem;
+					padding: 1.4rem 0;
+					background-color: $secondary;
+					border-radius: 0.3rem;
+					color: $white;
+					font-size: 2.2rem;
+					font-weight: $medium;
+
+					letter-spacing: 0.04em;
+
+					img {
+						max-width: 2rem;
+					}
+				}
+			}
+
+			.other {
+
+				ul {
+					display: flex;
+					justify-content: center;
+					gap: 0.8rem;
+
+					@media #{$pc} {
+						gap: 20px;
+					}
+
+					.txt_primary {
+
+						@media #{$pc} {
+							font-size: 18px;
+						}
+					}
+
+					.btn_access,
+					.btn_appointment {
+						width: calc((100% - 1rem * 2) / 2);
+						border: solid 0.2rem $white;
+						border-radius: 0.3em;
+
+						@media #{$pc} {
+							width: 240px;
+							border: solid 2px $white;
+						}
+
+						a {
+							margin: 0;
+							padding: 1.2rem;
+							background-color: $primary;
+							text-align: center;
+
+							@media #{$pc} {
+								letter-spacing: 0.1em;
+								transition: .3s;
+
+								&:hover {
+									background-color: $white;
+									text-decoration: none;
+
+									span {
+										color: #62B9B0;
+									}
+								}
+							}
+
+							span {
+								display: block;
+								letter-spacing: 0.16em;
+							}
+						}
+					}
+
+					.btn_access {
+						a {
+							display: block;
+
+							span {
+
+								img {
+									display: inline;
+									max-width: 1.6rem;
+									margin: 0.4rem 0.4rem 0 0;
+
+									@media #{$pc} {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+
+					.btn_appointment {
+						a {
+							display: block;
+
+							img {
+								display: inline;
+								max-width: 1rem;
+								margin: 0.4rem 0.6rem 0 0;
+
+								@media #{$pc} {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// map
+	.googlemap {
+		.map {
+			#js-access-map {
+				height: 30rem;
+				width: 100%;
+
+				@media #{$pc} {
+					height: 330px;
+					width: 100%;
+				}
+			}
+
+			.infoWindowText {
+				font-size: 1.1rem;
+			}
+		}
+	}
+
+	// cta
+	.cta {
+		display: flex;
+		flex-direction: column;
+		gap: 1.4rem;
+		padding: 3rem 2rem;
+		background-color: $base;
+
+		@media #{$pc} {
+			display: none;
+		}
+
+		.cta_frame {
+			padding: 1.4rem 1.4rem 1.6rem;
+			background-color: $white;
+			border-radius: 0.3rem;
+		}
+
+		.cta_txt {
+			@include font-notoserif();
+			font-size: 1.8rem;
+			font-weight: 600;
+			text-shadow: 1px 1px $white;
+			letter-spacing: 0.02em;
+		}
+
+		li {
+			text-align: center;
+		}
+
+		.cta_primary {
+
+			li {
+
+				&:nth-of-type(1) {
+					margin-bottom: 1.2rem;
+
+					img {
+						max-width: 2.4rem;
+					}
+				}
+
+				&:nth-of-type(2) {
+					margin-bottom: 0.2rem;
+					color: $primary;
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.cta_secondary {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.3em;
+
+			li {
+				&:nth-of-type(1) {
+					margin-top: 0.1em;
+
+					img {
+						max-width: 2rem;
+					}
+				}
+			}
+		}
+	}
+
+	// navigation
+	.navigation {
+
+		@media #{$pc} {
+			margin: 0px 20px;
+			padding-bottom: 40px;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 1rem 0;
+
+			@media #{$pc} {
+				flex-direction: row;
+			}
+
+			li {
+				position: relative;
+				text-align: center;
+
+				@media #{$pc} {
+					text-align: left;
+
+					&:hover {
+						a {
+							color: $primary;
+						}
+					}
+				}
+
+				a {
+					display: block;
+					padding: 1.8rem 2rem;
+
+					@media #{$pc} {
+						min-width: 30px;
+						font-size: 1.2rem;
+						transition: .3s;
+					}
+				}
+
+				div {
+					position: absolute;
+					width: 0.18rem;
+					height: 30%;
+					top: 35%;
+					background-color: $primary;
+				}
+			}
+		}
+
+		dl {
+			padding: 1.6rem 1.6rem 2rem;
+			margin: 0 2rem 4rem;
+			background-color: $base;
+			border-radius: 0.3rem;
+
+			@media #{$pc} {
+				max-width: 1060px;
+				margin: 0 auto;
+				padding: 20px 40px;
+			}
+
+			.sub {
+				margin-bottom: 1rem;
+				font-size: 1.4rem;
+				font-weight: 400;
+				text-align: center;
+
+				@media #{$pc} {
+					margin-bottom: 6px;
+					text-align: left;
+				}
+			}
+
+			dd {
+				display: flex;
+
+				@media #{$pc} {
+					gap: 20px;
+				}
+
+				div {
+					font-size: 1rem;
+					text-align: justify;
+					line-height: 2rem;
+
+					&:nth-of-type(1) {
+						max-width: 940px;
+					}
+
+					&:nth-of-type(2) {
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	//copyright
+	.copyright {
+		padding: 0.6rem;
+		background-color: $primary;
+		text-align: center;
+
+		@media #{$pc} {
+			padding: 10px;
+		}
+
+		small {
+			color: $white;
+			font-size: 1rem;
+
+			span {
+				font-family: Verdana, "Droid Sans", "メイリオ", sans-serif;
+				color: $white;
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+// ------ footer end ------ //
+
+
+// ------ 画面下に固定 ------ //
+
+.floating {
+	@media #{$rwd} {
+		display: none;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		margin: 0;
+		padding: 3px;
+		width: 100%;
+		background: $white;
+		box-sizing: border-box;
+		justify-content: space-between;
+		z-index: 10;
+		list-style: none;
+
+		li {
+			&.materials {
+				width: 41%;
+				background-color: #58CABE;
+			}
+
+			&.appointment {
+				width: 41%;
+				background-color: #FF6C79;
+			}
+
+			&.line {
+				width: 17.5%;
+				background-color: #E2E2E2;
+			}
+
+			+li {
+				margin-left: 3px;
+			}
+
+			a {
+				@include font-notosans();
+				padding: 5px;
+				color: $white;
+				font-size: 1.8rem;
+				width: 100%;
+				height: 64px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-sizing: border-box;
+				font-weight: 500;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// ------ 画面下に固定 end ------ //

@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@use "defines/index"as *;
+
+
+// ------ 共通セッティング ------ //
+
+html {
+	font-size: 62.5%;
+
+	@media #{$rwd} {
+		font-size: $rwd_root_fontsize;
+	}
+}
+
+html,
+body {
+	// 文字の禁則処理
+	line-break: strict;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+
+}
+
+// ブレイクポイントでの切り替え
+.pc {
+	display: block;
+
+	@media #{$rwd} {
+		display: none;
+	}
+}
+
+.rwd {
+	display: block;
+
+	@media #{$pc} {
+		display: none;
+	}
+}
+
+// ------ 共通セッティング end ------ //
+
+
+// ------ 共通パーツ ------ //
+
+.txt_primary {
+	color: $primary;
+}
+
+.txt_secondary {
+	color: $secondary;
+}
+
+.txt_white {
+	color: $white;
+}
+
+.txt_center {
+	text-align: center;
+}
+
+.txt_notosan {
+	@include font-notosans();
+}
+
+.txt_notosan_16 {
+	@include font-notosans();
+	font-size: 1.6rem;
+
+	@media #{$pc} {
+		font-size: 1.8rem;
+	}
+}
+
+.txt_notosan_14 {
+	@include font-notosans();
+	font-size: 1.4rem;
+
+	@media #{$pc} {
+		font-size: 1.6rem;
+	}
+}
+
+.txt_notosan_12 {
+	@include font-notosans();
+	font-size: 1.2rem;
+
+	@media #{$pc} {
+		font-size: 1.4rem;
+	}
+}
+
+.txt_notosan_10 {
+	@include font-notosans();
+	font-size: 1rem;
+}
+
+.txt_notoser {
+	@include font-notoserif();
+}
+
+.txt_notoser_16 {
+	@include font-notoserif();
+	font-size: 1.6rem;
+
+	@media #{$pc} {
+		font-size: 1.8rem;
+	}
+}
+
+.txt_notoser_14 {
+	@include font-notoserif();
+	font-size: 1.4rem;
+
+	@media #{$pc} {
+		font-size: 1.6rem;
+	}
+}
+
+.txt_notoser_10 {
+	@include font-notoserif();
+	font-size: 1rem;
+}
+
+.none {
+	display: none;
+}
+
+.btn {
+
+	a {
+		display: block;
+		margin: 0 auto;
+		padding: 1rem 0;
+		background-color: $primary;
+		color: $white;
+		font-weight: $bold;
+		font-size: 1.6rem;
+		text-align: center;
+		transition: 0.3s;
+
+		&:hover {
+			background-color: #7CD4CA;
+		}
+
+		@media #{$pc} {
+			max-width: 540px;
+			padding: 14px 0;
+			font-size: 2rem;
+		}
+	}
+}
+
+// ------ 共通パーツ end ------ //

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container{
+	background:#fff;
+}
+
+.main-contents{
+	padding-bottom:30px;
+}
+
+.mainvisu-status{
+	margin:0 0 20px 0;
+	text-align:center;
+}
+
+.main-button-area img{
+	max-width:570px;
+	width:100%;
+}
+
+.status-job-area img{
+	width:100%;
+}
+
+.job-area{
+	margin-top:-108px;
+}
+
+.ttl-text-box p{
+	max-width:570px;
+	width:100%;
+	margin:0 auto;
+/*	padding-top:10px;*/
+}
+
+.statusplan2_linkbox {
+	background: #a48247;
+	margin:0 auto 5%;
+	text-align:center;
+	padding:2%;
+}
+
+.statusplan2_linkbox img {
+	max-width: 100%;
+    height: auto;
+}
+
+.statusplan2_linkbox .statusplan2_link {
+	display:block;
+	margin:2% auto;
+	width:90%;
+}
+
+.statusplan2_linkbox .statusplan2_link02 {
+	margin:5% auto 2%;
+}
+
+.statusplan2_linkbox .linkboxWrap{display: flex; flex-wrap: wrap;justify-content: space-between;}
+.statusplan2_linkbox .linkbox {
+	float:left;
+	width:24%;
+	margin:1% 0.5% 0;
+	color:#FFF;
+	text-align:center;
+	font-size:110%;
+}
+
+.statusplan2_linkbox .linkbox img {
+	margin:0 0 1.5%;
+}
+
+.statusplan2_linkbox .linkbox a:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)";
+}
+
+.statusplan2_linkbox .carrer {
+	color:#FFF;
+	text-align:left;
+	font-size:1.1rem;
+	padding:0 2%;
+}
+
+.statusplan2_linkbox .statusplan2_title {
+	margin:4% auto;
+	color:#FFF;
+	text-align:center;
+	font-size:320%;
+}
+
+.statusplan2_linkbox .statusplan2_title02 {
+	margin:3% auto 2%;
+	padding:1%;
+	color:#FFF;
+	text-align:left;
+	font-size:100%;
+}
+
+.statusplan2_linkbox .statusplan2_title03 {
+	margin:4% auto 2%;
+	padding:1%;
+	color:#FFF;
+	text-align:left;
+	font-size:100%;
+}
+
+.condition_box {
+	padding:2%;
+	margin:0 auto 2%;
+	background: #E3D6BF;
+}
+
+.condition_box .condition_img {
+	float:left;
+	width:30%;
+}
+
+.condition_box .condition_exp {
+    float: left;
+    text-align: left;
+    margin: 0 1% 0 5%;
+	width:60%;
+}
+
+.condition_box .condition_exp ul li {
+	padding:0 0 7px;
+	font-size: 1.3rem;
+	padding-left: 1em;
+  text-indent: -1.3em;
+}
+.condition_box .condition_exp ul li:before{content:'◎'; padding-right: 0.3em;}

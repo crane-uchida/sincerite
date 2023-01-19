@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+@media only screen and (max-width:640px){
+	
+	article.feature h3{
+    font-size: 160%;
+    background-size: 95%;
+	margin: 2%;
+    padding: 0.2% 0;
+    line-height: 1.9;
+	}
+	
+	div.profile_box .profile_img_sp{
+	width: 100%;
+    display: block;
+	margin-left: 0;
+    overflow: hidden;
+		
+	}
+	
+	div.profile_box .profile{
+	width: 100%;
+	margin: 0 0 10px 0
+	}
+	
+	div.profile_box .profile_img_pc{
+    display: none;		
+	}
+
+}
+
+@media only screen and (max-width:360px){
+	article.feature h3{
+	letter-spacing: 0.1em;
+    background-size: 98%;
+	margin: 2.5% 1%;
+	}
+	article.feature .thumbnail_small{
+	width: 100%;
+	height: auto;	
+	float: none;
+	margin: 0 auto 2%;
+	text-align: center
+	}
+	
+	article.feature .thumbnail_small img{
+	width: 194px;
+	height: 110px;	
+	}
+}

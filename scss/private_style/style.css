@@ -1,0 +1,782 @@
+@charset "UTF-8";
+.private_style {
+  display: block;
+}
+.private_style h1,
+.private_style h2,
+.private_style h3,
+.private_style h4,
+.private_style h5,
+.private_style h6,
+.private_style ul,
+.private_style p,
+.private_style a,
+.private_style figure,
+.private_style ol,
+.private_style dl,
+.private_style dt,
+.private_style dd,
+.private_style div,
+.private_style small {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333333;
+  line-height: 2;
+}
+
+.private_style p,
+.private_style a,
+.private_style div,
+.private_style span {
+  color: #333333;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .private_style p,
+.private_style a,
+.private_style div,
+.private_style span {
+    font-size: 1.6rem;
+  }
+}
+.private_style h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #B19C7E;
+  text-align: center;
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px), print {
+  .private_style h2 {
+    font-size: 2.4rem;
+    line-height: 1.6;
+  }
+}
+.private_style .h2_secondary {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .private_style .h2_secondary {
+    margin-bottom: 30px;
+  }
+}
+.private_style .h2_secondary span {
+  color: #B19C7E;
+}
+.private_style h3 {
+  font-family: "Noto Serif JP", serif;
+  color: #FFF;
+}
+.private_style hr {
+  margin: 1rem;
+  border-width: 0.1px;
+  border-style: dashed;
+}
+@media screen and (min-width: 768px), print {
+  .private_style hr {
+    margin: 10px;
+  }
+}
+.private_style .inner {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.private_style .inner_header {
+  width: 1080px;
+}
+.private_style .ladies_inner {
+  width: 920px;
+}
+.private_style .section {
+  margin: 4rem 0;
+}
+@media screen and (min-width: 768px), print {
+  .private_style .section {
+    margin: 60px 0 80px;
+  }
+}
+.private_style .txt {
+  font-size: 1.2rem;
+  letter-spacing: 1;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+@media screen and (min-width: 768px), print {
+  .private_style .txt {
+    font-size: 1.4rem;
+    letter-spacing: 1.2;
+  }
+}
+.private_style .txt_primary {
+  margin: 0 2rem 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .private_style .txt_primary {
+    margin: 0 10px 40px;
+  }
+}
+.private_style .txt_white {
+  color: #FFF;
+}
+.private_style .txt_red {
+  color: #FF6C79;
+}
+.private_style .txt_space {
+  letter-spacing: 0.1em;
+}
+.private_style .frame {
+  padding: 3rem 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .private_style .frame {
+    padding: 30px;
+  }
+}
+.private_style .frame .frame_contents {
+  padding: 1rem 1rem 3rem;
+  background-color: #FFF;
+}
+@media screen and (min-width: 768px), print {
+  .private_style .frame .frame_contents {
+    padding: 20px 20px 60px;
+  }
+}
+.private_style .frame .frame_contents .sub {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .private_style .frame .frame_contents .sub {
+    margin-bottom: 30px;
+  }
+}
+.private_style .frame_primary {
+  background-color: #B19C7E;
+}
+.private_style .frame_primary div dt {
+  background-color: #B19C7E;
+}
+.private_style .frame_secondary {
+  background-color: #58CABE;
+}
+.private_style .frame_secondary div dt {
+  background-color: #58CABE;
+}
+
+@media screen and (min-width: 768px), print {
+  .private_style .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100vw;
+    margin-bottom: 45px;
+  }
+}
+
+.side_main {
+  background-color: #FFF;
+}
+@media screen and (min-width: 768px), print {
+  .side_main {
+    width: 650px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .side_main .section:nth-of-type(2) {
+    margin: 60px 0 160px;
+  }
+}
+
+.breadcrumb {
+  margin: 0.3rem 0.8rem;
+}
+@media screen and (min-width: 768px), print {
+  .breadcrumb {
+    margin: 8px 8px 10px;
+  }
+}
+.breadcrumb .flow {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1rem;
+}
+.breadcrumb .flow a,
+.breadcrumb .flow span {
+  color: #333333;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.breadcrumb .flow a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (min-width: 768px), print {
+  .breadcrumb .flow a:hover {
+    color: #B19C7E;
+  }
+}
+
+.feature .sub div {
+  width: 14rem;
+  margin: 0 auto 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .feature .sub div {
+    margin: 20px auto 25px;
+  }
+}
+.feature .sub .h2_primary {
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 768px), print {
+  .feature .sub .h2_primary {
+    margin-bottom: 30px;
+  }
+}
+.feature .pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .feature .pic {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 25px;
+  }
+}
+.feature .frame_primary .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10rem;
+  background-image: url(../../images/private_style/feature_img_sp.svg);
+  background-repeat: no-repeat;
+  background-size: 7.4rem;
+  background-position: 96% 100%;
+}
+@media screen and (min-width: 768px), print {
+  .feature .frame_primary .sub {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100px;
+    background-size: 13rem;
+    background-position: 90% -14%;
+  }
+}
+.feature .frame_primary .sub h3 {
+  padding-left: 2rem;
+  font-size: 3.6rem;
+  line-height: 0.8;
+}
+@media screen and (min-width: 768px), print {
+  .feature .frame_primary .sub h3 {
+    padding-left: 0;
+    font-size: 3.4rem;
+    text-align: center;
+  }
+}
+.feature .frame_primary .sub h3 span {
+  font-size: 2rem;
+  vertical-align: top;
+}
+@media screen and (min-width: 768px), print {
+  .feature .frame_primary .sub h3 span {
+    font-size: 2rem;
+  }
+}
+.feature .frame_primary .sub h3 span:last-of-type {
+  font-size: 2.6rem;
+  vertical-align: bottom;
+}
+@media screen and (min-width: 768px), print {
+  .feature .frame_primary .sub h3 span:last-of-type {
+    font-size: 2.4rem;
+  }
+}
+.feature .frame_primary dd .h2_secondary span {
+  font-size: 1.8rem;
+  vertical-align: top;
+}
+@media screen and (min-width: 768px), print {
+  .feature .frame_primary dd .h2_secondary span {
+    vertical-align: baseline;
+  }
+}
+.feature .frame_primary dd .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .feature .frame_primary dd .contents {
+    margin-bottom: 20px;
+  }
+}
+.feature .frame_primary dd .contents div {
+  max-width: 13rem;
+}
+@media screen and (min-width: 768px), print {
+  .feature .frame_primary dd .contents div {
+    max-width: 16rem;
+  }
+}
+.feature .frame_primary dd .contents div .txt {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+.feature .frame_primary dd .txt_contents {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .feature .frame_primary dd .txt_contents {
+    padding: 0 10px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.summary .h2_secondary {
+  margin-bottom: 4rem;
+  line-height: 1.6em;
+}
+@media screen and (min-width: 768px), print {
+  .summary .h2_secondary {
+    margin-bottom: 50px;
+  }
+}
+.summary .item dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-repeat: no-repeat;
+  background-position: 7%;
+  background-size: 5rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dt {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 46px;
+    background-position: 0;
+    background-size: 50px;
+  }
+}
+.summary .item dt:nth-of-type(1) {
+  background-image: url(../../images/private_style/summary_no1.svg);
+}
+.summary .item dt:nth-of-type(2) {
+  background-image: url(../../images/private_style/summary_no2.svg);
+}
+.summary .item dt:nth-of-type(3) {
+  background-image: url(../../images/private_style/summary_no3.svg);
+}
+.summary .item dt:nth-of-type(3) .txt_space {
+  letter-spacing: 0;
+}
+.summary .item dt:nth-of-type(4) {
+  background-image: url(../../images/private_style/summary_no4.svg);
+}
+.summary .item dt h2 {
+  display: block;
+  margin-left: 8rem;
+  font-size: 2rem;
+  text-align: left;
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dt h2 {
+    margin-left: 60px;
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+.summary .item dd {
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dd {
+    margin-bottom: 60px;
+  }
+}
+.summary .item dd:last-of-type {
+  margin-bottom: 0;
+}
+.summary .item dd .txt_primary {
+  margin: 0 3rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dd .txt_primary {
+    margin: 0 10px 20px;
+  }
+}
+.summary .item dd .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dd .contents {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 10px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dd .contents .summary_pic:last-of-type {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dd .contents .summary_pic {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+.summary .item dd .summary_txt {
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dd .summary_txt {
+    margin-bottom: 12px;
+  }
+}
+.summary .item dd .summary_txt:last-of-type {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .summary .item dd .summary_txt:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.expense h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .expense h3 {
+    font-size: 1.8rem;
+  }
+}
+.expense .frame_secondary {
+  padding: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_secondary {
+    padding: 20px 30px 30px;
+  }
+}
+.expense .frame_secondary dt h2 {
+  margin: 2rem 0 3rem;
+  font-size: 2.2rem;
+  line-height: 1.2em;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_secondary dt h2 {
+    font-size: 2.2rem;
+    margin: 10px 0 30px;
+  }
+}
+.expense .frame_secondary dt h2 span {
+  font-size: 1.6rem;
+  vertical-align: top;
+}
+.expense .frame_secondary .frame_contents {
+  margin-bottom: 2rem;
+  padding: 1rem 1rem 1.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_secondary .frame_contents {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+}
+.expense .frame_secondary .frame_contents:last-of-type {
+  margin-bottom: 0;
+}
+.expense .frame_secondary .frame_contents dt {
+  margin-bottom: 1rem;
+  background-color: #58CABE;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_secondary .frame_contents dt {
+    margin-bottom: 10px;
+  }
+}
+.expense .frame_secondary .frame_contents dd {
+  text-align: center;
+}
+.expense .frame_secondary .frame_contents dd li {
+  line-height: 1.6em;
+}
+.expense .frame_secondary .frame_contents dd .sub_txt {
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_secondary .frame_contents dd .sub_txt {
+    font-size: 1.6rem;
+  }
+}
+.expense .frame_secondary .frame_contents dd .price_txt {
+  font-family: "Noto Serif JP", serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_secondary .frame_contents dd .price_txt {
+    font-size: 2.8rem;
+  }
+}
+.expense .frame_secondary .frame_contents dd .price_txt span {
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_secondary .frame_contents dd .price_txt span {
+    font-size: 2.2rem;
+  }
+}
+.expense .frame_secondary .frame_contents dd hr {
+  color: #58CABE;
+}
+.expense .frame_secondary .notes {
+  margin: 1rem 0;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_secondary .notes {
+    margin: 10px 0 0;
+  }
+}
+.expense .frame_secondary .notes ul li {
+  padding-left: 1em;
+  color: #FFF;
+  font-size: 1rem;
+  text-indent: -1em;
+}
+.expense .frame_secondary .notes ul li::before {
+  content: "※";
+}
+.expense .frame_primary .frame_contents {
+  padding: 1rem 1rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_primary .frame_contents {
+    padding: 20px 20px 30px;
+  }
+}
+.expense .frame_primary .frame_contents .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6rem;
+  background-image: url(../../images/private_style/expense_img.svg);
+  background-repeat: no-repeat;
+  background-size: 9rem;
+  background-position: 100% -2%;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_primary .frame_contents .sub {
+    height: 40px;
+    background-position: 68% -2%;
+    background-size: 60px;
+  }
+}
+.expense .frame_primary .frame_contents .sub h3 {
+  font-size: 2.2rem;
+}
+.expense .frame_primary dd .txt {
+  margin: 0 2rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_primary dd .txt {
+    margin: 0 10px 20px;
+  }
+}
+.expense .frame_primary dd .txt span {
+  color: #B19C7E;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_primary dd .txt span {
+    font-size: 1.4rem;
+  }
+}
+.expense .frame_primary dd ul li {
+  position: relative;
+}
+.expense .frame_primary dd ul li:nth-of-type(even) {
+  padding-left: 3em;
+}
+.expense .frame_primary dd ul li:nth-of-type(even)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  width: 1rem;
+  height: 0.5rem;
+  border-left: 0.3rem solid #B19C7E;
+  border-bottom: 0.3rem solid #B19C7E;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_primary dd ul li:nth-of-type(even)::before {
+    height: 5px;
+    border-left: 3px solid #B19C7E;
+    border-bottom: 3px solid #B19C7E;
+  }
+}
+.expense .frame_primary dd ul li hr {
+  color: #B19C7E;
+}
+.expense .frame_primary dd ul .txt {
+  margin: 0 2rem 0 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .expense .frame_primary dd ul .txt {
+    margin: 0 20px 0 10px;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .message {
+    margin: 60px 0 160px;
+  }
+}
+.message dl dt ul .message_sub {
+  font-family: "Noto Serif JP", serif;
+  text-align: center;
+  line-height: 1.6;
+}
+.message dl dt ul .message_mb {
+  margin-bottom: 1rem;
+}
+.message dl dt ul li:nth-of-type(1) {
+  text-align: center;
+}
+.message dl dt ul li:nth-of-type(1) img {
+  max-width: 3rem;
+}
+.message dl dt ul li:nth-of-type(2) div:nth-of-type(1) {
+  font-size: 1.6rem;
+}
+.message dl dt ul li:nth-of-type(2) div:nth-of-type(2) {
+  font-size: 2.2rem;
+  letter-spacing: 1;
+}
+.message dl dt ul li:nth-of-type(3) {
+  text-align: center;
+}
+.message dl dt ul li:nth-of-type(3) img {
+  max-width: 10rem;
+}
+@media screen and (min-width: 768px), print {
+  .message dl dt ul li:nth-of-type(3) img {
+    max-width: 130px;
+  }
+}
+.message dl dt ul li:nth-of-type(4) {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .message dl dt ul li:nth-of-type(4) {
+    margin-bottom: 40px;
+  }
+}
+.message dl dt ul li:nth-of-type(4) div:nth-of-type(1) {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px), print {
+  .message dl dt ul li:nth-of-type(4) div:nth-of-type(1) {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+.message dl dt ul li:nth-of-type(4) div:nth-of-type(2) {
+  margin: 0 3rem;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .message dl dt ul li:nth-of-type(4) div:nth-of-type(2) {
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+  }
+}
+.message dl dd:nth-of-type(1) hr {
+  margin: 1rem 1rem 2rem;
+  color: #B19C7E;
+}
+@media screen and (min-width: 768px), print {
+  .message dl dd:nth-of-type(1) hr {
+    margin: 10px 10px 40px;
+  }
+}
+.message dl dd:nth-of-type(2) {
+  margin: 0 3rem;
+}
+.message dl dd:nth-of-type(2) div {
+  margin-bottom: 0.8rem;
+}
+.message dl dd:nth-of-type(2) div:last-of-type {
+  margin-bottom: 0;
+}
+
+.side_nav {
+  width: 250px;
+}
+@media screen and (min-width: 768px), print {
+  .side_nav ul li {
+    margin: 10px 0;
+  }
+}
+.side_nav ul li a:hover {
+  opacity: 0.7;
+}

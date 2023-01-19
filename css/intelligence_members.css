@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.main-contents{
+	padding-bottom:60px;
+}
+
+.btn_inteli a:link, .btn_inteli a:visited{
+	text-align:center;
+	border-radius:4px;
+/*	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+*/}

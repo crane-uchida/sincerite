@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+@media only screen and (max-width:640px){
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:15px;
+	}
+	
+	.bread-list{
+		margin-left:5%;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+		margin:0;
+	}
+	
+	.main-sub-left{
+		float:none;
+		max-width:640px;
+		width:100%;
+	}
+	
+	.main-sub-ttl{
+		text-align:start;
+	}
+	
+	.main-sub-ttl h2{
+		font-size:30px;
+		line-height:normal;
+	}
+	
+	.main-sub-ttl img{
+		width:94%;
+		margin:0 3%;
+		height:auto;
+	}
+	
+	.main-sub-ttl p{
+		text-align:start;
+		width:90%;
+		margin:0 5%;
+		padding-top:5px;
+		line-height:1.6;
+	}
+	
+	.ttl-box-2{
+		margin:0 0 15px 0;
+	}
+	
+	.main-about h3.tsuyomi-about{
+		font-size:20px;
+		margin:0 5%;
+	}
+	
+	.slide-party{
+		max-width:640px;
+		width:100%;
+	}
+	
+	.ttl-slide{
+		width:94%;
+		margin:0 3%;
+	}
+	
+	.open{
+		max-width:640px;
+		width:100%;
+	}
+	
+	.party .main-ct-box{
+		margin:0 1%;
+		margin-bottom:60px;
+	}
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+		margin-top:25px;
+		padding-top:20px;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	.slideBox{
+		display:none;
+	}
+	
+	.party_report {
+		height:auto;
+		overflow:inherit;
+		overflow-y:inherit;
+		overflow-x: inherit;
+	}
+	
+}

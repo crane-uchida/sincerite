@@ -1,0 +1,616 @@
+@charset "UTF-8";
+
+/*
+=====================================================================
+*
+*    初期設定
+*
+* ===================================================================
+*/
+
+/****
+ * RESET
+ ***/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+img {
+  vertical-align: bottom;
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+
+input {
+  outline: 0;
+}
+
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  font-family: sans-serif;
+}
+
+/****
+ * clearfix
+ ***/
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+
+	font-size: 0;
+	line-height: 0;
+}
+.clearfix{
+	display:inline-block;
+}
+/* Hides from IE-mac \*/
+*html .clearfix{
+	height:1%;
+}
+.clearfix{
+	display:block;
+}
+/* End hide from IE-mac */
+
+
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体","ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,verdana,Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif !important;
+  font-size: 100%;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+a:link, a:visited {
+  color: #333;
+  text-decoration: underline;
+}
+a:hover, a:active {
+  text-decoration: none;
+}
+
+
+
+
+
+#FirstMatchingWrapper footer{margin-top: 100px;}
+#FirstMatchingWrapper header a,
+#FirstMatchingWrapper footer a{color:#fff; text-decoration:none;}
+#FirstMatchingWrapper header a:hover,
+#FirstMatchingWrapper footer a:hover{text-decoration:underline;}
+#FirstMatchingWrapper #f1-wrap{background:#55c0d5; color:#fff; padding: 10px 0;}
+#FirstMatchingWrapper #f2-wrap{background:#5e5e5e; color:#fff; padding: 20px 0 10px;}
+#FirstMatchingWrapper #f1-wrap .layoutFrame,
+#FirstMatchingWrapper #f2-wrap .layoutFrame{text-align: center; max-width: 980px; margin: auto; overflow: hidden;}
+#FirstMatchingWrapper #f1-wrap .info-wrap{text-align:justify; line-height: 1;}
+#FirstMatchingWrapper #f1-wrap .info-wrap:after{content: ""; display: inline-block; width: 100%; height: 0;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .logo-box{display:inline-block; width:260px; vertical-align: bottom;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .logo-box figure img{width:236px;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .catch-box{display:inline-block; width:335px; vertical-align: bottom;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .catch-box p{font-size: 1.3rem; line-height: 1;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .catch-box p br{line-height: 1.6;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .catch-box p span{font-size: 1.5rem;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box{display:inline-block; width:375px; vertical-align: bottom; text-align:right;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box .inner{display: inline-block; text-align: left;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box p{font-size: 1.4rem; margin-bottom: 3px;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box dl{line-height:1.2;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box dt{font-size: 3.2rem; font-weight: bold;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box dd{font-size: 1.1rem; margin-top: 1px;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap{display:table; width:100%; border-collapse: separate; border-spacing: 20px 0; line-height: 1.2;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .img-box{display:table-cell; width:100px;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .img-box figure{}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box{display:table-cell; vertical-align: top; text-align: left;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box dl{margin-bottom: 10px;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box dt{font-size: 1.3rem; margin-bottom: 3px;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box dd{}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box ul{}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box li{display: inline; margin-right: 10px; padding-right: 10px; border-right: 1px solid #fff;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box li:last-of-type{border:none;}
+#FirstMatchingWrapper #f2-wrap .copyright{font-size: 1rem; color: #fff;}
+
+#FirstMatchingWrapper a[href^="tel:"] {pointer-events: none;}
+#FirstMatchingWrapper .pc-none{display:none;}
+#FirstMatchingWrapper .table-sticky {position: -webkit-sticky; /* Safari */ position: sticky; bottom:0;}
+
+#FirstMatchingWrapper{}
+#FirstMatchingWrapper header{}
+#FirstMatchingWrapper header .layoutFrame {max-width: 980px; margin: auto; overflow: hidden;}
+#FirstMatchingWrapper header .layoutFrame .breadcrumb{padding: 5px 0;}
+#FirstMatchingWrapper header .breadcrumb li{display:inline; }
+#FirstMatchingWrapper header .breadcrumb li a{color:#55c0d5; border:none; padding: 0; font-size:1.1rem; text-decoration:none;}
+#FirstMatchingWrapper header .breadcrumb li:after{content:'\03e'; padding-left: 5px; padding-right: 2px;}
+#FirstMatchingWrapper header .breadcrumb li:last-child:after{content:none;}
+#FirstMatchingWrapper header .breadcrumb li a:hover{text-decoration:underline;}
+
+#FirstMatchingWrapper #main-img-wrap{margin:0 auto 30px; width:980px;}
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner{background:url(../images/lp/first_matching/bg_main_pc.jpg) no-repeat; height: 400px; width:980px; margin:0 auto; position: relative;}
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner h1{font-size: 5rem; line-height: 1.3; padding: 70px 0 0 50px; color: #55c0d5; font-weight: bold;}
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner p{font-size: 2rem; color: #55c0d5; padding: 10px 0 0 50px;}
+
+#FirstMatchingWrapper main{}
+
+#FirstMatchingWrapper .reserve-btn{width: 980px; margin: 0 auto 40px; text-align: center;}
+#FirstMatchingWrapper .reserve-btn a{background: #349ebc; color: #fff; font-size: 3.3rem; font-weight: bold; text-decoration: none; padding: 5px 25px;}
+#FirstMatchingWrapper .reserve-btn a:hover{opacity:0.8;}
+
+#FirstMatchingWrapper #first-step-wrap{margin-bottom: 30px; width: 980px; margin: 0 auto 30px;}
+#FirstMatchingWrapper #first-step-wrap h2{font-size: 3.1rem; text-align: center; margin-bottom:10px; font-weight: bold; line-height: 1.4;}
+#FirstMatchingWrapper #first-step-wrap .txt1{font-size: 1.3rem; text-align: center; margin-bottom: 10px; line-height: 1.8; margin-bottom: 15px;}
+#FirstMatchingWrapper #first-step-wrap .txt2{text-align: center; font-size: 1.2rem; margin-bottom: 20px;}
+#FirstMatchingWrapper #first-step-wrap .txt2 span{background: #55c0d5; padding: 3px 10px; color: #fff;}
+
+#FirstMatchingWrapper #remote-wrap{background:url(../images/lp/online/bg_remote_pc.jpg) no-repeat; height: 366px; width:980px; margin: 0 auto 30px;}
+#FirstMatchingWrapper #remote-wrap .txt{font-size: 2.8rem; text-align: center; color: #fff; font-weight: bold; padding-top: 5.2%;}
+
+
+
+
+
+#FirstMatchingWrapper #flow-wrap{background:#55c0d5; margin-bottom: 30px; padding: 30px 0px;}
+#FirstMatchingWrapper #flow-wrap .flow-wrap-inner{width:980px; margin: 0 auto;}
+#FirstMatchingWrapper #flow-wrap h2{font-size: 3.6rem; text-align: center; color: #fff; margin-bottom: 20px; font-weight: bold;}
+#FirstMatchingWrapper #flow-wrap .first-txt{font-size: 2.4rem; text-align: center; color: #fff; font-weight: bold;}
+#FirstMatchingWrapper #flow-wrap .last-txt{font-size: 2rem; text-align: center; color: #fff; font-weight: bold;}
+#FirstMatchingWrapper #flow-wrap .first-txt span,
+#FirstMatchingWrapper #flow-wrap .last-txt span{border: 1px solid #fff; border-radius: 6px; display: inline-block; padding: 10px 15px; width: 100%; box-sizing: border-box;}
+#FirstMatchingWrapper #flow-wrap .angle-down{color: #fff; font-size: 6rem; text-align: center; line-height: 1;}
+#FirstMatchingWrapper #flow-wrap .image-wrap{width:100%; display:table; border-collapse: separate; border-spacing: 10px 0;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box{display:table-cell; width: 33%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .arrow-box{font-size: 6rem; display: table-cell; vertical-align: middle; color: #fff;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl{background: #1da1b0; color:#fff; position: relative; z-index: 10; margin: 0 10px -15px 30px; padding:3px 0;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .maru {height: 30px; width:30px; border-radius: 50%; line-height: 32px; text-align: center; background: #fff; color: #1da1b0; border: 3px solid #1da1b0; font-size: 2em; display: inline-block; margin-left: -1em;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt{font-size: 1.6rem; font-size: 1.8rem; font-weight: bold;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt.no1{margin-left:14%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt.no2{margin-left:5%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt.no3{margin-left:1.5%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .pic{background: #fff; padding: 5px; z-index: 1;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .txt{background: #fff; color: #1da1b0; padding: 6px 10px 10px; font-size: 1.5rem; line-height: 1.4;}
+#FirstMatchingWrapper #flow-wrap .notice-box{text-align: center; margin-top: 25px;}
+#FirstMatchingWrapper #flow-wrap .notice-box ul{font-size: 1.9rem; text-align: left; display: inline-block; color:#fff;}
+#FirstMatchingWrapper #flow-wrap .notice-box li{}
+#FirstMatchingWrapper #flow-wrap .notice-box li:before{content:'●'; color: #1da1b0;}
+
+#FirstMatchingWrapper #form-wrap{width: 980px; margin: 30px auto;}
+#FirstMatchingWrapper #form-wrap .pic-wrap{text-align: justify;}
+#FirstMatchingWrapper #form-wrap .pic-wrap:after{content: ""; display: inline-block; width: 100%; height: 0;}
+#FirstMatchingWrapper #form-wrap .pic-wrap figure{width: 24%; display: inline-block;}
+#FirstMatchingWrapper #form-wrap h2{font-size: 3.9rem; border-bottom: 1px solid #555; text-align: center; margin-bottom: 20px; font-weight: bold; line-height: 1.4; padding-bottom: 15px;}
+#FirstMatchingWrapper #form-wrap .notice-box{text-align: center; margin-bottom: 30px;}
+#FirstMatchingWrapper #form-wrap .notice-box ul{font-size: 1.7rem; text-align: left; display: inline-block;}
+#FirstMatchingWrapper #form-wrap .notice-box li{color:#55c0d5;}
+#FirstMatchingWrapper #form-wrap .notice-box li:before{content:'●'; color: #55c0d5;}
+#FirstMatchingWrapper #form-wrap .form-ttl{font-size: 3rem; text-align: center; margin-bottom: 20px;}
+#FirstMatchingWrapper #form-wrap .confirm-txt,
+#FirstMatchingWrapper #form-wrap .thanks-txt{font-size: 1.3rem; margin:20px 0;}
+#FirstMatchingWrapper #form-wrap .thanks-link{font-size: 1.3rem; margin:40px 0 20px;}
+#FirstMatchingWrapper #form-wrap .thanks-link span{border:1px solid #ccc; padding:10px 15px;}
+#FirstMatchingWrapper #form-wrap .thanks-link span a{text-decoration: none;}
+#FirstMatchingWrapper #form-wrap .thanks-link span a:hover{text-decoration: underline;}
+
+
+
+/* フォーム */
+.mw_wp_form_business table{font-size:1.4rem;}
+.mw_wp_form_business .action-buttons {text-align:center;}
+.mw_wp_form_business input.test[type="submit"] {background: #55c0d5; color: #fff; font-size: 2.4rem; border: none; width: 300px; height: 70px; cursor: pointer; margin-top: 20px; box-shadow:none;}
+.mw_wp_form_business input.test[type="submit"]:hover {box-shadow:none; opacity:0.8;}
+.mw_wp_form_business input.back[type="submit"]{background:#fff !important; border:1px solid #d9d9d9!important; color:#000 !important; font-size: 2rem !important; margin: 0; height:auto; line-height: 1; padding: 10px;}
+.mw_wp_form .horizontal-item + .horizontal-item{margin-left:0 !important;}
+.mw_wp_form_business .require{background-color: #b70000 !important; font-size: 1.2rem;}
+.mw_wp_form_business .mw_wp_form_error td.error-box{background:#ffe2e4;}
+
+.mw_wp_form_business #results{}
+.mw_wp_form_business #age{display:none;}
+.mw_wp_form_business .kome{font-size:1.2rem; margin-left:5px; color:#555;}
+.mw_wp_form_business td.address input#zip,
+.mw_wp_form_business td.address select#address1,
+.mw_wp_form_business td.address input#address2{margin-bottom:15px;}
+.mw_wp_form_business td.address input#zip{width:120px;}
+.mw_wp_form_business td.address input,
+.mw_wp_form_business td.address select{margin:0 5px;}
+.mw_wp_form_business .man-notice,
+.mw_wp_form_business .woman-notice{display:none; padding: 5px 10px; margin-top: 10px; font-size:1.2rem; color:#777; background:#fff;}
+.mw_wp_form_business .man-notice li,
+.mw_wp_form_business .woman-notice li{padding-left:10px;}
+.mw_wp_form_business .man-notice li.ttl,
+.mw_wp_form_business .woman-notice li.ttl{padding-left:0;}
+.mw_wp_form_business .man-notice{border: 2px solid #dbe9f7;}
+.mw_wp_form_business .woman-notice{border: 2px solid #fbe0e0;}
+
+.mw_wp_form_business input[type="text"]:focus,
+.mw_wp_form_business input[type="email"]:focus,
+.mw_wp_form_business textarea:focus,
+.mw_wp_form_business select:focus {box-shadow: 0 0 7px #3498db; border: 1px solid #3498db;}
+.mw_wp_form_business textarea {-webkit-transition: all .3s; -moz-transition: all .3s; transition: all .3s; height:50px;}
+.mw_wp_form_business textarea:focus {height: 80px;}
+.mw_wp_form_business .bread-list a{color:#9b7e51;}
+.mw_wp_form_business .bread-list label{margin-right:20px;}
+
+.mw_wp_form_business input.wpcf7c-btn-back[type="button"] {background: #fff; border: 1px solid #d9d9d9; color: #000; font-size: 2rem; margin: 0; height: 50px; line-height: 1; padding: 10px; width: 150px; cursor: pointer; margin-top: 20px; box-shadow: none; vertical-align: bottom;}
+.mw_wp_form_business input[type="submit"]{box-shadow:4px 4px #e3e3e3;}
+.mw_wp_form_business input, .mw_wp_form_business select, .mw_wp_form_business textarea{font-size:1.4rem;}
+.mw_wp_form_business input[type="text"].hasDatepicker{width:40%;}
+.mw_wp_form_business .bs1{border-top:1px dotted #dcdcdc;}
+.mw_wp_form_business select{color:#ccc; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.mw_wp_form_business select::-ms-expand { /* select要素のデザインを無効にする（IE用） */ display: none;}
+
+
+.mw_wp_form_business .your-date1:before,
+.mw_wp_form_business .your-date2:before{font-family: FontAwesome; content:'\f107'; position: absolute; top: 0; right:10px; font-size:2rem; line-height:1;}
+.mw_wp_form_business .your-time1:before,
+.mw_wp_form_business .your-time2:before,
+.mw_wp_form_business .your-date-year:before,
+.mw_wp_form_business .your-date-month:before,
+.mw_wp_form_business .your-date-day:before{font-family: FontAwesome; content:'\f107'; position: absolute; top: 0; right:5px; font-size:2rem; line-height:1;}
+.mw_wp_form_business .your-address1:before{font-family: FontAwesome; content:'\f107'; position: absolute; top: -7px; right:10px; font-size:2rem; line-height:1;}
+
+.mw_wp_form_business #your-time1,
+.mw_wp_form_business #your-time2{padding-right: 10px;}
+.mw_wp_form_business #address1{padding-right: 25px;}
+
+.mw_wp_form_business select option{color:#000;}
+.mw_wp_form_business select#Date_Year{width: 80px; padding-right: 10px;}
+.mw_wp_form_business select#Date_Month{width: 60px; padding-right: 10px;}
+.mw_wp_form_business select#Date_Day{width: 60px;}
+
+.mw_wp_form_business .caution{font-size: 1.2rem; display: block; margin-top: 5px;}
+
+.mw_wp_form_business .email-notice{display:none; color: #E50012;}
+.mw_wp_form_business .privacy-notice{font-size: 1.15rem; color: #565656; padding-bottom: 5px; line-height: 1.8;}
+
+.mw_wp_form_business .action-buttons .go,
+.mw_wp_form_business .action-buttons .back{position:relative; display: inline-block;}
+.mw_wp_form_business .action-buttons .go:after {content: "\f054"; font-family: FontAwesome; position: absolute; top: 50%; right: 20px; color: #fff; font-size: 1.8rem; line-height: 1;}
+.mw_wp_form_business .action-buttons .back:before {content: "\f104"; font-family: FontAwesome; position: absolute; top: 50%; left: 20px; font-size: 1.8rem; line-height: 1;}
+
+.mw_wp_form_business .ajax-loader{position: absolute; left: 50%;}
+
+/* 来店予約フォーム */
+/* カレンダーのサイズ */
+.ui-widget{font-size: 1.6em;}
+/* カレンダーの土曜日 */
+td.ui-datepicker-week-end:last-child a.ui-state-default{background-color: #eaeaff; color: #00f!important;}
+/* カレンダーの日曜日 */
+td.ui-datepicker-week-end a.ui-state-default{background-color: #ffecec; color: #f00!important;}
+
+/* ラジオボタンをカスタマイズ */
+.mw_wp_form_business input[type="radio"]{display:none;}
+.mw_wp_form_business span.wpcf7-list-item-label{position: relative; display: inline-block;}
+.mw_wp_form_business span.wpcf7-list-item-label::before{content: " "; width: 17px; height: 17px; position: absolute; border: 1px solid #584940; top: 0; left: -13px; margin-top: 2px; background: #FFF; border-radius: 50%; -webkit-transform: translateY(0); transform: translateY(0);}
+.mw_wp_form_business input[type="radio"]:checked+span.wpcf7-list-item-label:after {position: absolute; content: ""; top: -1px; left: -9px; width: 11px; height: 11px; margin-top: 7px; border-radius: 50%; background: #888888;}
+.mw_wp_form_business input[type="radio"]+span.wpcf7-list-item-label{padding: 0 0 0 12px;}
+.mw_wp_form_business span.wpcf7-list-item{margin-left:1em;}
+.mw_wp_form_business span.wpcf7-list-item:not(:last-child) {padding-right: 20px;}
+
+/* 確認画面 or 確認画面から戻ったときの入力画面 */
+form.wpcf7-form.custom-wpcf7c-confirmed .mw_wp_form_business input[type="radio"]{display:inline-block;}
+form.wpcf7-form.custom-wpcf7c-confirmed .mw_wp_form_business span.wpcf7-list-item-label::before{border: none; background: none;}
+form.wpcf7-form.custom-wpcf7c-confirmed .mw_wp_form_business input[type="radio"]:checked+span.wpcf7-list-item-label:after{background: none;}
+form.wpcf7-form.custom-wpcf7c-confirmed .mw_wp_form_business input[type="radio"]+span.wpcf7-list-item-label{padding: 0;}
+
+
+
+
+/* フォームのステップバー */
+.stepBar {
+  position: relative;
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  *zoom: 1;
+}
+.stepBar .step {
+  position: relative;
+  float: left;
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 40px 0 20px;
+  background-color: #eee;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+.stepBar .step:before, .stepBar .step:after {
+  position: absolute;
+  left: -15px;
+  display: block;
+  content: '';
+  background-color: #eee;
+  border-left: 4px solid #FFF;
+  width: 20px;
+  height: 20px;
+}
+.stepBar .step:after {
+  top: 0;
+  -moz-transform: skew(30deg);
+  -ms-transform: skew(30deg);
+  -webkit-transform: skew(30deg);
+  transform: skew(30deg);
+}
+.stepBar .step:before {
+  bottom: 0;
+  -moz-transform: skew(-30deg);
+  -ms-transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  transform: skew(-30deg);
+}
+.stepBar .step:first-child {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.stepBar .step:first-child:before, .stepBar .step:first-child:after {
+  content: none;
+}
+.stepBar .step:last-child {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.stepBar .step.current {
+  color: #FFF;
+  background-color: #55c0d5;
+}
+.stepBar .step.current:before, .stepBar .step.current:after {
+  background-color: #55c0d5;
+}
+.stepBar.step2 .step {
+  width: 50%;
+}
+.stepBar.step3 .step {
+  width: 33.333%;
+}
+.stepBar.step4 .step {
+  width: 25%;
+}
+.stepBar.step5 .step {
+  width: 20%;
+}
+
+
+/* Contact Form 7 add confirm使用時のスタイルを整える。確認画面で入力内容が暗くなるのをリセットして、オートコンプリートの背景色を取り除く */
+input.wpcf7c-conf,select.wpcf7c-conf,textarea.wpcf7c-conf{border: 0; padding: 0; background: #fff;}
+.wpcf7-text:-webkit-autofill {box-shadow: 0 0 0 1000px #fff inset;}
+
+
+
+
+
+@media only screen and (max-width:768px){
+#FirstMatchingWrapper #f1-wrap .info-wrap{padding: 0 20px;}
+#FirstMatchingWrapper header .layoutFrame .breadcrumb{padding: 5px 10px;}
+#FirstMatchingWrapper .br-ipad{display:none;}
+#FirstMatchingWrapper #main-img-wrap{width:100%;}
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner{width:100%; background-position: top;}
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner h1{font-size: 4.5rem;}
+#FirstMatchingWrapper .reserve-btn{width:100%;}
+#FirstMatchingWrapper #remote-wrap{background:url(../images/lp/online/bg_remote_pc.jpg) no-repeat center center / cover; width: 100%; height: 288px;}
+#FirstMatchingWrapper #remote-wrap .txt{font-size: 2.3rem;}
+#FirstMatchingWrapper #first-step-wrap{width:100%;}
+#FirstMatchingWrapper #first-step-wrap h2{font-size: 2.4rem;}
+#FirstMatchingWrapper #flow-wrap h2{font-size: 2.8rem;}
+#FirstMatchingWrapper #flow-wrap .flow-wrap-inner{width:100%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl{margin: 0 5px -15px 20px;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt{font-size: 1.4rem; margin-left: 3px;}
+#FirstMatchingWrapper #flow-wrap .first-txt span,
+#FirstMatchingWrapper #flow-wrap .last-txt span{width:95%}
+#FirstMatchingWrapper #flow-wrap .first-txt{font-size:1.8rem;}
+#FirstMatchingWrapper #flow-wrap .last-txt{font-size:1.6rem;}
+#FirstMatchingWrapper #flow-wrap .notice-box ul{font-size:1.5rem;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .logo-box{width: 25%;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .catch-box{width: 40%;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box{width: 32%;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box dt{font-size: 3rem;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .catch-box p span{font-size: 1.4rem;}
+#FirstMatchingWrapper #form-wrap{width:100%;}
+#FirstMatchingWrapper #form-wrap h2{font-size: 2.8rem;}
+#FirstMatchingWrapper #form-wrap .notice-box ul{font-size: 1.4rem;}
+#FirstMatchingWrapper #form-wrap .form-ttl{font-size: 3.1rem; line-height: 1.4; padding: 0 20px;}
+#FirstMatchingWrapper #form-wrap .confirm-txt,
+#FirstMatchingWrapper #form-wrap .thanks-txt{padding: 0 20px;}
+#FirstMatchingWrapper #form-wrap .thanks-link{padding: 0 20px;}
+
+/* フォーム */
+.mw_wp_form_business select{color:#8e8e8e;}
+.mw_wp_form_business .caution{font-size: 1.1rem;}
+}
+
+
+
+@media only screen and (max-width:640px){
+button#responsive-menu-button{display:none;}
+#FirstMatchingWrapper a[href^="tel:"] {pointer-events: auto;}
+#FirstMatchingWrapper .br-sp{display:none;}
+#FirstMatchingWrapper .sp-none{display:none;}
+#FirstMatchingWrapper .pc-none{display:block;}
+
+#FirstMatchingWrapper #f1-wrap .info-wrap .logo-box{display:block; width:100%; text-align:center; margin-bottom: 20px;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .catch-box{display:block; width:100%; text-align:center; margin-bottom: 20px;}
+#FirstMatchingWrapper #f1-wrap .info-wrap .tel-box{display:block; width:100%; text-align:center;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .img-box{width: 50px;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box dl{margin-bottom: 15px;}
+#FirstMatchingWrapper #f2-wrap .privacy-wrap .txt-box li{display: block; border:none; margin-bottom: 10px;}
+#FirstMatchingWrapper #f2-wrap .copyright{margin-top: 10px; font-size: 1.2rem;}
+
+#FirstMatchingWrapper header .layoutFrame{max-width:100%;}
+#FirstMatchingWrapper header .breadcrumb li{width:48%; margin: 20px 0 0;}
+#FirstMatchingWrapper #main-img-wrap{margin-bottom:15px;}
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner{background:url(../images/lp/first_matching/bg_main_sp.jpg) no-repeat; background-size:auto 300px; height: 490px; background-color: #55c0d5; background-position: top;}
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner h1{padding: 315px 0 0 20px; font-size: 3rem; color: #fff;}
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner p{padding: 5px 20px 0 20px; line-height: 1.4; font-size: 1.8rem; color: #fff; padding-top: 120%;}
+
+#FirstMatchingWrapper .reserve-btn{margin-bottom:15px;}
+#FirstMatchingWrapper .reserve-btn a{font-size: 1.95rem; padding: 15px 8px; box-sizing: border-box; width: 95%; display: block; margin: 0 auto;}
+
+#FirstMatchingWrapper #remote-wrap{background:url(../images/lp/online/bg_remote_sp.jpg) no-repeat center center / cover; width: 100%; height: 500px; position: relative;}
+#FirstMatchingWrapper #remote-wrap .txt{
+	padding:0;
+	width: 100%;
+	font-size: 2.8rem;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+#FirstMatchingWrapper #first-step-wrap h2{font-size: 2.5rem; padding: 0 20px; line-height: 1.4; text-align:left;}
+#FirstMatchingWrapper #first-step-wrap .txt1{padding: 0 20px; text-align:left;}
+#FirstMatchingWrapper #first-step-wrap .txt2{padding: 0 20px; text-align:left;}
+#FirstMatchingWrapper #first-step-wrap .txt2 span{display: block;}
+#FirstMatchingWrapper #first-step-wrap .pic-wrap figure{width: 49%; margin-bottom: 5px;}
+
+#FirstMatchingWrapper #flow-wrap h2{font-size: 2.5rem; line-height: 1.5; padding: 0 20px; text-align:left;}
+#FirstMatchingWrapper #flow-wrap .first-txt,
+#FirstMatchingWrapper #flow-wrap .last-txt{padding: 0 20px; text-align:left; font-size:1.7rem;}
+#FirstMatchingWrapper #flow-wrap .first-txt span,
+#FirstMatchingWrapper #flow-wrap .last-txt span{width:100%;}
+
+#FirstMatchingWrapper #flow-wrap .image-wrap{display: block; padding: 0 20px; box-sizing: border-box;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box{display: block; width: 100%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt{font-size: 2.2rem; margin-left: 10px;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt.no1{margin-left: 16%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt.no2{margin-left: 8%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt.no3{margin-left: 5%;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .arrow-box{display: block; text-align: center; line-height: 1;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .arrow-box .fa-angle-right{transform: rotate(90deg); -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); -ms-transform: rotate(90deg);}
+#FirstMatchingWrapper #flow-wrap .notice-box{padding: 0 20px;}
+#FirstMatchingWrapper #flow-wrap .notice-box li{padding-left:1em; text-indent: -1em;}
+
+#FirstMatchingWrapper #form-wrap h2{font-size: 2rem; padding: 0 20px 10px; line-height: 1.4; text-align:left;}
+#FirstMatchingWrapper #form-wrap .notice-box{padding: 0 20px;}
+#FirstMatchingWrapper #form-wrap .notice-box ul{font-size: 1.1rem; font-weight:bold;}
+#FirstMatchingWrapper #form-wrap .notice-box li{padding-left: 1em; text-indent: -1em;}
+
+}
+
+
+
+@media only screen and (max-width:320px){
+#FirstMatchingWrapper #main-img-wrap .main-img-wrap-inner p{font-size: 1.5rem; padding: 10px 20px 0 20px;}
+#FirstMatchingWrapper .reserve-btn a{font-size: 1.6rem;}
+#FirstMatchingWrapper #first-step-wrap h2{font-size: 2.3rem;}
+#FirstMatchingWrapper #remote-wrap .txt{font-size: 2.5rem;}
+#FirstMatchingWrapper #flow-wrap h2{font-size: 2rem;}
+#FirstMatchingWrapper #flow-wrap .image-wrap .image-box .ttl .ttl-txt{font-size: 1.8rem;}
+#FirstMatchingWrapper #form-wrap h2{font-size: 1.7rem;}
+.mw_wp_form_business input[type="text"].hasDatepicker{width: 44%;}
+.mw_wp_form_business input[type="submit"]{width: 250px !important;}
+
+/* フォームのステップバー */
+.stepBar .step {padding:0;}
+.stepBar .step:before, .stepBar .step:after {position: absolute; left: -5px;}
+
+}

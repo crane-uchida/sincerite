@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.party .ct-article span {
+ 	font-weight:bold;
+  font-size: 1.4rem;
+}
+
+.main-sub-ttl p{
+	line-height:1.8;
+}
+
+.party .ct-article span + .ct-text{margin-top: 3px;}
+
+.slideBox.party_report .menuList{background: ivory; padding: 15px;}
+.slideBox.party_report .menuList > .ttl{border-bottom: 1px solid #c1ae8e; display: block; width: 90%; margin: 0 auto; padding-bottom: 15px;}

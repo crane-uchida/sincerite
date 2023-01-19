@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+
+.main-sub-ttl p{
+	font-size:14px
+}
+.ttl-text-box p{
+	font-size:14px
+}
+.main-ct-01 p{
+	font-size:14px
+}
+
+
+}

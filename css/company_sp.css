@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:15px;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+		margin:0;
+	}
+	
+	.main-sub-left{
+		max-width:640px;
+		width:100%;
+		float:none;
+	}
+	
+	.sub-main-topimg img{
+		width:100%;
+		height:auto;
+	}
+	
+	.main-ct-box{
+		margin:0 1%;
+	}
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+		margin-top:25px;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

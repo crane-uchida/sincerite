@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.body_plan a:link,
+.body_plan a:visited {
+	color:#A2824C !important;	
+}
+
+.body_plan .main02-inner {
+	background:#000;
+	color:#FFF;
+	padding:5%;
+}
+
+.body_plan .toptxt {
+	padding:2%;
+	margin:0 0 2%;
+	line-height:1.3;	
+}
+
+.body_plan .women_plan {
+	margin:5% 0 0;
+}
+
+.body_plan .main02-inner p {
+	padding:1% 1% 0;
+}
+
+.body_plan .planimg {
+	margin:1.5% auto 0;
+}
+
+@media only screen and (max-width:640px){
+
+.body_plan .title_img {
+	display:block;
+	width:93%;
+	padding:0;
+    margin: 0 auto 2%;
+}
+
+.main-sub-left{
+    width: 100%;
+    float: none;
+}
+.main-contents,.main-inner-box{
+	width: 100%;
+}
+}

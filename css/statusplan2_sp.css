@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+
+
+.main-contents{
+	max-width:640px;
+	width:100%;
+	padding-bottom:0;
+}
+
+.bread-list{
+	margin-left:5%;
+}
+
+.main-inner-box{
+	max-width:640px;
+	width:100%;
+}
+
+.main-sub-left{
+	max-width:640px;
+	width:100%;
+	float:none;
+}
+
+.main-sub-ttl{
+	margin:0;
+}
+
+.main-sub-ttl img{
+	width:100%;
+	height:auto;
+}
+
+.mainvisu-inner{
+	display:none;
+}
+.mainvisum-inner{
+	display:none;
+}
+
+.mainvisu_inner_sp{
+	float:none;
+	max-width:640px;
+	width:100%;
+	padding-top:0;
+	padding-right:0;
+	cursor:auto;
+	position: relative;
+}
+
+.mainvisu_sp_bg{
+	background:url(../images/status_plan_p.gif) repeat left top;
+    background-size: 100%;
+    text-align: left;
+    padding: 3%;
+    position: absolute;
+    top: 65%;
+    left: 0%;
+}
+
+/*.mainvisu_inner_sp p{
+	width:94%;
+	margin:0 3%;
+	padding-bottom:15px;
+	margin-top:-15px !important;
+}
+*/
+.mainvisu-status{
+	margin:0 0 20px 0;
+}
+
+.main-button-area{margin:15% 0 0; width:98%; margin-left:1%; margin-right:1%;}
+.main-button-area:last-of-type{margin: 15% 0 30px;}
+
+
+.ttl-text-box h2{
+}
+
+.ttl-text-box img{
+	width:94%;
+	margin:0 3%;
+}
+
+.ttl-text-box{
+	margin:5% 0;
+}
+
+.status-job-area h2{
+	font-size:20px;
+}
+
+.main-sub-ttl p{
+/*	margin:0 3%;*/
+}
+
+.ttl-text-box p{
+	max-width:640px;
+	width:79%;
+	margin:0 auto;
+
+	margin-top:5px;
+	margin-bottom:10px;
+}
+
+.job-area{
+	margin-top:-50px;
+}
+
+.job-area p{
+	font-size:8px;
+	line-height:11px;
+}
+
+
+.status-inner{
+	margin:10px 0;
+}
+
+.status-inner-box{
+	float:none;
+	max-width:137px;
+	width:100%;
+	margin:0 auto;
+	padding-bottom:10px;
+}
+
+.status-attention{
+	max-width:640px;
+	width:98%;
+	margin:0 1%;
+	padding:10px 0;
+	margin-bottom:10px;
+}
+
+.status-attention-left{
+	float:none;
+	margin:0 auto;
+	padding-bottom:15px;
+	padding-top:10px;
+}
+
+.status-attention-right{
+	float:none;
+	width:90%;
+	margin:0 5%;
+	padding-bottom:10px;
+}
+
+.actAsDiv{
+	max-width:640px;
+	width:100%;
+	height:auto;
+}
+
+.main-sub-right{
+	float:none;
+	margin:0 auto;
+}
+
+.side-nav{
+		margin:0;
+		text-align:center;
+	}
+
+	.main-sub-right ul li{
+		text-align:center;
+	}
+
+.statusplan2_linkbox .linkboxWrap{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.statusplan2_linkbox .linkbox {width:47%;}
+
+.statusplan2_linkbox .statusplan2_title {
+	margin:4% auto;
+	font-size:140%;
+}
+
+.statusplan2_linkbox .statusplan2_title02 {
+	margin:4% auto 2%;
+	font-size:100%;
+}
+
+.condition_box .condition_img {
+	float:none;
+	width:25%;
+	margin:0 auto;
+}
+
+.condition_box .condition_exp {
+    float: none;
+	width:90%;
+	margin:0 auto;
+	padding:2%;
+}
+
+}
+
+@media only screen and (max-width:320px){
+.main-button-area{margin: 20% 0 0;}
+}

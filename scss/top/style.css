@@ -1,0 +1,992 @@
+.top h1,
+.top h2,
+.top h3,
+.top h4,
+.top h5 {
+  font-family: "Noto Serif JP", serif;
+}
+.top:not(.data .sub .contents_1 .txt) {
+  font-family: "Noto Serif JP", serif;
+}
+.top p,
+.top a,
+.top div,
+.top span,
+.top li,
+.top small {
+  color: #333333;
+}
+.top .concept,
+.top .data,
+.top .plan,
+.top .cta,
+.top .conversation,
+.top .voice {
+  margin-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .top .concept,
+.top .data,
+.top .plan,
+.top .cta,
+.top .conversation,
+.top .voice {
+    margin-bottom: 4px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .top .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+.top .under_line {
+  border-bottom: 0.1rem solid;
+}
+@media screen and (min-width: 768px), print {
+  .top .under_line {
+    border-bottom: 1px solid;
+  }
+}
+.top .background {
+  background-size: cover;
+  background-position: center center;
+}
+.top .btn a {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: #58CABE;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.top .btn a:hover {
+  background-color: #7CD4CA;
+}
+@media screen and (min-width: 768px), print {
+  .top .btn a {
+    max-width: 540px;
+    padding: 14px 0;
+    font-size: 2rem;
+  }
+}
+
+.hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.hover:hover {
+  background-color: #7CD4CA;
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.fadeIn.is-show {
+  opacity: 1;
+}
+
+.top .firstview .mv {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 6rem);
+  overflow: hidden;
+}
+@media screen and (min-width: 768px), print {
+  .top .firstview .mv {
+    height: calc(100% - 65px);
+  }
+}
+.top .firstview .txt_holiday {
+  padding: 1rem;
+  background-color: #58CABE;
+  color: #FFF;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .top .firstview .txt_holiday {
+    padding: 10px;
+    font-size: 1.6rem;
+  }
+}
+.top .firstview .mv-wrap {
+  position: relative;
+  height: 100vh;
+}
+.top .firstview video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.top .firstview .mv-bg {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.4) 30%, transparent 30%);
+  background-size: 3px 3px;
+}
+
+.concept {
+  padding: 6rem 0 0 0;
+}
+@media screen and (min-width: 768px), print {
+  .concept {
+    padding: 100px 0 40px;
+  }
+}
+.concept .sub {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 4rem;
+  letter-spacing: 0.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .concept .sub {
+    font-size: 3rem;
+  }
+}
+.concept .message {
+  margin: 2rem 0 8rem;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .concept .message {
+    margin: 40px 0 100px;
+  }
+}
+.concept .message li {
+  line-height: 4rem;
+}
+.concept .message li:nth-of-type(2) {
+  font-weight: 500;
+}
+@media screen and (min-width: 768px), print {
+  .concept .message li:nth-of-type(2) {
+    font-weight: 700;
+  }
+}
+.concept .message li:nth-of-type(3) {
+  font-weight: 500;
+}
+@media screen and (min-width: 768px), print {
+  .concept .message li:nth-of-type(3) {
+    font-weight: 400;
+  }
+}
+.concept .message li:nth-of-type(4) {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .concept .message li:nth-of-type(4) {
+    margin-bottom: 0;
+  }
+}
+.concept .message li:nth-of-type(4) span {
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .concept .message li:nth-of-type(5) {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .concept .message .sub {
+    font-size: 2.6rem;
+  }
+}
+.concept .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .concept .link {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    margin: 0 20px;
+  }
+}
+.concept .link li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 11rem;
+  background-color: #58CABE;
+}
+@media screen and (min-width: 768px), print {
+  .concept .link li {
+    width: 420px;
+    height: 110px;
+  }
+}
+.concept .link li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 11rem;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .concept .link li a {
+    font-size: 2rem;
+  }
+}
+.concept .link li a span {
+  color: #FFF;
+  font-size: 1.6rem;
+}
+
+.data .sub {
+  position: relative;
+  height: 29rem;
+  background-image: url(../../images/top/data_bg_rwd.jpg);
+}
+@media screen and (min-width: 768px), print {
+  .data .sub {
+    height: 480px;
+    background-image: url(../../images/top/data_bg_pc.jpg);
+  }
+}
+.data .sub .contents_1 {
+  position: relative;
+}
+@media screen and (min-width: 768px), print {
+  .data .sub .contents_1 {
+    max-width: 770px;
+    margin: 0 auto;
+  }
+}
+.data .sub .contents_1 .txt {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  font-family: "STIX Two Text", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 5.8rem;
+  text-shadow: 0.1rem 0.1rem 0 #FFF;
+  border-bottom: 0.2rem solid;
+  line-height: 4.8rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .sub .contents_1 .txt {
+    top: 9rem;
+    font-size: 12rem;
+    text-shadow: 0.2rem 0.2rem 0 #fff;
+    border-bottom: 3px solid;
+    line-height: 9.4rem;
+  }
+}
+.data .sub .contents_1 .txt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -0.4rem;
+  left: 0.4rem;
+  right: -0.3rem;
+  border-bottom: 0.2rem solid #FFF;
+}
+@media screen and (min-width: 768px), print {
+  .data .sub .contents_1 .txt::before {
+    bottom: -0.6rem;
+    left: 0.6rem;
+    right: -0.4rem;
+    border-bottom: 3px solid #FFF;
+  }
+}
+.data .sub .contents_1 .txt .phrase {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .sub .contents_1 .txt .phrase {
+    margin-left: 2rem;
+    font-size: 3.4rem;
+  }
+}
+.data .sub .contents_1 .txt .unit {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  font-size: 3.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .sub .contents_1 .txt .unit {
+    font-size: 7rem;
+  }
+}
+.data .sub .contents_2 {
+  position: relative;
+  height: 29rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .sub .contents_2 {
+    height: 480px;
+  }
+}
+.data .sub .contents_2 .notes {
+  position: absolute;
+  bottom: 1rem;
+  margin: 0 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 1rem;
+  text-shadow: 0.1rem 0.1rem 0 #fff;
+  line-height: 1.6;
+}
+@media screen and (min-width: 768px), print {
+  .data .sub .contents_2 .notes {
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: 0px 40px;
+    padding: 16px 30px;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+}
+.data .sub .contents_2 .notes span {
+  font-weight: 700;
+}
+.data .chart {
+  padding: 4rem 2rem;
+  background-color: #E0E0E0;
+}
+@media screen and (min-width: 768px), print {
+  .data .chart {
+    padding: 80px 0;
+  }
+}
+.data .chart .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .chart .contents {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.data .chart .contents .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  max-width: 33.5rem;
+  padding: 2rem;
+  background-color: #FFF;
+}
+@media screen and (min-width: 768px), print {
+  .data .chart .contents .container {
+    max-width: 500px;
+  }
+}
+.data .chart .contents .container .txt {
+  width: 16.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  -webkit-text-decoration: underline 0.1rem;
+          text-decoration: underline 0.1rem;
+  text-underline-offset: 0.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .chart .contents .container .txt {
+    width: 230px;
+    font-size: 2.2rem;
+  }
+}
+.data .chart .contents .container .img {
+  position: relative;
+  width: 12rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .chart .contents .container .img {
+    width: 160px;
+  }
+}
+.data .chart .contents .container .img img {
+  width: 12rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .chart .contents .container .img img {
+    width: 160px;
+  }
+}
+.data .chart .contents .container .img div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px), print {
+  .data .chart .contents .container .img div {
+    font-size: 4rem;
+  }
+}
+.data .chart .contents .container .img .value {
+  left: 30%;
+  -webkit-transform: translateX(-20%) translateY(-50%);
+          transform: translateX(-20%) translateY(-50%);
+  font-size: 2.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .data .chart .contents .container .img .value {
+    font-size: 2.6rem;
+  }
+}
+
+.plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .plan {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 4px;
+  }
+}
+.plan .gender {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 7rem 2rem;
+  background-color: #E0E0E0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px), print {
+  .plan .gender {
+    width: 50%;
+    padding: 60px 40px;
+  }
+}
+.plan .gender h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 6rem;
+  text-shadow: 0 0 0.8rem #333333;
+}
+@media screen and (min-width: 768px), print {
+  .plan .gender h2 {
+    margin: 0 auto 40px;
+    text-shadow: 0 0 0.8rem #333333;
+    line-height: 6rem;
+  }
+}
+.plan .gender h2 img {
+  -webkit-filter: drop-shadow(0px 0px 9px #333);
+          filter: drop-shadow(0px 0px 9px #333);
+}
+.plan .gender ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #FFF;
+}
+@media screen and (min-width: 768px), print {
+  .plan .gender ul {
+    gap: 12px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 30px;
+  }
+}
+.plan .gender ul .txt {
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .plan .gender ul .txt {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+.plan .gender ul .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.plan .gender ul .sub div {
+  color: #58CABE;
+}
+.plan .gender ul .sub div:nth-of-type(1) {
+  font-size: 2.4rem;
+  text-align: center;
+}
+.plan .gender ul .sub div:nth-of-type(2) {
+  font-size: 8rem;
+}
+.plan .gender ul .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .plan .gender ul .link {
+    margin: 0;
+  }
+}
+.plan .gender ul .link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plan .gender ul .link a div {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+@media screen and (min-width: 768px), print {
+  .plan .gender ul .link a div {
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+  }
+}
+.plan .gender ul .link a .arrow {
+  padding: 0;
+}
+.plan .gender ul .link a h3 {
+  color: #333333;
+  font-size: 1.6rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.plan .gender ul .link a h3:hover {
+  opacity: 0.7;
+}
+@media screen and (min-width: 768px), print {
+  .plan .gender ul .link a h3 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .plan .gender ul .btn a {
+    margin: 20px auto 0;
+  }
+}
+.plan .mens {
+  background-image: url(../../images/top/planm_bg_rwd.jpg);
+}
+@media screen and (min-width: 768px), print {
+  .plan .mens {
+    background-image: url(../../images/top/planm_bg_pc.jpg);
+  }
+}
+.plan .mens h2 {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
+}
+.plan .mens h2 span {
+  -webkit-text-decoration: underline #a7d5d0 0.5rem;
+          text-decoration: underline #a7d5d0 0.5rem;
+}
+.plan .mens h2 img {
+  max-width: 20rem;
+}
+@media screen and (min-width: 768px), print {
+  .plan .mens h2 img {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    height: 120px;
+  }
+}
+.plan .mens ul .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px), print {
+  .plan .mens ul .sub {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-height: 180px;
+  }
+}
+.plan .mens ul .sub img {
+  width: 400px;
+  margin: 20px 0;
+}
+.plan .mens ul .link a div {
+  border-top: 0.2rem solid #58CABE;
+  border-right: 0.2rem solid #58CABE;
+}
+@media screen and (min-width: 768px), print {
+  .plan .mens ul .link a div {
+    border-top: 3px solid #58CABE;
+    border-right: 3px solid #58CABE;
+  }
+}
+.plan .ladies {
+  background-image: url(../../images/top/planl_bg_rwd.jpg);
+}
+@media screen and (min-width: 768px), print {
+  .plan .ladies {
+    background-image: url(../../images/top/planl_bg_pc.jpg);
+  }
+}
+.plan .ladies h2 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+}
+.plan .ladies h2 span {
+  -webkit-text-decoration: underline #eabdc1 0.5rem;
+          text-decoration: underline #eabdc1 0.5rem;
+}
+.plan .ladies h2 img {
+  max-width: 21rem;
+}
+@media screen and (min-width: 768px), print {
+  .plan .ladies h2 img {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .plan .ladies ul .sub {
+    max-height: 180px;
+  }
+}
+.plan .ladies ul .sub img {
+  width: 420px;
+}
+.plan .ladies ul .link a div {
+  border-top: 0.2rem solid #58CABE;
+  border-right: 0.2rem solid #58CABE;
+}
+@media screen and (min-width: 768px), print {
+  .plan .ladies ul .link a div {
+    border-top: 3px solid #58CABE;
+    border-right: 3px solid #58CABE;
+  }
+}
+
+.cta {
+  color: #FFF;
+}
+@media screen and (min-width: 768px), print {
+  .cta .btn {
+    margin: 40px auto;
+  }
+}
+.cta .btn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 11rem;
+  padding: 2rem;
+  font-size: 2.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .cta .btn a {
+    max-width: 680px;
+  }
+}
+.cta .btn a span {
+  color: #FFF;
+  font-size: 1.8rem;
+}
+
+.conversation {
+  background-image: url(../../images/top/conversation_bg_rwd.jpg);
+  padding: 3rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .conversation {
+    background-image: url(../../images/top/conversation_bg_pc.jpg);
+    padding: 60px 20px;
+  }
+}
+.conversation ul li:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+.conversation ul li:nth-of-type(1) h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-shadow: 0 0 0.8rem #333333;
+}
+@media screen and (min-width: 768px), print {
+  .conversation ul li:nth-of-type(1) h2 {
+    font-size: 5.2rem;
+    text-align: center;
+  }
+}
+.conversation ul li:nth-of-type(1) h2 span {
+  margin-left: 8rem;
+  color: #FFF;
+  text-shadow: 0 0 0.8rem #333333;
+}
+@media screen and (min-width: 768px), print {
+  .conversation ul li:nth-of-type(1) h2 span {
+    margin-left: 0;
+  }
+}
+.conversation ul li:nth-of-type(2) {
+  margin-bottom: 4rem;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-shadow: 0 0 0.4rem #333333;
+}
+@media screen and (min-width: 768px), print {
+  .conversation ul li:nth-of-type(2) {
+    margin-bottom: 120px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+.conversation ul .btn {
+  margin: 0 2rem;
+}
+
+.voice {
+  background-image: url(../../images/top/voice_bg_rwd.jpg);
+  padding: 7rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .voice {
+    background-image: url(../../images/top/voice_bg_pc.jpg);
+    padding: 110px 20px;
+  }
+}
+.voice .btn {
+  margin: 0 2rem;
+}
+.voice .btn a h2 {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .voice .btn a h2 {
+    font-size: 2rem;
+  }
+}
+
+.column {
+  padding: 4rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .column {
+    padding: 80px 40px;
+  }
+}
+.column h2 {
+  margin-bottom: 3rem;
+  color: #333333;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .column h2 {
+    margin-bottom: 50px;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+}
+.column .swiper {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .column .swiper {
+    margin-bottom: 60px;
+  }
+}
+.column .swiper .swiper-slide {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.column .swiper .swiper-slide a {
+  padding: 2rem;
+  background-color: #E9F9F8;
+}
+@media screen and (min-width: 768px), print {
+  .column .swiper .swiper-slide a {
+    margin-bottom: 20px;
+  }
+}
+.column .swiper .swiper-slide a img {
+  margin-bottom: 1rem;
+}
+.column .swiper .swiper-slide a div {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px), print {
+  .column .swiper .swiper-slide a div {
+    margin-bottom: 20px;
+  }
+}
+.column .swiper .swiper-slide a ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.4rem;
+}
+.column .swiper .swiper-slide a ul li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.4rem;
+  background-color: #58CABE;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px), print {
+  .column .swiper .swiper-slide a ul li {
+    padding: 4px 8px;
+  }
+}
+.column .btn {
+  margin: 0 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .column .btn {
+    margin: 0;
+  }
+}
