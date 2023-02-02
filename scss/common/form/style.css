@@ -47,97 +47,6 @@
   }
 }
 
-.step {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5rem;
-  margin-bottom: 3rem;
-}
-@media screen and (min-width: 768px), print {
-  .step {
-    gap: 120px;
-    margin-bottom: 40px;
-  }
-}
-@media screen and (min-width: 768px), print {
-  .step .contents {
-    font-size: 1.4rem;
-  }
-}
-.step .contents div {
-  position: relative;
-  width: 2.4rem;
-  height: 2.4rem;
-  margin: 0 auto;
-  border: solid 0.2rem #E0E0E0;
-  border-radius: 50%;
-}
-@media screen and (min-width: 768px), print {
-  .step .contents div {
-    width: 32px;
-    height: 32px;
-    border: solid 2px #E0E0E0;
-    border-radius: 50%;
-  }
-}
-.step .contents div span {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #E0E0E0;
-  font-size: 1.4rem;
-  text-align: center;
-}
-@media screen and (min-width: 768px), print {
-  .step .contents div span {
-    font-size: 2rem;
-  }
-}
-.step .contents p {
-  color: #E0E0E0;
-  font-size: 1.4rem;
-}
-@media screen and (min-width: 768px), print {
-  .step .selected {
-    font-size: 1.8rem;
-  }
-}
-.step .selected div {
-  width: 3.4rem;
-  height: 3.4rem;
-  background-color: #58CABE;
-  border: none;
-  border-radius: 50%;
-  color: #FFF;
-  font-size: 2.4rem;
-  text-align: center;
-}
-@media screen and (min-width: 768px), print {
-  .step .selected div {
-    width: 38px;
-    height: 38px;
-    font-size: 2.6rem;
-  }
-}
-.step .selected div span {
-  color: #FFF;
-  font-size: 2.2rem;
-}
-.step .selected p {
-  color: #58CABE;
-  font-size: 1.6rem;
-}
-
 .form_area .form {
   margin: 0 2rem 3rem;
 }
@@ -184,6 +93,7 @@
 .form_area .form input[type=tel],
 .form_area .form textarea,
 .form_area .form input[type=checkbox] {
+  font-family: "Noto Sans JP", sans-serif;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -210,6 +120,23 @@
 .form_area .form textarea::placeholder,
 .form_area .form input[type=checkbox]::placeholder {
   color: #E0E0E0;
+}
+.form_area .form input[type=date] {
+  font-family: "Noto Sans JP", sans-serif;
+  position: relative;
+  color: #E0E0E0;
+}
+.form_area .form input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.form_area .form input[type=date]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.form_area .form input[type=date]::-webkit-clear-button {
+  -webkit-appearance: none;
 }
 .form_area .form .area_default {
   padding: 1.2rem;
@@ -471,6 +398,18 @@
     padding: 14px 20px;
     border-radius: 3px;
   }
+}
+.form_area .form .error_message {
+  margin-top: 1rem;
+  text-indent: 1em;
+  line-height: 2;
+  background-color: #FFE5E8;
+  color: #f00;
+  font-size: 1.4rem;
+  border-radius: 3px;
+}
+.form_area span[data-name=FlexTextarea] {
+  display: block;
 }
 .form_area .FlexTextarea {
   display: block;
@@ -1426,6 +1365,179 @@ div.wpcf7-mail-sent-ok {
 	margin: 0 !important;
 	padding: 0 !important;
 } */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 999999;
+}
+.modal-container .modal-position {
+  max-height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position {
+    width: 800px;
+  }
+}
+.modal-container .modal-position .modal-body {
+  position: relative;
+  /* display: inline-block; */
+  vertical-align: middle;
+}
+.modal-container .modal-position .modal-body .modal-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -40px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-container .modal-position .modal-body .modal-content {
+  background: #fff;
+  text-align: left;
+  padding: 20px;
+  overflow: auto;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.modal-container .modal-position .modal-body .modal-content .text {
+  text-align: center;
+  font-size: clamp(1.3rem, 8vw - 2rem, 1.4rem);
+}
+.modal-container .modal-position .modal-body .modal-content .primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary {
+    border: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.modal-container .modal-position .modal-body .modal-content .primary dt {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  font-size: 1.4rem;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-container .modal-position .modal-body .modal-content .primary dt span {
+  background-color: #999;
+  width: 100%;
+  padding: 5px 15px;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary dt span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary dt:first-of-type {
+    border-top: 1px solid #ccc;
+  }
+}
+.modal-container .modal-position .modal-body .modal-content .primary dd {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  background-color: #FFF;
+  font-size: 1.4rem;
+  padding: 10px 15px;
+  min-height: 28px;
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary dd:first-of-type {
+    border-top: 1px solid #ccc;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary dd {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+}
+.modal-container .modal-position .modal-body .modal-content .button-box {
+  text-align: center;
+}
+.modal-container .modal-position .modal-body .modal-content .button-box button {
+  display: inline-block;
+  margin: 5px;
+  color: #FFF;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  width: 120px;
+  padding: 12px;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .button-box button {
+    width: 150px;
+    padding: 15px;
+  }
+}
+.modal-container .modal-position .modal-body .modal-content .button-box button.modal-close {
+  background-color: #999;
+  font-size: clamp(1.4rem, 8vw - 2rem, 1.6rem);
+}
+.modal-container .modal-position .modal-body .modal-content .button-box button.submit {
+  background-color: #FF6C79;
+  font-size: clamp(1.6rem, 8vw - 2rem, 1.8rem);
+}
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .appointment,
 .request,
 .partner,
@@ -2595,14 +2707,6 @@ div.wpcf7-mail-sent-ok {
 }
 @media screen and (min-width: 768px), print {
   .thanks .thanks_header li .form_sub {
-    margin-bottom: 30px;
-  }
-}
-.thanks .thanks_header li .wpcf7c-elm-step3 .step {
-  margin-bottom: 2rem;
-}
-@media screen and (min-width: 768px), print {
-  .thanks .thanks_header li .wpcf7c-elm-step3 .step {
     margin-bottom: 30px;
   }
 }

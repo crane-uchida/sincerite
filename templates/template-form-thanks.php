@@ -1,5 +1,5 @@
 <?php
-/* Template Name: 【リニューアル】フォーム */
+/* Template Name:フォーム送信完了 */
 remove_filter('the_content', 'wpautop');
 get_header(); ?>
 
@@ -8,17 +8,12 @@ get_header(); ?>
                 while (have_posts()) :
                     the_post();
                     ?>
-
                     <?php the_content(); ?>
-
-
                     <?php
                 endwhile;
             else:
                 ?>
-
                 <p>ページはありません！</p>
-
                 <?php
             endif;
             ?>

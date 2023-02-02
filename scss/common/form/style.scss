@@ -47,96 +47,6 @@
 	}
 }
 
-.step {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 5rem;
-	margin-bottom: 3rem;
-
-	@media #{$pc} {
-		gap: 120px;
-		margin-bottom: 40px;
-	}
-
-	.contents {
-
-		@media #{$pc} {
-			font-size: 1.4rem;
-		}
-
-		div {
-			position: relative;
-			width: 2.4rem;
-			height: 2.4rem;
-			margin: 0 auto;
-			border: solid 0.2rem $gray_light;
-			border-radius: 50%;
-
-			@media #{$pc} {
-				width: 32px;
-				height: 32px;
-				border: solid 2px $gray_light;
-				border-radius: 50%;
-			}
-
-			span {
-				display: block;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				color: $gray_light;
-				font-size: 1.4rem;
-				text-align: center;
-
-				@media #{$pc} {
-					font-size: 2rem;
-				}
-			}
-		}
-
-		p {
-			color: $gray_light;
-			font-size: 1.4rem;
-		}
-	}
-
-	.selected {
-
-		@media #{$pc} {
-			font-size: 1.8rem;
-		}
-
-		div {
-			width: 3.4rem;
-			height: 3.4rem;
-			background-color: $primary;
-			border: none;
-			border-radius: 50%;
-			color: $white;
-			font-size: 2.4rem;
-			text-align: center;
-
-			@media #{$pc} {
-				width: 38px;
-				height: 38px;
-				font-size: 2.6rem;
-			}
-
-			span {
-				color: $white;
-				font-size: 2.2rem;
-			}
-		}
-
-		p {
-			color: $primary;
-			font-size: 1.6rem;
-		}
-	}
-}
-
 // ------ form_area 共通パーツ end ------ //
 
 
@@ -188,7 +98,8 @@
 		input[type="email"],
 		input[type="tel"],
 		textarea,
-		input[type="checkbox"] {
+		input[type="checkbox"], {
+			font-family: "Noto Sans JP", sans-serif;
 			appearance: none;
 			background-color: $white;
 			color: $txt;
@@ -196,6 +107,24 @@
 			&::placeholder {
 				color: $gray_light;
 			}
+		}
+
+		input[type="date"]{
+			font-family: "Noto Sans JP", sans-serif;
+			position:relative;
+			color: $gray_light;
+		}
+		input[type="date"]::-webkit-calendar-picker-indicator {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+		input[type="date"]::-webkit-inner-spin-button{
+			-webkit-appearance: none;
+		}
+		input[type="date"]::-webkit-clear-button{
+			-webkit-appearance: none;
 		}
 
 		.area_default {
@@ -470,6 +399,19 @@
 				border-radius: 3px;
 			}
 		}
+		.error_message{
+			margin-top: 1rem;
+			text-indent: 1em;
+			line-height: 2;
+			background-color: $secondary_light;
+			color: #f00;
+			font-size: 1.4rem;
+			border-radius: 3px;
+		}
+	}
+
+	span[data-name="FlexTextarea"]{
+		display: block;
 	}
 
 	.FlexTextarea {
@@ -1009,6 +951,146 @@ div.wpcf7-mail-sent-ok {
 	margin: 0 !important;
 	padding: 0 !important;
 } */
+
+
+
+
+.modal-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, 50%);
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+	box-sizing: border-box;
+	z-index: 999999;
+	.modal-position{
+	  max-height: 80vh;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  width: 100%;
+	  @media #{$pc}{
+		width: 800px;
+	  }
+	  .modal-body {
+		position: relative;
+		/* display: inline-block; */
+		vertical-align: middle;
+		.modal-button {
+		  position: absolute;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  top: -40px;
+		  right: 0;
+		  width: 40px;
+		  height: 40px;
+		  font-size: 40px;
+		  color: #fff;
+		  cursor: pointer;
+		}
+		.modal-content {
+		  background: #fff;
+		  text-align: left;
+		  padding: 20px;
+		  overflow: auto;
+		  @include font-notosans();
+		  .text{
+			text-align: center;
+			font-size: clamp(1.3rem, 8vw - 2rem, 1.4rem);
+		  }
+		  .primary{
+			display:flex;
+			align-items: stretch;
+			margin-top:20px;
+			margin-bottom:20px;
+			border: 1px solid #ccc;
+			flex-flow: column;
+			@media #{$pc}{
+				border:none;
+				flex-flow:row nowrap;
+				flex-wrap: wrap;
+			}
+			dt{
+			  flex-basis: 30%;
+			  font-size:1.4rem;
+			  color:$white;
+			  display: flex;
+			  span{
+				background-color: #999;
+				width: 100%;
+				padding: 5px 15px;
+				@media #{$pc}{
+					display: flex;
+					align-items: center;
+				}
+			  }
+			  &:first-of-type{
+				@media #{$pc}{
+				  border-top: 1px solid #ccc;
+				}
+			  }
+			}
+			dd{
+			  flex-basis: 70%;
+			  background-color: $white;
+			  font-size: 1.4rem;
+			  padding: 10px 15px;
+			  min-height: 28px;
+			  line-height: 1.4;
+			  &:first-of-type{
+				@media #{$pc}{
+				  border-top: 1px solid #ccc;
+				}
+			  }
+			  @media #{$pc}{
+				border-right: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			  }
+			}
+		  }
+		  .button-box{
+			text-align: center;
+			button{
+			  display: inline-block;
+			  margin: 5px;
+			  color: $white;
+			  cursor: pointer;
+			  border: 0;
+			  border-radius: 5px;
+			  width: 120px;
+			  padding: 12px;
+			  @media #{$pc}{
+				width: 150px;
+				padding: 15px;
+			  }
+			  &.modal-close{
+				background-color: #999;
+				font-size: clamp(1.4rem, 8vw - 2rem, 1.6rem);
+			  }
+			  &.submit{
+				background-color: $secondary;
+				font-size: clamp(1.6rem, 8vw - 2rem, 1.8rem);
+			  }
+			}
+		  }
+		}
+	  }
+	}
+	&.active{
+	  opacity: 1;
+	  visibility: visible;
+	}
+}
+
+
 
 // ------ form_area 確認フォーム end ------ //
 
@@ -2064,16 +2146,6 @@ div.wpcf7-mail-sent-ok {
 
 				@media #{$pc} {
 					margin-bottom: 30px;
-				}
-			}
-
-			.wpcf7c-elm-step3 {
-				.step {
-					margin-bottom: 2rem;
-
-					@media #{$pc} {
-						margin-bottom: 30px;
-					}
 				}
 			}
 

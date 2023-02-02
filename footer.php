@@ -1,4 +1,4 @@
-<?php if (!(is_page_template('page-form.php') || is_page('form01') )) : ?>
+<?php if (!(is_page('form01') || is_page('form02') || is_page('form03') || is_page('form04') || is_page('form05') || is_page('form06') || is_page('online') || is_page('recruit') || is_page('first_matching') )) : ?>
 
 <div class=rwd>
   <ul class="floating">
@@ -210,8 +210,33 @@
 
 </div><!-- container  -->
 
-<?php if (is_page_template('page-form.php')) : ?>
+
+<?php if (is_page('form01') || is_page('form02') || is_page('form03') || is_page('form04') || is_page('form05') || is_page('form06') || is_page('online') || is_page('recruit') || is_page('first_matching')) : ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- フォームで使っているスクリプト -->
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/form.js"></script>
+<!-- 「フリガナ」を自動で入力する -->
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.autoKana.js">
+</script>
+<script>
+jQuery(function() {
+  jQuery.fn.autoKana('#name', '#name_kana', {
+    katakana: true
+  });
+});
+</script>
+
+<!-- 【リニューアル】 郵便番号から住所の自動入力 -->
+<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="utf-8"></script>
+<script type="text/javascript">
+jQuery(function($) {
+  $('.btn_address').click(function() {
+    AjaxZip3.zip2addr('txt_number', '', 'txt_prefectures', 'txt_address');
+  });
+});
+</script>
+
 <?php endif; ?>
 
 <?php wp_footer(); ?>
@@ -221,7 +246,7 @@
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/common.js"></script>
 
 <?php if (is_page(5728)) :?>
-<!-- 資料請求フォーム（サンクスページ）に、A8.netのタグ設置のための準備 -->
+<!-- 資料請求サンクスページに、A8.netのタグ設置のための準備 -->
 <?php
 	$var= do_shortcode('[wpcf7sn_view_count id="5730"]'); //「Contact Form 7 Serial Numbers」プラグインのショートコードの出力をPHP変数varに格納する
 	echo <<< EOD
@@ -231,7 +256,7 @@
 	EOD;
 	?>
 
-<!-- 資料請求フォーム（サンクスページ）に、A8.netのタグ設置。受付番号(order_number)に変数(pram)をいれることで動的になる。-->
+<!-- 資料請求サンクスページに、A8.netのタグ設置。受付番号(order_number)に変数(pram)をいれることで動的になる。-->
 <span id="a8sales"></span>
 <script src="//statics.a8.net/a8sales/a8sales.js"></script>
 <script>
@@ -249,7 +274,7 @@ a8sales({
 </script>
 
 <?php elseif (is_page(5645)) :?>
-<!-- 来店予約フォーム（サンクスページ）に、A8.netのタグ設置のための準備 -->
+<!-- 来店予約サンクスページに、A8.netのタグ設置のための準備 -->
 <?php
 	$var= do_shortcode('[wpcf7sn_view_count id="5641"]'); //「Contact Form 7 Serial Numbers」プラグインのショートコードの出力をPHP変数varに格納する
 	echo <<< EOD
@@ -259,7 +284,7 @@ a8sales({
 	EOD;
 ?>
 
-<!-- 来店予約フォーム（サンクスページ）に、A8.netのタグ設置。受付番号(order_number)に変数(pram)をいれることで動的になる。-->
+<!-- 来店予約サンクスページに、A8.netのタグ設置。受付番号(order_number)に変数(pram)をいれることで動的になる。-->
 <span id="a8sales"></span>
 <script src="//statics.a8.net/a8sales/a8sales.js"></script>
 <script>
@@ -332,32 +357,6 @@ jQuery(function($) {
 });
 </script>
 
-<?php elseif (is_page_template('templates/form.php')) : ?>
-<!-- フォームで使っているスクリプト -->
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/form.js"></script>
-<!-- 「フリガナ」を自動で入力する -->
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.autoKana.js">
-</script>
-<script>
-jQuery(function() {
-  jQuery.fn.autoKana('#name', '#name_kana', {
-    katakana: true
-  });
-});
-</script>
-
-<!-- 【リニューアル】 郵便番号から住所の自動入力 -->
-<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="utf-8"></script>
-<script type="text/javascript">
-jQuery(function($) {
-  $('.btn_address').click(function() {
-    AjaxZip3.zip2addr('txt_number', '', 'txt_prefectures', 'txt_address');
-  });
-});
-</script>
-
-
-
 <?php endif; ?>
 
 <script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/accordion.js"></script>
@@ -397,8 +396,5 @@ jQuery(window).on("scroll", function() {
 </script>
 
 
-
-
 </body>
-
 </html>

@@ -62,7 +62,8 @@ select {
 
 // iOSでのデフォルトスタイルを削除
 input[type="submit"],
-input[type="button"] {
+input[type="button"],
+button[type="button"] {
   border-radius: 0;
   -webkit-box-sizing: content-box;
   -webkit-appearance: button;
@@ -73,14 +74,16 @@ input[type="button"] {
 }
 
 input[type="submit"],
-input[type="button"] {
+input[type="button"],
+button[type="button"] {
   &::-webkit-search-decoration {
     opacity: 0;
   }
 }
 
 input[type="submit"],
-input[type="button"] {
+input[type="button"],
+button[type="button"] {
   &:focus {
     outline-offset: -2px;
   }

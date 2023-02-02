@@ -108,6 +108,20 @@ endif;
 
 </main>
 
-
+<?php 
+//「無料マッチング体験」サンクスページへリダイレクト
+if( get_the_ID() == '3840' ) {
+	$var= do_shortcode('[wpcf7sn_view_count id="4346"]');
+	$var= ++$var;
+echo <<< EOD
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+	var pram="$var";
+	location = window.location.host + '/first_matching/thanks/?id='+pram;
+}, false );
+</script>
+EOD;
+}
+?>
 
 <?php get_footer("first-matching"); ?>

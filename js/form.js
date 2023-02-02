@@ -341,8 +341,15 @@ jQuery(function() {
 			jQuery(this).css('opacity','1');
 		});
 	});
-	
-	
+
+
+	//日付(date)要素の値が変更されたとき、色を変更する
+	jQuery(function() {
+		jQuery('input[type="date"]').change(function() {
+			jQuery(this).css('color','#333');
+		});
+	});
+
 	
 	//【リニューアル】メールアドレス入力欄をクリックすると、注意事項を表示させる。
 	jQuery('input[type="email"]').focus(function() {
@@ -389,7 +396,7 @@ jQuery(function() {
 	
 	//【リニューアル】伸縮するテキストエリア */
 	jQuery(function(){
-		jQuery('.wpcf7 span.FlexTextarea').prepend('<div class="FlexTextarea__dummy" aria-hidden="true"></div>'); //対象要素内の先頭に要素を追加
+		jQuery('.wpcf7 span[data-name="FlexTextarea"]').prepend('<div class="FlexTextarea__dummy" aria-hidden="true"></div>'); //対象要素内の先頭に要素を追加
 	
 		function flexTextarea(el) {
 		const dummy = el.querySelector('.FlexTextarea__dummy')
@@ -398,7 +405,7 @@ jQuery(function() {
 		})
 		}
 	
-		document.querySelectorAll('.FlexTextarea').forEach(flexTextarea)
+		document.querySelectorAll('span[data-name="FlexTextarea"]').forEach(flexTextarea)
 	});
 	
 	
@@ -450,6 +457,18 @@ jQuery(function() {
 	
 	
 	
+	// フォームの日付カレンダーで水曜日を選択するとアラートを出す
+	jQuery(function(){
+		document.querySelector('#date_limit').addEventListener('change', () => {
+			let elem = document.querySelector('#date_limit');
+			let date = new Date(elem.value);
+			let dayOfWeek = date.getDay()
+			if (dayOfWeek === 3) { // 複数曜日なら、|| を使って併記していく
+				alert("水曜日は休業日となります。選択しなおしてください。");
+				elem.value = "";
+			}
+		});
+	});
 	
 	
 	

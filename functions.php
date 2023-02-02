@@ -39,28 +39,28 @@ function my_css_id_filter($var) {
 
 
 
-add_action('admin_init', 'hide_editor' );
-
-function hide_editor() {
-    // Get the Post ID.
-    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-    if( !isset( $post_id ) ) return;
+//add_action('admin_init', 'hide_editor' );
+//
+//function hide_editor() {
+//    // Get the Post ID.
+//    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+//    if( !isset( $post_id ) ) return;
 
 //    // Hide the editor on the page titled 'MyCustom'
 
-    $homepgname = get_the_title($post_id);
-    if($homepgname == 'MyCustom'){
-        remove_post_type_support('page', 'editor');
-    }
-    // Hide the editor on a page with a specific page template
-    // Get the name of the Page Template file.
-    $template_file = get_post_meta($post_id, '_wp_page_template', true);
+//    $homepgname = get_the_title($post_id);
+//    if($homepgname == 'MyCustom'){
+//        remove_post_type_support('page', 'editor');
+//    }
+//    // Hide the editor on a page with a specific page template
+//    // Get the name of the Page Template file.
+//    $template_file = get_post_meta($post_id, '_wp_page_template', true);
 
-    if($template_file == 'page-custom.php'){ // the filename of the page template
-        remove_post_type_support('page', 'editor');
-    }
+//    if($template_file == 'page-custom.php'){ // the filename of the page template
+//        remove_post_type_support('page', 'editor');
+//    }
 
-}
+//}
 
 
 
@@ -191,318 +191,6 @@ function change_excerpt_mblength($length) {
 }
 add_filter('excerpt_mblength', 'change_excerpt_mblength');
 
-
-
-
-
-// banner
-function campaign_shortcode() {
-	ob_start();
-	$date = new DateTime();
-	$date->setTimeZone(new DateTimeZone('Asia/Tokyo'));
-	$now_time = $date->format('Y-m-d H:i:s');
-	$get_time = '2017-01-31 23:59:59';
-
-	if (strtotime($now_time) < strtotime($get_time)) {
-		echo '<div class="pc">
-<p style="padding: 0;"><img class="alignnone size-full wp-image-2773" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/sinsyun_w640.jpg" alt="新春婚活キャンペーン" width="640" height="192" /></p>
-<p style="padding-top: 3px; padding-bottom: 3px;"><a href="http://www.club-sincerite.co.jp/form01/"><img class="alignnone size-full wp-image-2774" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/pc_reserve_btn_l.jpg" alt="初回来店カウンセリング予約" width="640" height="46" /></a></p>
-<p style="text-align: center; padding-top: 40px;">今年こそ始めると決めたあなたに。</p><br/>
-<p class="p_title" style="text-align: center; line-height: 1.5; padding-bottom: 5px; padding-top: 0px;">2017/01/07(土)より
-<img class="alignnone size-full wp-image-2750" style="padding-top: 5px; padding-bottom: 8px; width: 550px; margin: 0 auto;display:block;" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/title_cam.jpg" alt="新春婚活キャンペーン" width="400" height="auto" />を開催致します。</p>
-<p class="end_time" style="text-align: center; padding-top: 0; font-weight: bold; padding-bottom: 10px;"><strong><span style="color: #da283e;">～ 2017/01/31(火)まで ～</span></strong></p>
-<p style="padding-bottom: 10px; text-align: center;">これから活動をしようか考えていた方。<br/>
-素敵なパートナーと巡り合いたい方。<br/>
-2017年を素晴らしい年にしましょう。</p>
-<p style="padding-top: 0px; padding-bottom: 25px; text-align: center;">今、期間中にご入会頂きますと、<br/>
-入会金が50％OFFとなります。<br/>
-婚活を始めるなら新春キャンペーン中がお得。<br/>
-この機会に是非ご検討ください。</p>
-<p style="padding-bottom: 10px;"><img class="alignnone size-full wp-image-2775" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/pc_50off.jpg" alt="入会金50%off" width="640" height="106" /></p>
-
-<div class="con_box" style="background: #f9f9f9; box-sizing: border-box; padding: 0 15px 0;">
-<p class="st" style="text-align: center; padding-bottom: 10px; padding-top: 20px; color: #896a1a; font-weight: bold;">ご来店のご予約・お問い合わせはこちらから</p>
-<p style="padding-top: 9px; padding-bottom: 7px;"><a style="display: inline-block; width: 49%;" href="http://www.club-sincerite.co.jp/form01/"><img class="alignnone size-full wp-image-2776" style="display: inline-block;" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/pc_reserve_btn.jpg" sizes="(max-width: 315px) 100vw, 315px" srcset="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/pc_reserve_btn.jpg 315w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/pc_reserve_btn-300x78.jpg 300w" alt="来店予約" width="315" height="82" /></a><img class="alignnone size-full wp-image-2777" style="display: inline-block; margin-left: 10px; width: 49%;" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/pc_tel_btn.jpg" sizes="(max-width: 315px) 100vw, 315px" srcset="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/pc_tel_btn.jpg 315w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/pc_tel_btn-300x78.jpg 300w" alt="お電話でのお問い合わせ" width="315" height="82" /></p>
-
-</div>
-<br/>
-<p>【結婚相談所 サンセリテ青山】</P>
-
-</div>
-<div class="sp" style="margin: 0 10px 0 10px;">
-<p style="padding: 0; width: 100%;"><img class="aligncenter size-medium wp-image-2666" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/201701cam-300x240.jpg" sizes="(max-width: 100%) 100vw, 100%" srcset="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/201701cam-300x240.jpg 300w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/201701cam.jpg 666w" alt="201701cam" width="100%" height="auto" /></p>
-<p class="st" style="text-align: center; padding-bottom: 10px; padding-top: 11px; color: #896a1a;">ご来店のご予約はこちらから</p>
-<p style="text-align: center; padding: 0;"><a class="reserve_btn" href="http://www.club-sincerite.co.jp/form01/"><img class="alignnone size-full wp-image-2732" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/reserve_btn.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/reserve_btn.jpg 800w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/reserve_btn-300x79.jpg 300w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/reserve_btn-768x201.jpg 768w" alt="カウンセリング予約" width="100%" height="auto" /></a></p>
-<p style="text-align: center; padding-top: 40px;">今年こそ始めると決めたあなたに。</p><br/>
-<p class="p_title" style="text-align: center; line-height: 1.5; padding-bottom: 5px; padding-top: 0px;">2017/01/07(土)より
-<img class="alignnone size-full wp-image-2750" style="padding-top: 5px; padding-bottom: 8px;" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/title_cam.jpg" alt="新春婚活キャンペーン" width="900" height="90" />を開催致します。</p>
-<p class="end_time" style="text-align: center; padding-top: 0; font-weight: bold; padding-bottom: 10px;"><strong><span style="color: #da283e;">～ 2017/01/31(火)まで ～</span></strong></p>
-<p style="padding-bottom: 10px; text-align: center;">これから活動をしようか考えていた方。<br/>
-素敵なパートナーと巡り合いたい方。<br/>2017年を素晴らしい年にしましょう。</p>
-<p style="padding-top: 0px; padding-bottom: 35px; text-align: center;">今、期間中にご入会頂きますと、<br/>
-入会金が50％OFFとなります。</p>
-<p style="padding: 0;"><img class="alignnone size-full wp-image-2733" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/50off.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/50off.jpg 800w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/50off-300x115.jpg 300w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/50off-768x294.jpg 768w" alt="50%off" width="800" height="344" /></p>
-<p class="st" style="text-align: center; padding-bottom: 10px; padding-top: 11px; color: #896a1a;">ご来店のご予約はこちらから</p>
-<p style="text-align: center; padding: 0;"><a class="reserve_btn" href="http://www.club-sincerite.co.jp/form01/"><img class="alignnone size-full wp-image-2732" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/reserve_btn.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/reserve_btn.jpg 800w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/reserve_btn-300x79.jpg 300w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/reserve_btn-768x201.jpg 768w" alt="カウンセリング予約" width="100%" height="auto" /></a></p>
-<p style="padding-top: 50px; padding-bottom: 0px;">婚活を始めるなら新春キャンペーン中がお得。<br/>
-この機会に是非ご検討ください。</p><br/>
-<p style="padding-bottom: 0;">【結婚相談所 サンセリテ青山】<br/><br/>
-<a class="tel_btn" href="tel:0354682181">
-<img class="alignnone size-full wp-image-2734" src="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/tel_btn.jpg" sizes="(max-width: 800px) 100vw, 800px" srcset="http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/tel_btn.jpg 800w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/tel_btn-300x85.jpg 300w, http://www.club-sincerite.co.jp/wp-content/uploads/2017/01/tel_btn-768x217.jpg 768w" alt="tel:0354682181" width="800" height="254" />
-</a></p>
-
-</div>';
-	} else {
-		echo '<div class="campaign_text">只今キャンペーンは行っておりません。<br>次回キャンペーンをお待ちください。</div>';
-	}
-    return ob_get_clean();
-}
-add_shortcode('campaign', 'campaign_shortcode');
-
-
-
-//フォーム(Contact Form7) 完了画面(サンクス)ページ遷移の設定
-add_action( 'wp_footer', 'add_thanks_page' );
-function add_thanks_page() {
-
-//【旧】「東大・慶応・早稲田メンバーズ 簡易エントリー」フォームの場合
-//if( get_the_ID() == '272' ) {
-//	$var= do_shortcode('[wpcf7sn_view_count id="4285"]'); //「Contact Form 7 Serial Numbers」プラグインのショートコードの出力をPHP変数varに格納する
-//	$var= ++$var; //1を足す（出力した番号とメールに届く番号が一致していないため、1を足して番号を合わせている。プラグインのバグかも。）
-//echo <<< EOD
-//<script>
-//document.addEventListener( 'wpcf7mailsent', function( event ) {
-//	var pram="$var"; //PHP変数varをjavascript変数pramにいれる
-//	location = 'https://www.club-sincerite.co.jp/form03/form03-thanks/?id='+pram; //変数pramのパラメータ追加
-//}, false );
-//</script>
-//EOD;
-//}
-
-//【リニューアル】「東大・慶応・早稲田メンバーズ 簡易エントリー」フォームの場合
-if( get_the_ID() == '5850' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="5854"]'); //「Contact Form 7 Serial Numbers」プラグインのショートコードの出力をPHP変数varに格納する
-	$var= ++$var; //1を足す（出力した番号とメールに届く番号が一致していないため、1を足して番号を合わせている。プラグインのバグかも。）
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var"; //PHP変数varをjavascript変数pramにいれる
-	location = 'https://www.club-sincerite.co.jp/form03/form03-thanks/?id='+pram; //変数pramのパラメータ追加
-}, false );
-</script>
-EOD;
-}
-
-//【旧】「医師・歯科医師 たまごクラブ 簡易エントリー」フォームの場合
-//if( get_the_ID() == '274' ) {
-//	$var= do_shortcode('[wpcf7sn_view_count id="4296"]');
-//	$var= ++$var;
-//echo <<< EOD
-//<script>
-//document.addEventListener( 'wpcf7mailsent', function( event ) {
-//	var pram="$var";
-//	location = 'https://www.club-sincerite.co.jp/form04/form04-thanks/?id='+pram;
-//}, false );
-//</script>
-//EOD;
-//}
-
-//【リニューアル】「ドクターズ・プレミアム 簡易エントリー」フォームの場合
-if( get_the_ID() == '5846' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="5856"]');
-	$var= ++$var;
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var";
-	location = 'https://www.club-sincerite.co.jp/form04/form04-thanks/?id='+pram;
-}, false );
-</script>
-EOD;
-}
-
-//【旧】「ステータスプラン 簡易エントリー」フォームの場合
-//if( get_the_ID() == '270' ) {
-//	$var= do_shortcode('[wpcf7sn_view_count id="4314"]');
-//	$var= ++$var;
-//echo <<< EOD
-//<script>
-//document.addEventListener( 'wpcf7mailsent', function( event ) {
-//	var pram="$var";
-//	location = 'https://www.club-sincerite.co.jp/form02/form02-thanks/?id='+pram;
-//}, false );
-//</script>
-//EOD;
-//}
-
-//【リニューアル】「ステータスプラン 簡易エントリー」フォームの場合
-if( get_the_ID() == '5869' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="5873"]');
-	$var= ++$var;
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var";
-	location = 'https://www.club-sincerite.co.jp/form02/form02-thanks/?id='+pram;
-}, false );
-</script>
-EOD;
-}
-
-// 旧「無料パンフレット請求」フォームの場合
-// if( get_the_ID() == '277' ) {
-// 	$var= do_shortcode('[wpcf7sn_view_count id="4320"]');
-// 	$var= ++$var;
-// echo <<< EOD
-// <script>
-// document.addEventListener( 'wpcf7mailsent', function( event ) {
-// 	var pram="$var";
-// 	location = 'https://www.club-sincerite.co.jp/form05/form05-thanks/?id='+pram;
-// }, false );
-// </script>
-// EOD;
-// }
-
-//リニューアル「無料パンフレット請求」フォームの場合
-if( get_the_ID() == '5726' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="5730"]');
-	$var= ++$var;
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var";
-	location = 'https://www.club-sincerite.co.jp/form05/form05-thanks/?id='+pram;
-}, false );
-</script>
-EOD;
-}
-
-// 旧「初回来店予約」フォームの場合
-// if( get_the_ID() == '223' ) {
-// 	$var= do_shortcode('[wpcf7sn_view_count id="4327"]');
-// 	$var= ++$var;
-// echo <<< EOD
-// <script>
-// document.addEventListener( 'wpcf7mailsent', function( event ) {
-// 	var pram="$var";
-// 	location = 'https://www.club-sincerite.co.jp/form01/form01-thanks/?id='+pram;
-// }, false );
-// </script>
-// EOD;
-// }
-
-// リニューアル「初回来店予約」フォームの場合
-if( get_the_ID() == '5642' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="5641"]');
-	$var= ++$var;
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var";
-	location = 'https://www.club-sincerite.co.jp/form01/form01-thanks/?id='+pram;
-}, false );
-</script>
-EOD;
-}
-
-// 旧「パートナー診断」フォームの場合
-//if( get_the_ID() == '279' ) {
-//	$var= do_shortcode('[wpcf7sn_view_count id="4335"]');
-//	$var= ++$var;
-//echo <<< EOD
-//<script>
-//document.addEventListener( 'wpcf7mailsent', function( event ) {
-//	var pram="$var";
-//	location = 'https://www.club-sincerite.co.jp/form06/form06-thanks/?id='+pram;
-//}, false );
-//</script>
-//EOD;
-//}
-
-// リニューアル「パートナー診断」フォームの場合
-if( get_the_ID() == '5774' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="5778"]');
-	$var= ++$var;
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var";
-	location = 'https://www.club-sincerite.co.jp/form06/form06-thanks/?id='+pram;
-}, false );
-</script>
-EOD;
-}
-
-//「無料マッチング体験」フォームの場合
-if( get_the_ID() == '3840' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="4346"]');
-	$var= ++$var;
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var";
-	location = 'https://www.club-sincerite.co.jp/first_matching/thanks/?id='+pram;
-}, false );
-</script>
-EOD;
-}
-
-// 旧「オンライン面談」フォームの場合
-//if( get_the_ID() == '4778' ) {
-//	$var= do_shortcode('[wpcf7sn_view_count id="4780"]');
-//	$var= ++$var;
-//echo <<< EOD
-//<script>
-//document.addEventListener( 'wpcf7mailsent', function( event ) {
-//	var pram="$var";
-//	location = 'https://www.club-sincerite.co.jp/online/thanks/?id='+pram;
-//}, false );
-//</script>
-//EOD;
-//}
-// リニューアル「オンライン面談」フォームの場合
-if( get_the_ID() == '5797' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="5801"]');
-	$var= ++$var;
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var";
-	location = 'https://www.club-sincerite.co.jp/online/thanks/?id='+pram;
-}, false );
-</script>
-EOD;
-}
-
-// 旧「求人応募」フォームの場合
-//if( get_the_ID() == '5434' ) {
-//	$var= do_shortcode('[wpcf7sn_view_count id="5433"]');
-//	$var= ++$var;
-//echo <<< EOD
-//<script>
-//document.addEventListener( 'wpcf7mailsent', function( event ) {
-//	var pram="$var";
-//	location = 'https://www.club-sincerite.co.jp/recruit/thanks/?id='+pram;
-//}, false );
-//</script>
-//EOD;
-//}
-
-// リニューアル「求人応募」フォームの場合
-if( get_the_ID() == '5901' ) {
-	$var= do_shortcode('[wpcf7sn_view_count id="5914"]');
-	$var= ++$var;
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	var pram="$var";
-	location = 'https://www.club-sincerite.co.jp/recruit/thanks/?id='+pram;
-}, false );
-</script>
-EOD;
-}
-
-}
 
 
 
@@ -1070,6 +758,11 @@ function custom_select_values( $values, $options, $args ) {
 
 
 
+// Contact Form 7の自動pタグ無効
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+  return false;
+}
 
 
 ?>
