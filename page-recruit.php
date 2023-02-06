@@ -82,33 +82,113 @@ get_header(); ?>
       function formCheck() {
         var number = $('input[name="tel"]').val()
         number = number.replace(/-/g,'');
+
+        var is_check = true;
+        var txt_name_error = $(".txt_name .error_message");
+        var select_yy_error = $(".select_yy .error_message");
+        var select_mm_error = $(".select_mm .error_message");
+        var select_dd_error = $(".select_dd .error_message");
+        var gender_error = $(".gender .error_message");
+        var txt_email_error = $(".txt_email .error_message");
+        var txt_number_error = $(".txt_number .error_message");
+        var txt_prefectures_error = $(".txt_prefectures .error_message");
+        var txt_address_error = $(".txt_address .error_message");
+        var tel_error = $(".tel .error_message");
+        var select_occupation_error = $(".select_occupation .error_message");
+        var checkbox_error = $(".checkbox .error_message");
+
         if ($('input[name="txt_name"]').val() == "") {
-          $(".txt_name .error_message").text("お名前を入力してください");
-        } else if ($('select[name="select_yy"] option:selected').val() == "") {
-          $(".select_yy_mm_dd .error_message").text("生年月日の年を選択してください");
-        } else if ($('select[name="select_mm"] option:selected').val() == "") {
-          $(".select_yy_mm_dd .error_message").text("生年月日の月を選択してください");
-        } else if ($('select[name="select_dd"] option:selected').val() == "") {
-          $(".select_yy_mm_dd .error_message").text("生年月日の日を選択してください");
-        } else if ($('input[name="gender"]:checked').val() === undefined ) {
-          $(".gender .error_message").text("性別を選択してください");
-        } else if ($('input[name="txt_email"]').val() == "") {
-          $(".txt_email .error_message").text("メールアドレスを入力してください");
-        } else if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
-          $(".txt_email .error_message").text("メールアドレスを正しく入力してください");
-        } else if ($('input[name="txt_number"]').val() == "") {
-          $(".txt_number .error_message").text("郵便番号を入力してください");
-        } else if ($('input[name="txt_prefectures"]').val() == "") {
-          $(".txt_prefectures .error_message").text("住所（都道府県）を入力してください");
-        } else if ($('input[name="txt_address"]').val() == "") {
-          $(".txt_address .error_message").text("住所を入力してください");
-        } else if (number.length < 10) {
-          $(".tel .error_message").text("電話番号を正しく入力してください");
-        } else if ($('select[name="select_occupation"] option:selected').val() == "") {
-          $(".select_occupation .error_message").text("希望職種を選択してください");
-        } else if (!$('input[name="checkbox"]').prop("checked")) {
-          $(".checkbox .error_message").text("個人情報に同意してください");
-        } else {
+          is_check = false;
+          txt_name_error.text("お名前を入力してください");
+        }else{
+          txt_name_error.text("");
+        }
+        
+        if ($('select[name="select_yy"] option:selected').val() == "") {
+          is_check = false;
+          select_yy_error.text("生年月日の年を選択してください");
+        }else{
+          select_yy_error.text("");
+        }
+        
+        if ($('select[name="select_mm"] option:selected').val() == "") {
+          is_check = false;
+          select_mm_error.text("生年月日の月を選択してください");
+        }else{
+          select_mm_error.text("");
+        }
+        
+        if ($('select[name="select_dd"] option:selected').val() == "") {
+          is_check = false;
+          select_dd_error.text("生年月日の日を選択してください");
+        }else{
+          select_dd_error.text("");
+        }
+        
+        if ($('input[name="gender"]:checked').val() === undefined ) {
+          is_check = false;
+          gender_error.text("性別を選択してください");
+        }else{
+          gender_error.text("");
+        }
+        
+        if ($('input[name="txt_email"]').val() == "") {
+          is_check = false;
+          txt_email_error.text("メールアドレスを入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+        
+        if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
+          is_check = false;
+          txt_email_error.text("メールアドレスを正しく入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+        
+        if ($('input[name="txt_number"]').val() == "") {
+          is_check = false;
+          txt_number_error.text("郵便番号を入力してください");
+        }else{
+          txt_number_error.text("");
+        }
+        
+        if ($('input[name="txt_prefectures"]').val() == "") {
+          is_check = false;
+          txt_prefectures_error.text("住所（都道府県）を入力してください");
+        }else{
+          txt_prefectures_error.text("");
+        }
+        
+        if ($('input[name="txt_address"]').val() == "") {
+          is_check = false;
+          txt_address_error.text("住所を入力してください");
+        }else{
+          txt_address_error.text("");
+        }
+        
+        if (number.length < 10) {
+          is_check = false;
+          tel_error.text("電話番号を正しく入力してください");
+        }else{
+          tel_error.text("");
+        }
+        
+        if ($('select[name="select_occupation"] option:selected').val() == "") {
+          is_check = false;
+          select_occupation_error.text("希望職種を選択してください");
+        }else{
+          select_occupation_error.text("");
+        }
+        
+        if (!$('input[name="checkbox"]').prop("checked")) {
+          is_check = false;
+          checkbox_error.text("個人情報に同意してください");
+        }else{
+          checkbox_error.text("");
+        }
+        
+        if(is_check){
           $(".error_message").text("");
           $('#entry_send').attr("type", "submit");
 
@@ -120,6 +200,7 @@ get_header(); ?>
           container = $('.modal-container');
           container.addClass('active');
         }
+        
       }
 
     };

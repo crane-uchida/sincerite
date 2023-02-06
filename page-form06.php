@@ -139,71 +139,265 @@ get_header(); ?>
       function formCheck() {
         var number = $('input[name="tel"]').val()
         number = number.replace(/-/g,'');
+
+        var is_check = true;
+        var txt_name_error = $(".txt_name .error_message");
+        var gender_error = $(".gender .error_message");
+        var select_age_error = $(".select_age .error_message");
+        var select_zodiac_error = $(".select_zodiac .error_message");
+        var select_bloodtype_error = $(".select_bloodtype .error_message");
+        var select_1_error = $(".select_1 .error_message");
+        var select_2_error = $(".select_2 .error_message");
+        var yesno_1_error = $(".yesno_1 .error_message");
+        var select_3_error = $(".select_3 .error_message");
+        var yesno_2_error = $(".yesno_2 .error_message");
+        var select_4_error = $(".select_4 .error_message");
+        var yesno_3_error = $(".yesno_3 .error_message");
+        var yesno_4_error = $(".yesno_4 .error_message");
+        var select_5_error = $(".select_5 .error_message");
+        var yesno_5_error = $(".yesno_5 .error_message");
+        var yesno_6_error = $(".yesno_6 .error_message");
+        var select_6_error = $(".select_6 .error_message");
+        var select_7_error = $(".select_7 .error_message");
+        var yesno_7_error = $(".yesno_7 .error_message");
+        var select_8_error = $(".select_8 .error_message");
+        var yesno_8_error = $(".yesno_8 .error_message");
+        var select_9_error = $(".select_9 .error_message");
+        var yesno_9_error = $(".yesno_9 .error_message");
+        var select_10_error = $(".select_10 .error_message");
+        var select_11_error = $(".select_11 .error_message");
+        var txt_number_error = $(".txt_number .error_message");
+        var txt_prefectures_error = $(".txt_prefectures .error_message");
+        var txt_address_error = $(".txt_address .error_message");
+        var txt_email_error = $(".txt_email .error_message");
+        var tel_error = $(".tel .error_message");
+        var checkbox_error = $(".checkbox .error_message");
+
         if ($('input[name="txt_name"]').val() == "") {
-          $(".txt_name .error_message").text("お名前を入力してください");
-        } else if ($('input[name="gender"]:checked').val() === undefined ) {
-          $(".gender .error_message").text("性別を選択してください");
-        } else if ($('select[name="select_age"] option:selected').val() == "") {
-          $(".select_age .error_message").text("あなたの年齢層を選択してください");
-        } else if ($('select[name="select_zodiac"] option:selected').val() == "") {
-          $(".select_zodiac .error_message").text("あなたの星座を選択してください");
-        } else if ($('select[name="select_bloodtype"] option:selected').val() == "") {
-          $(".select_bloodtype .error_message").text("あなたの血液型を選択してください");
-        } else if ($('select[name="select_1"] option:selected').val() == "") {
-          $(".select_1 .error_message").text("選択してください");
-        } else if ($('select[name="select_2"] option:selected').val() == "") {
-          $(".select_2 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_1"]:checked').val() === undefined ) {
-          $(".yesno_1 .error_message").text("選択してください");
-        } else if ($('select[name="select_3"] option:selected').val() == "") {
-          $(".select_3 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_2"]:checked').val() === undefined ) {
-          $(".yesno_2 .error_message").text("選択してください");
-        } else if ($('select[name="select_4"] option:selected').val() == "") {
-          $(".select_4 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_3"]:checked').val() === undefined ) {
-          $(".yesno_3 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_4"]:checked').val() === undefined ) {
-          $(".yesno_4 .error_message").text("選択してください");
-        } else if ($('select[name="select_5"] option:selected').val() == "") {
-          $(".select_5 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_5"]:checked').val() === undefined ) {
-          $(".yesno_5 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_6"]:checked').val() === undefined ) {
-          $(".yesno_6 .error_message").text("選択してください");
-        } else if ($('select[name="select_6"] option:selected').val() == "") {
-          $(".select_6 .error_message").text("選択してください");
-        } else if ($('select[name="select_7"] option:selected').val() == "") {
-          $(".select_7 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_7"]:checked').val() === undefined ) {
-          $(".yesno_7 .error_message").text("選択してください");
-        } else if ($('select[name="select_8"] option:selected').val() == "") {
-          $(".select_8 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_8"]:checked').val() === undefined ) {
-          $(".yesno_8 .error_message").text("選択してください");
-        } else if ($('select[name="select_9"] option:selected').val() == "") {
-          $(".select_9 .error_message").text("選択してください");
-        } else if ($('input[name="yesno_9"]:checked').val() === undefined ) {
-          $(".yesno_9 .error_message").text("選択してください");
-        } else if ($('select[name="select_10"] option:selected').val() == "") {
-          $(".select_10 .error_message").text("選択してください");
-        } else if ($('select[name="select_11"] option:selected').val() == "") {
-          $(".select_11 .error_message").text("選択してください");
-        } else if ($('input[name="txt_number"]').val() == "") {
-          $(".txt_number .error_message").text("郵便番号を入力してください");
-        } else if ($('input[name="txt_prefectures"]').val() == "") {
-          $(".txt_prefectures .error_message").text("住所（都道府県）を入力してください");
-        } else if ($('input[name="txt_address"]').val() == "") {
-          $(".txt_address .error_message").text("住所を入力してください");
-        } else if ($('input[name="txt_email"]').val() == "") {
-          $(".txt_email .error_message").text("メールアドレスを入力してください");
-        } else if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
-          $(".txt_email .error_message").text("メールアドレスを正しく入力してください");
-        } else if (number.length < 10) {
-          $(".tel .error_message").text("電話番号を正しく入力してください");
-        } else if (!$('input[name="checkbox"]').prop("checked")) {
-          $(".checkbox .error_message").text("個人情報に同意してください");
-        } else {
+          is_check = false;
+          txt_name_error.text("お名前を入力してください");
+        }else{
+          txt_name_error.text("");
+        }
+        
+        if ($('input[name="gender"]:checked').val() === undefined ) {
+          is_check = false;
+          gender_error.text("性別を選択してください");
+        }else{
+          gender_error.text("");
+        }
+        
+        if ($('select[name="select_age"] option:selected').val() == "") {
+          is_check = false;
+          select_age_error.text("あなたの年齢層を選択してください");
+        }else{
+          select_age_error.text("");
+        }
+        
+        if ($('select[name="select_zodiac"] option:selected').val() == "") {
+          is_check = false;
+          select_zodiac_error.text("あなたの星座を選択してください");
+        }else{
+          select_zodiac_error.text("");
+        }
+        
+        if ($('select[name="select_bloodtype"] option:selected').val() == "") {
+          is_check = false;
+          select_bloodtype_error.text("あなたの血液型を選択してください");
+        }else{
+          select_bloodtype_error.text("");
+        }
+        
+        if ($('select[name="select_1"] option:selected').val() == "") {
+          is_check = false;
+          select_1_error.text("選択してください");
+        }else{
+          select_1_error.text("");
+        }
+        
+        if ($('select[name="select_2"] option:selected').val() == "") {
+          is_check = false;
+          select_2_error.text("選択してください");
+        }else{
+          select_2_error.text("");
+        }
+        
+        if ($('input[name="yesno_1"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_1_error.text("選択してください");
+        }else{
+          yesno_1_error.text("");
+        }
+        
+        if ($('select[name="select_3"] option:selected').val() == "") {
+          is_check = false;
+          select_3_error.text("選択してください");
+        }else{
+          select_3_error.text("");
+        }
+        
+        if ($('input[name="yesno_2"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_2_error.text("選択してください");
+        }else{
+          yesno_2_error.text("");
+        }
+        
+        if ($('select[name="select_4"] option:selected').val() == "") {
+          is_check = false;
+          select_4_error.text("選択してください");
+        }else{
+          select_4_error.text("");
+        }
+        
+        if ($('input[name="yesno_3"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_3_error.text("選択してください");
+        }else{
+          yesno_3_error.text("");
+        }
+        
+        if ($('input[name="yesno_4"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_4_error.text("選択してください");
+        }else{
+          yesno_4_error.text("");
+        }
+        
+        if ($('select[name="select_5"] option:selected').val() == "") {
+          is_check = false;
+          select_5_error.text("選択してください");
+        }else{
+          select_5_error.text("");
+        }
+        
+        if ($('input[name="yesno_5"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_5_error.text("選択してください");
+        }else{
+          yesno_5_error.text("");
+        }
+        
+        if ($('input[name="yesno_6"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_6_error.text("選択してください");
+        }else{
+          yesno_6_error.text("");
+        }
+        
+        if ($('select[name="select_6"] option:selected').val() == "") {
+          is_check = false;
+          select_6_error.text("選択してください");
+        }else{
+          select_6_error.text("");
+        }
+        
+        if ($('select[name="select_7"] option:selected').val() == "") {
+          is_check = false;
+          select_7_error.text("選択してください");
+        }else{
+          select_7_error.text("");
+        }
+        
+        if ($('input[name="yesno_7"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_7_error.text("選択してください");
+        }else{
+          yesno_7_error.text("");
+        }
+        
+        if ($('select[name="select_8"] option:selected').val() == "") {
+          is_check = false;
+          select_8_error.text("選択してください");
+        }else{
+          select_8_error.text("");
+        }
+        
+        if ($('input[name="yesno_8"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_8_error.text("選択してください");
+        }else{
+          yesno_8_error.text("");
+        }
+        
+        if ($('select[name="select_9"] option:selected').val() == "") {
+          is_check = false;
+          select_9_error.text("選択してください");
+        }else{
+          select_9_error.text("");
+        }
+        
+        if ($('input[name="yesno_9"]:checked').val() === undefined ) {
+          is_check = false;
+          yesno_9_error.text("選択してください");
+        }else{
+          yesno_9_error.text("");
+        }
+        
+        if ($('select[name="select_10"] option:selected').val() == "") {
+          is_check = false;
+          select_10_error.text("選択してください");
+        }else{
+          select_10_error.text("");
+        }
+        
+        if ($('select[name="select_11"] option:selected').val() == "") {
+          is_check = false;
+          select_11_error.text("選択してください");
+        }else{
+          select_11_error.text("");
+        }
+        
+        if ($('input[name="txt_number"]').val() == "") {
+          is_check = false;
+          txt_number_error.text("郵便番号を入力してください");
+        }else{
+          txt_number_error.text("");
+        }
+        
+        if ($('input[name="txt_prefectures"]').val() == "") {
+          is_check = false;
+          txt_prefectures_error.text("住所（都道府県）を入力してください");
+        }else{
+          txt_prefectures_error.text("");
+        }
+        
+        if ($('input[name="txt_address"]').val() == "") {
+          is_check = false;
+          txt_address_error.text("住所を入力してください");
+        }else{
+          txt_address_error.text("");
+        }
+        
+        if ($('input[name="txt_email"]').val() == "") {
+          is_check = false;
+          txt_email_error.text("メールアドレスを入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+        
+        if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
+          is_check = false;
+          txt_email_error.text("メールアドレスを正しく入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+        
+        if (number.length < 10) {
+          is_check = false;
+          tel_error.text("電話番号を正しく入力してください");
+        }else{
+          tel_error.text("");
+        }
+        
+        if (!$('input[name="checkbox"]').prop("checked")) {
+          is_check = false;
+          checkbox_error.text("個人情報に同意してください");
+        }else{
+          checkbox_error.text("");
+        }
+        
+        if(is_check){
           $(".error_message").text("");
           $('#entry_send').attr("type", "submit");
 
@@ -215,6 +409,7 @@ get_header(); ?>
           container = $('.modal-container');
           container.addClass('active');
         }
+
       }
 
     };
