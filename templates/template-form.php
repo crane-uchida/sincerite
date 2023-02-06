@@ -1,4 +1,5 @@
 <?php
+/* Template Name:フォーム */
 remove_filter('the_content', 'wpautop');
 get_header(); ?>
 
@@ -18,14 +19,20 @@ get_header(); ?>
             ?>
 
 <?php
-  $wpcf7sn= do_shortcode('[wpcf7sn_view_count id="5856"]');
+  if (is_page('form02')) {
+    $wpcf7sn= do_shortcode('[wpcf7sn_view_count id="5873"]');
+  } elseif (is_page('form03')) {
+    $wpcf7sn= do_shortcode('[wpcf7sn_view_count id="5854"]');
+  } elseif (is_page('form04')) {
+    $wpcf7sn= do_shortcode('[wpcf7sn_view_count id="5856"]');
+  }
   // $wpcf7snの文字列に含まれる数字に1を足す
   $number = preg_replace( '/[^\p{Nd}]/u', '', $wpcf7sn);
   $number++;
   $substr1 = substr($wpcf7sn, 0, 1);
 ?>
 
-<!-- ドクターズ・プレミアム -->
+<!-- ステータスプランform02 --><!-- 旧帝大・早慶プレミアムメンバーズform03 --><!-- ドクターズ・プレミアムform04 -->
 <script>
     window.onload = function(){
       $('#entry_conf').click(function () {
@@ -73,38 +80,105 @@ get_header(); ?>
       function formCheck() {
         var number = $('input[name="tel"]').val()
         number = number.replace(/-/g,'');
+
+        var is_check = true;
+        var txt_name_error = $(".txt_name .error_message");
+        var gender_error = $(".gender .error_message");
+        var select_annualincome_error = $(".select_annualincome .error_message");
+        var txt_email_error = $(".txt_email .error_message");
+        var tel_error = $(".tel .error_message");
+        var txt_number_error = $(".txt_number .error_message");
+        var txt_prefectures_error = $(".txt_prefectures .error_message");
+        var txt_address_error = $(".txt_address .error_message");
+        var checkbox_error = $(".checkbox .error_message");
+        
         if ($('input[name="txt_name"]').val() == "") {
-          $(".txt_name .error_message").text("お名前を入力してください");
-        } else if ($('input[name="gender"]:checked').val() === undefined ) {
-          $(".gender .error_message").text("性別を選択してください");
-        } else if ($('select[name="select_annualincome"] option:selected').val() == "") {
-          $(".select_annualincome .error_message").text("年収を選択してください");
-        } else if ($('input[name="txt_email"]').val() == "") {
-          $(".txt_email .error_message").text("メールアドレスを入力してください");
-        } else if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
-          $(".txt_email .error_message").text("メールアドレスを正しく入力してください");
-        } else if (number.length < 10) {
-          $(".tel .error_message").text("電話番号を正しく入力してください");
-        } else if ($('input[name="txt_number"]').val() == "") {
-          $(".txt_number .error_message").text("郵便番号を入力してください");
-        } else if ($('input[name="txt_prefectures"]').val() == "") {
-          $(".txt_prefectures .error_message").text("住所（都道府県）を入力してください");
-        } else if ($('input[name="txt_address"]').val() == "") {
-          $(".txt_address .error_message").text("住所を入力してください");
-        } else if (!$('input[name="checkbox"]').prop("checked")) {
-          $(".checkbox .error_message").text("個人情報に同意してください");
-        } else {
+          is_check = false;
+          txt_name_error.text("お名前を入力してください");
+        }else{
+          txt_name_error.text("");
+        }
+        
+        if ($('input[name="gender"]:checked').val() === undefined ) {
+          is_check = false;
+          gender_error.text("性別を選択してください");
+        }else{
+          gender_error.text("");
+        }
+        
+        if ($('select[name="select_annualincome"] option:selected').val() == "") {
+          is_check = false;
+          select_annualincome_error.text("年収を選択してください");
+        }else{
+          select_annualincome_error.text("");
+        }
+        
+        if ($('input[name="txt_email"]').val() == "") {
+          is_check = false;
+          txt_email_error.text("メールアドレスを入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+        
+        if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
+          is_check = false;
+          txt_email_error.text("メールアドレスを正しく入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+        
+        if (number.length < 10) {
+          is_check = false;
+          tel_error.text("電話番号を正しく入力してください");
+        }else{
+          tel_error.text("");
+        }
+        
+        if ($('input[name="txt_number"]').val() == "") {
+          is_check = false;
+          txt_number_error.text("郵便番号を入力してください");
+        }else{
+          txt_number_error.text("");
+        }
+        
+        if ($('input[name="txt_prefectures"]').val() == "") {
+          is_check = false;
+          txt_prefectures_error.text("住所（都道府県）を入力してください");
+        }else{
+          txt_prefectures_error.text("");
+        }
+        
+        if ($('input[name="txt_address"]').val() == "") {
+          is_check = false;
+          txt_address_error.text("住所を入力してください");
+        }else{
+          txt_address_error.text("");
+        }
+        
+        if (!$('input[name="checkbox"]').prop("checked")) {
+          is_check = false;
+          checkbox_error.text("個人情報に同意してください");
+        }else{
+          checkbox_error.text("");
+        }
+        
+        if(is_check){
           $(".error_message").text("");
           $('#entry_send').attr("type", "submit");
 
           var parameter = '<?=$substr1.$number?>'; //PHPの変数をJavaScriptへ渡す
-          var thanks = '/form04/form04-thanks/?id=' + parameter;
+
+          var dir = location.href.split("/"); //変数dirに取得したURLをスラッシュごとに区切り、配列に格納
+          var dir2 = dir[dir.length -2]; //配列dirの、最後のオブジェクトから数えて2番目のものを変数dir2に格納
+          var thanks = '/' + dir2 + '/' + dir2 + '-thanks/?id=' + parameter; //サンクスページURL
+
           $('form').attr('action', thanks);
 
           var close = $('.modal-close'),
           container = $('.modal-container');
           container.addClass('active');
         }
+
       }
 
     };

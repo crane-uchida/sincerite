@@ -64,23 +64,73 @@ get_header(); ?>
       function formCheck() {
         var number = $('input[name="tel"]').val()
         number = number.replace(/-/g,'');
+
+        var is_check = true;
+        var date_error = $(".date .error_message");
+        var select_error = $(".select .error_message");
+        var txt_name_error = $(".txt_name .error_message");
+        var gender_error = $(".gender .error_message");
+        var txt_email_error = $(".txt_email .error_message");
+        var tel_error = $(".tel .error_message");
+        var checkbox_error = $(".checkbox .error_message");
+
         if ($('input[name="date"]').val() == "") {
-          $(".date_select .error_message").text("ご来店希望日を選択してください");
-        } else if ($('select[name="select"] option:selected').val() == "") {
-          $(".date_select .error_message").text("ご来店希望時間を選択してください");
-        } else if ($('input[name="txt_name"]').val() == "") {
-          $(".txt_name .error_message").text("お名前を入力してください");
-        } else if ($('input[name="gender"]:checked').val() === undefined ) {
-          $(".gender .error_message").text("性別を選択してください");
-        } else if ($('input[name="txt_email"]').val() == "") {
-          $(".txt_email .error_message").text("メールアドレスを入力してください");
-        } else if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
-          $(".txt_email .error_message").text("メールアドレスを正しく入力してください");
-        } else if (number.length < 10) {
-          $(".tel .error_message").text("電話番号を正しく入力してください");
-        } else if (!$('input[name="checkbox"]').prop("checked")) {
-          $(".checkbox .error_message").text("個人情報に同意してください");
-        } else {
+          is_check = false;
+          date_error.text("ご来店希望日を選択してください");
+        }else{
+          date_error.text("");
+        }
+
+        if ($('select[name="select"] option:selected').val() == "") {
+          is_check = false;
+          select_error.text("ご来店希望時間を選択してください");
+        }else{
+          select_error.text("");
+        }
+
+        if ($('input[name="txt_name"]').val() == "") {
+          is_check = false;
+          txt_name_error.text("お名前を入力してください");
+        }else{
+          txt_name_error.text("");
+        }
+
+        if ($('input[name="gender"]:checked').val() === undefined ) {
+          is_check = false;
+          gender_error.text("性別を選択してください");
+        }else{
+          gender_error.text("");
+        }
+
+        if ($('input[name="txt_email"]').val() == "") {
+          is_check = false;
+          txt_email_error.text("メールアドレスを入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+
+        if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
+          is_check = false;
+          txt_email_error.text("メールアドレスを正しく入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+
+        if (number.length < 10) {
+          is_check = false;
+          tel_error.text("電話番号を正しく入力してください");
+        }else{
+          tel_error.text("");
+        }
+
+        if (!$('input[name="checkbox"]').prop("checked")) {
+          is_check = false;
+          checkbox_error.text("個人情報に同意してください");
+        }else{
+          checkbox_error.text("");
+        }
+
+        if(is_check){
           $(".error_message").text("");
           $('#entry_send').attr("type", "submit");
 
@@ -92,6 +142,7 @@ get_header(); ?>
           container = $('.modal-container');
           container.addClass('active');
         }
+
       }
 
     };
