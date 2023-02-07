@@ -110,9 +110,34 @@
 		}
 
 		input[type="date"]{
+			position:relative;
 			font-family: "Noto Sans JP", sans-serif;
 			color: $gray_light;
 			background-color: $white;
+			&::-webkit-calendar-picker-indicator{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: auto;
+				height: auto;
+				background: transparent;
+				z-index: 1;
+			}
+			&::after{
+				content: '';
+				background-image: url(../../../images/form/icon_calendar.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: 0 0;
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				transform: translateY(-50%);
+			}
 		}
 
 		.area_default {
