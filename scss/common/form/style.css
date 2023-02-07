@@ -122,9 +122,35 @@
   color: #E0E0E0;
 }
 .form_area .form input[type=date] {
+  position: relative;
   font-family: "Noto Sans JP", sans-serif;
   color: #E0E0E0;
   background-color: #FFF;
+}
+.form_area .form input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  z-index: 1;
+}
+.form_area .form input[type=date]::after {
+  content: "";
+  background-image: url(../../../images/form/icon_calendar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .form_area .form .area_default {
   padding: 1.2rem;
