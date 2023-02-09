@@ -1,5 +1,3 @@
-//フォームで使っているスクリプト
-
 jQuery(function() {
 
 	//生年月日から年齢を自動計算。その年齢をフォームの#ageのvalueに設定する。
@@ -26,13 +24,6 @@ jQuery(function() {
 			jQuery('#age').val( '（'+myYear+'才）' );
 		}
 	
-	
-	
-	
-	
-	
-	
-	
 	//性別の男性・女性のinputタグにidを追加する。
 	jQuery(function () {
 		jQuery('#your-sex .first input').attr('id', 'sex-1');
@@ -43,7 +34,6 @@ jQuery(function() {
 		jQuery('.wpcf7 .gender .first input').attr('id', 'male');
 		jQuery('.wpcf7 .gender .last input').attr('id', 'female');
 	});
-	
 	
 	//【リニューアル】はい・いいえのinputタグにidを追加する。
 	jQuery(function () {
@@ -66,15 +56,6 @@ jQuery(function() {
 		jQuery('.wpcf7 .yesno_9 .first input').attr('id', 'yes_9');
 		jQuery('.wpcf7 .yesno_9 .last input').attr('id', 'no_9');
 	});
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	//性別の男性・女性クリックすると、それぞれ注意事項を表示させる。
 	jQuery('input#sex-1[type="radio"]').change(function() {
@@ -107,8 +88,6 @@ jQuery(function() {
 			jQuery('.woman-notice').toggle(true);
 		}
 	});
-	
-	
 	
 	//性別の男性・女性をクリックすると、生年月日の年の選択肢が変更される。女性をクリックすると指定optionタグが削除され、女性以外をクリックすると（指定optionタグが存在してなければ）指定optionタグを追加。
 	jQuery(function(){
@@ -144,8 +123,6 @@ jQuery(function() {
 		});
 	});
 	
-	
-	
 	//性別の男性・女性をクリックすると、最終学歴の選択肢が変更される。
 	jQuery(function(){
 		jQuery('input[name="your-sex"]').change(function() {
@@ -159,8 +136,6 @@ jQuery(function() {
 		});
 	});
 	
-	
-	
 	//性別の男性・女性をクリックすると、チェックされたinputの親のlabelにclassが追加される。
 	jQuery(function() {
 	  $('[name="your-sex"]:radio').change( function() {
@@ -173,8 +148,6 @@ jQuery(function() {
 		}
 	  });
 	});
-	
-	
 	
 	//【リニューアル】性別の男性・女性をクリックすると、チェックされたinputの親のlabelにclassが追加される。
 	jQuery(function() {
@@ -271,9 +244,6 @@ jQuery(function() {
 		});
 	  });
 	
-	
-	
-	
 	//formタグにエラー用classを付与する（mw wp form用）
 	jQuery(function(jQuery) {
 	  if ( jQuery('.error')[0] ) {
@@ -282,16 +252,13 @@ jQuery(function() {
 	  }
 	});
 	
-	
 	//span.errorの直近の親要素tdにclass「error-box」を付与する（mw wp form用）
 	jQuery("span.error").closest("td").addClass('error-box');
-	
 	
 	//フォームの自動補完を無効
 	jQuery(function() {
 		jQuery('form').attr('autocomplete', 'off');
 	});
-	
 	
 	//ご来店希望日にプレースホルダーを追加
 	jQuery(function() {
@@ -300,12 +267,10 @@ jQuery(function() {
 		jQuery('.your-date3 input').attr('placeholder', '第三希望を選択');
 	});
 	
-	
 	//「パートナー診断」「資料請求」の来店日にプレースホルダーを追加
 	jQuery(function() {
 		jQuery('.your-date4 input').attr('placeholder', 'ご来店日を選択');
 	});
-	
 	
 	//ご来店希望日の時間(selectタグ)の最初のoptionタグを選択できないようにする
 	jQuery(function() {
@@ -332,8 +297,6 @@ jQuery(function() {
 		jQuery('select[name="select_11"] option:first-of-type').prop('disabled', 'true').css('display','none');
 	});
 	
-	
-	
 	//セレクト要素の値が変更されたとき、色を変更する
 	jQuery(function() {
 		jQuery("select").change(function() {
@@ -342,7 +305,6 @@ jQuery(function() {
 		});
 	});
 
-
 	//日付(date)要素の値が変更されたとき、色を変更する
 	jQuery(function() {
 		jQuery('input[type="date"]').change(function() {
@@ -350,20 +312,15 @@ jQuery(function() {
 		});
 	});
 
-	
 	//【リニューアル】メールアドレス入力欄をクリックすると、注意事項を表示させる。
 	jQuery('input[type="email"]').focus(function() {
 		jQuery('.email-notice').css('display', 'block');
 	});
 	
-	
-	
 	//フォームのカレンダーが表示されるinputにフォーカスしたときに、キーボードを表示させない
 	jQuery('input[name="your-date1"],input[name="your-date2"],input[name="your-date3"],input[name="your-date4"]').click(function(){
 		jQuery('input[name="your-date1"],input[name="your-date2"],input[name="your-date3"],input[name="your-date4"]').blur();
 	});
-	
-	
 	
 	//パートナー診断の来店質問で「今すぐ」or「1週間後」にチェックしたとき、指定箇所にページ内スクロール＆CSS変更
 	jQuery(function(){
@@ -380,19 +337,12 @@ jQuery(function() {
 			jQuery('html,body').animate({ scrollTop: p-20 }, 'slow');
 	*/
 			jQuery('.mw_wp_form_business .coming-box').addClass('notice');
-	
 			return false;
-	
 			} else{
-	
 			jQuery('.mw_wp_form_business .coming-box').removeClass('notice');
-	
 			}
-	
 		});
 	});
-	
-	
 	
 	//【リニューアル】伸縮するテキストエリア */
 	jQuery(function(){
@@ -404,17 +354,8 @@ jQuery(function() {
 			dummy.textContent = e.target.value + '\u200b'
 		})
 		}
-	
 		document.querySelectorAll('span[data-name="FlexTextarea"]').forEach(flexTextarea)
 	});
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	// 同意するチェックボックスにチェックが入ったとき
 	jQuery('input[type=checkbox].agreement_wp').change(function() {
@@ -425,17 +366,12 @@ jQuery(function() {
 		}
 	});
 	
-	
-	
 	//【リニューアル】戻るボタンを押すと、class（custom-wpcf7c-confirmed）削除
 	jQuery(function(){
 		jQuery('input.wpcf7c-btn-back[type="button"]').click(function() {
 			jQuery('form').removeClass('custom-wpcf7c-confirmed');
 	   });
 	});
-	
-	
-	
 	
 	//【リニューアル】確認するボタンを押すと、value値が空の特定要素にclass追加
 	jQuery(function(){
@@ -455,25 +391,56 @@ jQuery(function() {
 		});
 	});
 	
-	
-	
 	// フォームの日付カレンダーで水曜日を選択するとアラートを出す
 	jQuery(function(){
-		document.querySelector('#date_limit').addEventListener('change', () => {
-			let elem = document.querySelector('#date_limit');
-			let date = new Date(elem.value);
-			let dayOfWeek = date.getDay()
-			if (dayOfWeek === 3) { // 複数曜日なら、|| を使って併記していく
-				alert("水曜日は休業日となります。選択しなおしてください。");
-				elem.value = "";
-			}
-		});
+		if(jQuery('input#date_limit').length) { //特定の要素(input#date_limit)が存在するかどうかを判別
+			document.querySelector('#date_limit').addEventListener('change', () => {
+				let elem = document.querySelector('#date_limit');
+				let date = new Date(elem.value);
+				let dayOfWeek = date.getDay()
+				if (dayOfWeek === 3) { // 複数曜日なら、|| を使って併記していく
+					alert("水曜日は休業日となります。選択しなおしてください。");
+					elem.value = "";
+				}
+			});
+		}
 	});
-	
-	
+
+	// 【リニューアル】 郵便番号から住所の自動入力
+	jQuery(function($){
+		if(jQuery('input[name="txt_number"]').length) { //特定の要素(input[name="txt_number"])が存在するかどうかを判別
+			$.getScript("https://ajaxzip3.github.io/ajaxzip3.js");
+			$('.btn_address').click(function() {
+				AjaxZip3.zip2addr('txt_number', '', 'txt_prefectures', 'txt_address');
+			});
+		}
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	/*
-	
 	jQuery(function($) {
 		$('input[name="date"]').datepicker({
 		  beforeShowDay: function(date) {
@@ -493,11 +460,9 @@ jQuery(function() {
 		  }
 		});
 	});
-	
 	*/
 	
 	
 	
 	
 	});
-	

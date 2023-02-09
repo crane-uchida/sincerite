@@ -122,6 +122,7 @@
   color: #E0E0E0;
 }
 .form_area .form input[type=date] {
+  -webkit-appearance: none;
   position: relative;
   font-family: "Noto Sans JP", sans-serif;
   color: #E0E0E0;

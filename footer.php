@@ -211,151 +211,130 @@
 </div><!-- container  -->
 
 
-<?php if (is_page('form01') || is_page('form02') || is_page('form03') || is_page('form04') || is_page('form05') || is_page('form06') || is_page('online') || is_page('recruit') || is_page('first_matching')) : ?>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!-- フォームで使っているスクリプト -->
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/form.js"></script>
-<!-- 「フリガナ」を自動で入力する -->
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.autoKana.js">
-</script>
-<script>
-jQuery(function() {
-  jQuery.fn.autoKana('#name', '#name_kana', {
-    katakana: true
-  });
-});
-</script>
-
-<!-- 【リニューアル】 郵便番号から住所の自動入力 -->
-<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="utf-8"></script>
-<script type="text/javascript">
-jQuery(function($) {
-  $('.btn_address').click(function() {
-    AjaxZip3.zip2addr('txt_number', '', 'txt_prefectures', 'txt_address');
-  });
-});
-</script>
-
+<?php if (is_page('form01') || is_page_template('templates/template-form.php') || is_page('form05') || is_page('form06') || is_page('online') || is_page('recruit') || is_page('first_matching')) : ?>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/form.js"></script>
 <?php endif; ?>
 
+
 <?php wp_footer(); ?>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/sp.js"></script>
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/common.js"></script>
 
 <?php if (is_page(5728)) :?>
-<!-- 資料請求サンクスページに、A8.netのタグ設置のための準備 -->
-<?php
-	$var= do_shortcode('[wpcf7sn_view_count id="5730"]'); //「Contact Form 7 Serial Numbers」プラグインのショートコードの出力をPHP変数varに格納する
-	echo <<< EOD
-	<script>
-	var pram="$var"; //PHP変数varをjavascript変数pramにいれる
-	</script>
-	EOD;
-	?>
+  <!-- 資料請求サンクスページに、A8.netのタグ設置のための準備 -->
+  <?php
+    $var= do_shortcode('[wpcf7sn_view_count id="5730"]'); //「Contact Form 7 Serial Numbers」プラグインのショートコードの出力をPHP変数varに格納する
+    echo <<< EOD
+      <script>
+      var pram="$var"; //PHP変数varをjavascript変数pramにいれる
+      </script>
+    EOD;
+  ?>
 
-<!-- 資料請求サンクスページに、A8.netのタグ設置。受付番号(order_number)に変数(pram)をいれることで動的になる。-->
-<span id="a8sales"></span>
-<script src="//statics.a8.net/a8sales/a8sales.js"></script>
-<script>
-a8sales({
-  "pid": "s00000021539001",
-  "order_number": pram,
-  "currency": "JPY",
-  "items": [{
-    "code": "a8",
-    "price": 3500,
-    "quantity": 1
-  }, ],
-  "total_price": 3500
-});
-</script>
+  <!-- 資料請求サンクスページに、A8.netのタグ設置。受付番号(order_number)に変数(pram)をいれることで動的になる。-->
+  <span id="a8sales"></span>
+  <script src="//statics.a8.net/a8sales/a8sales.js"></script>
+  <script>
+    a8sales({
+      "pid": "s00000021539001",
+      "order_number": pram,
+      "currency": "JPY",
+      "items": [{
+        "code": "a8",
+        "price": 3500,
+        "quantity": 1
+      }, ],
+      "total_price": 3500
+    });
+  </script>
 
 <?php elseif (is_page(5645)) :?>
-<!-- 来店予約サンクスページに、A8.netのタグ設置のための準備 -->
-<?php
-	$var= do_shortcode('[wpcf7sn_view_count id="5641"]'); //「Contact Form 7 Serial Numbers」プラグインのショートコードの出力をPHP変数varに格納する
-	echo <<< EOD
-	<script>
-	var pram="$var"; //PHP変数varをjavascript変数pramにいれる
-	</script>
-	EOD;
-?>
+  <!-- 来店予約サンクスページに、A8.netのタグ設置のための準備 -->
+  <?php
+    $var= do_shortcode('[wpcf7sn_view_count id="5641"]'); //「Contact Form 7 Serial Numbers」プラグインのショートコードの出力をPHP変数varに格納する
+    echo <<< EOD
+      <script>
+      var pram="$var"; //PHP変数varをjavascript変数pramにいれる
+      </script>
+    EOD;
+  ?>
 
-<!-- 来店予約サンクスページに、A8.netのタグ設置。受付番号(order_number)に変数(pram)をいれることで動的になる。-->
-<span id="a8sales"></span>
-<script src="//statics.a8.net/a8sales/a8sales.js"></script>
-<script>
-a8sales({
-  "pid": "s00000021539001",
-  "order_number": pram,
-  "currency": "JPY",
-  "items": [{
-    "code": "b8",
-    "price": 15000,
-    "quantity": 1
-  }, ],
-  "total_price": 15000
-});
-</script>
+  <!-- 来店予約サンクスページに、A8.netのタグ設置。受付番号(order_number)に変数(pram)をいれることで動的になる。-->
+  <span id="a8sales"></span>
+  <script src="//statics.a8.net/a8sales/a8sales.js"></script>
+  <script>
+    a8sales({
+      "pid": "s00000021539001",
+      "order_number": pram,
+      "currency": "JPY",
+      "items": [{
+        "code": "b8",
+        "price": 15000,
+        "quantity": 1
+      }, ],
+      "total_price": 15000
+    });
+  </script>
 
 <?php elseif (is_page('statusplan2')) :?>
-<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/statusplan.js"></script>
+  <script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/statusplan.js"></script>
 
 <?php elseif (is_page('faq')) :?>
-<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/faq.js"></script>
+  <script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/faq.js"></script>
 
 <?php elseif (is_page('voice')) :?>
-<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/voice.js"></script>
+  <script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/voice.js"></script>
 
 <?php elseif (is_home() || is_front_page()) :?>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script>
-const mySwiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  grabCursor: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  speed: 1000,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  },
-  slidesPerView: 1,
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+  const mySwiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    900: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    }
-  },
-  loop: true,
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
-<script>
-//ふわっとアニメーション
-jQuery(function($) {
-  $(".inview").on("inview", function(event, isInView) {
-
-    if (isInView) {
-      $(this).stop().addClass("is-show");
-    }
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    speed: 1000,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      }
+    },
+    loop: true,
   });
-});
-</script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+  <script>
+  //ふわっとアニメーション
+  jQuery(function($) {
+    $(".inview").on("inview", function(event, isInView) {
+
+      if (isInView) {
+        $(this).stop().addClass("is-show");
+      }
+    });
+  });
+  </script>
 
 <?php endif; ?>
 
