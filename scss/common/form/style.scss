@@ -110,6 +110,7 @@
 		}
 
 		input[type="date"]{
+			-webkit-appearance: none;
 			position:relative;
 			font-family: "Noto Sans JP", sans-serif;
 			color: $gray_light;
@@ -847,7 +848,6 @@ form.custom-wpcf7c-confirmed input.transparent::placeholder {
 				ul {
 
 					li {
-
 						span.date,
 						span.select {
 
