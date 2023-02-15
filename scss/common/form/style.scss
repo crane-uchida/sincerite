@@ -389,8 +389,27 @@
 		span.select_mm,
 		span.select_dd,
 		span.select_occupation,
-		span[data-name="select"] {
-
+		span[data-name="select"],
+		span[data-name="select_age"],
+		span[data-name="select_zodiac"],
+		span[data-name="select_bloodtype"],
+		span[data-name="select_1"],
+		span[data-name="select_2"],
+		span[data-name="select_3"],
+		span[data-name="select_4"],
+		span[data-name="select_5"],
+		span[data-name="select_6"],
+		span[data-name="select_7"],
+		span[data-name="select_8"],
+		span[data-name="select_9"],
+		span[data-name="select_10"],
+		span[data-name="select_11"]	,
+		span[data-name="select_annualincome"],
+		span[data-name="select_yy"],
+		span[data-name="select_mm"],
+		span[data-name="select_dd"],
+		span[data-name="select_occupation"]
+		{
 			&::after {
 				content: '';
 				position: absolute;
