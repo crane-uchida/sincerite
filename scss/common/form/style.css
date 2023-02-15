@@ -392,7 +392,26 @@
 .form_area .form span.select_mm::after,
 .form_area .form span.select_dd::after,
 .form_area .form span.select_occupation::after,
-.form_area .form span[data-name=select]::after {
+.form_area .form span[data-name=select]::after,
+.form_area .form span[data-name=select_age]::after,
+.form_area .form span[data-name=select_zodiac]::after,
+.form_area .form span[data-name=select_bloodtype]::after,
+.form_area .form span[data-name=select_1]::after,
+.form_area .form span[data-name=select_2]::after,
+.form_area .form span[data-name=select_3]::after,
+.form_area .form span[data-name=select_4]::after,
+.form_area .form span[data-name=select_5]::after,
+.form_area .form span[data-name=select_6]::after,
+.form_area .form span[data-name=select_7]::after,
+.form_area .form span[data-name=select_8]::after,
+.form_area .form span[data-name=select_9]::after,
+.form_area .form span[data-name=select_10]::after,
+.form_area .form span[data-name=select_11]::after,
+.form_area .form span[data-name=select_annualincome]::after,
+.form_area .form span[data-name=select_yy]::after,
+.form_area .form span[data-name=select_mm]::after,
+.form_area .form span[data-name=select_dd]::after,
+.form_area .form span[data-name=select_occupation]::after {
   content: "";
   position: absolute;
   right: 1rem;
