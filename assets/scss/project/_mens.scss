@@ -1,0 +1,52 @@
+@use "../foundation/"as *;
+@use "../global/"as *;
+
+
+// ---------- all ---------- //
+
+
+.p-mens {
+  &__cta-title {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    line-height: 0;
+  }
+
+  &__cta-title-pic {
+    width: 295px;
+    height: 90px;
+  }
+
+  &__cta-comment {
+    color: $c_white;
+    font-size: responsiveFontSizeClamp(24, 26, 320, 1200);
+    text-align: center;
+    letter-spacing: 0.2;
+  }
+}
+
+// ---------- all end ---------- //
+
+
+// ---------- header ---------- //
+
+.p-mens-header {
+
+  &__inner {
+    background-color: $mens_base_dark;
+    color: $mens_primary;
+    text-align: center;
+  }
+
+  &__fv {
+    background-color: $mens_base_light;
+    background-image: url(../../images/lp_mens/fv_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+
+
+// ---------- header end ---------- //
