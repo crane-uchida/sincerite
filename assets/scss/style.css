@@ -1,0 +1,87 @@
+@charset "UTF-8";
+.p-mens {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+
+html,
+body {
+  line-break: strict;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.75;
+}
+
+.p-mens {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+.p-mens p,
+.p-mens div {
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+}
+
+/*** The new CSS Reset - version 1.0.0 (last updated 8.7.2021) ***/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.p-mens__cta-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  line-height: 0;
+}
+.p-mens__cta-title-pic {
+  width: 295px;
+  height: 90px;
+}
+.p-mens__cta-comment {
+  color: #FFF;
+  font-size: clamp(1.5rem, 1.455rem + 0.23vw, 1.625rem);
+  text-align: center;
+  letter-spacing: 0.2;
+}
+
+.p-mens-header__inner {
+  background-color: #22201D;
+  color: #C9BA9D;
+  text-align: center;
+}
+.p-mens-header__fv {
+  background-color: #57524A;
+  background-image: url(../../images/lp_mens/fv_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

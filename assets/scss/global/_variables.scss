@@ -1,0 +1,20 @@
+// remの指定
+$rwd_root_fontsize: calc(100vw / 37.5);
+
+// メディアクエリ
+$rwd: "screen and (max-width: 767.99px)";
+$tab: "screen and (max-width: 768px),print";
+$pc: "screen and (min-width: 1200px),print";
+// $sp: "(width < 600px)";
+// $tab: "(600px <= width < 1200px)";
+// $pc: "(1200px <= width),print";
+
+// font-size
+$fs_medium: 1.4rem;
+$fs_small: 1.2rem;
+
+// font-weight
+$fw_regular: 400;
+$fw_medium: 500;
+$fw_bold: 700;
+$fw_black: 900;
