@@ -17,15 +17,3 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.75;
 }
-
-// 男性向けLPのデフォルトを定義
-.p-mens {
-  width: 100%;
-  max-width: 390px;
-  margin: 0 auto;
-
-  p,
-  div {
-    font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
-  }
-}

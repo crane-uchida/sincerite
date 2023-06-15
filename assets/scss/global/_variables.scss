@@ -3,7 +3,7 @@ $rwd_root_fontsize: calc(100vw / 37.5);
 
 // メディアクエリ
 $rwd: "screen and (max-width: 767.99px)";
-$tab: "screen and (max-width: 768px),print";
+$tab: "screen and (min-width: 768px),print";
 $pc: "screen and (min-width: 1200px),print";
 // $sp: "(width < 600px)";
 // $tab: "(600px <= width < 1200px)";

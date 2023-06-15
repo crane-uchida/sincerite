@@ -1,0 +1,17 @@
+.c-faq {
+
+  &__summary,
+  &__content {
+    text-align: justify;
+  }
+
+  &__summary {
+    position: relative;
+    display: block;
+    margin: 0;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}

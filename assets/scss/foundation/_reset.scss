@@ -10,6 +10,7 @@
 
 // box-sizingの優先値
 *,
+*img,
 *::before,
 *::after {
   box-sizing: border-box;
