@@ -5,7 +5,10 @@
 // ---------- all ---------- //
 
 .p-mens {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: $mens_bg;
 
   &__text {
     font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
@@ -17,6 +20,56 @@
 
   &__section {
     padding: 60px 20px;
+  }
+
+
+  // PC版 左側のエリア
+  &__left {
+    display: none;
+
+    @media #{$tab} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      width: calc(100% - 490px);
+      height: 100svh;
+      background-image: url(../images/lp_mens/mens_bg.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+    }
+  }
+
+  &__title-logo {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 200px;
+    height: 120px;
+  }
+
+  // PC版 右側のエリア
+  /*   &__right {
+    display: none;
+
+    @media #{$tab} {
+    }
+  } */
+
+  // PC版 メインエリア
+  &__content {
+
+    @media (min-width:440px) {
+      width: 390px;
+      margin-inline: auto;
+    }
+
+    @media #{$tab} {
+      margin: 0;
+    }
   }
 
   // CTA部分
@@ -45,7 +98,6 @@
   &__cta-comment {
     color: $c_white;
     font-size: responsiveFontSizeClamp(24, 26, 320, 1200);
-    letter-spacing: 0.2;
   }
 
   &__cta-button-application,
@@ -66,12 +118,35 @@
     display: block;
     height: 60px;
     padding: 10px;
+    line-height: 38px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &__cta-link-white {
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1)
+    }
+  }
+
+  &__cta-link-primary {
+
+    &:hover {
+      background-color: rgba(201, 186, 157, 0.1)
+    }
+  }
+
+  &__cta-link-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
   }
 
   &__cta-icon {
     width: 25px;
     height: 25px;
-    vertical-align: middle;
   }
 
   // 見出し部分
@@ -88,7 +163,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 40px;
-      height: 3px;
+      height: 2px;
       border-radius: 2px;
     }
   }
@@ -101,10 +176,6 @@
 
 .p-mens-header {
   display: block;
-  position: relative;
-  width: 100%;
-  max-width: 390px;
-  height: 100svh;
   margin-inline: auto;
   background-color: $mens_base_light;
   background-image: url(../images/lp_mens/fv_bg.jpg);
@@ -112,21 +183,32 @@
   background-size: contain;
   background-position: 0 20px;
 
+  @media (max-width: 440px) {
+    width: 100%;
+    height: 100svh;
+  }
+
+  @media (min-width: 440px) {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 40px;
+  }
+
   &__inner {
     background-color: $mens_base_dark;
     color: $mens_primary;
     font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
   }
 
-  &__title {
-    position: absolute;
-    top: 50px;
-    left: 20px;
+  &__headline {
+    margin: 20px 0 100px 20px;
 
-    @media #{$pc} {
-      width: 260px;
-      height: 198px;
+    @media #{$tab} {
+      margin: 20px 0 80px 20px;
     }
+  }
+
+  &__title {
 
     @media #{$tab} {
       width: 260px;
@@ -140,11 +222,7 @@
   }
 
   .p-mens__cta {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
     width: 90%;
-    transform: translateX(-50%);
   }
 }
 
@@ -155,8 +233,12 @@
 
 .p-mens-main {
   width: 100%;
-  max-width: 390px;
+  max-width: 100vw;
   margin-inline: auto;
+
+  @media (min-width: 390px) {
+    width: 100%;
+  }
 
   // サンセリテのコンセプト
   &__concept {
@@ -178,11 +260,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 30px;
     color: $t_gray;
   }
 
   &__concept-sentence {
     text-align: justify;
+  }
+
+  &__concept-movie {
+    width: 100%;
+    aspect-ratio: 3/2;
   }
 
 
@@ -300,6 +388,17 @@
     .p-mens__cta {
       width: 90%;
     }
+
+    .p-mens__cta-comment,
+    .p-mens__cta-button-application,
+    .p-mens__cta-button-line {
+      color: $c_white;
+    }
+
+    .p-mens__cta-button-application,
+    .p-mens__cta-button-line {
+      border: 1px solid $c_white;
+    }
   }
 
   &__fee-lineup {
@@ -374,9 +473,8 @@
   }
 
   &__strength-content {
-    margin-right: 20px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 94%;
 
     &:nth-of-type(1) {
       background-image: url(../images/lp_mens/strength_pic1.jpg);
@@ -412,13 +510,13 @@
   }
 
   &__strength-container {
-    width: 315px;
-    margin: 140px 20px 0;
+    max-width: 94%;
+    margin: 140px 0 0 auto;
     padding: 30px 20px;
     background-color: $mens_primary;
 
     @media #{$tab} {
-      width: 330px;
+      max-width: 330px;
     }
   }
 
@@ -474,6 +572,12 @@
     padding: 10px 0;
     background-color: $mens_primary;
     font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(201, 186, 157, 0.6)
+    }
   }
 
 
@@ -524,7 +628,7 @@
 
   &__voice-content-pic {
     width: 160px;
-    height: fit-content;
+    height: 30px;
     vertical-align: text-bottom;
   }
 
@@ -563,6 +667,16 @@
     // FAQ
     .c-faq {
 
+      &__details[open] {
+
+        .c-faq__summary {
+
+          &::before {
+            transform: none;
+          }
+        }
+      }
+
       &__summary,
       &__content {
         display: flex;
@@ -600,18 +714,34 @@
         }
 
         &::before {
-          transform: translate(0, -50%);
+          transform: translate(0, -50%) rotate(90deg);
         }
 
         &::after {
-          transform: translate(0, -50%) rotate(90deg);
+          transform: none;
         }
       }
 
       &__content {
         margin-bottom: 20px;
-        padding: 20px;
+        padding: 0 20px;
         background-color: $mens_base;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          margin: 0;
+        }
+      }
+
+      &____container {
+        background-color: $mens_base;
+      }
+
+      &__sentence {
+        display: block;
+        margin: 20px 0;
+        text-align: justify;
       }
 
       &__q,
@@ -641,12 +771,16 @@
 
 .p-mens-footer {
   width: 100%;
-  max-width: 390px;
+  max-width: 100vw;
   margin-inline: auto;
   padding: 4px;
   background-color: $mens_base_dark;
   color: $mens_primary;
   font-size: responsiveFontSizeClamp(10, 12, 320, 1200);
+
+  @media (min-width: 390px) {
+    width: 100%;
+  }
 }
 
 // ---------- footer end ---------- //

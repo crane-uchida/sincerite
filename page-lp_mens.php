@@ -22,6 +22,12 @@ get_header("lp_mens"); ?>
         ご自身のペースで活動していただく為、ある特定の審査基準を通過された方にご利用いただける完全成果報酬型のプランをご用意いたしました。
       </li>
     </ul>
+    <div class="p-mens-main__concept-movie">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DqN1TYa1blk" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
   </section>
   <?php /* サンセリテのコンセプト end */ ?>
 
@@ -67,15 +73,19 @@ get_header("lp_mens"); ?>
         ＼無料婚活相談受付中／
       </dt>
       <dd class="p-mens__cta-button-application">
-        <a class="p-mens__cta-link p-mens__center" href="">
+        <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center"
+          href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_2">
           お申し込みはこちら
         </a>
       </dd>
       <dd class="p-mens__cta-button-line">
-        <a class="p-mens__cta-link p-mens__center" href="">
-          <img class="p-mens__cta-icon"
-            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-          LINEからも簡単お申し込み！
+        <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center" href="https://line.me/R/ti/p/%40sincerite"
+          target="_blank" rel="noopener noreferrer">
+          <div class="p-mens__cta-link-content">
+            <img class="p-mens__cta-icon"
+              src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
+            LINEからも簡単お申し込み！
+          </div>
         </a>
       </dd>
     </dl>
@@ -143,15 +153,19 @@ get_header("lp_mens"); ?>
         ＼無料婚活相談受付中／
       </dd>
       <dd class="p-mens__cta-button-application">
-        <a class="p-mens__cta-link p-mens__center" href="">
+        <a class="p-mens__cta-link p-mens__cta-link-white p-mens__center"
+          href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_3">
           お申し込みはこちら
         </a>
       </dd>
       <dd class="p-mens__cta-button-line">
-        <a class="p-mens__cta-link p-mens__center" href="">
-          <img class="p-mens__cta-icon"
-            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-          LINEからも簡単お申し込み！
+        <a class="p-mens__cta-link p-mens__cta-link-white p-mens__center" href="https://line.me/R/ti/p/%40sincerite"
+          target="_blank" rel="noopener noreferrer">
+          <div class="p-mens__cta-link-content">
+            <img class="p-mens__cta-icon"
+              src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
+            LINEからも簡単お申し込み！
+          </div>
         </a>
       </dd>
     </dl>
@@ -273,15 +287,19 @@ get_header("lp_mens"); ?>
         ＼無料婚活相談受付中／
       </dt>
       <dd class="p-mens__cta-button-application">
-        <a class="p-mens__cta-link p-mens__center" href="">
+        <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center"
+          href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_4">
           お申し込みはこちら
         </a>
       </dd>
       <dd class="p-mens__cta-button-line">
-        <a class="p-mens__cta-link p-mens__center" href="">
-          <img class="p-mens__cta-icon"
-            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-          LINEからも簡単お申し込み！
+        <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center" href="https://line.me/R/ti/p/%40sincerite"
+          target="_blank" rel="noopener noreferrer">
+          <div class="p-mens__cta-link-content">
+            <img class="p-mens__cta-icon"
+              src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
+            LINEからも簡単お申し込み！
+          </div>
         </a>
       </dd>
       <dd class="p-mens__cta-button-online">
@@ -292,7 +310,8 @@ get_header("lp_mens"); ?>
           オンラインカウンセリングも<br>
           大好評受付中です！
         </div>
-        <a class="p-mens__cta-button-link p-mens__center" href="">
+        <a class="p-mens__cta-button-link p-mens__center"
+          href="<?php echo get_site_url(); ?>/online/?utm_source=lp_mens&utm_medium=cta_4">
           詳しくはこちら
         </a>
       </dd>
@@ -311,8 +330,10 @@ get_header("lp_mens"); ?>
       <li class="p-mens-main__voice-content">
         <ul class="p-mens-main__voice-content-evaluate">
           <li class="p-mens-main__voice-content-star">
-            <img class="p-mens-main__voice-content-pic"
-              src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/voice_icon_1.png" alt="星4.6">
+            <div class="p-mens-main__voice-content-img">
+              <img class="p-mens-main__voice-content-pic"
+                src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/voice_icon_1.png" alt="星4.6">
+            </div>
           </li>
           <li class="p-mens-main__voice-content-value">
             4.6
@@ -328,8 +349,10 @@ get_header("lp_mens"); ?>
       <li class="p-mens-main__voice-content">
         <ul class="p-mens-main__voice-content-evaluate">
           <li class="p-mens-main__voice-content-star">
-            <img class="p-mens-main__voice-content-pic"
-              src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/voice_icon_3.png" alt="星4.4">
+            <div class="p-mens-main__voice-content-img">
+              <img class="p-mens-main__voice-content-pic"
+                src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/voice_icon_3.png" alt="星4.4">
+            </div>
           </li>
           <li class="p-mens-main__voice-content-value">
             4.4
@@ -345,8 +368,10 @@ get_header("lp_mens"); ?>
       <li class="p-mens-main__voice-content">
         <ul class="p-mens-main__voice-content-evaluate">
           <li class="p-mens-main__voice-content-star">
-            <img class="p-mens-main__voice-content-pic"
-              src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/voice_icon_2.png" alt="星4.5">
+            <div class="p-mens-main__voice-content-img">
+              <img class="p-mens-main__voice-content-pic"
+                src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/voice_icon_2.png" alt="星4.5">
+            </div>
           </li>
           <li class="p-mens-main__voice-content-value">
             4.5
@@ -362,8 +387,10 @@ get_header("lp_mens"); ?>
       <li class="p-mens-main__voice-content">
         <ul class="p-mens-main__voice-content-evaluate">
           <li class="p-mens-main__voice-content-star">
-            <img class="p-mens-main__voice-content-pic"
-              src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/voice_icon_2.png" alt="星4.5">
+            <div class="p-mens-main__voice-content-img">
+              <img class="p-mens-main__voice-content-pic"
+                src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/voice_icon_2.png" alt="星4.5">
+            </div>
           </li>
           <li class="p-mens-main__voice-content-value">
             4.5
@@ -387,6 +414,9 @@ get_header("lp_mens"); ?>
       よくある質問
     </h2>
 
+    <div class="c-faq__line">
+      <hr>
+    </div>
     <div class="c-faq">
       <details class="c-faq__details">
         <summary class="c-faq__summary p-mens__text">
@@ -395,86 +425,117 @@ get_header("lp_mens"); ?>
         </summary>
         <div class="c-faq__content p-mens__text">
           <span class="c-faq__a">a</span>
-          要素は詳細情報を開閉可能な要素です。
+          <span class="c-faq__sentence">
+            面談で希望条件をお伺いし、在籍している会員の中からご希望のお相手や、カウンセラーお勧めの素敵だと思える方をご紹介致します。まずは積極的にお申込みください。
+          </span>
+        </div>
+      </details>
+    </div>
+    <div class="c-faq__line">
+      <hr>
+    </div>
+    <div class="c-faq">
+      <details class="c-faq__details">
+        <summary class="c-faq__summary p-mens__text">
+          <span class="c-faq__q">q</span>
+          どれくらいの年齢差が最も多いでしょうか？
+        </summary>
+        <div class="c-faq__content p-mens__text">
+          <span class="c-faq__a">a</span>
+          <span class="c-faq__sentence">
+            一般的には5～6歳前後の歳の差カップルが最も多いですが、中には10歳以上離れているカップルが誕生される事もございます。様々なお相手とお会いして行く中で、お互いに『この人だ』というお相手をお探し下さい。
+          </span>
+        </div>
+      </details>
+    </div>
+    <div class="c-faq__line">
+      <hr>
+    </div>
+    <div class="c-faq">
+      <details class="c-faq__details">
+        <summary class="c-faq__summary p-mens__text">
+          <span class="c-faq__q">q</span>
+          女性会員はどんなご職業の方が在籍していますか？
+        </summary>
+        <div class="c-faq__content p-mens__text">
+          <span class="c-faq__a">a</span>
+          <span class="c-faq__sentence">
+            メガバンクにお勤めの銀行員や外資系企業にお勤めの会社員、その他IT系や公務員、医療系など様々です。
+          </span>
+        </div>
+      </details>
+    </div>
+    <div class="c-faq__line">
+      <hr>
+    </div>
+    <div class="c-faq">
+      <details class="c-faq__details">
+        <summary class="c-faq__summary p-mens__text">
+          <span class="c-faq__q">q</span>
+          入会資格は何歳までですか？
+        </summary>
+        <div class="c-faq__content p-mens__text">
+          <span class="c-faq__a">a</span>
+          <span class="c-faq__sentence">
+            男性は59歳まで、女性は42歳までご入会いただけます。
+          </span>
+        </div>
+      </details>
+    </div>
+    <div class="c-faq__line">
+      <hr>
+    </div>
+    <div class="c-faq">
+      <details class="c-faq__details">
+        <summary class="c-faq__summary p-mens__text">
+          <span class="c-faq__q">q</span>
+          まだ研修医なのですが入会は可能ですか？
+        </summary>
+        <div class="c-faq__content p-mens__text">
+          <span class="c-faq__a">a</span>
+          <span class="c-faq__sentence">
+            当会では研修医の方も活動をサポート致します。まずはお気軽にお問い合わせください。
+          </span>
+        </div>
+      </details>
+    </div>
+    <div class="c-faq__line">
+      <hr>
+    </div>
+    <div class="c-faq">
+      <details class="c-faq__details">
+        <summary class="c-faq__summary p-mens__text">
+          <span class="c-faq__q">q</span>
+          男性ではどんな職業の方が在籍していますか？
+        </summary>
+        <div class="c-faq__content p-mens__text">
+          <span class="c-faq__a">a</span>
+          <span class="c-faq__sentence">
+            医師や弁護士といった士業をはじめ、外資系金融会社勤務の会社員やIT企業勤務の会社員、経営者や教授といった高収入、高ステータスな方々が在籍しています。
+          </span>
         </div>
       </details>
     </div>
 
-    <!--     <div class="c-faq__line">
-      <hr>
-    </div>
-    <div class="c-faq">
-      <details class="c-faq__content">
-        <summary class="c-faq__question p-mens__text">
-          <span class="c-faq__q">q</span>
-          どれくらいの年齢差が最も多いでしょうか？
-        </summary>
-        <div class="c-faq__anser p-mens__text">
-          <span class="c-faq__a">a</span>
-          要素は詳細情報を開閉可能な要素です。
-        </div>
-      </details>
-    </div>
-    <div class="c-faq__line">
-      <hr>
-    </div>
-    <div class="c-faq">
-      <details class="c-faq__content">
-        <summary class="c-faq__question p-mens__text">
-          <span class="c-faq__q">q</span>
-          女性会員はどんなご職業の方が在籍していますか？
-        </summary>
-        <div class="c-faq__anser p-mens__text">
-          <span class="c-faq__a">a</span>
-          要素は詳細情報を開閉可能な要素です。
-        </div>
-      </details>
-    </div>
-    <div class="c-faq__line">
-      <hr>
-    </div>
-    <div class="c-faq">
-      <details class="c-faq__content">
-        <summary class="c-faq__question p-mens__text">
-          <span class="c-faq__q">q</span>
-          入会資格は何歳までですか？
-        </summary>
-        <div class="c-faq__anser p-mens__text">
-          <span class="c-faq__a">a</span>
-          要素は詳細情報を開閉可能な要素です。
-        </div>
-      </details>
-    </div>
-    <div class="c-faq__line">
-      <hr>
-    </div>
-    <div class="c-faq">
-      <details class="c-faq__content">
-        <summary class="c-faq__question p-mens__text">
-          <span class="c-faq__q">q</span>
-          男性ではどんな職業の方が在籍していますか？
-        </summary>
-        <div class="c-faq__anser p-mens__text">
-          <span class="c-faq__a">a</span>
-          要素は詳細情報を開閉可能な要素です。
-        </div>
-      </details>
-    </div> -->
     <?php /* CTA */ ?>
     <dl class="p-mens__cta">
       <dt class="p-mens__cta-comment p-mens__center">
         ＼無料婚活相談受付中／
       </dt>
       <dd class="p-mens__cta-button-application">
-        <a class="p-mens__cta-link p-mens__center" href="">
+        <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center"
+          href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_5">
           お申し込みはこちら
         </a>
       </dd>
       <dd class="p-mens__cta-button-line">
-        <a class="p-mens__cta-link p-mens__center" href="">
-          <img class="p-mens__cta-icon"
-            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-          LINEからも簡単お申し込み！
+        <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center" href="https://line.me/R/ti/p/%40sincerite"
+          target="_blank" rel="noopener noreferrer">
+          <div class="p-mens__cta-link-content">
+            <img class="p-mens__cta-icon"
+              src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
+            LINEからも簡単お申し込み！
+          </div>
         </a>
       </dd>
     </dl>
