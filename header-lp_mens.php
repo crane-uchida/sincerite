@@ -20,8 +20,30 @@ Template Name: LP_MENS
 
   <?php wp_head(); ?>
 
+  <?php /* CSSの読み込み */ ?>
   <link href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/scss/style.css" rel="stylesheet">
-  <link href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/accordion.js" rel="stylesheet">
+  <?php /* CSSの読み込み end */ ?>
+
+  <?php /* Andoroidのみにウェブフォントを読み込ませる記述 */ ?>
+  <?php
+      function isAndroid() {
+        $userAgent = $_SERVER['HTTP_USER_AGENT'];
+        return stripos($userAgent, 'android') !== false;
+      }
+    ?>
+  <?php if(isAndroid()): //アンドロイドの場合 ?>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+  body {
+    font-family: "Noto Serif JP", serif;
+  }
+  </style>
+  <?php endif;?>
+  <?php /* Andoroidのみウェブフォントを読み込ませる記述 end */ ?>
 
   <!-- Google Tag Manager -->
   <script>
@@ -49,42 +71,52 @@ Template Name: LP_MENS
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) end -->
 
-  <header class="p-mens-header">
-    <?php /* ヘッダー */ ?>
-    <div class="p-mens-header__inner p-mens__center">
-      高収入男性のための結婚相談所 サンセリテ青山
-    </div>
-    <?php /* ヘッダー end */ ?>
+  <div class="p-mens__left">
+    <img class="p-mens__title-logo" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/sct_logo.svg"
+      alt="サンセリテ青山">
+  </div>
 
-    <?php /* ファーストビュー */ ?>
-    <h1 class="p-mens-header__headline">
-      <img class="p-mens-header__title"
-        src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/fv_title.svg" alt="ステータスプランエリート男性専用プラン">
-    </h1>
+  <article class="p-mens__content">
 
-    <?php /* CTA */ ?>
-    <dl class="p-mens__cta">
-      <dt class="p-mens__cta-title">
-        <img class="p-mens__cta-title-pic"
-          src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/cta_txt.svg" alt="入会金・月額活動費0円">
-      </dt>
-      <dd class="p-mens__cta-comment p-mens__center">
-        ＼無料婚活相談受付中／
-      </dd>
-      <dd class="p-mens__cta-button-application">
-        <a class="p-mens__cta-link p-mens__center" href="">
-          お申し込みはこちら
-        </a>
-      </dd>
-      <dd class="p-mens__cta-button-line">
-        <a class="p-mens__cta-link p-mens__center" href="">
-          <img class="p-mens__cta-icon"
-            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-          LINEからも簡単お申し込み！
-        </a>
-      </dd>
-    </dl>
-    <?php /* CTA end */ ?>
+    <header class="p-mens-header">
+      <?php /* ヘッダー */ ?>
+      <div class="p-mens-header__inner p-mens__center">
+        高収入男性のための結婚相談所 サンセリテ青山
+      </div>
+      <?php /* ヘッダー end */ ?>
 
-    <?php /* ファーストビュー end */ ?>
-  </header>
+      <?php /* ファーストビュー */ ?>
+      <h1 class="p-mens-header__headline">
+        <img class="p-mens-header__title"
+          src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/fv_title.svg" alt="ステータスプランエリート男性専用プラン">
+      </h1>
+
+      <?php /* CTA */ ?>
+      <dl class="p-mens__cta">
+        <dt class="p-mens__cta-title">
+          <img class="p-mens__cta-title-pic"
+            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/cta_txt.svg" alt="入会金・月額活動費0円">
+        </dt>
+        <dd class="p-mens__cta-comment p-mens__center">
+          ＼無料婚活相談受付中／
+        </dd>
+        <dd class="p-mens__cta-button-application">
+          <a class="p-mens__cta-link p-mens__cta-link-white p-mens__center"
+            href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_1">
+            お申し込みはこちら
+          </a>
+        </dd>
+        <dd class="p-mens__cta-button-line">
+          <a class="p-mens__cta-link p-mens__cta-link-white p-mens__center" href="https://line.me/R/ti/p/%40sincerite"
+            target="_blank" rel="noopener noreferrer">
+            <div class="p-mens__cta-link-content">
+              <img class="p-mens__cta-icon"
+                src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
+              LINEからも簡単お申し込み！
+            </div>
+          </a>
+        </dd>
+      </dl>
+      <?php /* CTA end */ ?>
+      <?php /* ファーストビュー end */ ?>
+    </header>
