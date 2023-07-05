@@ -71,10 +71,12 @@ Template Name: LP_MENS
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) end -->
 
+  <?php /* PC版 背景 */ ?>
   <div class="p-mens__left">
     <img class="p-mens__title-logo" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/sct_logo.svg"
       alt="サンセリテ青山">
   </div>
+  <?php /* PC版 背景 end */ ?>
 
   <article class="p-mens__content">
 
@@ -98,12 +100,12 @@ Template Name: LP_MENS
             src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/cta_txt.svg" alt="入会金・月額活動費0円">
         </dt>
         <dd class="p-mens__cta-comment p-mens__center">
-          ＼無料婚活相談受付中／
+          ＼無料婚活相談 好評受付中／
         </dd>
         <dd class="p-mens__cta-button-application">
           <a class="p-mens__cta-link p-mens__cta-link-white p-mens__center"
             href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_1">
-            お申し込みはこちら
+            無料来店相談を予約
           </a>
         </dd>
         <dd class="p-mens__cta-button-line">
@@ -112,7 +114,7 @@ Template Name: LP_MENS
             <div class="p-mens__cta-link-content">
               <img class="p-mens__cta-icon"
                 src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-              LINEからも簡単お申し込み！
+              LINEで気軽にご相談
             </div>
           </a>
         </dd>

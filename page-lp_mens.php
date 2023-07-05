@@ -7,6 +7,48 @@ get_header("lp_mens"); ?>
 
 <main class="p-mens-main">
 
+  <?php /* SP版 固定フッター */ ?>
+  <section class="p-mens__overlay" id="scrolltarget">
+    <div class="p-mens__overlay_content">
+      <a class="p-mens__overlay-tel" href="tel:03-5468-2181">
+        <div class="p-mens__overlay-link">
+          <img class="p-mens__overlay-pic"
+            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/overlay_tel.png" alt="電話する">
+        </div>
+      </a>
+
+      <a class="p-mens__overlay-reservation"
+        href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=footer">
+        <div class="p-mens__overlay-link">
+          <img class="p-mens__overlay-pic"
+            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/overlay_reservation.png"
+            alt="来店予約をする">
+        </div>
+      </a>
+      <a class="p-mens__overlay-line" href="https://line.me/R/ti/p/%40sincerite" target="_blank"
+        rel="noopener noreferrer">
+        <div class="p-mens__overlay-link">
+          <img class="p-mens__overlay-pic"
+            src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/overlay_line.png" alt="公式ラインに今すぐ相談">
+        </div>
+      </a>
+    </div>
+  </section>
+  <?php /* SP版 固定フッター end */ ?>
+
+  <?php /* トピックス（バナー） */ ?>
+  <section class="p-mens-main__topics">
+    <div class="p-mens-main__topics-content">
+      <a class="p-mens-main__topics-link"
+        href="<?php echo get_site_url(); ?>/online/?utm_source=lp_mens&utm_medium=cta_1">
+        <img class="p-mens-main__topics-pic"
+          src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/banner_online.jpg" alt="オンライン面談実施中">
+      </a>
+    </div>
+  </section>
+  <?php /* トピックス（バナー） end */ ?>
+
+
   <?php /* サンセリテのコンセプト */ ?>
   <section class="p-mens-main__concept p-mens__section">
     <h2 class="p-mens__headline p-mens__center">
@@ -70,12 +112,12 @@ get_header("lp_mens"); ?>
     <?php /* CTA */ ?>
     <dl class="p-mens__cta">
       <dt class="p-mens__cta-comment p-mens__center">
-        ＼無料婚活相談受付中／
+        ＼無料婚活相談 好評受付中／
       </dt>
       <dd class="p-mens__cta-button-application">
         <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center"
           href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_2">
-          お申し込みはこちら
+          無料来店相談を予約
         </a>
       </dd>
       <dd class="p-mens__cta-button-line">
@@ -84,8 +126,21 @@ get_header("lp_mens"); ?>
           <div class="p-mens__cta-link-content">
             <img class="p-mens__cta-icon"
               src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-            LINEからも簡単お申し込み！
+            LINEで気軽にご相談
           </div>
+        </a>
+      </dd>
+      <dd class="p-mens__cta-button-online">
+        <div class="p-mens__cta-button-word p-mens__center">
+          ＼ご自宅から安心・簡単／
+        </div>
+        <div class="p-mens__cta-button-text p-mens__center">
+          オンラインでのカウンセリングも<br>
+          大好評受付中です！
+        </div>
+        <a class="p-mens__cta-button-link p-mens__center"
+          href="<?php echo get_site_url(); ?>/online/?utm_source=lp_mens&utm_medium=cta_4">
+          オンライン面談に申し込む
         </a>
       </dd>
     </dl>
@@ -107,6 +162,121 @@ get_header("lp_mens"); ?>
     </div>
   </section>
   <?php /* 職業一覧 end */ ?>
+
+
+  <?php /* 出会い方 */ ?>
+  <section class="p-mens-main__meeting p-mens__section">
+    <h2 class="p-mens__headline p-mens__center">
+      サンセリテ青山での<br>
+      出会い方
+    </h2>
+    <ul class="p-mens-main__meeting-content">
+      <li class="p-mens-main__meeting-pic">
+        <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic1.jpg"
+          alt="カウンセラーからご紹介">
+        <ul class="p-mens-main__meeting-container">
+          <li>
+            <h3 class="p-mens-main__meeting-title p-mens__center">
+              カウンセラーからご紹介
+            </h3>
+          </li>
+          <li class="p-mens-main__meeting-text">
+            専任カウンセラーが面談時にお伺いしたあなたのご要望に沿ってお相手のプロフィールを毎月定期的にご紹介いたします。
+          </li>
+          <li class="p-mens-main__meeting-note p-mens__center">
+            <div class="p-mens-main__meeting-note-title">
+              こんなひとにおすすめ
+            </div>
+            幅広い出会いのチャンスを求める方
+          </li>
+        </ul>
+      </li>
+      <li class="p-mens-main__meeting-pic">
+        <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic2.jpg"
+          alt="プロフィール検索">
+        <ul class="p-mens-main__meeting-container">
+          <li>
+            <h3 class="p-mens-main__meeting-title p-mens__center">
+              プロフィール検索
+            </h3>
+          </li>
+          <li class="p-mens-main__meeting-text">
+            希望条件(学歴/収入/身長)や趣味など、専用ページから好きな時にご自身でお相手を探すことができます。
+          </li>
+          <li class="p-mens-main__meeting-note p-mens__center">
+            <div class="p-mens-main__meeting-note-title">
+              こんなひとにおすすめ
+            </div>
+            好きなタイプが定まっている方
+          </li>
+        </ul>
+      </li>
+      <li class="p-mens-main__meeting-pic">
+        <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic3.jpg"
+          alt="お見合いパーティー">
+        <ul class="p-mens-main__meeting-container">
+          <li>
+            <h3 class="p-mens-main__meeting-title p-mens__center">
+              お見合いパーティー
+            </h3>
+          </li>
+          <li class="p-mens-main__meeting-text">
+            会員のみが参加できるお見合いパーティーを開催。会員様同士、実際に顔を合わせて新たな出会いを見つけることができます。
+          </li>
+          <li class="p-mens-main__meeting-note p-mens__center">
+            <div class="p-mens-main__meeting-note-title">
+              こんなひとにおすすめ
+            </div>
+            相手の顔を見て話がしたい方
+          </li>
+        </ul>
+      </li>
+      <li class="p-mens-main__meeting-pic">
+        <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic4.jpg"
+          alt="サンセリテ・ビューティー">
+        <ul class="p-mens-main__meeting-container">
+          <li>
+            <h3 class="p-mens-main__meeting-title p-mens__center">
+              サンセリテ・ビューティー<br>
+              （自分磨き）
+            </h3>
+          </li>
+          <li class="p-mens-main__meeting-text">
+            結婚相談所の中での出会いだけが婚活ではありません。自らの美を磨き、日常の中での新しい出会いに備えましょう。
+          </li>
+          <li class="p-mens-main__meeting-note p-mens__center">
+            <div class="p-mens-main__meeting-note-title">
+              こんなひとにおすすめ
+            </div>
+            婚活を通して自分を高めたい方
+          </li>
+        </ul>
+      </li>
+      <li class="p-mens-main__meeting-pic">
+        <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic5.jpg"
+          alt="サンセリテ・ビューティー">
+        <ul class="p-mens-main__meeting-container">
+          <li>
+            <h3 class="p-mens-main__meeting-title p-mens__center">
+              アレンジメント<br>
+              （お見合い）
+            </h3>
+          </li>
+          <li class="p-mens-main__meeting-text">
+            専任カウンセラーがあなたとの出会いを希望されている方とお取次ぎ。お2人の出会いの場をコーディネートいたします。
+          </li>
+          <li class="p-mens-main__meeting-note p-mens__center">
+            <div class="p-mens-main__meeting-note-title">
+              こんなひとにおすすめ
+            </div>
+            一人きりの活動では悩む事がある方<br>
+            （デートが不慣れでも安心）
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <?php /* 出会い方 end */ ?>
 
 
   <?php /* 料金 */ ?>
@@ -150,12 +320,12 @@ get_header("lp_mens"); ?>
           src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/cta_txt.svg" alt="入会金・月額活動費0円">
       </dt>
       <dd class="p-mens__cta-comment p-mens__center">
-        ＼無料婚活相談受付中／
+        ＼無料婚活相談 好評受付中／
       </dd>
       <dd class="p-mens__cta-button-application">
         <a class="p-mens__cta-link p-mens__cta-link-white p-mens__center"
           href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_3">
-          お申し込みはこちら
+          無料来店相談を予約
         </a>
       </dd>
       <dd class="p-mens__cta-button-line">
@@ -164,8 +334,21 @@ get_header("lp_mens"); ?>
           <div class="p-mens__cta-link-content">
             <img class="p-mens__cta-icon"
               src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-            LINEからも簡単お申し込み！
+            LINEで気軽にご相談
           </div>
+        </a>
+      </dd>
+      <dd class="p-mens__cta-button-online">
+        <div class="p-mens__cta-button-word p-mens__center">
+          ＼ご自宅から安心・簡単／
+        </div>
+        <div class="p-mens__cta-button-text p-mens__center">
+          オンラインでのカウンセリングも<br>
+          大好評受付中です！
+        </div>
+        <a class="p-mens__cta-button-link p-mens__center"
+          href="<?php echo get_site_url(); ?>/online/?utm_source=lp_mens&utm_medium=cta_4">
+          オンライン面談に申し込む
         </a>
       </dd>
     </dl>
@@ -284,12 +467,12 @@ get_header("lp_mens"); ?>
     <?php /* CTA */ ?>
     <dl class="p-mens__cta">
       <dt class="p-mens__cta-comment p-mens__center">
-        ＼無料婚活相談受付中／
+        ＼無料婚活相談 好評受付中／
       </dt>
       <dd class="p-mens__cta-button-application">
         <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center"
           href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_4">
-          お申し込みはこちら
+          無料来店相談を予約
         </a>
       </dd>
       <dd class="p-mens__cta-button-line">
@@ -298,7 +481,7 @@ get_header("lp_mens"); ?>
           <div class="p-mens__cta-link-content">
             <img class="p-mens__cta-icon"
               src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-            LINEからも簡単お申し込み！
+            LINEで気軽にご相談
           </div>
         </a>
       </dd>
@@ -307,12 +490,12 @@ get_header("lp_mens"); ?>
           ＼ご自宅から安心・簡単／
         </div>
         <div class="p-mens__cta-button-text p-mens__center">
-          オンラインカウンセリングも<br>
+          オンラインでのカウンセリングも<br>
           大好評受付中です！
         </div>
         <a class="p-mens__cta-button-link p-mens__center"
           href="<?php echo get_site_url(); ?>/online/?utm_source=lp_mens&utm_medium=cta_4">
-          詳しくはこちら
+          オンライン面談に申し込む
         </a>
       </dd>
     </dl>
@@ -414,9 +597,6 @@ get_header("lp_mens"); ?>
       よくある質問
     </h2>
 
-    <div class="c-faq__line">
-      <hr>
-    </div>
     <div class="c-faq">
       <details class="c-faq__details">
         <summary class="c-faq__summary p-mens__text">
@@ -520,12 +700,12 @@ get_header("lp_mens"); ?>
     <?php /* CTA */ ?>
     <dl class="p-mens__cta">
       <dt class="p-mens__cta-comment p-mens__center">
-        ＼無料婚活相談受付中／
+        ＼無料婚活相談 好評受付中／
       </dt>
       <dd class="p-mens__cta-button-application">
         <a class="p-mens__cta-link p-mens__cta-link-primary p-mens__center"
           href="<?php echo get_site_url(); ?>/form01/?utm_source=lp_mens&utm_medium=cta_5">
-          お申し込みはこちら
+          無料来店相談を予約
         </a>
       </dd>
       <dd class="p-mens__cta-button-line">
@@ -534,8 +714,21 @@ get_header("lp_mens"); ?>
           <div class="p-mens__cta-link-content">
             <img class="p-mens__cta-icon"
               src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/icon_line.png" alt="ラインのアイコン">
-            LINEからも簡単お申し込み！
+            LINEで気軽にご相談
           </div>
+        </a>
+      </dd>
+      <dd class="p-mens__cta-button-online">
+        <div class="p-mens__cta-button-word p-mens__center">
+          ＼ご自宅から安心・簡単／
+        </div>
+        <div class="p-mens__cta-button-text p-mens__center">
+          オンラインでのカウンセリングも<br>
+          大好評受付中です！
+        </div>
+        <a class="p-mens__cta-button-link p-mens__center"
+          href="<?php echo get_site_url(); ?>/online/?utm_source=lp_mens&utm_medium=cta_4">
+          オンライン面談に申し込む
         </a>
       </dd>
     </dl>

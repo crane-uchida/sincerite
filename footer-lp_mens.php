@@ -4,13 +4,13 @@ Template Name: LP_MENS
 */ 
 ?>
 
-<footer class="p-lp p-mens">
-  <?php /* フッター */ ?>
-  <div class="p-mens-footer p-mens__center">
+<?php /* フッター */ ?>
+<footer class="p-lp p-mens p-mens-footer">
+  <div class="p-mens-footer__content p-mens__center">
     &copy;Sincrite Aoyama.
   </div>
-  <?php /* フッター end */ ?>
 </footer>
+<?php /* フッター end */ ?>
 
 </article>
 
@@ -21,6 +21,10 @@ Template Name: LP_MENS
 <?php /* JS */ ?>
 <?php /* アコーディオン */ ?>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/accordion.js"></script>
+<?php /* スクロールイベント */ ?>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/appear.js"></script>
 <?php /* JS end */ ?>
 
 </body>
