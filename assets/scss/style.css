@@ -130,6 +130,10 @@ table {
     margin: 0;
   }
 }
+.p-mens__headline_point {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(0, 0, 0, 0)), color-stop(70%, rgba(233, 23, 57, 0.3)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(233, 23, 57, 0.3) 70%);
+}
 .p-mens__cta {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,7 +832,61 @@ table {
     padding-bottom: 77px;
   }
 }
-.p-mens-footer__content {
+.p-mens-footer__access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 20px;
+  background-color: #3E3A35;
+}
+.p-mens-footer .p-mens__logo {
+  margin-bottom: 30px;
+}
+.p-mens-footer .p-mens__logo .p-mens__logo-pic {
+  width: 110px;
+  height: 70px;
+}
+.p-mens-footer__access-information {
+  margin-bottom: 20px;
+  color: #C9BA9D;
+}
+.p-mens-footer__access-name {
+  font-size: clamp(1.375rem, 1.33rem + 0.23vw, 1.5rem);
+}
+.p-mens-footer__access-office {
+  font-size: clamp(1.25rem, 1.205rem + 0.23vw, 1.375rem);
+}
+.p-mens-footer__access-address, .p-mens-footer__access-guide {
+  color: #FFF;
+}
+.p-mens-footer__access-address {
+  margin-bottom: 20px;
+  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
+}
+.p-mens-footer__access-guide {
+  font-size: clamp(0.75rem, 0.705rem + 0.23vw, 0.875rem);
+}
+.p-mens-footer__access-map {
+  margin-bottom: 20px;
+}
+.p-mens-footer__access-map #js-access-map {
+  height: 260px;
+  width: 100%;
+}
+.p-mens-footer__access-map .infoWindowText {
+  font-size: 1.1rem;
+}
+.p-mens-footer__copyright {
   width: 100%;
   max-width: 100vw;
   margin-inline: auto;
@@ -838,7 +896,7 @@ table {
   font-size: clamp(0.625rem, 0.58rem + 0.23vw, 0.75rem);
 }
 @media (min-width: 390px) {
-  .p-mens-footer__content {
+  .p-mens-footer__copyright {
     width: 100%;
   }
 }

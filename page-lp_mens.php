@@ -53,8 +53,8 @@ get_header("lp_mens"); ?>
   <section class="p-mens-main__concept p-mens__section">
     <h2 class="p-mens__headline p-mens__center">
       理想の女性を求める<br>
-      高収入エリート男性のための<br>
-      「成果報酬型」婚活プラン
+      <span class="p-mens__headline_point">高収入エリート男性のための<br>
+        「成果報酬型」婚活プラン</span>
     </h2>
     <ul class="p-mens-main__concept-text">
       <li class="p-mens-main__concept-sentence p-mens__text">

@@ -69,6 +69,12 @@
     }
   }
 
+  // 見出し（ポイント）
+  &__headline_point {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(233, 23, 57, 0.3) 70%);
+  }
+
+
   // CTA部分
   &__cta {
     display: flex;
@@ -857,7 +863,65 @@
     padding-bottom: 77px;
   }
 
-  &__content {
+  &__access {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: $mens_base;
+  }
+
+  .p-mens__logo {
+    margin-bottom: 30px;
+
+    .p-mens__logo-pic {
+      width: 110px;
+      height: 70px;
+    }
+  }
+
+  &__access-information {
+    margin-bottom: 20px;
+    color: $mens_primary;
+  }
+
+  &__access-name {
+    font-size: responsiveFontSizeClamp(22, 24, 320, 1200);
+  }
+
+  &__access-office {
+    font-size: responsiveFontSizeClamp(20, 22, 320, 1200);
+  }
+
+  &__access-address,
+  &__access-guide {
+    color: $c_white;
+  }
+
+  &__access-address {
+    margin-bottom: 20px;
+    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
+  }
+
+  &__access-guide {
+    font-size: responsiveFontSizeClamp(12, 14, 320, 1200);
+  }
+
+  &__access-map {
+    margin-bottom: 20px;
+
+    #js-access-map {
+      height: 260px;
+      width: 100%;
+    }
+
+    .infoWindowText {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__copyright {
     width: 100%;
     max-width: 100vw;
     margin-inline: auto;
