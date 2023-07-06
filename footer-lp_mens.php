@@ -5,8 +5,33 @@ Template Name: LP_MENS
 ?>
 
 <?php /* フッター */ ?>
-<footer class="p-lp p-mens p-mens-footer">
-  <div class="p-mens-footer__content p-mens__center">
+<footer class="p-mens-footer">
+  <ul class="p-mens-footer__access">
+    <li class="p-mens__logo">
+      <img class="p-mens__logo-pic" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/logo.svg"
+        alt="サンセリテ青山">
+    </li>
+    <li class="p-mens-footer__access-information p-mens__center">
+      <h2 class="p-mens-footer__access-name">
+        サンセリテ青山
+      </h2>
+      <h3 class="p-mens-footer__access-office">
+        表参道本店
+      </h3>
+    </li>
+    <li class="p-mens-footer__access-address p-mens__center">
+      東京都渋谷区神宮前5-6-13<br>
+      ヴァイス表参道 B1
+    </li>
+    <li class="p-mens-footer__access-map">
+      <?php get_template_part( 'assets/others/map' );?>
+    </li>
+    <li class="p-mens-footer__access-guide p-mens__center">
+      東京メトロ 銀座線・半蔵門線・千代田線<br>
+      表参道駅 A1出口徒歩5分
+    </li>
+  </ul>
+  <div class="p-mens-footer__copyright p-mens__center">
     &copy;Sincrite Aoyama.
   </div>
 </footer>
