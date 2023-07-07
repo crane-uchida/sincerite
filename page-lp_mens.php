@@ -167,16 +167,15 @@ get_header("lp_mens"); ?>
   <?php /* 出会い方 */ ?>
   <section class="p-mens-main__meeting p-mens__section">
     <h2 class="p-mens__headline p-mens__center">
-      サンセリテ青山での<br>
-      出会い方
+      サンセリテ青山での出会い方
     </h2>
     <ul class="p-mens-main__meeting-content">
       <li class="p-mens-main__meeting-pic">
         <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic1.jpg"
           alt="カウンセラーからご紹介">
         <ul class="p-mens-main__meeting-container">
-          <li>
-            <h3 class="p-mens-main__meeting-title p-mens__center">
+          <li class="p-mens-main__meeting-title">
+            <h3 class="p-mens-main__meeting-title-text p-mens__center">
               カウンセラーからご紹介
             </h3>
           </li>
@@ -195,8 +194,8 @@ get_header("lp_mens"); ?>
         <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic2.jpg"
           alt="プロフィール検索">
         <ul class="p-mens-main__meeting-container">
-          <li>
-            <h3 class="p-mens-main__meeting-title p-mens__center">
+          <li class="p-mens-main__meeting-title">
+            <h3 class="p-mens-main__meeting-title-text p-mens__center">
               プロフィール検索
             </h3>
           </li>
@@ -215,8 +214,8 @@ get_header("lp_mens"); ?>
         <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic3.jpg"
           alt="お見合いパーティー">
         <ul class="p-mens-main__meeting-container">
-          <li>
-            <h3 class="p-mens-main__meeting-title p-mens__center">
+          <li class="p-mens-main__meeting-title">
+            <h3 class="p-mens-main__meeting-title-text p-mens__center">
               お見合いパーティー
             </h3>
           </li>
@@ -235,8 +234,8 @@ get_header("lp_mens"); ?>
         <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic4.jpg"
           alt="サンセリテ・ビューティー">
         <ul class="p-mens-main__meeting-container">
-          <li>
-            <h3 class="p-mens-main__meeting-title p-mens__center">
+          <li class="p-mens-main__meeting-title">
+            <h3 class="p-mens-main__meeting-title-text p-mens__center">
               サンセリテ・ビューティー<br>
               （自分磨き）
             </h3>
@@ -256,8 +255,8 @@ get_header("lp_mens"); ?>
         <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/meeting_pic5.jpg"
           alt="サンセリテ・ビューティー">
         <ul class="p-mens-main__meeting-container">
-          <li>
-            <h3 class="p-mens-main__meeting-title p-mens__center">
+          <li class="p-mens-main__meeting-title">
+            <h3 class="p-mens-main__meeting-title-text p-mens__center">
               アレンジメント<br>
               （お見合い）
             </h3>
@@ -378,7 +377,8 @@ get_header("lp_mens"); ?>
         <dl class="p-mens-main__strength-container">
           <dt class="p-mens-main__strength-title">
             <h3 class="p-mens-main__strength-title-text p-mens__center">
-              早期成婚を目指した独自のシステム
+              早期成婚を目指した<br>
+              独自のシステム
             </h3>
           </dt>
           <dd class="p-mens-main__strength-sentence p-mens__text">
@@ -430,7 +430,8 @@ get_header("lp_mens"); ?>
         <dl class="p-mens-main__strength-container">
           <dt class="p-mens-main__strength-title">
             <h3 class="p-mens-main__strength-title-text p-mens__center">
-              お見合いから成婚までのアドバイス
+              お見合いから成婚までの<br>
+              アドバイス
             </h3>
           </dt>
           <dd class="p-mens-main__strength-text p-mens__text">
