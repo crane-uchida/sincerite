@@ -185,7 +185,7 @@
   // 見出し部分
   &__headline {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     font-size: responsiveFontSizeClamp(22, 24, 320, 1200);
     font-weight: bold;
 
@@ -446,14 +446,14 @@
 
   &__meeting-container {
     background-color: $mens_base_dark;
-    padding: 30px 20px 20px;
+    padding: 30px 20px;
   }
 
-  &__meeting-title {
+  &__meeting-title-text {
     position: relative;
     margin-bottom: 40px;
     color: $mens_primary;
-    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
+    font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
     font-weight: bold;
 
     &::before {
@@ -472,6 +472,7 @@
   &__meeting-text {
     margin-bottom: 20px;
     color: $c_white;
+    font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
     text-align: justify;
   }
 
@@ -479,6 +480,7 @@
     padding: 10px;
     background-color: $mens_base_light;
     color: $c_white;
+    font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
   }
 
   &__meeting-note-title {
@@ -642,7 +644,7 @@
   &__strength-title-text {
     position: relative;
     margin-bottom: 40px;
-    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
+    font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
     font-weight: bold;
 
     &::before {
@@ -909,6 +911,7 @@
   }
 
   &__access-map {
+    width: 100%;
     margin-bottom: 20px;
 
     #js-access-map {
@@ -917,7 +920,7 @@
     }
 
     .infoWindowText {
-      font-size: 1.1rem;
+      font-size: responsiveFontSizeClamp(12, 14, 320, 1200);
     }
   }
 

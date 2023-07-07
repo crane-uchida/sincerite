@@ -235,7 +235,7 @@ table {
 }
 .p-mens__headline {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   font-size: clamp(1.375rem, 1.33rem + 0.23vw, 1.5rem);
   font-weight: bold;
 }
@@ -468,16 +468,16 @@ table {
 }
 .p-mens-main__meeting-container {
   background-color: #22201D;
-  padding: 30px 20px 20px;
+  padding: 30px 20px;
 }
-.p-mens-main__meeting-title {
+.p-mens-main__meeting-title-text {
   position: relative;
   margin-bottom: 40px;
   color: #C9BA9D;
-  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
+  font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
   font-weight: bold;
 }
-.p-mens-main__meeting-title::before {
+.p-mens-main__meeting-title-text::before {
   content: "";
   position: absolute;
   bottom: -20px;
@@ -492,12 +492,14 @@ table {
 .p-mens-main__meeting-text {
   margin-bottom: 20px;
   color: #FFF;
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
   text-align: justify;
 }
 .p-mens-main__meeting-note {
   padding: 10px;
   background-color: #57524A;
   color: #FFF;
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
 }
 .p-mens-main__meeting-note-title {
   color: #C9BA9D;
@@ -640,7 +642,7 @@ table {
 .p-mens-main__strength-title-text {
   position: relative;
   margin-bottom: 40px;
-  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
+  font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
   font-weight: bold;
 }
 .p-mens-main__strength-title-text::before {
@@ -877,6 +879,7 @@ table {
   font-size: clamp(0.75rem, 0.705rem + 0.23vw, 0.875rem);
 }
 .p-mens-footer__access-map {
+  width: 100%;
   margin-bottom: 20px;
 }
 .p-mens-footer__access-map #js-access-map {
@@ -884,7 +887,7 @@ table {
   width: 100%;
 }
 .p-mens-footer__access-map .infoWindowText {
-  font-size: 1.1rem;
+  font-size: clamp(0.75rem, 0.705rem + 0.23vw, 0.875rem);
 }
 .p-mens-footer__copyright {
   width: 100%;

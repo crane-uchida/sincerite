@@ -14,8 +14,6 @@ Template Name: LP_MENS
 
   <title><?php wp_title( '' ); ?></title>
 
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
   <?php wp_head(); ?>

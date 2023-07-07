@@ -8,7 +8,7 @@ Template Name: LP_MENS
 <footer class="p-mens-footer">
   <ul class="p-mens-footer__access">
     <li class="p-mens__logo">
-      <img class="p-mens__logo-pic" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/logo.svg"
+      <img class="p-mens__logo-pic" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/sct_logo.svg"
         alt="サンセリテ青山">
     </li>
     <li class="p-mens-footer__access-information p-mens__center">
