@@ -859,7 +859,7 @@ table {
   height: 70px;
 }
 .p-mens-footer__access-information {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #C9BA9D;
 }
 .p-mens-footer__access-name {
@@ -870,6 +870,22 @@ table {
 }
 .p-mens-footer__access-address, .p-mens-footer__access-guide {
   color: #FFF;
+}
+.p-mens-footer__access-link {
+  width: 70%;
+  margin-bottom: 10px;
+  border: 1px solid #C9BA9D;
+  color: #C9BA9D;
+}
+.p-mens-footer__access-link-text {
+  display: block;
+  padding: 10px 0;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.p-mens-footer__access-link-text:hover {
+  background-color: rgba(201, 186, 157, 0.2);
 }
 .p-mens-footer__access-address {
   margin-bottom: 20px;
