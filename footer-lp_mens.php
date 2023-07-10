@@ -19,6 +19,12 @@ Template Name: LP_MENS
         表参道本店
       </h3>
     </li>
+    <li class="p-mens-footer__access-link">
+      <a class="p-mens-footer__access-link-text p-mens__center"
+        href="https://www.club-sincerite.co.jp/?utm_source=lp_mens&utm_medium=footer">
+        公式サイトはこちら
+      </a>
+    </li>
     <li class="p-mens-footer__access-address p-mens__center">
       東京都渋谷区神宮前5-6-13<br>
       ヴァイス表参道 B1

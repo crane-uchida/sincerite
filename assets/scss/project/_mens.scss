@@ -884,7 +884,7 @@
   }
 
   &__access-information {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: $mens_primary;
   }
 
@@ -899,6 +899,24 @@
   &__access-address,
   &__access-guide {
     color: $c_white;
+  }
+
+  &__access-link {
+    width: 70%;
+    margin-bottom: 10px;
+    border: 1px solid $mens_primary;
+    color: $mens_primary;
+  }
+
+  &__access-link-text {
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(201, 186, 157, 0.2)
+    }
   }
 
   &__access-address {
