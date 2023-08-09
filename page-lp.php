@@ -33,7 +33,7 @@ get_header("lp"); ?>
 			<p class="s01">あなたのご希望・お悩みをお聞かせ下さい。</p>
 			
 			<div class="reservation-wrap">
-				<div class="reservation-btn"><a href="<?php echo home_url(); ?>/form01/">無料来店カウンセリング予約</a></div>
+				<div class="reservation-btn"><a href="<?php echo home_url(); ?>/counseling/">無料来店カウンセリング予約</a></div>
 				<div class="online-btn"><a href="<?php echo home_url(); ?>/online/">オンライン面談予約</a></div>
 				<div class="tel-btn"><a href="tel:03-5468-2181">03-5468-2181</a></div>
 			</div>

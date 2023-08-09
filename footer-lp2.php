@@ -13,7 +13,7 @@
 	<ul id="fixNav">
 		<li class="tel"><a href="tel:03-5468-2181"><span><span>03-5468-2181</span></span></a></li>
 		<li class="document"><a href="<?php echo home_url(); ?>/form05/"><span><span>資料請求</span></span></a></li>
-		<li class="counseling"><a href="<?php echo home_url(); ?>/form01/"><span><span>無料カウンセリング</span></span></a></li>
+		<li class="counseling"><a href="<?php echo home_url(); ?>/counseling/"><span><span>無料カウンセリング</span></span></a></li>
 	</ul>
 	
 	
