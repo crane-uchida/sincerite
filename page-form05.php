@@ -1,6 +1,33 @@
 <?php
+/*
+Template Name: 無料パンフレット請求
+*/?>
+<?php
 remove_filter('the_content', 'wpautop');
-get_header(); ?>
+get_header('new'); ?>
+<h1 class="form_ttl"><span>無料</span>パンフレット請求</h1>
+<div class="breadcrumb">
+  <div class="container-1280">
+    <ul class="breadcrumb-ul">
+      <li class="breadcrumb-li">
+        <a href="/" class="breadcrumb-link -home">HOME</a>
+      </li>
+      <li class="breadcrumb-li">
+        <a href="#" class="breadcrumb-link -active">無料パンフレット請求</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="request-mv">
+  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/request-main-sp.png" alt="パンフレットご請求受付中" class="only-sp">
+ <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/request-main.png" alt="パンフレットご請求受付中" class="pc" width="900" hieght="420" style="margin: auto">
+</div>
+<div class="form-flow">
+ <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/nyuryoku-sp.png" alt="01情報のご入力" class="only-sp">
+   <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/nyuryoku.png" alt="01情報のご入力" class="pc" width="900" hieght="90">
+</div>
+
 
             <?php
             if (have_posts()) :
@@ -54,8 +81,8 @@ get_header(); ?>
         let input_txt_number = $("input[name=txt_number]").val();
         $('#txt_number').empty().append(input_txt_number);
         //住所1
-        let input_txt_prefectures = $("input[name=txt_prefectures]").val();
-        $('#txt_prefectures').empty().append(input_txt_prefectures);
+        let select_txt_prefectures = $("select[name=txt_prefectures]").val();
+        $('#txt_prefectures').empty().append(select_txt_prefectures);
         //住所2
         let input_txt_address = $("input[name=txt_address]").val();
         $('#txt_address').empty().append(input_txt_address);
@@ -89,10 +116,11 @@ get_header(); ?>
 
         if ($('input[name="txt_name"]').val() == "") {
           is_check = false;
-          txt_name_error.text("お名前を入力してください");
+          txt_name_error.text("全角カタカナで入力してください");
         }else{
           txt_name_error.text("");
         }
+
         
         if ($('input[name="gender"]:checked').val() === undefined ) {
           is_check = false;
@@ -117,21 +145,21 @@ get_header(); ?>
         
         if (number.length < 10) {
           is_check = false;
-          tel_error.text("電話番号を正しく入力してください");
+          tel_error.text("半角英数字で入力してください");
         }else{
           tel_error.text("");
         }
         
         if ($('input[name="txt_number"]').val() == "") {
           is_check = false;
-          txt_number_error.text("郵便番号を入力してください");
+          txt_number_error.text("半角英数字で入力してください");
         }else{
           txt_number_error.text("");
         }
-        
-        if ($('input[name="txt_prefectures"]').val() == "") {
+
+        if ($('select[name="txt_prefectures"]').val() == "") {
           is_check = false;
-          txt_prefectures_error.text("住所（都道府県）を入力してください");
+          txt_prefectures_error.text("住所（都道府県）を選択してください");
         }else{
           txt_prefectures_error.text("");
         }
@@ -145,7 +173,7 @@ get_header(); ?>
         
         if (!$('input[name="checkbox"]').prop("checked")) {
           is_check = false;
-          checkbox_error.text("個人情報に同意してください");
+          checkbox_error.text("お問い合わせには、個人情報の同意が必要です。");
         }else{
           checkbox_error.text("");
         }
@@ -155,7 +183,7 @@ get_header(); ?>
           $('#entry_send').attr("type", "submit");
 
           var parameter = '<?=$substr1.$number?>'; //PHPの変数をJavaScriptへ渡す
-          var thanks = '/form05/form05-thanks/?id=' + parameter;
+          var thanks = '/request/request-thanks/?id=' + parameter;
           $('form').attr('action', thanks);
 
           var close = $('.modal-close'),
@@ -172,7 +200,14 @@ get_header(); ?>
     }
 
   </script>
-
+<script>
+  var wpcf7Elm = document.querySelector( '.wpcf7' );
+ 
+  wpcf7Elm.addEventListener( 'wpcf7invalid', function( event ) {
+    let speed = 1000;
+    jQuery("html, body").animate({scrollTop:0}, speed, "swing");
+  }, false );
+</script>
 
   <!-- 確認画面 -->
   <div class="modal-container">
@@ -180,9 +215,55 @@ get_header(); ?>
       <div class="modal-body">
         <div class="modal-close modal-button">×</div>
         <div class="modal-content">
-          <p class="text">この内容で送信します。よろしいですか？</p>
-          <dl class="primary">
-            <dt><span>お名前</span></dt>
+         
+          <div>
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/kakunin-sp.png" alt="02内容の確認" class="only-sp">
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/kakunin.png" alt="02内容の確認" class="pc" width="1000" hieght="92"></div>
+         <div class="mdl">
+          <table class="modal-table">
+           <tr>
+            <th>お名前（フリガナ）<span class="hissu">必須</span></th>
+            <td id="txt_name"></td>
+           </tr>
+           
+           <tr>
+            <th>性別<span class="hissu">必須</span></th>
+            <td id="gender"></td>
+           </tr>
+           
+           <tr>
+            <th>メールアドレス<span class="hissu">必須</span></th>
+            <td id="txt_email"></td>
+           </tr>
+           
+           <tr>
+            <th>電話番号<span class="hissu">必須</span></th>
+            <td id="tel"></td>
+           </tr>
+           
+           <tr>
+            <th>郵便番号<span class="hissu">必須</span></th>
+            <td id="txt_number"></td>
+           </tr>
+           
+           <tr>
+            <th>住所<span class="hissu">必須</span></th>
+            <td>
+              <div id="txt_prefectures"></div>
+              <div id="txt_address"></div>
+              <div id="txt_other"></div>
+            </td>
+           </tr>
+           
+           <tr class="dan2">
+            <th>個人情報の<br>取り扱いへの同意<span class="hissu">必須</span></th>
+            <td>同意する</td>
+           </tr>
+         
+          </table>
+         </div>
+          <!--<dl class="primary">
+            <dt><span>お名前</span><span class="hissu">必須</span></dt>
             <dd id="txt_name"></dd>
             <dt><span>性別</span></dt>
             <dd id="gender"></dd>
@@ -205,15 +286,16 @@ get_header(); ?>
             </dd>
             <dt><span>弊社へのお問い合わせ</span></dt>
             <dd id="FlexTextarea"></dd>
-          </dl>
+          </dl>-->
           <div class="button-box">
-            <button type="button" class="modal-close">戻る</button>
-            <button type="button" id="entry_send" class="submit" onclick="send_form()">送信する</button>
+            <button type="button" class="modal-close btn-prev modoru">修正する</button>
+            <button type="button" id="entry_send" class="submit btn-primary" onclick="send_form()">送信する</button>
           </div>
+          <div class="modoru-area"><button type="button" class="modal-close tojiru">閉じる</button></div>
         </div>
       </div>
     </div>
   </div>
   <!-- 確認画面 end -->
 
-<?php get_footer(); ?>
+<?php get_footer('new02'); ?>

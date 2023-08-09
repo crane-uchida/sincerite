@@ -80,7 +80,7 @@
 
   <?php if (is_home() || is_front_page()) : ?>
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@8/swiper.min.css">
-  <link href="<?php echo esc_url(get_template_directory_uri()); ?>/scss/common/reset.css" rel="stylesheet">
+  <!--<link href="<?php echo esc_url(get_template_directory_uri()); ?>/scss/common/reset.css" rel="stylesheet">
   <link href="<?php echo esc_url(get_template_directory_uri()); ?>/scss/common/style.css" rel="stylesheet">
   <link href="<?php echo esc_url(get_template_directory_uri()); ?>/scss/top/style.css" rel="stylesheet">
   <link href="<?php echo esc_url(get_template_directory_uri()); ?>/scss/common/faq/style.css" rel="stylesheet">
@@ -91,7 +91,7 @@
     rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;1,400;1,500&display=swap&text=0123456789,"
-    rel="stylesheet">
+    rel="stylesheet">-->
 
   <?php elseif (is_page_template('page-form.php')) : ?>
   <link rel="stylesheet" type="text/css"
@@ -169,6 +169,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap"
     rel="stylesheet">
+  <?php elseif (is_page('request')) : ?>
+  <link href="<?php echo esc_url(get_template_directory_uri()); ?>/scss/common/reset.css" rel="stylesheet">
+  <link href="<?php echo esc_url(get_template_directory_uri()); ?>/scss/common/form/style.css" rel="stylesheet">
 
   <?php elseif (is_page('form05-thanks')) : ?>
   <link href="<?php echo esc_url(get_template_directory_uri()); ?>/scss/common/reset.css" rel="stylesheet">

@@ -1,0 +1,17 @@
+<svg id="btn_modal_open-pc" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="長方形_1632" data-name="長方形 1632" transform="translate(0 32) rotate(-90)" fill="#fff" stroke="#b19d7f" stroke-width="1">
+    <rect width="32" height="32" rx="16" stroke="none"/>
+    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="none"/>
+  </g>
+  <g id="グループ_6383" data-name="グループ 6383" transform="translate(0.646 0.646)">
+    <g id="長方形_2325" data-name="長方形 2325" transform="translate(8 21) rotate(-90)" fill="none" stroke="#b19d7f" stroke-width="1">
+      <rect width="13" height="13" rx="6.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="12" height="12" rx="6" fill="none"/>
+    </g>
+    <g id="グループ_6382" data-name="グループ 6382" transform="translate(-543 -2736)">
+      <rect id="長方形_2323" data-name="長方形 2323" width="1" height="7" transform="translate(557 2747)" fill="#b19d7f"/>
+      <rect id="長方形_2324" data-name="長方形 2324" width="7" height="1" transform="translate(554 2750)" fill="#b19d7f"/>
+    </g>
+    <path id="線_135" data-name="線 135" d="M2.293,3.707l-3-3L.707-.707l3,3Z" transform="translate(19 19)" fill="#b19d7f"/>
+  </g>
+</svg>

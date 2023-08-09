@@ -54,6 +54,9 @@
   // PC版 右側のエリア
   /*   &__right {
     display: none;
+
+    @media #{$tab} {
+    }
   } */
 
   // PC版 メインエリア
@@ -68,12 +71,6 @@
       margin: 0;
     }
   }
-
-  // 見出し（ポイント）
-  &__headline_point {
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(233, 23, 57, 0.3) 70%);
-  }
-
 
   // CTA部分
   &__cta {
@@ -100,7 +97,7 @@
 
   &__cta-comment {
     color: $c_white;
-    font-size: responsiveFontSizeClamp(20, 22, 320, 1200);
+    font-size: responsiveFontSizeClamp(24, 26, 320, 1200);
   }
 
   &__cta-button-application,
@@ -114,7 +111,7 @@
   }
 
   &__cta-button-line {
-    font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
+    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
   }
 
   &__cta-link {
@@ -152,40 +149,10 @@
     height: 25px;
   }
 
-  &__cta-button-online {
-    margin-top: 10px;
-    padding: 20px;
-    background-color: $mens_base_light;
-  }
-
-  &__cta-button-word {
-    color: $c_white;
-    font-size: responsiveFontSizeClamp(12, 14, 320, 1200);
-  }
-
-  &__cta-button-text {
-    margin-bottom: 14px;
-    color: $c_white;
-    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
-  }
-
-  &__cta-button-link {
-    display: block;
-    padding: 10px 0;
-    background-color: $mens_primary;
-    font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-      background-color: rgba(201, 186, 157, 0.6)
-    }
-  }
-
   // 見出し部分
   &__headline {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-size: responsiveFontSizeClamp(22, 24, 320, 1200);
     font-weight: bold;
 
@@ -209,6 +176,7 @@
 
 .p-mens-header {
   display: block;
+  height: 100svh;
   margin-inline: auto;
   background-color: $mens_base_light;
   background-image: url(../images/lp_mens/fv_bg.jpg);
@@ -216,15 +184,10 @@
   background-size: contain;
   background-position: 0 20px;
 
-  @media (max-width: 440px) {
+  @media (min-width: 390px) {
     width: 100%;
-    height: 100svh;
-  }
-
-  @media (min-width: 440px) {
-    width: 100%;
-    height: fit-content;
     padding-bottom: 20px;
+    height: fit-content;
   }
 
   &__inner {
@@ -272,29 +235,6 @@
   @media (min-width: 390px) {
     width: 100%;
   }
-
-
-  // トピックス（バナー）
-  &__topics {
-    padding: 0px 20px 20px;
-    background-color: $mens_base_light;
-
-    @media (min-width: 440px) {
-      padding: 0px 20px 20px;
-    }
-  }
-
-  &__topics-link {
-    display: block;
-    cursor: pointer;
-    transition: 0.3s;
-    line-height: 0;
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
 
   // サンセリテのコンセプト
   &__concept {
@@ -422,71 +362,6 @@
     background-color: $mens_base_light;
     color: $c_white;
     text-align: justify;
-  }
-
-
-  // 出会い方
-  &__meeting {
-    background-color: $mens_base_light;
-
-    .p-mens__headline {
-      color: $mens_primary;
-
-      &::before {
-        background-color: $mens_primary;
-      }
-    }
-  }
-
-  &__meeting-content {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  &__meeting-container {
-    background-color: $mens_base_dark;
-    padding: 30px 20px;
-  }
-
-  &__meeting-title-text {
-    position: relative;
-    margin-bottom: 40px;
-    color: $mens_primary;
-    font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
-    font-weight: bold;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 20px;
-      height: 2px;
-      background-color: $mens_primary;
-      border-radius: 2px;
-    }
-  }
-
-  &__meeting-text {
-    margin-bottom: 20px;
-    color: $c_white;
-    font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
-    text-align: justify;
-  }
-
-  &__meeting-note {
-    padding: 10px;
-    background-color: $mens_base_light;
-    color: $c_white;
-    font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
-  }
-
-  &__meeting-note-title {
-    color: $mens_primary;
-    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
-    font-weight: bold;
   }
 
 
@@ -644,7 +519,7 @@
   &__strength-title-text {
     position: relative;
     margin-bottom: 40px;
-    font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
+    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
     font-weight: bold;
 
     &::before {
@@ -668,6 +543,37 @@
 
   &__strength-sentence {
     text-align: justify;
+  }
+
+  // 強み CTA
+  .p-mens__cta-button-online {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: $mens_base_light;
+  }
+
+  .p-mens__cta-button-word {
+    color: $c_white;
+    font-size: responsiveFontSizeClamp(12, 14, 320, 1200);
+  }
+
+  .p-mens__cta-button-text {
+    margin-bottom: 14px;
+    color: $c_white;
+    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
+  }
+
+  .p-mens__cta-button-link {
+    display: block;
+    padding: 10px 0;
+    background-color: $mens_primary;
+    font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(201, 186, 157, 0.6)
+    }
   }
 
 
@@ -718,7 +624,7 @@
 
   &__voice-content-pic {
     width: 160px;
-    height: 30px;
+    height: fit-content;
     vertical-align: text-bottom;
   }
 
@@ -860,166 +766,16 @@
 // ---------- footer ---------- //
 
 .p-mens-footer {
+  width: 100%;
+  max-width: 100vw;
+  margin-inline: auto;
+  padding: 4px;
+  background-color: $mens_base_dark;
+  color: $mens_primary;
+  font-size: responsiveFontSizeClamp(10, 12, 320, 1200);
 
-  @media (max-width: 440px) {
-    padding-bottom: 77px;
-  }
-
-  &__access {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: $mens_base;
-  }
-
-  .p-mens__logo {
-    margin-bottom: 30px;
-
-    .p-mens__logo-pic {
-      width: 110px;
-      height: 70px;
-    }
-  }
-
-  &__access-information {
-    margin-bottom: 10px;
-    color: $mens_primary;
-  }
-
-  &__access-name {
-    font-size: responsiveFontSizeClamp(22, 24, 320, 1200);
-  }
-
-  &__access-office {
-    font-size: responsiveFontSizeClamp(20, 22, 320, 1200);
-  }
-
-  &__access-address,
-  &__access-guide {
-    color: $c_white;
-  }
-
-  &__access-link {
-    width: 70%;
-    margin-bottom: 10px;
-    border: 1px solid $mens_primary;
-    color: $mens_primary;
-  }
-
-  &__access-link-text {
-    display: block;
-    padding: 10px 0;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-      background-color: rgba(201, 186, 157, 0.2)
-    }
-  }
-
-  &__access-address {
-    margin-bottom: 20px;
-    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
-  }
-
-  &__access-guide {
-    font-size: responsiveFontSizeClamp(12, 14, 320, 1200);
-  }
-
-  &__access-map {
+  @media (min-width: 390px) {
     width: 100%;
-    margin-bottom: 20px;
-
-    #js-access-map {
-      height: 260px;
-      width: 100%;
-    }
-
-    .infoWindowText {
-      font-size: responsiveFontSizeClamp(12, 14, 320, 1200);
-    }
-  }
-
-  &__copyright {
-    width: 100%;
-    max-width: 100vw;
-    margin-inline: auto;
-    padding: 4px;
-    background-color: $mens_base_dark;
-    color: $mens_primary;
-    font-size: responsiveFontSizeClamp(10, 12, 320, 1200);
-
-    @media (min-width: 390px) {
-      width: 100%;
-    }
-  }
-}
-
-// SP版 固定フッター
-.p-mens {
-
-  &__overlay {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-  }
-
-  &__overlay_content {
-    display: none;
-
-    @media (max-width: 440px) {
-      display: flex;
-    }
-  }
-
-  &__overlay-tel,
-  &__overlay-reservation,
-  &__overlay-line {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    height: 77px;
-    padding: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-
-    .p-mens__overlay-pic {
-      max-height: 77px;
-    }
-  }
-
-  &__overlay-link {
-    width: 100%;
-    text-align: center;
-  }
-
-  &__overlay-tel {
-    background-color: #a13939;
-
-    &:hover {
-      background-color: #B03F3F;
-    }
-  }
-
-  &__overlay-reservation {
-    background-color: #911b1b;
-
-    &:hover {
-      background-color: #A21F1F;
-    }
-  }
-
-  &__overlay-line {
-    background-color: #d7d7d7;
-
-    &:hover {
-      background-color: #E2E2E2;
-    }
   }
 }
 

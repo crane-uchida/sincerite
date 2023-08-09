@@ -1,4 +1,4 @@
-<?php if (!(is_page('form01') || is_page('form02') || is_page('form03') || is_page('form04') || is_page('form05') || is_page('form06') || is_page('online') || is_page('recruit') || is_page('first_matching') )) : ?>
+<?php if (!(is_page('form01') || is_page('form02') || is_page('form03') || is_page('form04') || is_page('form05') || is_page('request') || is_page('form06') || is_page('online') || is_page('recruit') || is_page('first_matching') )) : ?>
 
 <div class=rwd>
   <ul class="floating">
@@ -211,7 +211,7 @@
 </div><!-- container  -->
 
 
-<?php if (is_page('form01') || is_page_template('templates/template-form.php') || is_page('form05') || is_page('form06') || is_page('online') || is_page('recruit') || is_page('first_matching')) : ?>
+<?php if (is_page('form01') || is_page_template('templates/template-form.php') || is_page('form05') || is_page('request') || is_page('form06') || is_page('online') || is_page('recruit') || is_page('first_matching')) : ?>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/form.js"></script>
 <?php endif; ?>

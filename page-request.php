@@ -1,0 +1,1859 @@
+<?php
+remove_filter('the_content', 'wpautop');
+get_header(); ?>
+
+            <?php
+            if (have_posts()) :
+                while (have_posts()) :
+                    the_post();
+                    ?>
+                    <?php the_content(); ?>
+                    <?php
+                endwhile;
+            else:
+                ?>
+                <p>ページはありません！</p>
+                <?php
+            endif;
+            ?>
+
+<?php
+  $wpcf7sn= do_shortcode('[wpcf7sn_view_count id="5730"]');
+  // $wpcf7snの文字列に含まれる数字に1を足す
+  $number = preg_replace( '/[^\p{Nd}]/u', '', $wpcf7sn);
+  $number++;
+  $substr1 = substr($wpcf7sn, 0, 1);
+?>
+
+<!-- 無料パンフレット請求 -->
+<script>
+    window.onload = function(){
+      $('#entry_conf').click(function () {
+        formCheck();
+        $('.modal-close').on('click', function () {
+          $('.modal-container').removeClass('active');
+        });
+        $('.modal-container.active').on('click', function (e) {
+          if (!$(e.target).closest('.modal-body').length) {
+            $('.modal-container').removeClass('active');
+          }
+        });
+        // お名前
+        let input_name = $("input[name=txt_name]").val();
+        $('#txt_name').empty().append(input_name);
+        // 性別
+        let input_gender = $("input[name=gender]:checked").val();
+        $('#gender').empty().append(input_gender);
+        //メールアドレス
+        let input_txt_email = $("input[name=txt_email]").val();
+        $('#txt_email').empty().append(input_txt_email);
+        //電話番号
+        let input_tel = $("input[name=tel]").val();
+        $('#tel').empty().append(input_tel);
+        //郵便番号
+        let input_txt_number = $("input[name=txt_number]").val();
+        $('#txt_number').empty().append(input_txt_number);
+        //住所1
+        let input_txt_prefectures = $("input[name=txt_prefectures]").val();
+        $('#txt_prefectures').empty().append(input_txt_prefectures);
+        //住所2
+        let input_txt_address = $("input[name=txt_address]").val();
+        $('#txt_address').empty().append(input_txt_address);
+        //住所3
+        let input_txt_other = $("input[name=txt_other]").val();
+        $('#txt_other').empty().append(input_txt_other);
+        // ご来店希望日
+        let input_date = $("input[name=date]").val();
+        $('#date').empty().append(input_date);
+        // ご来店希望時間
+        let input_select = $("select[name=select]").val();
+        $('#select').empty().append(input_select);
+        //弊社へのお問い合わせ
+        let textarea_FlexTextarea = $("textarea[name=FlexTextarea]").val();
+        $('#FlexTextarea').empty().append(textarea_FlexTextarea);
+      });
+
+      function formCheck() {
+        var number = $('input[name="tel"]').val()
+        number = number.replace(/-/g,'');
+
+        var is_check = true;
+        var txt_name_error = $(".txt_name .error_message");
+        var gender_error = $(".gender .error_message");
+        var txt_email_error = $(".txt_email .error_message");
+        var tel_error = $(".tel .error_message");
+        var txt_number_error = $(".txt_number .error_message");
+        var txt_prefectures_error = $(".txt_prefectures .error_message");
+        var txt_address_error = $(".txt_address .error_message");
+        var checkbox_error = $(".checkbox .error_message");
+
+        if ($('input[name="txt_name"]').val() == "") {
+          is_check = false;
+          txt_name_error.text("お名前を入力してください");
+        }else{
+          txt_name_error.text("");
+        }
+        
+        if ($('input[name="gender"]:checked').val() === undefined ) {
+          is_check = false;
+          gender_error.text("性別を選択してください");
+        }else{
+          gender_error.text("");
+        }
+        
+        if ($('input[name="txt_email"]').val() == "") {
+          is_check = false;
+          txt_email_error.text("メールアドレスを入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+        
+        if (!$('input[name="txt_email"]').val().match(/^[A-Za-z0-9.]+[\w-]+@[\w\.-]+\.\w{2,}$/)) {
+          is_check = false;
+          txt_email_error.text("メールアドレスを正しく入力してください");
+        }else{
+          txt_email_error.text("");
+        }
+        
+        if (number.length < 10) {
+          is_check = false;
+          tel_error.text("電話番号を正しく入力してください");
+        }else{
+          tel_error.text("");
+        }
+        
+        if ($('input[name="txt_number"]').val() == "") {
+          is_check = false;
+          txt_number_error.text("郵便番号を入力してください");
+        }else{
+          txt_number_error.text("");
+        }
+        
+        if ($('input[name="txt_prefectures"]').val() == "") {
+          is_check = false;
+          txt_prefectures_error.text("住所（都道府県）を入力してください");
+        }else{
+          txt_prefectures_error.text("");
+        }
+        
+        if ($('input[name="txt_address"]').val() == "") {
+          is_check = false;
+          txt_address_error.text("住所を入力してください");
+        }else{
+          txt_address_error.text("");
+        }
+        
+        if (!$('input[name="checkbox"]').prop("checked")) {
+          is_check = false;
+          checkbox_error.text("個人情報に同意してください");
+        }else{
+          checkbox_error.text("");
+        }
+        
+        if(is_check){
+          $(".error_message").text("");
+          $('#entry_send').attr("type", "submit");
+
+          var parameter = '<?=$substr1.$number?>'; //PHPの変数をJavaScriptへ渡す
+          var thanks = '/form05/form05-thanks/?id=' + parameter;
+          $('form').attr('action', thanks);
+
+          var close = $('.modal-close'),
+          container = $('.modal-container');
+          container.addClass('active');
+        }
+
+      }
+
+    };
+
+    function send_form(){
+        $('form').submit();
+    }
+
+  </script>
+
+
+  <!-- 確認画面 -->
+  <div class="modal-container">
+    <div class="modal-position">
+      <div class="modal-body">
+        <div class="modal-close modal-button">×</div>
+        <div class="modal-content">
+          <p class="text">この内容で送信します。よろしいですか？</p>
+          <dl class="primary">
+            <dt><span>お名前</span></dt>
+            <dd id="txt_name"></dd>
+            <dt><span>性別</span></dt>
+            <dd id="gender"></dd>
+            <dt><span>メールアドレス</span></dt>
+            <dd id="txt_email"></dd>
+            <dt><span>電話番号</span></dt>
+            <dd id="tel"></dd>
+            <dt><span>郵便番号</span></dt>
+            <dd id="txt_number"></dd>
+            <dt><span>住所</span></dt>
+            <dd>
+              <div id="txt_prefectures"></div>
+              <div id="txt_address"></div>
+              <div id="txt_other"></div>
+            </dd>
+            <dt><span>ご来店希望日</span></dt>
+            <dd>
+              <div id="date"></div>
+              <div id="select"></div>
+            </dd>
+            <dt><span>弊社へのお問い合わせ</span></dt>
+            <dd id="FlexTextarea"></dd>
+          </dl>
+          <div class="button-box">
+            <button type="button" class="modal-close">戻る</button>
+            <button type="button" id="entry_send" class="submit" onclick="send_form()">送信する</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 確認画面 end -->
+<style>
+@charset "UTF-8";
+.form_area,
+.thanks {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333333;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area,
+.thanks {
+    font-size: 1.6rem;
+  }
+}
+.form_area h1,
+.form_area h2,
+.form_area h3,
+.form_area h4,
+.form_area h5,
+.thanks h1,
+.thanks h2,
+.thanks h3,
+.thanks h4,
+.thanks h5 {
+  font-family: "Noto Serif JP", serif;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .inner,
+.thanks .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+.form_sub {
+  margin-bottom: 2rem;
+  color: #58CABE;
+  font-size: 2.4rem;
+  text-align: center;
+  line-height: 3.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_sub {
+    margin-bottom: 30px;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+  }
+}
+
+.form_area .form {
+  margin: 0 2rem 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form {
+    max-width: 1020px;
+   width: 100%;
+   padding: 0 60px;
+    margin: 0 auto 0;
+   display: flex;
+   flex-wrap: wrap;
+  }
+}
+.form_area .form dt {
+  margin-bottom: 0.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form dt {
+    margin-bottom: 8px;
+   width: 25%;
+   white-space: nowrap;
+   font-size: 1.6rem;
+   text-align: right;
+   padding-top: 11px;
+  }
+}
+.form_area  dt span {
+  margin-left: 1.0rem;
+  padding: 0.1rem 0.3rem;
+  background-color: #B19D7F;
+  border-radius: 0.3rem;
+  color: #FFF;
+  font-size: 1.2rem;
+ font-weight: 500;
+}
+@media screen and (min-width: 768px), print {
+  .form_area dt span {
+    padding: 2px 6px;
+    border-radius: 3px;
+   font-size: 1.6rem;
+  }
+}
+.form_area .form dd {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form dd {
+    margin-bottom: 10px;
+   width: 75%;
+   padding-left: 30px;
+  }
+}
+.form_area .form input[type=text],
+.form_area .form select,
+.form_area .form input[type=radio],
+.form_area .form input[type=email],
+.form_area .form input[type=tel],
+.form_area .form textarea,
+.form_area .form input[type=checkbox] {
+  font-family: "Noto Sans JP", sans-serif;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #FFF;
+  color: #333333;
+}
+.form_area .form input[type=text]::-webkit-input-placeholder, .form_area .form select::-webkit-input-placeholder, .form_area .form input[type=radio]::-webkit-input-placeholder, .form_area .form input[type=email]::-webkit-input-placeholder, .form_area .form input[type=tel]::-webkit-input-placeholder, .form_area .form textarea::-webkit-input-placeholder, .form_area .form input[type=checkbox]::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=text]::-moz-placeholder, .form_area .form select::-moz-placeholder, .form_area .form input[type=radio]::-moz-placeholder, .form_area .form input[type=email]::-moz-placeholder, .form_area .form input[type=tel]::-moz-placeholder, .form_area .form textarea::-moz-placeholder, .form_area .form input[type=checkbox]::-moz-placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=text]:-ms-input-placeholder, .form_area .form select:-ms-input-placeholder, .form_area .form input[type=radio]:-ms-input-placeholder, .form_area .form input[type=email]:-ms-input-placeholder, .form_area .form input[type=tel]:-ms-input-placeholder, .form_area .form textarea:-ms-input-placeholder, .form_area .form input[type=checkbox]:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=text]::-ms-input-placeholder, .form_area .form select::-ms-input-placeholder, .form_area .form input[type=radio]::-ms-input-placeholder, .form_area .form input[type=email]::-ms-input-placeholder, .form_area .form input[type=tel]::-ms-input-placeholder, .form_area .form textarea::-ms-input-placeholder, .form_area .form input[type=checkbox]::-ms-input-placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=text]::placeholder,
+.form_area .form select::placeholder,
+.form_area .form input[type=radio]::placeholder,
+.form_area .form input[type=email]::placeholder,
+.form_area .form input[type=tel]::placeholder,
+.form_area .form textarea::placeholder,
+.form_area .form input[type=checkbox]::placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=date] {
+  -webkit-appearance: none;
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #E0E0E0;
+  background-color: #FFF;
+}
+.form_area .form input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  z-index: 1;
+}
+.form_area .form input[type=date]::after {
+  content: "";
+  background-image: url(../../../images/form/icon_calendar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.form_area .form .area_default {
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_default {
+    padding: 14px 20px;
+    border-radius: 3px;
+    font-size: 1.6rem;
+  }
+}
+.form_area .form .area {
+  background-color: #E9F9F8;
+}
+.form_area .form .area_input {
+  width: 100%;
+  border: solid 1px #D0D0D0;
+  font-size: 1.4rem;
+  height: 50px;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_input {
+    border: solid 1px #D0D0D0;
+    font-size: 1.6rem;
+    height: 50px;
+  }
+}
+.form_area .form .area_input:focus {
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+          box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+  outline: 0;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_input:focus {
+    -webkit-box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+            box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+  }
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_input_half {
+    width: 345px;
+   width: 100%;
+  }
+}
+.form_area .form .area_input_half:focus {
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+          box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+  outline: 0;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_input_half:focus {
+    -webkit-box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+            box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+  }
+}
+.form_area .form .area_select_default ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select_default ul {
+    gap: 10px;
+  }
+}
+.form_area .form .area_select1 ul {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select1 ul {
+    margin-top: 14px;
+  }
+}
+.form_area .form .area_select1 ul li {
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50%;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select1 ul li {
+    width: 340px;
+  }
+}
+.form_area .form .area_select1 ul li select {
+  color: #E0E0E0;
+}
+.form_area .form .area_select1 ul li select option {
+  color: #333333;
+  font-size: 1.6rem;
+}
+.form_area .form .sub_checkbox {
+  margin: 0 0 0.6rem 0.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .sub_checkbox {
+    margin: 0 0 6px 6px;
+  }
+}
+.form_area .form .area_select2 ul {
+  font-size: 1.4rem;
+}
+.form_area .form .area_select2 ul li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50vw;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select2 ul li {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    width: 168px;
+  }
+}
+.form_area .form .area_select2 .wpcf7-form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+.form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item.first {
+  margin: 0;
+}
+.form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50%;
+  margin: 0;
+  border: solid 1px #D0D0D0;
+  border-radius: 0.3rem;
+  line-height: 2.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    width: 200px;
+    height: 50px;
+    border: solid 1px #D0D0D0;
+    line-height: normal;
+  }
+}
+.form_area .form .area_select2 .wpcf7-form-control input[type=radio] {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  padding: 1rem;
+}
+.form_area .form .area_select2 .wpcf7-form-control input[type=radio]:checked + .wpcf7-list-item-label::before {
+  background-color: #B19D7F;
+  -webkit-box-shadow: inset 0 0 0 0.2rem #fff;
+          box-shadow: inset 0 0 0 0.2rem #fff;
+}
+.form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 2.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label {
+    font-size: 1.2rem;
+    line-height: normal;
+   display: flex;
+   justify-content: center;
+  }
+}
+.form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before {
+  content: "";
+  background: #fff;
+  width: 1.2em;
+  height: 1.2em;
+  margin-bottom: auto;
+  margin-right: 0.5em;
+  margin-top: auto;
+  border: 1px solid #D0D0D0;
+  border-radius: 100%;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.form_area .form .area_select2 .man_notice,
+.form_area .form .area_select2 .woman_notice {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select2 .man_notice,
+.form_area .form .area_select2 .woman_notice {
+    margin: 20px;
+    padding: 14px;
+  }
+}
+.form_area .form .area_select2 .man_notice {
+  background-color: #CCEFEB;
+}
+.form_area .form .area_select2 .woman_notice {
+  background-color: #FFD1D5;
+}
+.form_area .form .area_select3 .area_select_half {
+  width: 48%;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select3 .area_select_half {
+    width: 345px;
+  }
+}
+.form_area .form .area_select3 select {
+  background-color: #FFF;
+  color: #E0E0E0;
+}
+.form_area .form .area_select3 select option {
+  color: #333333;
+  font-size: 1.6rem;
+}
+.form_area .form span.select_age::after,
+.form_area .form span.select_zodiac::after,
+.form_area .form span.select_bloodtype::after,
+.form_area .form span.select_1::after,
+.form_area .form span.select_2::after,
+.form_area .form span.select_3::after,
+.form_area .form span.select_4::after,
+.form_area .form span.select_5::after,
+.form_area .form span.select_6::after,
+.form_area .form span.select_7::after,
+.form_area .form span.select_8::after,
+.form_area .form span.select_9::after,
+.form_area .form span.select_10::after,
+.form_area .form span.select_11::after,
+.form_area .form span.select::after,
+.form_area .form span.date::after,
+.form_area .form span.select_yy::after,
+.form_area .form span.select_mm::after,
+.form_area .form span.select_dd::after,
+.form_area .form span.select_occupation::after,
+.form_area .form span[data-name=select]::after,
+.form_area .form span[data-name=select_age]::after,
+.form_area .form span[data-name=select_zodiac]::after,
+.form_area .form span[data-name=select_bloodtype]::after,
+.form_area .form span[data-name=select_1]::after,
+.form_area .form span[data-name=select_2]::after,
+.form_area .form span[data-name=select_3]::after,
+.form_area .form span[data-name=select_4]::after,
+.form_area .form span[data-name=select_5]::after,
+.form_area .form span[data-name=select_6]::after,
+.form_area .form span[data-name=select_7]::after,
+.form_area .form span[data-name=select_8]::after,
+.form_area .form span[data-name=select_9]::after,
+.form_area .form span[data-name=select_10]::after,
+.form_area .form span[data-name=select_11]::after,
+.form_area .form span[data-name=select_annualincome]::after,
+.form_area .form span[data-name=select_yy]::after,
+.form_area .form span[data-name=select_mm]::after,
+.form_area .form span[data-name=select_dd]::after,
+.form_area .form span[data-name=select_occupation]::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-top: solid 0.2rem #58CABE;
+  border-right: solid 0.2rem #58CABE;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.form_area .form label {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form label {
+    padding: 14px 20px;
+    border-radius: 3px;
+  }
+}
+.form_area .form .error_message {
+  margin-top: 1rem;
+  text-indent: 1em;
+  line-height: 2;
+  background-color: #FFE5E8;
+  color: #f00;
+  font-size: 1.4rem;
+  border-radius: 3px;
+}
+.form_area span[data-name=FlexTextarea] {
+  display: block;
+}
+.form_area .FlexTextarea {
+  display: block;
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .FlexTextarea {
+    font-size: 1.6rem;
+  }
+}
+.form_area .FlexTextarea__dummy {
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 15px;
+  min-height: 120px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 1px solid;
+}
+.form_area .FlexTextarea__textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 15px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid #b6c3c6;
+  border-radius: 4px;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  resize: none;
+}
+.form_area .FlexTextarea__textarea:focus {
+  -webkit-box-shadow: 0 0 0 4px rgba(35, 167, 195, 0.3);
+          box-shadow: 0 0 0 4px rgba(35, 167, 195, 0.3);
+  outline: 0;
+}
+.form_area .area_input_text {
+  width: 100%;
+  border: solid 0.2rem #58CABE;
+  font-size: 1.4rem;
+}
+.form_area .area_email .email-notice {
+  display: none;
+  margin: 1rem 0 1.4rem;
+  color: #FF6C79;
+  font-size: 1.2rem;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) {
+  width: 200px;
+   margin: 10px auto 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul li:nth-of-type(2) {
+    width: 200px;
+    margin-bottom: 10px;
+   margin: 10px auto 0;
+  }
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control-wrap {
+  position: static;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item {
+  margin: 0;
+  padding: 1.2rem;
+  width: 100%;
+  border: solid 1px #D0D0D0;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  height: 5rem;
+ display: flex;
+ justify-content: center;
+ background-color: #fff;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item label {
+  padding: 0;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item label input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item-label {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333333;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+ width: 200px;
+    text-align: center;
+    padding: 0px 64px;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item-label {
+    font-size: 1.2rem;
+  }
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item-label::before {
+  content: "";
+  background: #fff;
+  width: 1em;
+  height: 1em;
+  margin-bottom: auto;
+  margin-right: 0.5em;
+  margin-top: auto;
+  border: 1px solid #D0D0D0;
+  border-radius: 0.3rem;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control input[type=checkbox]:checked + .wpcf7-list-item-label::after {
+  color: #AE9E82;
+  position: absolute;
+  margin-top: 0.0rem;
+  width: 1.4rem;
+  height:3px;
+  border-bottom: solid 0.2rem currentColor;
+  border-left: solid 0.2rem currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control input[type=checkbox]:checked + .wpcf7-list-item-label::after {
+    margin-top: 8px;
+    margin-left: 3px;
+    width: 8px;
+  }
+}
+.form_area .area_checkbox ul .area_default {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul .area_default {
+    margin-bottom: 10px;
+  }
+}
+.form_area .area_checkbox ul .area_default:nth-of-type(2) {
+  padding: 0;
+}
+.form_area .area_checkbox ul .area_default:nth-of-type(2) label {
+  padding: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul .area_default:nth-of-type(2) label {
+    padding: 14px 20px;
+  }
+}
+.form_area .area_checkbox ul .area_input {
+  margin-top: 1.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul .area_input {
+    margin-top: 14px;
+  }
+}
+.form_area .btn {
+  display: block;
+  width: 30rem;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .btn {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+.form_area .btn_1 {
+  padding: 2rem 0;
+  background-color: #FF6C79;
+  color: #FFF;
+}
+.form_area .btn_2 {
+  padding: 1rem 0;
+  background-color: #FFF;
+  border: solid 0.2rem #58CABE;
+  color: #58CABE;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .btn_2 {
+    border: solid 2px #58CABE;
+  }
+}
+
+span.wpcf7-not-valid-tip,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #FFE5E8;
+  border: 0 !important;
+  color: #FF6C79;
+  font-size: 1.4rem !important;
+}
+@media screen and (min-width: 768px), print {
+  span.wpcf7-not-valid-tip,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+
+span.wpcf7-not-valid-tip {
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  span.wpcf7-not-valid-tip {
+    border-radius: 3px;
+  }
+}
+
+div.wpcf7-response-output {
+  margin: 2rem 0 0 0 !important;
+  padding: 1rem !important;
+}
+
+form.custom-wpcf7c-confirmed input.transparent::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+form.custom-wpcf7c-confirmed input.transparent::-moz-placeholder {
+  color: transparent !important;
+}
+
+form.custom-wpcf7c-confirmed input.transparent:-ms-input-placeholder {
+  color: transparent !important;
+}
+
+form.custom-wpcf7c-confirmed input.transparent::-ms-input-placeholder {
+  color: transparent !important;
+}
+
+form.custom-wpcf7c-confirmed select.transparent,
+form.custom-wpcf7c-confirmed input.transparent::placeholder {
+  color: transparent !important;
+}
+
+.form_request .form .area_number ul,
+.form_partner .form .area_number ul,
+.form_online .form .area_number ul,
+.form_premium .form .area_number ul,
+.form_doctor .form .area_number ul,
+.form_status .form .area_number ul,
+.form_joboffer .form .area_number ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_request .form .area_number ul,
+.form_partner .form .area_number ul,
+.form_online .form .area_number ul,
+.form_premium .form .area_number ul,
+.form_doctor .form .area_number ul,
+.form_status .form .area_number ul,
+.form_joboffer .form .area_number ul {
+    gap: 10px;
+  }
+}
+.form_request .form .area_number ul li,
+.form_partner .form .area_number ul li,
+.form_online .form .area_number ul li,
+.form_premium .form .area_number ul li,
+.form_doctor .form .area_number ul li,
+.form_status .form .area_number ul li,
+.form_joboffer .form .area_number ul li {
+  width: 50%;
+}
+@media screen and (min-width: 768px), print {
+  .form_request .form .area_number ul li,
+.form_partner .form .area_number ul li,
+.form_online .form .area_number ul li,
+.form_premium .form .area_number ul li,
+.form_doctor .form .area_number ul li,
+.form_status .form .area_number ul li,
+.form_joboffer .form .area_number ul li {
+    width: 340px;
+  }
+}
+.form_request .form .area_number ul li:nth-of-type(2),
+.form_partner .form .area_number ul li:nth-of-type(2),
+.form_online .form .area_number ul li:nth-of-type(2),
+.form_premium .form .area_number ul li:nth-of-type(2),
+.form_doctor .form .area_number ul li:nth-of-type(2),
+.form_status .form .area_number ul li:nth-of-type(2),
+.form_joboffer .form .area_number ul li:nth-of-type(2) {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 5rem;
+  background-color: #58CABE;
+  color: #FFF;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px), print {
+  .form_request .form .area_number ul li:nth-of-type(2),
+.form_partner .form .area_number ul li:nth-of-type(2),
+.form_online .form .area_number ul li:nth-of-type(2),
+.form_premium .form .area_number ul li:nth-of-type(2),
+.form_doctor .form .area_number ul li:nth-of-type(2),
+.form_status .form .area_number ul li:nth-of-type(2),
+.form_joboffer .form .area_number ul li:nth-of-type(2) {
+    height: 56px;
+  }
+}
+.form_request .form .area_address ul li,
+.form_partner .form .area_address ul li,
+.form_online .form .area_address ul li,
+.form_premium .form .area_address ul li,
+.form_doctor .form .area_address ul li,
+.form_status .form .area_address ul li,
+.form_joboffer .form .area_address ul li {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_request .form .area_address ul li,
+.form_partner .form .area_address ul li,
+.form_online .form .area_address ul li,
+.form_premium .form .area_address ul li,
+.form_doctor .form .area_address ul li,
+.form_status .form .area_address ul li,
+.form_joboffer .form .area_address ul li {
+    margin-bottom: 10px;
+ margin-bottom: 20px
+  }
+}
+.form_request .form .area_address ul li:nth-of-type(1),
+.form_partner .form .area_address ul li:nth-of-type(1),
+.form_online .form .area_address ul li:nth-of-type(1),
+.form_premium .form .area_address ul li:nth-of-type(1),
+.form_doctor .form .area_address ul li:nth-of-type(1),
+.form_status .form .area_address ul li:nth-of-type(1),
+.form_joboffer .form .area_address ul li:nth-of-type(1) {
+  width: 50%;
+}
+
+.male,
+.female,
+.agreement,
+.yes,
+.no {
+  background-color: #E9F9F8;
+}
+
+.form_partner .form dd {
+  margin-bottom: 3rem;
+}
+
+.form_joboffer {
+  margin-top: 4rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_joboffer {
+    margin-top: 60px;
+  }
+}
+
+.custom-wpcf7c-confirmed .form_appointment .message,
+.custom-wpcf7c-confirmed .form_request .message,
+.custom-wpcf7c-confirmed .form_partner .message,
+.custom-wpcf7c-confirmed .form_online .message,
+.custom-wpcf7c-confirmed .form_premium .message,
+.custom-wpcf7c-confirmed .form_doctor .message,
+.custom-wpcf7c-confirmed .form_status .message,
+.custom-wpcf7c-confirmed .form_joboffer .message {
+  margin: 0 2rem 3rem;
+  padding: 1.2rem;
+  border: solid 0.4rem #E9F9F8;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 2.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .custom-wpcf7c-confirmed .form_appointment .message,
+.custom-wpcf7c-confirmed .form_request .message,
+.custom-wpcf7c-confirmed .form_partner .message,
+.custom-wpcf7c-confirmed .form_online .message,
+.custom-wpcf7c-confirmed .form_premium .message,
+.custom-wpcf7c-confirmed .form_doctor .message,
+.custom-wpcf7c-confirmed .form_status .message,
+.custom-wpcf7c-confirmed .form_joboffer .message {
+    width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+  }
+}
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_appointment .form dd select,
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_appointment .form dd textarea,
+.custom-wpcf7c-confirmed .form_appointment .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_request .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_request .form dd select,
+.custom-wpcf7c-confirmed .form_request .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_request .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_request .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_request .form dd textarea,
+.custom-wpcf7c-confirmed .form_request .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_request .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_partner .form dd select,
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_partner .form dd textarea,
+.custom-wpcf7c-confirmed .form_partner .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_online .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_online .form dd select,
+.custom-wpcf7c-confirmed .form_online .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_online .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_online .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_online .form dd textarea,
+.custom-wpcf7c-confirmed .form_online .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_online .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_premium .form dd select,
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_premium .form dd textarea,
+.custom-wpcf7c-confirmed .form_premium .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_doctor .form dd select,
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_doctor .form dd textarea,
+.custom-wpcf7c-confirmed .form_doctor .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_status .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_status .form dd select,
+.custom-wpcf7c-confirmed .form_status .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_status .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_status .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_status .form dd textarea,
+.custom-wpcf7c-confirmed .form_status .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_status .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_joboffer .form dd select,
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_joboffer .form dd textarea,
+.custom-wpcf7c-confirmed .form_joboffer .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=checkbox] {
+  background-color: #E9F9F8;
+  pointer-events: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_input,
+.custom-wpcf7c-confirmed .form_appointment .form .area_input_half,
+.custom-wpcf7c-confirmed .form_request .form .area_input,
+.custom-wpcf7c-confirmed .form_request .form .area_input_half,
+.custom-wpcf7c-confirmed .form_partner .form .area_input,
+.custom-wpcf7c-confirmed .form_partner .form .area_input_half,
+.custom-wpcf7c-confirmed .form_online .form .area_input,
+.custom-wpcf7c-confirmed .form_online .form .area_input_half,
+.custom-wpcf7c-confirmed .form_premium .form .area_input,
+.custom-wpcf7c-confirmed .form_premium .form .area_input_half,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input_half,
+.custom-wpcf7c-confirmed .form_status .form .area_input,
+.custom-wpcf7c-confirmed .form_status .form .area_input_half,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input_half {
+  border: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_appointment .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_request .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_request .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_partner .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_partner .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_online .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_online .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_premium .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_premium .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_status .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_status .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input_half:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_appointment .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_request .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_request .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_partner .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_partner .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_online .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_online .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_premium .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_premium .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_status .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_status .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select1 ul li span.select::after {
+  display: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_request .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_partner .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_online .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_premium .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_status .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select1 ul li:nth-of-type(2) select {
+  background-color: #E9F9F8;
+  opacity: 1;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_request .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_partner .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_online .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_premium .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_status .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select2 .wpcf7-form-control .wpcf7-list-item {
+  border: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_request .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_partner .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_online .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_premium .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_status .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before {
+  display: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_appointment .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_request .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_request .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_partner .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_partner .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_online .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_online .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_premium .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_premium .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_status .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_status .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select2 .woman_notice {
+  display: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form span.select_age,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_1,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_2,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_3,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_4,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_5,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_6,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_7,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_8,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_9,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_10,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_11,
+.custom-wpcf7c-confirmed .form_appointment .form span.select,
+.custom-wpcf7c-confirmed .form_appointment .form span.date,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_yy,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_mm,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_dd,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_request .form span.select_age,
+.custom-wpcf7c-confirmed .form_request .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_request .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_request .form span.select_1,
+.custom-wpcf7c-confirmed .form_request .form span.select_2,
+.custom-wpcf7c-confirmed .form_request .form span.select_3,
+.custom-wpcf7c-confirmed .form_request .form span.select_4,
+.custom-wpcf7c-confirmed .form_request .form span.select_5,
+.custom-wpcf7c-confirmed .form_request .form span.select_6,
+.custom-wpcf7c-confirmed .form_request .form span.select_7,
+.custom-wpcf7c-confirmed .form_request .form span.select_8,
+.custom-wpcf7c-confirmed .form_request .form span.select_9,
+.custom-wpcf7c-confirmed .form_request .form span.select_10,
+.custom-wpcf7c-confirmed .form_request .form span.select_11,
+.custom-wpcf7c-confirmed .form_request .form span.select,
+.custom-wpcf7c-confirmed .form_request .form span.date,
+.custom-wpcf7c-confirmed .form_request .form span.select_yy,
+.custom-wpcf7c-confirmed .form_request .form span.select_mm,
+.custom-wpcf7c-confirmed .form_request .form span.select_dd,
+.custom-wpcf7c-confirmed .form_request .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_partner .form span.select_age,
+.custom-wpcf7c-confirmed .form_partner .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_partner .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_partner .form span.select_1,
+.custom-wpcf7c-confirmed .form_partner .form span.select_2,
+.custom-wpcf7c-confirmed .form_partner .form span.select_3,
+.custom-wpcf7c-confirmed .form_partner .form span.select_4,
+.custom-wpcf7c-confirmed .form_partner .form span.select_5,
+.custom-wpcf7c-confirmed .form_partner .form span.select_6,
+.custom-wpcf7c-confirmed .form_partner .form span.select_7,
+.custom-wpcf7c-confirmed .form_partner .form span.select_8,
+.custom-wpcf7c-confirmed .form_partner .form span.select_9,
+.custom-wpcf7c-confirmed .form_partner .form span.select_10,
+.custom-wpcf7c-confirmed .form_partner .form span.select_11,
+.custom-wpcf7c-confirmed .form_partner .form span.select,
+.custom-wpcf7c-confirmed .form_partner .form span.date,
+.custom-wpcf7c-confirmed .form_partner .form span.select_yy,
+.custom-wpcf7c-confirmed .form_partner .form span.select_mm,
+.custom-wpcf7c-confirmed .form_partner .form span.select_dd,
+.custom-wpcf7c-confirmed .form_partner .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_online .form span.select_age,
+.custom-wpcf7c-confirmed .form_online .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_online .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_online .form span.select_1,
+.custom-wpcf7c-confirmed .form_online .form span.select_2,
+.custom-wpcf7c-confirmed .form_online .form span.select_3,
+.custom-wpcf7c-confirmed .form_online .form span.select_4,
+.custom-wpcf7c-confirmed .form_online .form span.select_5,
+.custom-wpcf7c-confirmed .form_online .form span.select_6,
+.custom-wpcf7c-confirmed .form_online .form span.select_7,
+.custom-wpcf7c-confirmed .form_online .form span.select_8,
+.custom-wpcf7c-confirmed .form_online .form span.select_9,
+.custom-wpcf7c-confirmed .form_online .form span.select_10,
+.custom-wpcf7c-confirmed .form_online .form span.select_11,
+.custom-wpcf7c-confirmed .form_online .form span.select,
+.custom-wpcf7c-confirmed .form_online .form span.date,
+.custom-wpcf7c-confirmed .form_online .form span.select_yy,
+.custom-wpcf7c-confirmed .form_online .form span.select_mm,
+.custom-wpcf7c-confirmed .form_online .form span.select_dd,
+.custom-wpcf7c-confirmed .form_online .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_premium .form span.select_age,
+.custom-wpcf7c-confirmed .form_premium .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_premium .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_premium .form span.select_1,
+.custom-wpcf7c-confirmed .form_premium .form span.select_2,
+.custom-wpcf7c-confirmed .form_premium .form span.select_3,
+.custom-wpcf7c-confirmed .form_premium .form span.select_4,
+.custom-wpcf7c-confirmed .form_premium .form span.select_5,
+.custom-wpcf7c-confirmed .form_premium .form span.select_6,
+.custom-wpcf7c-confirmed .form_premium .form span.select_7,
+.custom-wpcf7c-confirmed .form_premium .form span.select_8,
+.custom-wpcf7c-confirmed .form_premium .form span.select_9,
+.custom-wpcf7c-confirmed .form_premium .form span.select_10,
+.custom-wpcf7c-confirmed .form_premium .form span.select_11,
+.custom-wpcf7c-confirmed .form_premium .form span.select,
+.custom-wpcf7c-confirmed .form_premium .form span.date,
+.custom-wpcf7c-confirmed .form_premium .form span.select_yy,
+.custom-wpcf7c-confirmed .form_premium .form span.select_mm,
+.custom-wpcf7c-confirmed .form_premium .form span.select_dd,
+.custom-wpcf7c-confirmed .form_premium .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_age,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_1,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_2,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_3,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_4,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_5,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_6,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_7,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_8,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_9,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_10,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_11,
+.custom-wpcf7c-confirmed .form_doctor .form span.select,
+.custom-wpcf7c-confirmed .form_doctor .form span.date,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_yy,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_mm,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_dd,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_status .form span.select_age,
+.custom-wpcf7c-confirmed .form_status .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_status .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_status .form span.select_1,
+.custom-wpcf7c-confirmed .form_status .form span.select_2,
+.custom-wpcf7c-confirmed .form_status .form span.select_3,
+.custom-wpcf7c-confirmed .form_status .form span.select_4,
+.custom-wpcf7c-confirmed .form_status .form span.select_5,
+.custom-wpcf7c-confirmed .form_status .form span.select_6,
+.custom-wpcf7c-confirmed .form_status .form span.select_7,
+.custom-wpcf7c-confirmed .form_status .form span.select_8,
+.custom-wpcf7c-confirmed .form_status .form span.select_9,
+.custom-wpcf7c-confirmed .form_status .form span.select_10,
+.custom-wpcf7c-confirmed .form_status .form span.select_11,
+.custom-wpcf7c-confirmed .form_status .form span.select,
+.custom-wpcf7c-confirmed .form_status .form span.date,
+.custom-wpcf7c-confirmed .form_status .form span.select_yy,
+.custom-wpcf7c-confirmed .form_status .form span.select_mm,
+.custom-wpcf7c-confirmed .form_status .form span.select_dd,
+.custom-wpcf7c-confirmed .form_status .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_age,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_1,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_2,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_3,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_4,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_5,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_6,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_7,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_8,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_9,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_10,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_11,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select,
+.custom-wpcf7c-confirmed .form_joboffer .form span.date,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_yy,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_mm,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_dd,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_occupation {
+  color: #333333;
+}
+.custom-wpcf7c-confirmed .form_appointment .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.date::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_request .form span.select::after,
+.custom-wpcf7c-confirmed .form_request .form span.date::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select::after,
+.custom-wpcf7c-confirmed .form_partner .form span.date::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_online .form span.select::after,
+.custom-wpcf7c-confirmed .form_online .form span.date::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select::after,
+.custom-wpcf7c-confirmed .form_premium .form span.date::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.date::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_status .form span.select::after,
+.custom-wpcf7c-confirmed .form_status .form span.date::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.date::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_occupation::after {
+  display: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form select,
+.custom-wpcf7c-confirmed .form_request .form select,
+.custom-wpcf7c-confirmed .form_partner .form select,
+.custom-wpcf7c-confirmed .form_online .form select,
+.custom-wpcf7c-confirmed .form_premium .form select,
+.custom-wpcf7c-confirmed .form_doctor .form select,
+.custom-wpcf7c-confirmed .form_status .form select,
+.custom-wpcf7c-confirmed .form_joboffer .form select {
+  color: #333333;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_input_text,
+.custom-wpcf7c-confirmed .form_request .form .area_input_text,
+.custom-wpcf7c-confirmed .form_partner .form .area_input_text,
+.custom-wpcf7c-confirmed .form_online .form .area_input_text,
+.custom-wpcf7c-confirmed .form_premium .form .area_input_text,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input_text,
+.custom-wpcf7c-confirmed .form_status .form .area_input_text,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input_text {
+  border: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_request .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_partner .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_online .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_premium .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_status .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input_text:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_request .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_partner .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_online .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_premium .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_doctor .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_status .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item {
+  border: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_request .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_partner .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_online .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_premium .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_doctor .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_status .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before {
+  display: none;
+}
+
+div.wpcf7-mail-sent-ok {
+  border: none !important;
+}
+
+
+
+
+
+/****************************
+カスタム
+*****************************/
+
+/*リード文*/
+.request-lead{
+ background: #F4F2F0;
+ padding: 50px 20px;
+}
+.request-lead ul{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 998px;
+ margin: 0 auto 20px;
+}
+.request-lead ul li{
+ background: url(../images/common/icon-ck.png) left center no-repeat;
+ background-size: 14px;
+ padding-left: 30px;
+ font-weight: 500;
+ max-width: 258px;
+}
+@media screen and (max-width: 767px), print {
+.request-lead{
+ padding: 20px;
+}
+.request-lead ul{
+ display: block;
+ margin: 0 auto 10px;
+ font-size: 1.2rem;
+}
+.request-lead ul li{
+ background-size: 14px;
+ padding-left: 20px;
+ font-weight: 500;
+ max-width: 100%;
+}
+}
+/*流れ*/
+.form-flow{
+ text-align: center;
+ padding: 50px 20px;
+}
+.form-flow img{
+ max-width: 470px;
+}
+
+/*非表示*/
+/*.wpcf7-spinner{
+ display: none !important;
+}*/
+.form_area .form dd .wpcf7-not-valid-tip{
+ display: none;
+}
+.plugin .wpcf7-response-output{
+ display: none;
+}
+
+/*placeholder装飾*/
+.form_area .form .area_input::placeholder {
+ font-size: 1.2rem;
+ font-weight: 400;
+ color: #CCCCCC;
+ position: relative;
+ top: -2px;
+}
+.btn_address{
+ background: url(../images/common/icon-mushi.png) center center no-repeat;
+ background-size: 20px;
+ background-color: #DDD7CF !important;
+ height: 50px !important;
+ width: 60px !important;
+}
+
+/*同意エリア*/
+.doui-box{
+ background: #F4F2F0;
+ padding: 30px 20px;
+ margin-top: 20px;
+}
+.doui{
+ max-width: 975px;
+ margin: auto;
+ display: flex;
+ align-items: center;
+}
+.doui dt{
+ font-weight: 500;
+}
+.doui dd{
+ padding-left: 65px;
+ background: url(../images/common/icon-kagi.png) left 33px center no-repeat;
+ background-size: 19px;
+}
+.douiue{
+ text-align: center;
+ margin-top: 20px;
+}
+.douiue a{
+ text-decoration: underline;
+}
+@media screen and (max-width: 767px), print {
+.doui{
+ display: block;
+}
+.doui dd{
+ padding-left: 32px;
+ background: url(../images/common/icon-kagi.png) left center no-repeat;
+ background-size: 19px;
+}
+}
+
+/*ボタンの装飾*/
+.submit-area{
+ padding: 50px 0 80px;
+ text-align: center;
+}
+.submit-area .btn_1{
+ display: inline-block;
+ width: 286px;
+ border-radius: 100px;
+ border: 1px solid #B19D7F;
+ padding: 20px;
+ text-align: center;
+ background: url(../images/common/arrow-right.png) right 20px center no-repeat #fff;
+ background-size: 12px;
+ cursor: pointer;
+}
+@media screen and (max-width: 767px), print {
+.submit-area{
+ padding: 30px 0 80px;
+}
+}
+
+/*入会資格*/
+.form_area .man_notice,.form_area .woman_notice{
+ font-size: 1.4rem;
+ line-height: 1.5;
+ padding: 10px;
+}
+.form_area .man_notice dt,.form_area .woman_notice dt{
+ font-size: 1.4rem;
+ text-align: left;
+}
+.form_area .man_notice dd,.form_area .woman_notice dd{
+ padding-left: 0;
+ width: 100%;
+}
+
+/*入input調整*/
+@media screen and (max-width: 767px), print {
+.form_request .form .area_number ul li, .form_partner .form .area_number ul li, .form_online .form .area_number ul li, .form_premium .form .area_number ul li, .form_doctor .form .area_number ul li, .form_status .form .area_number ul li, .form_joboffer .form .area_number ul li {
+    width: 100%;
+}
+.form_request .form .area_address ul li:nth-of-type(1), .form_partner .form .area_address ul li:nth-of-type(1), .form_online .form .area_address ul li:nth-of-type(1), .form_premium .form .area_address ul li:nth-of-type(1), .form_doctor .form .area_address ul li:nth-of-type(1), .form_status .form .area_address ul li:nth-of-type(1), .form_joboffer .form .area_address ul li:nth-of-type(1) {
+    width: 100%;
+}
+}
+
+
+/*確認画面*/
+.form_area.fm_confirm .form {
+    align-items: center;
+ max-width: 940px;
+}
+.form_area.fm_confirm .form dt {
+ padding-top: 0;
+ margin-bottom: 40px;
+}
+.form_area.fm_confirm .form dd {
+    margin-bottom: 40px;
+}
+.di-dl{
+ position: relative;
+}
+.di-dl{
+ padding-right: 60px;
+}
+.di-dl span{
+ position: absolute;
+ right: 0;
+ top: 14px;
+ line-height: 1.5;
+}
+.form_request.fm_confirm .form .area_address ul li, .form_partner.fm_confirm .form .area_address ul li, .form_online.fm_confirm .form .area_address ul li, .form_premium.fm_confirm .form .area_address ul li, .form_doctor.fm_confirm .form .area_address ul li, .form_status.fm_confirm .form .area_address ul li, .form_joboffe.fm_confirm .form .area_address ul li {
+    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+.submit-area-confirm{
+ display: flex;
+ justify-content: space-between;
+ max-width: 592px;
+ margin: auto;
+}
+.submit-area-confirm .sb-btn{
+ order: 2;
+ width: 286px;
+}
+.submit-area-confirm .sb-btn-fix{
+ order: 1;
+}
+.submit-area .sb-btn-fix input{
+ border: 1px solid #7C7C7C;
+ background: url(../images/common/arrow-left.png) left 20px center no-repeat #fff;
+ background-size: 12px;
+}
+ *{
+  box-sizing: border-box;
+ }
+</style>
+
+ 
+<?php get_footer(); ?>

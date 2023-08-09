@@ -116,19 +116,21 @@ function responsive_pagination($pages = '', $range = 4){
 		    //先頭へ
 		    echo '<li class="first"><a href="'.get_pagenum_link(1).'"><span>First</span></a></li>';
 		    //1つ戻る
-		    echo '<li class="previous"><a href="'.get_pagenum_link($paged - 1).'"><span>Previous</span></a></li>';
+		    echo '<a href="'.get_pagenum_link($paged - 1).'" class="pagination-link prev"><img src="/wp-content/themes/sincerite/images_new/common/pagi-arw.svg" width="32" height="32" loading="lazy" alt="arrow left"
+                class="img-fluid"></a></li>';
 		}
 
 		//番号つきページ送りボタン
 		for ($i=1; $i <= $pages; $i++){
 			if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )) {
-				echo ($paged == $i)? '<li class="current"><a>'.$i.'</a></li>':'<li><a href="'.get_pagenum_link($i).'" class="inactive" >'.$i.'</a></li>';
+				echo ($paged == $i)? '<a class="pagination-link active">'.$i.'</a>':'<a href="'.get_pagenum_link($i).'" class="pagination-link">'.$i.'</a>';
 			}
 		}
 
 		//1つ進む
 		if ($paged < $pages)  {
-			echo '<li class="next"><a href="'.get_pagenum_link($paged + 1).'"><span>Next</span></a></li>';
+			echo '<a href="'.get_pagenum_link($paged + 1).'" class="pagination-link next"><img src="/wp-content/themes/sincerite/images_new/common/pagi-arw.svg" width="32" height="32" loading="lazy" alt="arrow left"
+                class="img-fluid"></a>';
 			echo '<li class="last"><a href="'.get_pagenum_link($pages).'"><span>Last</span></a></li>';
 		}
 		 echo '</ul>';
@@ -741,7 +743,7 @@ add_filter( 'wpcf7_form_tag_data_option', 'custom_select_values', 10, 3 );
 function custom_select_values( $values, $options, $args ) {
 	if ( in_array( 'select_yy', $options ) ) {
 		// $values = range( 2022, 1960 );
-		for($i=2001;$i>=1951;$i--){
+		for($i=2023;$i>=1951;$i--){
 			$values[] = $i.'年';
 		}
 	}else if ( in_array( 'select_mm', $options ) ) {
@@ -765,4 +767,63 @@ function wpcf7_autop_return_false() {
 }
 
 
+//php読み込み
+function my_php_Include($params = array()) { 
+extract(shortcode_atts(array('file' => 'default'), $params)); 
+ob_start(); include(STYLESHEETPATH . "/parts/$file.php"); return
+ob_get_clean(); } add_shortcode('call_php', 'my_php_Include');
+
+
+//次へ前へclass追加
+function add_prev_post_link_class($output) {
+return str_replace('<a href=', '<a class="news-detail__arw -prev" href=', $output); 
+}
+add_filter( 'previous_post_link', 'add_prev_post_link_class' );
+function add_next_post_link_class($output) {
+return str_replace('<a href=', '<a class="news-detail__arw -next" href=', $output); 
+}
+add_filter( 'next_post_link', 'add_next_post_link_class' );
+
+
+//アーカイブタイトルカスタム
+
+add_filter( 'get_the_archive_title', function ($title) {
+  if(is_category()){
+    $title = single_cat_title('',false); //カテゴリー：を消す
+  }elseif(is_tag()){
+	  $title = single_tag_title('',false);  //タグ：を消す
+  }elseif(is_date()){
+	  $title = get_the_time('Y年n月');  //月：を消す
+  };
+ 
+  return $title;
+});
+
+
+function my_form_tag_filter($tag) {
+  if (!is_array($tag)) {
+    return $tag;
+  }
+
+  // ラジオボタンの場合
+  if (isset($_GET['selected'])) {
+    if ($tag['name'] === 'm_houhou') { // nameの値を指定
+      // TODO: エラー処理を加えたほうがいい
+      $tag['options'][] = 'default:' . $_GET['selected'];
+
+    }
+  }
+
+  //チェックボックスの場合
+  if (isset($_GET['checked'])) {
+    if ($tag['name'] === 'your-checkbox') { // nameの値を指定
+      // TODO: エラー処理を加えたほうがいい
+      $tag['options'][] = 'default:' . $_GET['checked'];
+    }
+  }
+
+  return $tag;
+}
+
+add_filter('wpcf7_form_tag', 'my_form_tag_filter', 10);
 ?>

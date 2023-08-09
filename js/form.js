@@ -400,7 +400,8 @@ jQuery(function() {
 				let dayOfWeek = date.getDay()
 				if (dayOfWeek === 3) { // 複数曜日なら、|| を使って併記していく
 					alert("水曜日は休業日となります。選択しなおしてください。");
-					elem.value = "";
+     elem.blur();
+					$('#date_limit').val("");
 				}
 			});
 		}

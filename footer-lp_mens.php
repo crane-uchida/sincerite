@@ -4,44 +4,13 @@ Template Name: LP_MENS
 */ 
 ?>
 
-<?php /* フッター */ ?>
-<footer class="p-mens-footer">
-  <ul class="p-mens-footer__access">
-    <li class="p-mens__logo">
-      <img class="p-mens__logo-pic" src="<?php echo get_template_directory_uri() ?>/assets/images/lp_mens/sct_logo.svg"
-        alt="サンセリテ青山">
-    </li>
-    <li class="p-mens-footer__access-information p-mens__center">
-      <h2 class="p-mens-footer__access-name">
-        サンセリテ青山
-      </h2>
-      <h3 class="p-mens-footer__access-office">
-        表参道本店
-      </h3>
-    </li>
-    <li class="p-mens-footer__access-link">
-      <a class="p-mens-footer__access-link-text p-mens__center"
-        href="https://www.club-sincerite.co.jp/?utm_source=lp_mens&utm_medium=footer">
-        公式サイトはこちら
-      </a>
-    </li>
-    <li class="p-mens-footer__access-address p-mens__center">
-      東京都渋谷区神宮前5-6-13<br>
-      ヴァイス表参道 B1
-    </li>
-    <li class="p-mens-footer__access-map">
-      <?php get_template_part( 'assets/others/map' );?>
-    </li>
-    <li class="p-mens-footer__access-guide p-mens__center">
-      東京メトロ 銀座線・半蔵門線・千代田線<br>
-      表参道駅 A1出口徒歩5分
-    </li>
-  </ul>
-  <div class="p-mens-footer__copyright p-mens__center">
+<footer class="p-lp p-mens">
+  <?php /* フッター */ ?>
+  <div class="p-mens-footer p-mens__center">
     &copy;Sincrite Aoyama.
   </div>
+  <?php /* フッター end */ ?>
 </footer>
-<?php /* フッター end */ ?>
 
 </article>
 
@@ -50,12 +19,14 @@ Template Name: LP_MENS
 <?php wp_footer(); ?>
 
 <?php /* JS */ ?>
+<?php /* CDN UAParser.js */ ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/1.0.2/ua-parser.min.js"
+  integrity="sha512-M/6+/Ib+r5t/hijvSPLPO76abBzT8vlMVRSJ16JDA+NV9CGCkAjq8UD4kHN6KpHncDTRRIb0oUU01yhW+yfqng=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<?php /* AndroidでのみGoogle Fontsを読み込ませる */ ?>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/andoroid.js"></script>
 <?php /* アコーディオン */ ?>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/accordion.js"></script>
-<?php /* スクロールイベント */ ?>
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"
-  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-<script src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/appear.js"></script>
 <?php /* JS end */ ?>
 
 </body>
