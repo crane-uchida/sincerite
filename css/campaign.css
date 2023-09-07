@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.campaign_link {
+	margin:0 auto;
+	width:70%;
+}
+
+.campaign_text {
+	margin: 5% auto 0;
+	line-height:1.3;
+	color: #000;
+}

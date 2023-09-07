@@ -1,0 +1,37 @@
+#u5943
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u5730
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u5735
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u6041
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u6022
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u5943:hover,#u5730:hover,#u5735:hover,#u6041:hover,#u6022:hover
+{
+	opacity: 0.7;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+}
+

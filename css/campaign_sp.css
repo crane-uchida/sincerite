@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:15px;
+	}
+	
+	.bread-list{
+		margin-left:5%;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+		margin:0;
+	}
+	
+	.body-campaign .main-sub-left{
+		max-width:640px;
+		width:100%;
+		float:none;
+		height:auto;
+	}
+	
+	.body-campaign .main-campaign{
+		padding:0;
+		padding-top:45%;
+	}
+	
+	/*.body-campaign .main-text-box{
+		background-size:100%;
+		margin:24px 0 0 0;
+		padding:0;
+		padding-bottom:10%;
+	}
+	
+	h2.ttl-campaign{
+		font-size:16px;
+		line-height:normal;
+		margin:0;
+	}
+	
+	h3.h3-campaign-1{
+		line-height:normal;
+		font-size:11px;
+		margin:0;
+	}
+	
+	.main-campaign p{
+		font-size:16px;
+		margin:0;
+	}
+	
+	.h3-campaig-2{
+		font-size:13px;
+		margin:0 !important;
+	}
+	
+	.campaing-tk, .campaing-osaka{
+		width:80%;
+		margin:0 auto;
+		padding-top:1%;
+	}
+	
+	.place-left{
+		width:10%;
+		font-size:8px;
+		line-height:normal
+	}
+	
+	.place-right{
+		width:80%;
+		float:left;
+		font-size:8px;
+		line-height:normal;
+	}
+	
+	.free-campaign{
+		font-size:14px;
+		line-height:inherit;
+		margin:0;
+		padding-top:2%;
+	}
+	
+	.day-campaign{
+		font-size:11px;
+		line-height:inherit;
+		margin:0;
+	}
+	
+	.attn-campaign{
+		width:80%;
+		margin:0 10%;
+		padding-top:1%;
+		font-size:9px;
+	}*/
+	
+	
+	
+	.main-text-box{
+		display:none;
+	}
+	
+	.campaign_img{
+		max-width:640px;
+		width:100%;
+		margin:0 auto;
+		margin-top:24px;
+	}
+	
+	.campaign_img img{
+		width:100%;
+	}
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+		margin-top:25px;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+.campaign_link {
+	margin:0 auto;
+	width:94%;
+}
+
+.campaign_text {
+	width: 92%;
+}
+	
+}

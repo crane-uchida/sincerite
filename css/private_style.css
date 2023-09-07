@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.main-contents .ttl-text-box p{
+}
+
+.main-contents{
+	padding-bottom:60px;
+}
+
+.ttl-text-box p {
+    max-width: 570px;
+/*    width: 100%;*/
+    margin: 0 auto;
+    /* padding-top: 10px; */
+}
+
+.chef_g{
+		background:#f4f0e9;
+	}
+	
+	.chef_img{
+		float:left;
+		max-width:164px;
+		width:29%;
+		padding-left:8px;
+	}
+	
+	.chef_img img{
+		width:100%;
+		margin:0;
+	}
+
+	.chef_name_box {
+		float:left;
+		width:68%;	
+	}
+
+	.chef_name{
+		width:90%;
+		margin:0 auto;
+		padding-top:25px;
+	}
+	
+	.chef_name p{
+		bottom:0;
+		padding-left:3%;
+		margin:0;
+		padding-top:0;
+		font-size:1.4rem;
+	}
+	
+	.chef_name span{
+		font-size:2em;
+	}
+	
+	.main-sub-ttl .chef_carrer{
+		background:#fff;
+		width:88%;
+		margin:5% auto;
+		padding:3%;
+		
+	}
+	
+	.main-sub-ttl .chef_text{
+		width:90%;
+		margin:2% auto !important;
+		padding:0 0 2%;
+	}
+	

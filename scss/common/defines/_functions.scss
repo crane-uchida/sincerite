@@ -1,0 +1,4 @@
+// rem変換
+@function rem($value) {
+  @return $value * .1rem;
+}

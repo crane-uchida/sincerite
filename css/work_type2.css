@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.main-contents .ttl-text-box p{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.main-contents{
+	padding-bottom:60px;
+}
+
+.mainvisu-status{max-width:648px; margin:0 auto 23px; position: relative;}
+.mainvisu-status img{width:100%;}
+.mainvisu-status .txt {position: absolute;color: #002f60;top: 16%; left: 5%; font-size: 4rem; font-weight: bold;}
+.main-sub-ttl p{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	/*font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;*/
+	font-size:14px;
+	color:#000;
+	text-align:start;
+	max-width:640px;
+	padding-bottom:40px;
+}
+
+.main-sub-ttl p.txt01{
+	padding-bottom:15px;
+}
+
+
+.main-sub-ttl p.txt03{
+	padding-bottom:28px;
+}
+
+/*h3{
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size:20px;
+	color:#4db4c8;
+	border-bottom:solid 1px #4db4c8;
+	padding:0 0 7px 6px;
+	text-align:start;
+	margin-bottom:20px;
+}*/
+
+h3{
+color: rgb(162, 130, 76);
+    line-height: 30px;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', ' ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    margin: 0px 0px 5px;
+}
+.img-area3{
+	padding-bottom:35px;
+}
+
+.chef_g{
+		background:#eeeeee;
+	}
+
+	.chef_name{
+		padding:19px 0 0 20px;
+	}
+
+	.chef_img{
+		max-width:116px;
+		float:left;
+	}
+
+	.chef_img img{
+		width:100%;
+		margin:0;
+	}
+
+	.chef_name .name_text{
+		float:left;
+		padding:40px 0 0 12px;
+	}
+
+	.chef_name p{
+		margin:0;
+		padding:0;
+		font-size:18px;
+		padding-bottom:14px;
+	}
+
+	.chef_name h4{
+		text-align:start;
+		font-family:"メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		font-size:20px;
+		font-weight:bold;
+	}
+
+	.main-sub-ttl .chef_text{
+		max-width:593px;
+		margin:0 auto !important;
+		padding:2% 0;
+		font-size:14px;
+	}
+
+.title_img {
+	display:block;
+	margin: 1% auto;
+}

@@ -1,0 +1,782 @@
+@use "../foundation/"as *;
+@use "../global/"as *;
+
+
+// ---------- all ---------- //
+
+.p-mens {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: $mens_bg;
+
+  &__text {
+    font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
+  }
+
+  &__center {
+    text-align: center;
+  }
+
+  &__section {
+    padding: 60px 20px;
+  }
+
+
+  // PC版 左側のエリア
+  &__left {
+    display: none;
+
+    @media #{$tab} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      width: calc(100% - 490px);
+      height: 100svh;
+      background-image: url(../images/lp_mens/mens_bg.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+    }
+  }
+
+  &__title-logo {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 200px;
+    height: 120px;
+  }
+
+  // PC版 右側のエリア
+  /*   &__right {
+    display: none;
+
+    @media #{$tab} {
+    }
+  } */
+
+  // PC版 メインエリア
+  &__content {
+
+    @media (min-width:440px) {
+      width: 390px;
+      margin-inline: auto;
+    }
+
+    @media #{$tab} {
+      margin: 0;
+    }
+  }
+
+  // CTA部分
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 20px;
+    background-color: $mens_base_dark;
+  }
+
+  &__cta-title {
+    width: fit-content;
+    height: fit-content;
+    margin-inline: auto;
+    line-height: 0;
+  }
+
+  &__cta-title-pic {
+    width: 295px;
+    height: 90px;
+  }
+
+  &__cta-comment {
+    color: $c_white;
+    font-size: responsiveFontSizeClamp(24, 26, 320, 1200);
+  }
+
+  &__cta-button-application,
+  &__cta-button-line {
+    border: 1px solid $c_white;
+    color: $c_white;
+  }
+
+  &__cta-button-application {
+    font-size: responsiveFontSizeClamp(20, 22, 320, 1200);
+  }
+
+  &__cta-button-line {
+    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
+  }
+
+  &__cta-link {
+    display: block;
+    height: 60px;
+    padding: 10px;
+    line-height: 38px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &__cta-link-white {
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1)
+    }
+  }
+
+  &__cta-link-primary {
+
+    &:hover {
+      background-color: rgba(201, 186, 157, 0.1)
+    }
+  }
+
+  &__cta-link-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__cta-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  // 見出し部分
+  &__headline {
+    position: relative;
+    margin-bottom: 50px;
+    font-size: responsiveFontSizeClamp(22, 24, 320, 1200);
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      border-radius: 2px;
+    }
+  }
+}
+
+// ---------- all end ---------- //
+
+
+// ---------- header ---------- //
+
+.p-mens-header {
+  display: block;
+  height: 100svh;
+  margin-inline: auto;
+  background-color: $mens_base_light;
+  background-image: url(../images/lp_mens/fv_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 20px;
+
+  @media (min-width: 390px) {
+    width: 100%;
+    padding-bottom: 20px;
+    height: fit-content;
+  }
+
+  &__inner {
+    background-color: $mens_base_dark;
+    color: $mens_primary;
+    font-size: responsiveFontSizeClamp(14, 16, 320, 1200);
+  }
+
+  &__headline {
+    margin: 20px 0 100px 20px;
+
+    @media #{$tab} {
+      margin: 20px 0 80px 20px;
+    }
+  }
+
+  &__title {
+
+    @media #{$tab} {
+      width: 260px;
+      height: 198px;
+    }
+
+    @media #{$rwd} {
+      width: 230px;
+      height: 168px;
+    }
+  }
+
+  .p-mens__cta {
+    width: 90%;
+  }
+}
+
+// ---------- header end ---------- //
+
+
+// ---------- main ---------- //
+
+.p-mens-main {
+  width: 100%;
+  max-width: 100vw;
+  margin-inline: auto;
+
+  @media (min-width: 390px) {
+    width: 100%;
+  }
+
+  // サンセリテのコンセプト
+  &__concept {
+    background-color: $mens_base_light;
+    background-image: url(../images/lp_mens/concept_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .p-mens__headline {
+      color: $t_gray;
+
+      &::before {
+        background-color: $t_gray;
+      }
+    }
+  }
+
+  &__concept-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    color: $t_gray;
+  }
+
+  &__concept-sentence {
+    text-align: justify;
+  }
+
+  &__concept-movie {
+    width: 100%;
+    aspect-ratio: 3/2;
+  }
+
+
+  // 男性入会資格
+  &__membership {
+    background-color: $mens_base_light;
+
+    .p-mens__headline {
+      color: $mens_primary;
+      font-size: responsiveFontSizeClamp(26, 28, 320, 1200);
+
+      &::before {
+        background-color: $mens_primary;
+      }
+    }
+  }
+
+  &__membership-text,
+  &__membership-list,
+  &__membership-note {
+    margin-bottom: 30px;
+  }
+
+  &__membership-text,
+  &__membership-note {
+    color: $c_white;
+  }
+
+  &__membership-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__membership-list-big,
+  &__membership-list-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $mens_base;
+    color: $mens_primary;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__membership-list-big {
+    height: 100px;
+    font-size: responsiveFontSizeClamp(22, 24, 320, 1200);
+  }
+
+  &__membership-list-small {
+    height: 70px;
+  }
+
+  &__membership-note {
+    text-align: justify;
+  }
+
+  // 男性入会資格 CTA
+  .p-mens__cta-comment {
+    color: $mens_primary;
+  }
+
+  .p-mens__cta-button-application,
+  .p-mens__cta-button-line {
+    border: 1px solid $mens_primary;
+    color: $mens_primary;
+  }
+
+
+  // 職業一覧
+  &__occupation {
+    background-color: $mens_base;
+
+    .p-mens__headline {
+      color: $mens_primary;
+
+      &::before {
+        background-color: $mens_primary;
+      }
+    }
+  }
+
+  &__occupation-pic {
+    display: block;
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+
+  &__occupation-text {
+    padding: 20px;
+    background-color: $mens_base_light;
+    color: $c_white;
+    text-align: justify;
+  }
+
+
+  // 料金
+  &__fee {
+    padding: 60px 0;
+    background-color: $mens_base_light;
+    background-image: url(../images/lp_mens/fee_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .p-mens__headline {
+      color: $t_gray;
+
+      &::before {
+        background-color: $t_gray;
+      }
+    }
+
+    .p-mens__cta {
+      width: 90%;
+    }
+
+    .p-mens__cta-comment,
+    .p-mens__cta-button-application,
+    .p-mens__cta-button-line {
+      color: $c_white;
+    }
+
+    .p-mens__cta-button-application,
+    .p-mens__cta-button-line {
+      border: 1px solid $c_white;
+    }
+  }
+
+  &__fee-lineup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 6px;
+  }
+
+  &__fee-lineup-container {
+    background-color: rgba(34, 32, 29, 0.8);
+
+    &:nth-of-type(odd) {
+      margin-right: 40px;
+      padding: 20px 20px 20px 60px;
+    }
+
+    &:nth-of-type(even) {
+      margin-left: 40px;
+      padding: 20px 60px 20px 20px;
+    }
+  }
+
+  &__fee-lineup-headline {
+    color: $c_white;
+    font-size: responsiveFontSizeClamp(20, 22, 320, 1200);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__fee-lineup-text {
+    margin-bottom: 16px;
+    color: $c_white;
+  }
+
+  &__fee-lineup-price {
+    color: $mens_primary;
+    font-size: responsiveFontSizeClamp(44, 46, 320, 1200);
+    line-height: 40px;
+  }
+
+  &__fee-note {
+    margin: 0 20px 20px;
+    font-size: responsiveFontSizeClamp(12, 14, 320, 1200);
+    text-align: right;
+  }
+
+
+  // サンセリテの強み
+  &__strength {
+    background-color: $mens_base_light;
+    background-image: url(../images/lp_mens/strength_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+
+    .p-mens__headline {
+      color: $mens_primary;
+      font-size: responsiveFontSizeClamp(26, 28, 320, 1200);
+
+      &::before {
+        background-color: $mens_primary;
+      }
+    }
+  }
+
+  &__strength-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__strength-content {
+    background-repeat: no-repeat;
+    background-size: 94%;
+
+    &:nth-of-type(1) {
+      background-image: url(../images/lp_mens/strength_pic1.jpg);
+    }
+
+    &:nth-of-type(2) {
+      background-image: url(../images/lp_mens/strength_pic2.jpg);
+    }
+
+    &:nth-of-type(3) {
+      background-image: url(../images/lp_mens/strength_pic3.jpg);
+    }
+
+    &:nth-of-type(4) {
+      background-image: url(../images/lp_mens/strength_pic4.jpg);
+    }
+
+    &:nth-of-type(5) {
+      background-image: url(../images/lp_mens/strength_pic5.jpg);
+    }
+
+    &:nth-of-type(6) {
+      background-image: url(../images/lp_mens/strength_pic6.jpg);
+    }
+  }
+
+  &__strength-pic {
+    width: 315px;
+
+    @media #{$tab} {
+      width: 330px;
+    }
+  }
+
+  &__strength-container {
+    max-width: 94%;
+    margin: 140px 0 0 auto;
+    padding: 30px 20px;
+    background-color: $mens_primary;
+
+    @media #{$tab} {
+      max-width: 330px;
+    }
+  }
+
+  &__strength-title-text {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background-color: $t_gray;
+      border-radius: 2px;
+    }
+  }
+
+  &__strength-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__strength-sentence {
+    text-align: justify;
+  }
+
+  // 強み CTA
+  .p-mens__cta-button-online {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: $mens_base_light;
+  }
+
+  .p-mens__cta-button-word {
+    color: $c_white;
+    font-size: responsiveFontSizeClamp(12, 14, 320, 1200);
+  }
+
+  .p-mens__cta-button-text {
+    margin-bottom: 14px;
+    color: $c_white;
+    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
+  }
+
+  .p-mens__cta-button-link {
+    display: block;
+    padding: 10px 0;
+    background-color: $mens_primary;
+    font-size: responsiveFontSizeClamp(18, 20, 320, 1200);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(201, 186, 157, 0.6)
+    }
+  }
+
+
+  // お客様の声
+  &__voice {
+    background-color: $mens_base_dark;
+
+    .p-mens__headline {
+      color: $mens_primary;
+
+      &::before {
+        background-color: $mens_primary;
+      }
+    }
+  }
+
+  &__voice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__voice-content {
+    padding: 30px 20px;
+    border: 2px solid $mens_primary;
+  }
+
+  &__voice-content-evaluate {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background-color: $mens_primary;
+      border-radius: 2px;
+    }
+  }
+
+  &__voice-content-pic {
+    width: 160px;
+    height: fit-content;
+    vertical-align: text-bottom;
+  }
+
+  &__voice-content-value,
+  &__voice-content-information {
+    color: $mens_primary;
+  }
+
+  &__voice-content-value {
+    font-size: responsiveFontSizeClamp(20, 22, 320, 1200);
+    font-weight: bold;
+  }
+
+  &__voice-content-information {
+    font-size: responsiveFontSizeClamp(16, 18, 320, 1200);
+  }
+
+  &__voice-content-text {
+    color: $c_white;
+    text-align: justify;
+  }
+
+
+  // よくある質問
+  &__faq {
+    background-color: $mens_base_light;
+
+    .p-mens__headline {
+      color: $mens_primary;
+
+      &::before {
+        background-color: $mens_primary;
+      }
+    }
+
+    // FAQ
+    .c-faq {
+
+      &__details[open] {
+
+        .c-faq__summary {
+
+          &::before {
+            transform: none;
+          }
+        }
+      }
+
+      &__summary,
+      &__content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: $c_white;
+      }
+
+      &__summary {
+        position: relative;
+        padding: 20px 40px 20px 10px;
+
+        @media #{$tab} {
+          padding: 20px 48px 20px 10px;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: block;
+          width: 20px;
+          margin-top: 2px;
+          background-color: $mens_primary;
+
+          @media #{$tab} {
+            width: 26px;
+            height: 2px;
+            margin-top: 2px;
+          }
+        }
+
+        &::before {
+          transform: translate(0, -50%) rotate(90deg);
+        }
+
+        &::after {
+          transform: none;
+        }
+      }
+
+      &__content {
+        margin-bottom: 20px;
+        padding: 0 20px;
+        background-color: $mens_base;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          margin: 0;
+        }
+      }
+
+      &____container {
+        background-color: $mens_base;
+      }
+
+      &__sentence {
+        display: block;
+        margin: 20px 0;
+        text-align: justify;
+      }
+
+      &__q,
+      &__a {
+        color: $mens_primary;
+        font-size: responsiveFontSizeClamp(24, 26, 320, 1200);
+        text-transform: uppercase;
+      }
+
+      &__line {
+        margin: 0 6px;
+        border-top: 0.1rem dotted $mens_primary;
+      }
+    }
+
+    // よくある質問 CTA
+    .p-mens__cta {
+      margin-top: 20px;
+    }
+  }
+}
+
+// ---------- main end ---------- //
+
+
+// ---------- footer ---------- //
+
+.p-mens-footer {
+  width: 100%;
+  max-width: 100vw;
+  margin-inline: auto;
+  padding: 4px;
+  background-color: $mens_base_dark;
+  color: $mens_primary;
+  font-size: responsiveFontSizeClamp(10, 12, 320, 1200);
+
+  @media (min-width: 390px) {
+    width: 100%;
+  }
+}
+
+// ---------- footer end ---------- //

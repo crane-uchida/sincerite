@@ -1,0 +1,35 @@
+// Dependencies CSS
+@forward "../../node_modules/swiper/swiper-bundle";
+@forward "../../node_modules/slick-carousel/slick/slick";
+
+// CSS
+@forward "./vendors/reset";
+@forward "./abstracts/variables";
+@forward "./abstracts/font-face";
+@forward "./abstracts/mixins";
+@forward "./base/global";
+@forward "./base/typography";
+@forward "./components/btns";
+@forward './components/section-nav';
+@forward "./layout/header";
+@forward "./layout/nav";
+@forward "./layout/hero";
+@forward "./layout/footer";
+@forward './layout/advice';
+@forward './layout/steps';
+@forward './layout/banner';
+@forward './layout/vid';
+@forward './layout/flow';
+@forward './layout/modal';
+@forward './layout/premium';
+@forward './layout/news';
+@forward './layout/faq';
+@forward './layout/access';
+@forward './layout/interview';
+@forward './layout/recruit';
+@forward './layout/company';
+@forward './layout/form-steps';
+@forward './layout/title';
+@forward './layout/question-form';
+@forward './layout/partnertest';
+@forward './layout/partnertest-complete';

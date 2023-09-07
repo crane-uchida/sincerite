@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container{
+	background:#fff;
+}
+
+.main-lt-01 h3 {
+	text-align:left;
+	border-left: 5px solid #FFF;
+	padding: 0.5% 2%;
+}
+
+.main-contents{
+	padding-bottom:60px;
+}
+
+
+.main-about h2.about{
+}
+
+.main-sub-ttl p{
+	max-width:595px;
+	width:100%;
+	margin:0 auto;
+	padding-top:15px;
+}
+
+.lt-article{
+	padding-top:10px;
+}
+
+.omote_p a:hover, 
+.lt-text a:hover{
+	color:#fff;
+}
+
+.lt-article img {
+	border:1px #FFF solid;
+}
+
+/*.main-about h3.tsuyomi-about {
+	line-height:1.6;
+	background:url(../images/img_border3.gif) no-repeat center bottom;
+}*/
+
+.youtube {
+	border:3px #A2824C solid;
+}
+
+.omote_p {
+	margin:2% 0 0;
+	letter-spacing:0.5px;
+}
+
+.omote_p p {
+	width:100%;
+    color: #FFFFFF;
+	line-height:1.5;
+}
+
+.omote_img {
+	margin: 2% auto 0;
+	text-align:center;
+	padding:0.2%;
+}
+
+.omote_img img {
+	width:31.2%;
+/*	border:1px #FFF solid;*/
+	display:inline-block;
+	margin:0.7%;
+}
+
+
+.reg_document {
+	background: #A2824C;
+	margin: 0 0 2% 0;
+	padding:2% 4%;
+}
+
+.reg_document_box {background: #A2824C;}
+.reg_document_box li{color:#fff; line-height:1.6; margin-bottom: 5px;}
+
+.reg_document_box h3 {
+/*    width:80%;*/
+    line-height: 1.3em;
+    letter-spacing: 1.1px;
+    font-size: 19px;
+    color: #FFF;
+    vertical-align: central;
+}

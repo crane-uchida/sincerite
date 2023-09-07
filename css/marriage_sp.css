@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+
+.main-contents{
+	max-width:640px;
+	width:100%;
+	padding-bottom:0;
+}
+
+.bread-list{
+	margin-left:5%;
+}
+
+.main-inner-box{
+	max-width:640px;
+	width:100%;
+	margin:0 0 20px 0;
+}
+
+.main-sub-left{
+	max-width:640px;
+	width:100%;
+	float:none;
+}
+
+.main-sub-ttl{
+	text-align:start;
+	margin:10px 0 20px 0;
+}
+
+h2.because{
+	font-size:130%;
+	line-height:normal;
+	margin:0 auto;
+}
+
+.main-sub-ttl img{
+	width:94%;
+	margin:0 3%;
+	height:auto;
+}
+
+.main-sub-ttl p{
+/*	color:#000;*/
+	font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro","ＭＳ Ｐ明朝", "MS PMincho", serif;
+/*	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+*/	font-size:14px;
+	line-height:22px;
+	text-align:start;
+	max-width:640px;
+	width:90%;
+	margin:0 auto;
+	padding-top:5px;
+}
+
+.main-ct-box{
+	border:none;
+	padding:0;
+	padding-top:20px;
+	padding-bottom:15px;
+}
+
+.main-ct-01{
+	margin:0;
+	padding-right:0;
+	padding-left:0;
+	padding-bottom:15px;
+}
+
+.main-ct-box .sub-main-img{
+	width:100%;
+	height:auto;
+}
+
+.ttl-box-2{
+	max-width:640px;
+/*	width:100%;*/
+	padding:0 0 0 5%;
+}
+
+.ttl-box-2 h3{
+	width:auto;
+	font-size:130%;
+/*	line-height:22px;*/
+}
+
+.add_img, .ct-img-area {
+	float:none;
+	width:100%;
+	margin:0;
+}
+
+.ct-article{
+	padding-bottom:0;
+}
+
+
+.ct-text{
+	font-size:13px;
+	max-width:640px;
+	width:90%;
+	margin:0 auto;
+	padding-top:0;
+}
+
+
+.ttl-article-2{
+	margin:0;
+}
+
+.img-area-rt img{
+	margin:0;
+	margin-left:5%;
+	display:block;
+	float:left;
+	margin-top:1.5%;
+}
+
+.ct-img-area{
+	float:none;
+	margin:0 auto;
+	padding-top:10px;
+}
+
+.img-area-rt{
+	float:none;
+}
+
+.img-area-rt span{
+	display:block;
+	float:left;
+	padding-left:2%;
+}
+
+
+
+.main-sub-right{
+	float:none;
+	margin:0 auto;
+	margin-top:25px;
+}
+
+.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	
+
+
+}

@@ -1,0 +1,2884 @@
+@charset "UTF-8";
+.form_area,
+.thanks {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333333;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area,
+.thanks {
+    font-size: 1.6rem;
+  }
+}
+.form_area h1,
+.form_area h2,
+.form_area h3,
+.form_area h4,
+.form_area h5,
+.thanks h1,
+.thanks h2,
+.thanks h3,
+.thanks h4,
+.thanks h5 {
+  font-family: "Noto Serif JP", serif;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .inner,
+.thanks .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+.form_sub {
+  margin-bottom: 2rem;
+  color: #58CABE;
+  font-size: 2.4rem;
+  text-align: center;
+  line-height: 3.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_sub {
+    margin-bottom: 30px;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+  }
+}
+
+.form_area .form {
+  margin: 0 2rem 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form {
+    width: 700px;
+    margin: 0 auto 60px;
+  }
+}
+.form_area .form dt {
+  margin-bottom: 0.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form dt {
+    margin-bottom: 8px;
+  }
+}
+.form_area .form dt span {
+  margin-left: 0.6rem;
+  padding: 0.1rem 0.3rem;
+  background-color: #FF6C79;
+  border-radius: 0.3rem;
+  color: #FFF;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form dt span {
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+}
+.form_area .form dd {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form dd {
+    margin-bottom: 20px;
+  }
+}
+.form_area .form input[type=text],
+.form_area .form select,
+.form_area .form input[type=radio],
+.form_area .form input[type=email],
+.form_area .form input[type=tel],
+.form_area .form textarea,
+.form_area .form input[type=checkbox] {
+  font-family: "Noto Sans JP", sans-serif;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #FFF;
+  color: #333333;
+}
+.form_area .form input[type=text]::-webkit-input-placeholder, .form_area .form select::-webkit-input-placeholder, .form_area .form input[type=radio]::-webkit-input-placeholder, .form_area .form input[type=email]::-webkit-input-placeholder, .form_area .form input[type=tel]::-webkit-input-placeholder, .form_area .form textarea::-webkit-input-placeholder, .form_area .form input[type=checkbox]::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=text]::-moz-placeholder, .form_area .form select::-moz-placeholder, .form_area .form input[type=radio]::-moz-placeholder, .form_area .form input[type=email]::-moz-placeholder, .form_area .form input[type=tel]::-moz-placeholder, .form_area .form textarea::-moz-placeholder, .form_area .form input[type=checkbox]::-moz-placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=text]:-ms-input-placeholder, .form_area .form select:-ms-input-placeholder, .form_area .form input[type=radio]:-ms-input-placeholder, .form_area .form input[type=email]:-ms-input-placeholder, .form_area .form input[type=tel]:-ms-input-placeholder, .form_area .form textarea:-ms-input-placeholder, .form_area .form input[type=checkbox]:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=text]::-ms-input-placeholder, .form_area .form select::-ms-input-placeholder, .form_area .form input[type=radio]::-ms-input-placeholder, .form_area .form input[type=email]::-ms-input-placeholder, .form_area .form input[type=tel]::-ms-input-placeholder, .form_area .form textarea::-ms-input-placeholder, .form_area .form input[type=checkbox]::-ms-input-placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=text]::placeholder,
+.form_area .form select::placeholder,
+.form_area .form input[type=radio]::placeholder,
+.form_area .form input[type=email]::placeholder,
+.form_area .form input[type=tel]::placeholder,
+.form_area .form textarea::placeholder,
+.form_area .form input[type=checkbox]::placeholder {
+  color: #E0E0E0;
+}
+.form_area .form input[type=date] {
+  -webkit-appearance: none;
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #E0E0E0;
+  background-color: #FFF;
+}
+.form_area .form input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  z-index: 1;
+}
+.form_area .form input[type=date]::after {
+  content: "";
+  background-image: url(../../../images/form/icon_calendar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.form_area .form .area_default {
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_default {
+    padding: 14px 20px;
+    border-radius: 3px;
+    font-size: 1.6rem;
+  }
+}
+.form_area .form .area {
+  background-color: #E9F9F8;
+}
+.form_area .form .area_input {
+  width: 100%;
+  border: solid 0.2rem #58CABE;
+  font-size: 1.4rem;
+  height: 5rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_input {
+    border: solid 2px #58CABE;
+    font-size: 1.6rem;
+    height: 56px;
+  }
+}
+.form_area .form .area_input:focus {
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+          box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+  outline: 0;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_input:focus {
+    -webkit-box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+            box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+  }
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_input_half {
+    width: 345px;
+  }
+}
+.form_area .form .area_input_half:focus {
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+          box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+  outline: 0;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_input_half:focus {
+    -webkit-box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+            box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+  }
+}
+.form_area .form .area_select_default ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select_default ul {
+    gap: 10px;
+  }
+}
+.form_area .form .area_select1 ul {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select1 ul {
+    margin-top: 14px;
+  }
+}
+.form_area .form .area_select1 ul li {
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50%;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select1 ul li {
+    width: 340px;
+  }
+}
+.form_area .form .area_select1 ul li select {
+  color: #E0E0E0;
+}
+.form_area .form .area_select1 ul li select option {
+  color: #333333;
+  font-size: 1.6rem;
+}
+.form_area .form .sub_checkbox {
+  margin: 0 0 0.6rem 0.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .sub_checkbox {
+    margin: 0 0 6px 6px;
+  }
+}
+.form_area .form .area_select2 ul {
+  font-size: 1.4rem;
+}
+.form_area .form .area_select2 ul li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50vw;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select2 ul li {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    width: 168px;
+  }
+}
+.form_area .form .area_select2 .wpcf7-form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+.form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item.first {
+  margin: 0;
+}
+.form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50%;
+  margin: 0;
+  border: solid 0.2rem #58CABE;
+  border-radius: 0.3rem;
+  line-height: 2.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    width: 168px;
+    height: 56px;
+    border: solid 2px #58CABE;
+    line-height: normal;
+  }
+}
+.form_area .form .area_select2 .wpcf7-form-control input[type=radio] {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  padding: 1rem;
+}
+.form_area .form .area_select2 .wpcf7-form-control input[type=radio]:checked + .wpcf7-list-item-label::before {
+  background-color: #3F968E;
+  -webkit-box-shadow: inset 0 0 0 0.2rem #fff;
+          box-shadow: inset 0 0 0 0.2rem #fff;
+}
+.form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 2.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+}
+.form_area .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before {
+  content: "";
+  background: #fff;
+  width: 1.2em;
+  height: 1.2em;
+  margin-bottom: auto;
+  margin-right: 0.5em;
+  margin-top: auto;
+  border: 0.2rem solid #58CABE;
+  border-radius: 100%;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.form_area .form .area_select2 .man_notice,
+.form_area .form .area_select2 .woman_notice {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select2 .man_notice,
+.form_area .form .area_select2 .woman_notice {
+    margin: 20px;
+    padding: 14px;
+  }
+}
+.form_area .form .area_select2 .man_notice {
+  background-color: #CCEFEB;
+}
+.form_area .form .area_select2 .woman_notice {
+  background-color: #FFD1D5;
+}
+.form_area .form .area_select3 .area_select_half {
+  width: 48%;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form .area_select3 .area_select_half {
+    width: 345px;
+  }
+}
+.form_area .form .area_select3 select {
+  background-color: #FFF;
+  color: #E0E0E0;
+}
+.form_area .form .area_select3 select option {
+  color: #333333;
+  font-size: 1.6rem;
+}
+.form_area .form span.select_age::after,
+.form_area .form span.select_zodiac::after,
+.form_area .form span.select_bloodtype::after,
+.form_area .form span.select_1::after,
+.form_area .form span.select_2::after,
+.form_area .form span.select_3::after,
+.form_area .form span.select_4::after,
+.form_area .form span.select_5::after,
+.form_area .form span.select_6::after,
+.form_area .form span.select_7::after,
+.form_area .form span.select_8::after,
+.form_area .form span.select_9::after,
+.form_area .form span.select_10::after,
+.form_area .form span.select_11::after,
+.form_area .form span.select::after,
+.form_area .form span.date::after,
+.form_area .form span.select_yy::after,
+.form_area .form span.select_mm::after,
+.form_area .form span.select_dd::after,
+.form_area .form span.select_occupation::after,
+.form_area .form span[data-name=select]::after,
+.form_area .form span[data-name=select_age]::after,
+.form_area .form span[data-name=select_zodiac]::after,
+.form_area .form span[data-name=select_bloodtype]::after,
+.form_area .form span[data-name=select_1]::after,
+.form_area .form span[data-name=select_2]::after,
+.form_area .form span[data-name=select_3]::after,
+.form_area .form span[data-name=select_4]::after,
+.form_area .form span[data-name=select_5]::after,
+.form_area .form span[data-name=select_6]::after,
+.form_area .form span[data-name=select_7]::after,
+.form_area .form span[data-name=select_8]::after,
+.form_area .form span[data-name=select_9]::after,
+.form_area .form span[data-name=select_10]::after,
+.form_area .form span[data-name=select_11]::after,
+.form_area .form span[data-name=select_annualincome]::after,
+.form_area .form span[data-name=select_yy]::after,
+.form_area .form span[data-name=select_mm]::after,
+.form_area .form span[data-name=select_dd]::after,
+.form_area .form span[data-name=select_occupation]::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-top: solid 0.2rem #58CABE;
+  border-right: solid 0.2rem #58CABE;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.form_area .form label {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .form label {
+    padding: 14px 20px;
+    border-radius: 3px;
+  }
+}
+.form_area .form .error_message {
+  margin-top: 1rem;
+  text-indent: 1em;
+  line-height: 2;
+  background-color: #FFE5E8;
+  color: #f00;
+  font-size: 1.4rem;
+  border-radius: 3px;
+}
+.form_area span[data-name=FlexTextarea] {
+  display: block;
+}
+.form_area .FlexTextarea {
+  display: block;
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .FlexTextarea {
+    font-size: 1.6rem;
+  }
+}
+.form_area .FlexTextarea__dummy {
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 15px;
+  min-height: 120px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 1px solid;
+}
+.form_area .FlexTextarea__textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 15px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid #b6c3c6;
+  border-radius: 4px;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  resize: none;
+}
+.form_area .FlexTextarea__textarea:focus {
+  -webkit-box-shadow: 0 0 0 4px rgba(35, 167, 195, 0.3);
+          box-shadow: 0 0 0 4px rgba(35, 167, 195, 0.3);
+  outline: 0;
+}
+.form_area .area_input_text {
+  width: 100%;
+  border: solid 0.2rem #58CABE;
+  font-size: 1.4rem;
+}
+.form_area .area_email .email-notice {
+  display: none;
+  margin: 1rem 0 1.4rem;
+  color: #FF6C79;
+  font-size: 1.2rem;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) {
+  width: calc(50% - 1rem);
+  margin-bottom: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul li:nth-of-type(2) {
+    width: 168px;
+    margin-bottom: 10px;
+  }
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control-wrap {
+  position: static;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item {
+  margin: 0;
+  padding: 1.2rem;
+  width: 100%;
+  border: solid 0.2rem #58CABE;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  height: 5rem;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item label {
+  padding: 0;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item label input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item-label {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333333;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item-label {
+    font-size: 1.6rem;
+  }
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item-label::before {
+  content: "";
+  background: #fff;
+  width: 1em;
+  height: 1em;
+  margin-bottom: auto;
+  margin-right: 0.5em;
+  margin-top: auto;
+  border: 0.2rem solid #58CABE;
+  border-radius: 0.3rem;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control input[type=checkbox]:checked + .wpcf7-list-item-label::after {
+  color: #FF6C79;
+  position: absolute;
+  margin-top: 0.4rem;
+  width: 1.4rem;
+  height: 0.8rem;
+  border-bottom: solid 0.2rem currentColor;
+  border-left: solid 0.2rem currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control input[type=checkbox]:checked + .wpcf7-list-item-label::after {
+    margin-top: 6px;
+    width: 16px;
+  }
+}
+.form_area .area_checkbox ul .area_default {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul .area_default {
+    margin-bottom: 10px;
+  }
+}
+.form_area .area_checkbox ul .area_default:nth-of-type(2) {
+  padding: 0;
+}
+.form_area .area_checkbox ul .area_default:nth-of-type(2) label {
+  padding: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul .area_default:nth-of-type(2) label {
+    padding: 14px 20px;
+  }
+}
+.form_area .area_checkbox ul .area_input {
+  margin-top: 1.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .area_checkbox ul .area_input {
+    margin-top: 14px;
+  }
+}
+.form_area .btn {
+  display: block;
+  width: 30rem;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .btn {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+.form_area .btn_1 {
+  padding: 2rem 0;
+  background-color: #FF6C79;
+  color: #FFF;
+}
+.form_area .btn_2 {
+  padding: 1rem 0;
+  background-color: #FFF;
+  border: solid 0.2rem #58CABE;
+  color: #58CABE;
+}
+@media screen and (min-width: 768px), print {
+  .form_area .btn_2 {
+    border: solid 2px #58CABE;
+  }
+}
+
+span.wpcf7-not-valid-tip,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #FFE5E8;
+  border: 0 !important;
+  color: #FF6C79;
+  font-size: 1.4rem !important;
+}
+@media screen and (min-width: 768px), print {
+  span.wpcf7-not-valid-tip,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+
+span.wpcf7-not-valid-tip {
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  span.wpcf7-not-valid-tip {
+    border-radius: 3px;
+  }
+}
+
+div.wpcf7-response-output {
+  margin: 2rem 0 0 0 !important;
+  padding: 1rem !important;
+}
+
+form.custom-wpcf7c-confirmed input.transparent::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+form.custom-wpcf7c-confirmed input.transparent::-moz-placeholder {
+  color: transparent !important;
+}
+
+form.custom-wpcf7c-confirmed input.transparent:-ms-input-placeholder {
+  color: transparent !important;
+}
+
+form.custom-wpcf7c-confirmed input.transparent::-ms-input-placeholder {
+  color: transparent !important;
+}
+
+form.custom-wpcf7c-confirmed select.transparent,
+form.custom-wpcf7c-confirmed input.transparent::placeholder {
+  color: transparent !important;
+}
+
+.form_request .form .area_number ul,
+.form_partner .form .area_number ul,
+.form_online .form .area_number ul,
+.form_premium .form .area_number ul,
+.form_doctor .form .area_number ul,
+.form_status .form .area_number ul,
+.form_joboffer .form .area_number ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_request .form .area_number ul,
+.form_partner .form .area_number ul,
+.form_online .form .area_number ul,
+.form_premium .form .area_number ul,
+.form_doctor .form .area_number ul,
+.form_status .form .area_number ul,
+.form_joboffer .form .area_number ul {
+    gap: 10px;
+  }
+}
+.form_request .form .area_number ul li,
+.form_partner .form .area_number ul li,
+.form_online .form .area_number ul li,
+.form_premium .form .area_number ul li,
+.form_doctor .form .area_number ul li,
+.form_status .form .area_number ul li,
+.form_joboffer .form .area_number ul li {
+  width: 50%;
+}
+@media screen and (min-width: 768px), print {
+  .form_request .form .area_number ul li,
+.form_partner .form .area_number ul li,
+.form_online .form .area_number ul li,
+.form_premium .form .area_number ul li,
+.form_doctor .form .area_number ul li,
+.form_status .form .area_number ul li,
+.form_joboffer .form .area_number ul li {
+    width: 340px;
+  }
+}
+.form_request .form .area_number ul li:nth-of-type(2),
+.form_partner .form .area_number ul li:nth-of-type(2),
+.form_online .form .area_number ul li:nth-of-type(2),
+.form_premium .form .area_number ul li:nth-of-type(2),
+.form_doctor .form .area_number ul li:nth-of-type(2),
+.form_status .form .area_number ul li:nth-of-type(2),
+.form_joboffer .form .area_number ul li:nth-of-type(2) {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 5rem;
+  background-color: #58CABE;
+  color: #FFF;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px), print {
+  .form_request .form .area_number ul li:nth-of-type(2),
+.form_partner .form .area_number ul li:nth-of-type(2),
+.form_online .form .area_number ul li:nth-of-type(2),
+.form_premium .form .area_number ul li:nth-of-type(2),
+.form_doctor .form .area_number ul li:nth-of-type(2),
+.form_status .form .area_number ul li:nth-of-type(2),
+.form_joboffer .form .area_number ul li:nth-of-type(2) {
+    height: 56px;
+  }
+}
+.form_request .form .area_address ul li,
+.form_partner .form .area_address ul li,
+.form_online .form .area_address ul li,
+.form_premium .form .area_address ul li,
+.form_doctor .form .area_address ul li,
+.form_status .form .area_address ul li,
+.form_joboffer .form .area_address ul li {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_request .form .area_address ul li,
+.form_partner .form .area_address ul li,
+.form_online .form .area_address ul li,
+.form_premium .form .area_address ul li,
+.form_doctor .form .area_address ul li,
+.form_status .form .area_address ul li,
+.form_joboffer .form .area_address ul li {
+    margin-bottom: 10px;
+  }
+}
+.form_request .form .area_address ul li:nth-of-type(1),
+.form_partner .form .area_address ul li:nth-of-type(1),
+.form_online .form .area_address ul li:nth-of-type(1),
+.form_premium .form .area_address ul li:nth-of-type(1),
+.form_doctor .form .area_address ul li:nth-of-type(1),
+.form_status .form .area_address ul li:nth-of-type(1),
+.form_joboffer .form .area_address ul li:nth-of-type(1) {
+  width: 50%;
+}
+
+.male,
+.female,
+.agreement,
+.yes,
+.no {
+  background-color: #E9F9F8;
+}
+
+.form_partner .form dd {
+  margin-bottom: 3rem;
+}
+
+.form_joboffer {
+  margin-top: 4rem;
+}
+@media screen and (min-width: 768px), print {
+  .form_joboffer {
+    margin-top: 60px;
+  }
+}
+
+.custom-wpcf7c-confirmed .form_appointment .message,
+.custom-wpcf7c-confirmed .form_request .message,
+.custom-wpcf7c-confirmed .form_partner .message,
+.custom-wpcf7c-confirmed .form_online .message,
+.custom-wpcf7c-confirmed .form_premium .message,
+.custom-wpcf7c-confirmed .form_doctor .message,
+.custom-wpcf7c-confirmed .form_status .message,
+.custom-wpcf7c-confirmed .form_joboffer .message {
+  margin: 0 2rem 3rem;
+  padding: 1.2rem;
+  border: solid 0.4rem #E9F9F8;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 2.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .custom-wpcf7c-confirmed .form_appointment .message,
+.custom-wpcf7c-confirmed .form_request .message,
+.custom-wpcf7c-confirmed .form_partner .message,
+.custom-wpcf7c-confirmed .form_online .message,
+.custom-wpcf7c-confirmed .form_premium .message,
+.custom-wpcf7c-confirmed .form_doctor .message,
+.custom-wpcf7c-confirmed .form_status .message,
+.custom-wpcf7c-confirmed .form_joboffer .message {
+    width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+  }
+}
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_appointment .form dd select,
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_appointment .form dd textarea,
+.custom-wpcf7c-confirmed .form_appointment .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_appointment .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_request .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_request .form dd select,
+.custom-wpcf7c-confirmed .form_request .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_request .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_request .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_request .form dd textarea,
+.custom-wpcf7c-confirmed .form_request .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_request .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_partner .form dd select,
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_partner .form dd textarea,
+.custom-wpcf7c-confirmed .form_partner .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_partner .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_online .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_online .form dd select,
+.custom-wpcf7c-confirmed .form_online .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_online .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_online .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_online .form dd textarea,
+.custom-wpcf7c-confirmed .form_online .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_online .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_premium .form dd select,
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_premium .form dd textarea,
+.custom-wpcf7c-confirmed .form_premium .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_premium .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_doctor .form dd select,
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_doctor .form dd textarea,
+.custom-wpcf7c-confirmed .form_doctor .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_doctor .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_status .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_status .form dd select,
+.custom-wpcf7c-confirmed .form_status .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_status .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_status .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_status .form dd textarea,
+.custom-wpcf7c-confirmed .form_status .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_status .form dd input[type=checkbox],
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=text],
+.custom-wpcf7c-confirmed .form_joboffer .form dd select,
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=radio],
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=email],
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=tel],
+.custom-wpcf7c-confirmed .form_joboffer .form dd textarea,
+.custom-wpcf7c-confirmed .form_joboffer .form dd .FlexTextarea__dummy,
+.custom-wpcf7c-confirmed .form_joboffer .form dd input[type=checkbox] {
+  background-color: #E9F9F8;
+  pointer-events: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_input,
+.custom-wpcf7c-confirmed .form_appointment .form .area_input_half,
+.custom-wpcf7c-confirmed .form_request .form .area_input,
+.custom-wpcf7c-confirmed .form_request .form .area_input_half,
+.custom-wpcf7c-confirmed .form_partner .form .area_input,
+.custom-wpcf7c-confirmed .form_partner .form .area_input_half,
+.custom-wpcf7c-confirmed .form_online .form .area_input,
+.custom-wpcf7c-confirmed .form_online .form .area_input_half,
+.custom-wpcf7c-confirmed .form_premium .form .area_input,
+.custom-wpcf7c-confirmed .form_premium .form .area_input_half,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input_half,
+.custom-wpcf7c-confirmed .form_status .form .area_input,
+.custom-wpcf7c-confirmed .form_status .form .area_input_half,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input_half {
+  border: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_appointment .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_request .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_request .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_partner .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_partner .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_online .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_online .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_premium .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_premium .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_status .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_status .form .area_input_half:focus,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input:focus,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input_half:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_appointment .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_request .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_request .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_partner .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_partner .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_online .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_online .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_premium .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_premium .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_status .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_status .form .area_select1 ul li span.select::after,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select1 ul li span.date::after,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select1 ul li span.select::after {
+  display: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_request .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_partner .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_online .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_premium .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_status .form .area_select1 ul li:nth-of-type(2) select,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select1 ul li:nth-of-type(2) select {
+  background-color: #E9F9F8;
+  opacity: 1;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_request .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_partner .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_online .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_premium .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_status .form .area_select2 .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select2 .wpcf7-form-control .wpcf7-list-item {
+  border: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_request .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_partner .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_online .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_premium .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_status .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select2 .wpcf7-form-control .wpcf7-list-item-label::before {
+  display: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_appointment .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_request .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_request .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_partner .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_partner .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_online .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_online .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_premium .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_premium .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_doctor .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_status .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_status .form .area_select2 .woman_notice,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select2 .man_notice,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_select2 .woman_notice {
+  display: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form span.select_age,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_1,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_2,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_3,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_4,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_5,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_6,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_7,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_8,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_9,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_10,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_11,
+.custom-wpcf7c-confirmed .form_appointment .form span.select,
+.custom-wpcf7c-confirmed .form_appointment .form span.date,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_yy,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_mm,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_dd,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_request .form span.select_age,
+.custom-wpcf7c-confirmed .form_request .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_request .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_request .form span.select_1,
+.custom-wpcf7c-confirmed .form_request .form span.select_2,
+.custom-wpcf7c-confirmed .form_request .form span.select_3,
+.custom-wpcf7c-confirmed .form_request .form span.select_4,
+.custom-wpcf7c-confirmed .form_request .form span.select_5,
+.custom-wpcf7c-confirmed .form_request .form span.select_6,
+.custom-wpcf7c-confirmed .form_request .form span.select_7,
+.custom-wpcf7c-confirmed .form_request .form span.select_8,
+.custom-wpcf7c-confirmed .form_request .form span.select_9,
+.custom-wpcf7c-confirmed .form_request .form span.select_10,
+.custom-wpcf7c-confirmed .form_request .form span.select_11,
+.custom-wpcf7c-confirmed .form_request .form span.select,
+.custom-wpcf7c-confirmed .form_request .form span.date,
+.custom-wpcf7c-confirmed .form_request .form span.select_yy,
+.custom-wpcf7c-confirmed .form_request .form span.select_mm,
+.custom-wpcf7c-confirmed .form_request .form span.select_dd,
+.custom-wpcf7c-confirmed .form_request .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_partner .form span.select_age,
+.custom-wpcf7c-confirmed .form_partner .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_partner .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_partner .form span.select_1,
+.custom-wpcf7c-confirmed .form_partner .form span.select_2,
+.custom-wpcf7c-confirmed .form_partner .form span.select_3,
+.custom-wpcf7c-confirmed .form_partner .form span.select_4,
+.custom-wpcf7c-confirmed .form_partner .form span.select_5,
+.custom-wpcf7c-confirmed .form_partner .form span.select_6,
+.custom-wpcf7c-confirmed .form_partner .form span.select_7,
+.custom-wpcf7c-confirmed .form_partner .form span.select_8,
+.custom-wpcf7c-confirmed .form_partner .form span.select_9,
+.custom-wpcf7c-confirmed .form_partner .form span.select_10,
+.custom-wpcf7c-confirmed .form_partner .form span.select_11,
+.custom-wpcf7c-confirmed .form_partner .form span.select,
+.custom-wpcf7c-confirmed .form_partner .form span.date,
+.custom-wpcf7c-confirmed .form_partner .form span.select_yy,
+.custom-wpcf7c-confirmed .form_partner .form span.select_mm,
+.custom-wpcf7c-confirmed .form_partner .form span.select_dd,
+.custom-wpcf7c-confirmed .form_partner .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_online .form span.select_age,
+.custom-wpcf7c-confirmed .form_online .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_online .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_online .form span.select_1,
+.custom-wpcf7c-confirmed .form_online .form span.select_2,
+.custom-wpcf7c-confirmed .form_online .form span.select_3,
+.custom-wpcf7c-confirmed .form_online .form span.select_4,
+.custom-wpcf7c-confirmed .form_online .form span.select_5,
+.custom-wpcf7c-confirmed .form_online .form span.select_6,
+.custom-wpcf7c-confirmed .form_online .form span.select_7,
+.custom-wpcf7c-confirmed .form_online .form span.select_8,
+.custom-wpcf7c-confirmed .form_online .form span.select_9,
+.custom-wpcf7c-confirmed .form_online .form span.select_10,
+.custom-wpcf7c-confirmed .form_online .form span.select_11,
+.custom-wpcf7c-confirmed .form_online .form span.select,
+.custom-wpcf7c-confirmed .form_online .form span.date,
+.custom-wpcf7c-confirmed .form_online .form span.select_yy,
+.custom-wpcf7c-confirmed .form_online .form span.select_mm,
+.custom-wpcf7c-confirmed .form_online .form span.select_dd,
+.custom-wpcf7c-confirmed .form_online .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_premium .form span.select_age,
+.custom-wpcf7c-confirmed .form_premium .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_premium .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_premium .form span.select_1,
+.custom-wpcf7c-confirmed .form_premium .form span.select_2,
+.custom-wpcf7c-confirmed .form_premium .form span.select_3,
+.custom-wpcf7c-confirmed .form_premium .form span.select_4,
+.custom-wpcf7c-confirmed .form_premium .form span.select_5,
+.custom-wpcf7c-confirmed .form_premium .form span.select_6,
+.custom-wpcf7c-confirmed .form_premium .form span.select_7,
+.custom-wpcf7c-confirmed .form_premium .form span.select_8,
+.custom-wpcf7c-confirmed .form_premium .form span.select_9,
+.custom-wpcf7c-confirmed .form_premium .form span.select_10,
+.custom-wpcf7c-confirmed .form_premium .form span.select_11,
+.custom-wpcf7c-confirmed .form_premium .form span.select,
+.custom-wpcf7c-confirmed .form_premium .form span.date,
+.custom-wpcf7c-confirmed .form_premium .form span.select_yy,
+.custom-wpcf7c-confirmed .form_premium .form span.select_mm,
+.custom-wpcf7c-confirmed .form_premium .form span.select_dd,
+.custom-wpcf7c-confirmed .form_premium .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_age,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_1,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_2,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_3,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_4,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_5,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_6,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_7,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_8,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_9,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_10,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_11,
+.custom-wpcf7c-confirmed .form_doctor .form span.select,
+.custom-wpcf7c-confirmed .form_doctor .form span.date,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_yy,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_mm,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_dd,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_status .form span.select_age,
+.custom-wpcf7c-confirmed .form_status .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_status .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_status .form span.select_1,
+.custom-wpcf7c-confirmed .form_status .form span.select_2,
+.custom-wpcf7c-confirmed .form_status .form span.select_3,
+.custom-wpcf7c-confirmed .form_status .form span.select_4,
+.custom-wpcf7c-confirmed .form_status .form span.select_5,
+.custom-wpcf7c-confirmed .form_status .form span.select_6,
+.custom-wpcf7c-confirmed .form_status .form span.select_7,
+.custom-wpcf7c-confirmed .form_status .form span.select_8,
+.custom-wpcf7c-confirmed .form_status .form span.select_9,
+.custom-wpcf7c-confirmed .form_status .form span.select_10,
+.custom-wpcf7c-confirmed .form_status .form span.select_11,
+.custom-wpcf7c-confirmed .form_status .form span.select,
+.custom-wpcf7c-confirmed .form_status .form span.date,
+.custom-wpcf7c-confirmed .form_status .form span.select_yy,
+.custom-wpcf7c-confirmed .form_status .form span.select_mm,
+.custom-wpcf7c-confirmed .form_status .form span.select_dd,
+.custom-wpcf7c-confirmed .form_status .form span.select_occupation,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_age,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_zodiac,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_bloodtype,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_1,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_2,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_3,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_4,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_5,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_6,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_7,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_8,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_9,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_10,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_11,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select,
+.custom-wpcf7c-confirmed .form_joboffer .form span.date,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_yy,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_mm,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_dd,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_occupation {
+  color: #333333;
+}
+.custom-wpcf7c-confirmed .form_appointment .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.date::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_appointment .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_request .form span.select::after,
+.custom-wpcf7c-confirmed .form_request .form span.date::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_request .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select::after,
+.custom-wpcf7c-confirmed .form_partner .form span.date::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_partner .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_online .form span.select::after,
+.custom-wpcf7c-confirmed .form_online .form span.date::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_online .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select::after,
+.custom-wpcf7c-confirmed .form_premium .form span.date::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_premium .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.date::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_doctor .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_status .form span.select::after,
+.custom-wpcf7c-confirmed .form_status .form span.date::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_status .form span.select_occupation::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_age::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_zodiac::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_bloodtype::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_1::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_2::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_3::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_4::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_5::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_6::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_7::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_8::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_9::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_10::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_11::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.date::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_yy::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_mm::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_dd::after,
+.custom-wpcf7c-confirmed .form_joboffer .form span.select_occupation::after {
+  display: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form select,
+.custom-wpcf7c-confirmed .form_request .form select,
+.custom-wpcf7c-confirmed .form_partner .form select,
+.custom-wpcf7c-confirmed .form_online .form select,
+.custom-wpcf7c-confirmed .form_premium .form select,
+.custom-wpcf7c-confirmed .form_doctor .form select,
+.custom-wpcf7c-confirmed .form_status .form select,
+.custom-wpcf7c-confirmed .form_joboffer .form select {
+  color: #333333;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_input_text,
+.custom-wpcf7c-confirmed .form_request .form .area_input_text,
+.custom-wpcf7c-confirmed .form_partner .form .area_input_text,
+.custom-wpcf7c-confirmed .form_online .form .area_input_text,
+.custom-wpcf7c-confirmed .form_premium .form .area_input_text,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input_text,
+.custom-wpcf7c-confirmed .form_status .form .area_input_text,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input_text {
+  border: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_request .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_partner .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_online .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_premium .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_doctor .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_status .form .area_input_text:focus,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_input_text:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_request .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_partner .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_online .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_premium .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_doctor .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_status .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item {
+  border: none;
+}
+.custom-wpcf7c-confirmed .form_appointment .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_request .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_partner .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_online .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_premium .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_doctor .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_status .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before,
+.custom-wpcf7c-confirmed .form_joboffer .form .area_checkbox ul li:nth-of-type(2) .wpcf7-form-control .wpcf7-list-item .wpcf7-list-item-label::before {
+  display: none;
+}
+
+div.wpcf7-mail-sent-ok {
+  border: none !important;
+}
+
+/* div.wpcf7-response-output {
+	margin: 0 !important;
+	padding: 0 !important;
+} */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 999999;
+}
+.modal-container .modal-position {
+  max-height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position {
+    width: 800px;
+  }
+}
+.modal-container .modal-position .modal-body {
+  position: relative;
+  /* display: inline-block; */
+  vertical-align: middle;
+}
+.modal-container .modal-position .modal-body .modal-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -40px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-container .modal-position .modal-body .modal-content {
+  background: #fff;
+  text-align: left;
+  padding: 20px;
+  overflow: auto;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.modal-container .modal-position .modal-body .modal-content .text {
+  text-align: center;
+  font-size: clamp(1.3rem, 8vw - 2rem, 1.4rem);
+}
+.modal-container .modal-position .modal-body .modal-content .primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary {
+    border: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.modal-container .modal-position .modal-body .modal-content .primary dt {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  font-size: 1.4rem;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-container .modal-position .modal-body .modal-content .primary dt span {
+  background-color: #999;
+  width: 100%;
+  padding: 5px 15px;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary dt span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary dt:first-of-type {
+    border-top: 1px solid #ccc;
+  }
+}
+.modal-container .modal-position .modal-body .modal-content .primary dd {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  background-color: #FFF;
+  font-size: 1.4rem;
+  padding: 10px 15px;
+  min-height: 28px;
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary dd:first-of-type {
+    border-top: 1px solid #ccc;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .primary dd {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+}
+.modal-container .modal-position .modal-body .modal-content .button-box {
+  text-align: center;
+}
+.modal-container .modal-position .modal-body .modal-content .button-box button {
+  display: inline-block;
+  margin: 5px;
+  color: #FFF;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  width: 120px;
+  padding: 12px;
+}
+@media screen and (min-width: 768px), print {
+  .modal-container .modal-position .modal-body .modal-content .button-box button {
+    width: 150px;
+    padding: 15px;
+  }
+}
+.modal-container .modal-position .modal-body .modal-content .button-box button.modal-close {
+  background-color: #999;
+  font-size: clamp(1.4rem, 8vw - 2rem, 1.6rem);
+}
+.modal-container .modal-position .modal-body .modal-content .button-box button.submit {
+  background-color: #FF6C79;
+  font-size: clamp(1.6rem, 8vw - 2rem, 1.8rem);
+}
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.appointment,
+.request,
+.partner,
+.online,
+.premium,
+.doctor,
+.status,
+.joboffer {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333333;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .appointment,
+.request,
+.partner,
+.online,
+.premium,
+.doctor,
+.status,
+.joboffer {
+    padding-top: 40px;
+  }
+}
+.appointment h1,
+.appointment h2,
+.appointment h3,
+.appointment h4,
+.appointment h5,
+.request h1,
+.request h2,
+.request h3,
+.request h4,
+.request h5,
+.partner h1,
+.partner h2,
+.partner h3,
+.partner h4,
+.partner h5,
+.online h1,
+.online h2,
+.online h3,
+.online h4,
+.online h5,
+.premium h1,
+.premium h2,
+.premium h3,
+.premium h4,
+.premium h5,
+.doctor h1,
+.doctor h2,
+.doctor h3,
+.doctor h4,
+.doctor h5,
+.status h1,
+.status h2,
+.status h3,
+.status h4,
+.status h5,
+.joboffer h1,
+.joboffer h2,
+.joboffer h3,
+.joboffer h4,
+.joboffer h5 {
+  font-family: "Noto Serif JP", serif;
+}
+@media screen and (min-width: 768px), print {
+  .appointment .inner,
+.request .inner,
+.partner .inner,
+.online .inner,
+.premium .inner,
+.doctor .inner,
+.status .inner,
+.joboffer .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+.pages .appointment_header,
+.pages .request_header,
+.pages .partner_header,
+.pages .online_header,
+.pages .premium_header,
+.pages .doctor_header,
+.pages .status_header,
+.pages .joboffer_header {
+  margin: 3rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_header,
+.pages .request_header,
+.pages .partner_header,
+.pages .online_header,
+.pages .premium_header,
+.pages .doctor_header,
+.pages .status_header,
+.pages .joboffer_header {
+    max-width: 920px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+}
+.pages .appointment_header dd ul,
+.pages .request_header dd ul,
+.pages .partner_header dd ul,
+.pages .online_header dd ul,
+.pages .premium_header dd ul,
+.pages .doctor_header dd ul,
+.pages .status_header dd ul,
+.pages .joboffer_header dd ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_header dd ul,
+.pages .request_header dd ul,
+.pages .partner_header dd ul,
+.pages .online_header dd ul,
+.pages .premium_header dd ul,
+.pages .doctor_header dd ul,
+.pages .status_header dd ul,
+.pages .joboffer_header dd ul {
+    font-weight: 500;
+  }
+}
+.pages .appointment_header dd ul li,
+.pages .request_header dd ul li,
+.pages .partner_header dd ul li,
+.pages .online_header dd ul li,
+.pages .premium_header dd ul li,
+.pages .doctor_header dd ul li,
+.pages .status_header dd ul li,
+.pages .joboffer_header dd ul li {
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  text-align: justify;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_header dd ul li,
+.pages .request_header dd ul li,
+.pages .partner_header dd ul li,
+.pages .online_header dd ul li,
+.pages .premium_header dd ul li,
+.pages .doctor_header dd ul li,
+.pages .status_header dd ul li,
+.pages .joboffer_header dd ul li {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+}
+.pages .appointment_header .btn,
+.pages .request_header .btn,
+.pages .partner_header .btn,
+.pages .online_header .btn,
+.pages .premium_header .btn,
+.pages .doctor_header .btn,
+.pages .status_header .btn,
+.pages .joboffer_header .btn {
+  width: 30rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  background-color: #FF6C79;
+  border-radius: 0.3rem;
+  color: #FFF;
+  font-size: 2.2rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_header .btn,
+.pages .request_header .btn,
+.pages .partner_header .btn,
+.pages .online_header .btn,
+.pages .premium_header .btn,
+.pages .doctor_header .btn,
+.pages .status_header .btn,
+.pages .joboffer_header .btn {
+    width: 500px;
+  }
+}
+.pages .appointment_header dd ul li:nth-of-type(2) ul,
+.pages .request_header dd ul li:nth-of-type(2) ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  -webkit-text-decoration: underline 0.1rem;
+          text-decoration: underline 0.1rem;
+  text-underline-offset: 0.2rem;
+  line-height: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_header dd ul li:nth-of-type(2) ul,
+.pages .request_header dd ul li:nth-of-type(2) ul {
+    gap: 10px;
+  }
+}
+.pages .appointment_header dd ul li:nth-of-type(2) ul li,
+.pages .request_header dd ul li:nth-of-type(2) ul li {
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_header dd ul li:nth-of-type(2) ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.pages .partner_header dd ul li:nth-of-type(1) {
+  text-align: center;
+}
+.pages .online_header,
+.pages .joboffer_header {
+  margin-bottom: 3rem;
+}
+.pages .online_header .form_sub,
+.pages .online_header .eyecatch,
+.pages .joboffer_header .form_sub,
+.pages .joboffer_header .eyecatch {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .form_sub,
+.pages .online_header .eyecatch,
+.pages .joboffer_header .form_sub,
+.pages .joboffer_header .eyecatch {
+    margin-bottom: 30px;
+  }
+}
+.pages .online_header .message,
+.pages .joboffer_header .message {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .message,
+.pages .joboffer_header .message {
+    margin-bottom: 30px;
+  }
+}
+.pages .online_header .list,
+.pages .joboffer_header .list {
+  gap: 1.6rem;
+  padding: 3rem 2rem 4rem;
+  background-color: #E9F9F8;
+  border-radius: 0.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list,
+.pages .joboffer_header .list {
+    margin: 0 10px;
+    padding: 30px 30px 40px;
+    border-radius: 6px;
+  }
+}
+.pages .online_header .list h2,
+.pages .online_header .list h3,
+.pages .joboffer_header .list h2,
+.pages .joboffer_header .list h3 {
+  color: #58CABE;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list dt,
+.pages .joboffer_header .list dt {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+  }
+}
+.pages .online_header .list dt h2,
+.pages .joboffer_header .list dt h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list dt h2,
+.pages .joboffer_header .list dt h2 {
+    margin-bottom: 20px;
+  }
+}
+.pages .online_header .list dd:nth-of-type(1),
+.pages .joboffer_header .list dd:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list dd:nth-of-type(1),
+.pages .joboffer_header .list dd:nth-of-type(1) {
+    margin-bottom: 20px;
+  }
+}
+.pages .online_header .list dd .containers,
+.pages .joboffer_header .list dd .containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list dd .containers,
+.pages .joboffer_header .list dd .containers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+}
+.pages .online_header .list dd .containers .container,
+.pages .joboffer_header .list dd .containers .container {
+  width: 100%;
+  padding: 2rem 1.6rem;
+  background-color: #FFF;
+  border-radius: 0.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list dd .containers .container:nth-of-type(1),
+.pages .joboffer_header .list dd .containers .container:nth-of-type(1) {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+.pages .online_header .list dd .containers .container h3,
+.pages .joboffer_header .list dd .containers .container h3 {
+  margin-bottom: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list dd .containers .container h3,
+.pages .joboffer_header .list dd .containers .container h3 {
+    font-size: 1.6rem;
+  }
+}
+.pages .online_header .list dd .containers .container h3 .list_sub,
+.pages .joboffer_header .list dd .containers .container h3 .list_sub {
+  padding: 0 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, rgba(88, 202, 190, 0.2)));
+  background: linear-gradient(transparent 60%, rgba(88, 202, 190, 0.2) 60%);
+}
+.pages .online_header .list dd .containers .container .icon,
+.pages .joboffer_header .list dd .containers .container .icon {
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.pages .online_header .list dd .containers .container .icon img,
+.pages .joboffer_header .list dd .containers .container .icon img {
+  width: 16rem;
+}
+.pages .online_header .list dd .containers .container p,
+.pages .joboffer_header .list dd .containers .container p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list dd .containers .container p,
+.pages .joboffer_header .list dd .containers .container p {
+    font-size: 1.4rem;
+  }
+}
+.pages .online_header .list dd .notes,
+.pages .joboffer_header .list dd .notes {
+  gap: 1rem;
+  margin-left: 1em;
+}
+.pages .online_header .list dd .notes li,
+.pages .joboffer_header .list dd .notes li {
+  list-style-type: "※";
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+@media screen and (min-width: 768px), print {
+  .pages .online_header .list dd .notes li,
+.pages .joboffer_header .list dd .notes li {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+.pages .joboffer_header {
+  max-width: initial;
+  margin: 0;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header {
+    margin: 0 auto;
+  }
+}
+.pages .joboffer_header .joboffer_sub {
+  color: #58CABE;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .joboffer_sub {
+    font-size: 3rem;
+  }
+}
+.pages .joboffer_header .firstview {
+  height: 50rem;
+  background-color: #E9F9F8;
+  background-image: url(../../../images/form/firstview_sp.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .firstview {
+    background-image: url(../../../images/form/firstview_pc.png);
+  }
+}
+.pages .joboffer_header .firstview h1 {
+  padding-top: 4rem;
+  color: #FFF;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  line-height: 4.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .firstview h1 {
+    padding-top: 60px;
+  }
+}
+.pages .joboffer_header .introduction,
+.pages .joboffer_header .feature,
+.pages .joboffer_header .flow,
+.pages .joboffer_header .list,
+.pages .joboffer_header .information,
+.pages .joboffer_header .voice {
+  margin: 0 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .introduction,
+.pages .joboffer_header .feature,
+.pages .joboffer_header .flow,
+.pages .joboffer_header .list,
+.pages .joboffer_header .information,
+.pages .joboffer_header .voice {
+    max-width: 920px;
+    margin: 0 auto 0;
+  }
+}
+.pages .joboffer_header .bg_base {
+  background-color: #E9F9F8;
+}
+.pages .joboffer_header .bg_img {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E9F9F8), to(#FFFFFF));
+  background: linear-gradient(#E9F9F8, #FFFFFF);
+  background-image: url(../../../images/form/feature_sp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .bg_img {
+    background-image: url(../../../images/form/feature_pc.jpg);
+  }
+}
+.pages .joboffer_header .introduction {
+  padding: 2rem 0;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .introduction {
+    padding-top: 40px;
+  }
+}
+.pages .joboffer_header .introduction li {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .introduction li {
+    margin-bottom: 20px;
+  }
+}
+.pages .joboffer_header .introduction li:nth-of-type(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .introduction li:nth-of-type(4) {
+    display: block;
+  }
+}
+.pages .joboffer_header .introduction li:nth-of-type(5) {
+  color: #58CABE;
+  text-align: center;
+  line-height: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .introduction li:nth-of-type(5) {
+    margin-bottom: 40px;
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+}
+.pages .joboffer_header .introduction li dt {
+  margin-bottom: 1.6rem;
+  color: #58CABE;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .introduction li dt {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+}
+.pages .joboffer_header .introduction li dd {
+  font-weight: 400;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .introduction li dd {
+    font-size: 1.6rem;
+  }
+}
+.pages .joboffer_header .feature {
+  padding: 8rem 0;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .feature {
+    padding: 120px 0;
+  }
+}
+.pages .joboffer_header .feature .joboffer_sub {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .feature .joboffer_sub {
+    margin-bottom: 20px;
+  }
+}
+.pages .joboffer_header .feature .container {
+  padding: 2rem 1.6rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: solid 0.3rem #E9F9F8;
+  border-radius: 0.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .feature .container {
+    margin: 0 100px;
+    padding: 20px 30px;
+    border: solid 3px #E9F9F8;
+    border-radius: 4px;
+  }
+}
+.pages .joboffer_header .feature .container h3 {
+  margin-bottom: 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+.pages .joboffer_header .feature .container p {
+  font-weight: 400;
+  text-align: start;
+}
+.pages .joboffer_header .list {
+  margin-top: 3rem;
+  padding: 3rem 2rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .list {
+    margin-top: 40px;
+    padding: 50px 30px 40px;
+  }
+}
+.pages .joboffer_header .list dt .joboffer_sub {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .list dt .joboffer_sub {
+    margin-bottom: 40px;
+    font-size: 3rem;
+  }
+}
+.pages .joboffer_header .list dd .containers .container h3 {
+  color: #333333;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .list dd .containers .container h3 .list_txt {
+    display: none;
+  }
+}
+.pages .joboffer_header .list dd .containers .container .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.4rem;
+  width: 24rem;
+  margin: 0 auto 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .list dd .containers .container .tag {
+    width: 240px;
+    margin: 0 auto 10px;
+  }
+}
+.pages .joboffer_header .list dd .containers .container .tag li {
+  padding: 0.2rem 0.8rem;
+  background-color: #58CABE;
+  border-radius: 0.3rem;
+  color: #FFF;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .list dd .containers .container .tag li {
+    padding: 0 8px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .list dd .containers .container .tag_1 {
+    width: 140px;
+    margin: 0 auto 10px;
+  }
+}
+.pages .joboffer_header .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 0.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information {
+    gap: 30px;
+    max-width: 790px;
+    margin: 0 auto;
+    padding: 80px 20px;
+  }
+}
+.pages .joboffer_header .information .joboffer_sub {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .joboffer_sub {
+    margin-bottom: 20px;
+  }
+}
+.pages .joboffer_header .information .container {
+  gap: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.pages .joboffer_header .information .container .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  height: 14rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .container .sub {
+    gap: 20px;
+  }
+}
+.pages .joboffer_header .information .container .sub .ruledline {
+  width: 4rem;
+  border-top: solid 0.1rem #FFF;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .container .sub .ruledline {
+    width: 200px;
+    border-top: solid 1px #FFF;
+  }
+}
+.pages .joboffer_header .information .container .sub h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #FFF;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .container .sub h3 {
+    font-size: 2rem;
+  }
+}
+.pages .joboffer_header .information .container .sub_1 {
+  background-image: url(../../../images/form/information_sp_1.jpg);
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .container .sub_1 {
+    background-image: url(../../../images/form/information_pc_1.jpg);
+  }
+}
+.pages .joboffer_header .information .container .sub_2 {
+  background-image: url(../../../images/form/information_sp_2.jpg);
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .container .sub_2 {
+    background-image: url(../../../images/form/information_pc_2.jpg);
+  }
+}
+.pages .joboffer_header .information .container .sub_3 {
+  background-image: url(../../../images/form/information_sp_3.jpg);
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .container .sub_3 {
+    background-image: url(../../../images/form/information_pc_3.jpg);
+  }
+}
+.pages .joboffer_header .information .contents {
+  display: none;
+}
+.pages .joboffer_header .information .contents.active {
+  display: block;
+}
+.pages .joboffer_header .information .contents dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 2rem 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .contents dl {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.pages .joboffer_header .information .contents dl div {
+  text-align: start;
+}
+.pages .joboffer_header .information .contents dl div dt {
+  padding: 0 0.6rem;
+}
+.pages .joboffer_header .information .contents dl div dd {
+  font-weight: 400;
+}
+.pages .joboffer_header .information .contents dl div .info_dd {
+  margin: 0 0.6rem;
+}
+.pages .joboffer_header .information .contents dl .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.pages .joboffer_header .information .contents dl .ruledline {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  margin: 1rem 0;
+  border-top: dotted 0.2rem #58CABE;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .contents dl .ruledline {
+    margin: 0 10px;
+    border-top: none;
+    border-left: dotted 2px #58CABE;
+  }
+}
+.pages .joboffer_header .information .down {
+  padding: 0.4rem 0;
+  background-color: #FFF;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .down {
+    padding: 3px 0;
+    border-radius: 0 0 3px 3px;
+  }
+}
+.pages .joboffer_header .information .down .triangle_open {
+  width: 0;
+  height: 0;
+  margin: 0.6rem auto;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-top: 1.2rem solid #58CABE;
+}
+.pages .joboffer_header .information .down .triangle_close {
+  width: 0;
+  height: 0;
+  margin: 0.6rem auto;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-bottom: 1.2rem solid #58CABE;
+}
+.pages .joboffer_header .information .txt {
+  text-align: center;
+}
+.pages .joboffer_header .information .btn {
+  margin: 2rem auto 0;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .information .btn {
+    margin: 20px auto 0;
+  }
+}
+.pages .joboffer_header .voice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice {
+    gap: 30px;
+    width: 670px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice .joboffer_sub {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd {
+    gap: 30px;
+  }
+}
+.pages .joboffer_header .voice dd .speechbabble {
+  gap: 0;
+}
+.pages .joboffer_header .voice dd .speechbabble .voice_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  padding: 2rem;
+  background-color: #E9F9F8;
+  border-radius: 0.6rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd .speechbabble .voice_txt {
+    padding: 30px 40px;
+    text-align: start;
+  }
+}
+.pages .joboffer_header .voice dd .speechbabble .voice_txt .tip {
+  position: absolute;
+  bottom: -2.6rem;
+  width: 6rem;
+  -webkit-transform: scaleX(2);
+          transform: scaleX(2);
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd .speechbabble .voice_txt .tip {
+    bottom: -30px;
+    width: 70px;
+    -webkit-transform: scaleX(4);
+            transform: scaleX(4);
+  }
+}
+.pages .joboffer_header .voice dd .speechbabble .voice_txt .tip_1 {
+  left: 4rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd .speechbabble .voice_txt .tip_1 {
+    left: 120px;
+  }
+}
+.pages .joboffer_header .voice dd .speechbabble .voice_txt .tip_2 {
+  right: 4rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd .speechbabble .voice_txt .tip_2 {
+    right: 120px;
+  }
+}
+.pages .joboffer_header .voice dd .speechbabble .name {
+  font-weight: 400;
+  line-height: 2.6rem;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd .speechbabble .name {
+    font-size: 1.4rem;
+  }
+}
+.pages .joboffer_header .voice dd .speechbabble .name span {
+  padding: 0 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, rgba(255, 108, 121, 0.2)));
+  background: linear-gradient(transparent 60%, rgba(255, 108, 121, 0.2) 60%);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd .speechbabble .name span {
+    font-size: 1.6rem;
+  }
+}
+.pages .joboffer_header .voice dd .speechbabble .name_1 {
+  margin: 0.6rem 0.6rem 0 0;
+  text-align: right;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd .speechbabble .name_1 {
+    margin: 10px 10px 0 0;
+  }
+}
+.pages .joboffer_header .voice dd .speechbabble .name_2 {
+  margin: 0.6rem 0 0 0.6rem;
+  text-align: left;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .voice dd .speechbabble .name_2 {
+    margin: 10px 0 0 10px;
+  }
+}
+.pages .joboffer_header .joboffer_question {
+  background-color: #E9F9F8;
+  background-image: none;
+}
+.pages .joboffer_header .joboffer_question h2 {
+  text-shadow: none;
+}
+.pages .joboffer_header .joboffer_question .joboffer_sub {
+  font-weight: 500;
+}
+.pages .joboffer_header .joboffer_question .inner .accordion_1 .q_txt,
+.pages .joboffer_header .joboffer_question .inner .accordion_1 .a_txt {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .joboffer_question .inner .accordion_1 .q_txt,
+.pages .joboffer_header .joboffer_question .inner .accordion_1 .a_txt {
+    font-size: 1.8rem;
+  }
+}
+.pages .joboffer_header .joboffer_question .inner .accordion_1 .q_txt .initial,
+.pages .joboffer_header .joboffer_question .inner .accordion_1 .a_txt .initial {
+  font-family: "Noto Serif JP", serif;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .joboffer_question .inner .accordion_1 .q_txt {
+    padding: 10px 60px 10px 15px;
+  }
+}
+.pages .joboffer_header .question .inner {
+  margin-bottom: 0;
+}
+.pages .joboffer_header .btn {
+  margin: 2rem auto;
+}
+@media screen and (min-width: 768px), print {
+  .pages .joboffer_header .btn {
+    margin: 40px auto;
+  }
+}
+.pages .plugin {
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .plugin {
+    margin-bottom: 120px;
+  }
+}
+.pages .appointment_footer,
+.pages .request_footer,
+.pages .partner_footer,
+.pages .online_footer {
+  margin: 0 2rem 3rem;
+  padding: 3rem 2rem;
+  background-color: #E9F9F8;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_footer,
+.pages .request_footer,
+.pages .partner_footer,
+.pages .online_footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 110px;
+  }
+}
+.pages .appointment_footer .pic img,
+.pages .request_footer .pic img,
+.pages .partner_footer .pic img,
+.pages .online_footer .pic img {
+  height: auto;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_footer .pic,
+.pages .request_footer .pic,
+.pages .partner_footer .pic,
+.pages .online_footer .pic {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    max-width: 48%;
+  }
+}
+.pages .appointment_footer .sub,
+.pages .request_footer .sub,
+.pages .partner_footer .sub,
+.pages .online_footer .sub {
+  margin: 2rem 0;
+}
+.pages .appointment_footer .sub h3,
+.pages .request_footer .sub h3,
+.pages .partner_footer .sub h3,
+.pages .online_footer .sub h3 {
+  color: #58CABE;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_footer .sub h3,
+.pages .request_footer .sub h3,
+.pages .partner_footer .sub h3,
+.pages .online_footer .sub h3 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_footer .sub,
+.pages .request_footer .sub,
+.pages .partner_footer .sub,
+.pages .online_footer .sub {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    margin: 0 0 10px;
+  }
+}
+.pages .appointment_footer .txt,
+.pages .request_footer .txt,
+.pages .partner_footer .txt,
+.pages .online_footer .txt {
+  text-align: justify;
+}
+@media screen and (min-width: 768px), print {
+  .pages .appointment_footer .txt,
+.pages .request_footer .txt,
+.pages .partner_footer .txt,
+.pages .online_footer .txt {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    max-width: 48%;
+  }
+}
+.pages .request_footer .txt,
+.pages .partner_footer .txt {
+  margin-bottom: 2rem;
+}
+.pages .request_footer .btn,
+.pages .partner_footer .btn {
+  font-family: "Noto Serif JP", serif;
+}
+@media screen and (min-width: 768px), print {
+  .pages .request_footer .btn,
+.pages .partner_footer .btn {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .pages .request_footer .btn a,
+.pages .partner_footer .btn a {
+    padding: 14px 80px;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .joboffer {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .thanks .thanks_header,
+.thanks .message {
+    width: 800px;
+  }
+}
+.thanks .thanks_header {
+  margin: 3rem 2rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .thanks_header {
+    margin: 0 auto 40px;
+    padding-top: 40px;
+  }
+}
+.thanks .thanks_header li .form_sub {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .thanks_header li .form_sub {
+    margin-bottom: 30px;
+  }
+}
+.thanks .thanks_header li .form_sub {
+  font-size: 2.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .thanks_header li .form_sub {
+    font-size: 3.2rem;
+  }
+}
+.thanks .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin: 0 2rem 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .message {
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+}
+.thanks .tel_area {
+  margin: 0 2rem 3rem;
+  padding: 1rem 1rem 2rem;
+  background-color: #E9F9F8;
+  border-radius: 0.3rem;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .tel_area {
+    width: 500px;
+    margin: 0 auto 60px;
+  }
+}
+.thanks .tel_area dt ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.6rem;
+  color: #58CABE;
+}
+.thanks .tel_area dt ul li {
+  font-family: "Noto Serif JP", serif;
+  font-size: 3.8rem;
+  font-weight: 500;
+}
+.thanks .tel_area dt ul li img {
+  width: 4rem;
+  margin-top: 1rem;
+}
+.thanks .tel_area dt ul li h3 {
+  font-size: 3.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .tel_area dt ul li h3 {
+    font-size: 4.4rem;
+  }
+}
+.thanks .tel_area dd {
+  margin: 0 2rem;
+  padding: 0.6rem 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #58CABE;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .tel_area dd {
+    margin: 0 40px;
+    padding: 6px 0;
+    font-size: 1.8rem;
+  }
+}
+.thanks .btn {
+  margin: 3rem 4rem 8rem;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .btn {
+    margin-bottom: 120px;
+  }
+}
+.thanks .btn a {
+  font-family: "Noto Serif JP", serif;
+}
+.thanks .question {
+  background-color: #E9F9F8;
+  background-image: none;
+}
+.thanks .question h2 {
+  color: #58CABE;
+  text-shadow: none;
+}
+@media screen and (min-width: 768px), print {
+  .thanks .question h2 {
+    font-size: 3.2rem;
+  }
+}
+.thanks .question .inner .accordion_1 .q_txt,
+.thanks .question .inner .accordion_1 .a_txt {
+  font-family: "Noto Serif JP", serif;
+}
+
+.online_thanks .thanks_header li .form_sub,
+.online_thanks .thanks_header li .eyecatch {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px), print {
+  .online_thanks .thanks_header li .form_sub,
+.online_thanks .thanks_header li .eyecatch {
+    margin-bottom: 30px;
+  }
+}
+
+.joboffer_thanks .thanks_header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.joboffer_thanks .thanks_header .firstview {
+  margin-bottom: 3rem;
+  background-color: #FFF;
+}
+@media screen and (min-width: 768px), print {
+  .joboffer_thanks .thanks_header .firstview {
+    margin-bottom: 40px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

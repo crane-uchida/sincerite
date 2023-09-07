@@ -1,0 +1,490 @@
+@charset "UTF-8";
+
+html { font-size: 62.5%; }
+body {font-size: 1.6em; margin: 0; color: #5c5c5c; font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;}
+.yumin{font-family: yu-mincho-pr6n, sans-serif;font-style: normal;font-weight: 400;}
+h1,h2,h3,h4,h5{margin: 0; padding: 0; font-weight: normal;}
+img,input[type="image"]{max-width: 100%; height: auto;}
+p{line-height: 1.7; margin: 0; padding: 0;}
+p + p{margin-top: 20px;}
+ul,li{list-style: none; margin: 0; padding: 0;}
+input{border: none;}
+
+
+select {color: #5c5c5c; -webkit-appearance: none; appearance: none; /* デフォルトのスタイルを無効 */ border-radius: 0;	padding: 0 16px 0 10px;}
+select::-ms-expand {display: none; /* デフォルトのスタイルを無効(IE用) */}
+.selectArrow{position: relative;}/* セレクトボックスの矢印デザイン変更 */
+.selectArrow::before {border-bottom: 4.5px solid #5c5c5c; border-left: 4px solid transparent; border-right: 4px solid transparent; content: ""; position: absolute; right: 6px; top: 10px; width: 0;}
+.selectArrow::after {border-left: 4px solid transparent;border-right: 4px solid transparent; border-top: 4.5px solid #5c5c5c; content: ""; position: absolute; right: 6px; top: 20px; width: 0;}
+
+
+
+
+.grecaptcha-badge { visibility: hidden; }
+a#scroll-to-top{display: none!important;}
+
+.lightBlueBox{background: #ebf6f9;}
+.corporateColorBox{background: #58CABE; color: #fff;}
+a {text-decoration: none;}
+small{text-align: center; background: #dedede; display: block; /*padding-bottom: 150px;*/ padding-bottom: 20px;}
+.br-sp{display: none;}
+.br-sp-small{display: none;}
+.spNone{display: none;}
+.vertical {-ms-writing-mode: tb-rl;	writing-mode: vertical-rl; }
+.fw_b{font-weight: bold;}
+.cl_corporate{color: #58CABE;}
+.ta_c{text-align: center;}
+.mb20{margin-bottom: 20px;}
+.mb50{margin-bottom: 50px;}
+.flex{display: flex; flex-wrap: wrap;}
+.wBox{width: 90%; margin-left:auto; margin-right: auto;}
+.wBox2{width: 80%; margin-left:auto; margin-right: auto;}
+.snsBox{display: flex; justify-content: space-between;}
+.snsBox li{width: 47%;}
+.snsBox li.icon{width: 15%;}
+
+.fs10{font-size: 1rem;}
+.fs11{font-size: 1.1rem;}
+.fs12{font-size: 1.2rem;}
+.fs13{font-size: 1.3rem;}
+.fs14{font-size: 1.4rem;}
+.fs15{font-size: 1.5rem;}
+.fs16{font-size: 1.6rem;}
+.fs17{font-size: 1.7rem;}
+.fs18{font-size: 1.8rem;}
+.fs19{font-size: 1.9rem;}
+.fs20{font-size: 2rem;}
+.fs21{font-size: 2.1rem;}
+.fs22{font-size: 2.2rem;}
+.fs23{font-size: 2.3rem;}
+.fs24{font-size: 2.4rem;}
+.fs25{font-size: 2.5rem;}
+.fs26{font-size: 2.6rem;}
+.fs27{font-size: 2.7rem;}
+.fs28{font-size: 2.8rem;}
+.fs29{font-size: 2.9rem;}
+.fs30{font-size: 3rem;}
+
+.lh10{line-height: 1;}
+.lh11{line-height: 1.1;}
+.lh12{line-height: 1.2;}
+.lh13{line-height: 1.3;}
+.lh14{line-height: 1.4;}
+.lh15{line-height: 1.5;}
+.lh16{line-height: 1.6;}
+.lh17{line-height: 1.7;}
+.lh18{line-height: 1.8;}
+.lh19{line-height: 1.9;}
+.lh20{line-height: 2;}
+
+
+
+
+
+/* ヘッダー */
+button#responsive-menu-button{background: #fff!important;}
+.responsive-menu-inner, .responsive-menu-inner::before, .responsive-menu-inner::after{background-color: #58CABE !important;}
+header .logoBox{display: flex;align-items: flex-end; }
+header .logoBox .logo{width: 25%; font-size: 0;}
+header .logoBox .txt{font-size: 1.2rem;flex: 1;color: #58CABE; padding:0 40px 4px 3%;}
+body.kekkon-uranai header .innerhead{background: #5c5c5c;}
+body.kekkon-uranai header .innerhead .leftsec{background:none;}
+body.kekkon-uranai header .innerhead .rightsec .headertxt{color: #fff;}
+body.kekkon-uranai header .hamburger ul{background: none;}
+body.kekkon-uranai header .hamburger ul li{background: #fff;}
+
+
+/* フッター */
+footer .gmaps{filter: grayscale(100%);}
+footer .gmaps iframe{width: 100%; display: block;height: 548px;}
+footer nav ul{display: flex; flex-wrap: wrap;padding:10px 5%;}
+footer nav ul li{width: 50%;font-size: 1.2rem;line-height: 2.5;}
+footer nav ul li a{color: #58CABE;}
+footer .privacy{background: #dedede;padding: 25px 5% 15px;}
+footer .privacy .ttl{font-size: 1.3rem; font-weight: bold;}
+footer .privacy .content{font-size: 1rem;}
+footer .lmrBox{display: flex; justify-content: space-between; align-items: flex-end;flex-wrap: wrap; padding: 20px 0;}
+footer .lmrBox .left{display: flex; align-items: flex-end; width:100%;}
+footer .lmrBox .left > .innerBox{display: flex;  align-items: flex-end; justify-content:center; padding: 0 5% 15px;width: 100%;}
+footer .lmrBox .left > .innerBox .logo{width: 40%;line-height: 1;margin-right: 5%;;}
+footer .lmrBox .left > .innerBox .name{font-size: 2.6rem; line-height: 1.5;}
+footer .lmrBox .left > .innerBox .name .headOffice{display: block; font-size: 1.8rem; line-height: 1;}
+footer .lmrBox .middle{width:100%;}
+footer .lmrBox .right{width:100%;}
+footer .lmrBox .adr{font-size: 1.2rem; text-align: center;}
+footer .lmrBox .middle > .tel{font-size: 1.6rem;    text-align: center;}
+footer .btnBox{display: flex; flex-wrap: wrap;justify-content:center; padding: 0 5%;margin-top: 20px;}
+footer .btnBox li{font-size: 1.8rem;width: 31%;}
+footer .btnBox li.access{width: 37%;}
+footer .btnBox li a{color: #fff; display: block;position: relative;padding:6px 10% 6px 0;text-align: center;}
+footer .btnBox li a::after{content:'>';font-size: 1.4rem;position: absolute; right: 7%; top: 23%; color: #ffc755;}
+footer .btnBox .tel{background: linear-gradient(#ff8089, #ff5263); border-radius: 4px; margin-right: 15px;}
+footer .btnBox .access{background: #007081; border-radius: 4px;}
+footer .btnBox .reserve{background: linear-gradient(#ff8089, #ff5263); border-radius: 4px;}
+footer .btnBox .document{background: linear-gradient(#ff8089, #ff5263); border-radius: 4px;}
+footer #fixNav{display: flex; flex-wrap: wrap;position: fixed;left: 0;bottom: -134px;width: 100%;z-index: 1000;transition-duration: 200ms;padding: 10px 5%; box-sizing: border-box;background: #dedede;}
+footer #fixNav li{width: 100%; background: linear-gradient(#ff8089, #ff5263); border-radius: 4px;text-align: center;line-height: 1.3;padding: 10px 0; }
+footer #fixNav li a{color: #fff;text-align: left; display: inline-block;font-size: 1.8rem;position: relative;}
+footer #fixNav li a::after{content:'\03e';font-size: 3rem;position: absolute; right: -15px;  color: #ffc755;}
+footer #fixNav li.counseling a::after{top: 0;}
+footer #fixNav li.document a::after{top: -11px;}
+footer #fixNav li:first-of-type{margin-bottom: 5px;}
+body.scrolled footer #fixNav{bottom: 0;}
+footer .partnerDiagnosis{justify-content: center;align-items: center;}
+footer .partnerDiagnosis .left{width: 30%; margin-right: 3%;}
+footer .partnerDiagnosis .left img{position: relative; top:-3px;top: -30px; margin-bottom: -30px; display: block;}
+footer .partnerDiagnosis .right{width: 57%;}
+footer .partnerDiagnosis .txt1{font-size: 1.2rem;margin-bottom: 10px;}
+footer .partnerDiagnosis .partnerDiagnosisBtn a{background: #ff7a85; color: #fff; display: block; text-align: center; border-radius: 4px; font-size: 1.2rem; padding: 4px 0;}
+footer .partnerDiagnosisBtn img{display: block;}
+footer .linkBox{width: 90%; margin: 0 auto; border: 1px solid #ccc; padding: 10px 20px; box-sizing: border-box;position: relative;}
+footer .linkBox a{display: block;line-height: 1.4;font-weight: bold;font-size: 18px;color: #5c5c5c;}
+footer .linkBox::after{content:'>';position: absolute;top: 50%; right: 13px; margin-top: -20px;font-size: 26px;}
+body.kekkon-uranai footer .privacy{background: none;}
+body.kekkon-uranai footer small{background: none;}
+
+#divination.diagnosis{padding: 0 0 30px 0;}
+#divination{padding: 0 0 50px 0;}
+.mainTtl{font-size: 7.5rem;font-family: ten-mincho, serif;font-style: normal;font-weight: 400;line-height: 1; margin:15px 10px 18px;}
+.flower2{margin: 10px 0;}
+.ellipsis{font-size: 3rem;width: 100%; display: flex; align-items: center;margin: 15px 0;}
+
+
+
+/* 1.生年月日で診断 */
+#divination.diagnosis .txt1{font-size: 1.3rem; padding: 0 20px; text-align: left;}
+#divination.diagnosis .txt2{font-size: 2rem;}
+#divination.diagnosis .txt3{font-size: 1.3rem;}
+#divination.diagnosis .txt4{font-size: 1.3rem; font-weight: bold;}
+#divination.diagnosis .txt5{font-size: 1.3rem;}
+#divination.diagnosis .txt6{font-size: 1.6rem;}
+#divination.diagnosis .txt7{font-size: 1rem;}
+#divination.diagnosis .txt8{font-size: 1.6rem;}
+
+.calculateBox {
+	width: 90%; margin: 23px auto 30px; padding: 28px 1px; box-sizing: border-box;
+	background-image:
+	url(../images/divination/calculatebox_line_lt.svg),
+	url(../images/divination/calculatebox_line_rt.svg),
+	url(../images/divination/calculatebox_line_lb.svg),
+	url(../images/divination/calculatebox_line_rb.svg),
+	url(../images/divination/calculatebox_line_top.svg),
+	url(../images/divination/calculatebox_line_bottom.svg);
+	background-position: left top,right top,left bottom,right bottom,center 1%, center 99%;
+	background-size:10% auto,10% auto,10% auto,10% auto,84% 5px ,84% 5px;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+}
+.calculateBox .border1{border-left: 2px solid #a1a1a1; border-right: 2px solid #a1a1a1; padding: 4px 2px;}
+.calculateBox .border2{border-left: 1px solid #a1a1a1;border-right: 1px solid #a1a1a1;}
+.calculateBox .resultBtn{margin-top:20px;}
+.calculateBox .resultBtn input{background: linear-gradient(#ff8089, #ff5263); border-radius: 4px;width: 70%; margin: 0 auto; color: #fff;text-align: center; padding: 10px 0;display: block;font-size: 1.8rem;font-weight: bold;}
+.calculateBox .box{padding: 10px; margin: 5px 5% 10px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+.calculateBox span{}
+.calculateBox .birthdayBox{display: flex;  flex-wrap: wrap;justify-content: center;margin-top: 15px;}
+.calculateBox .ymdBox{width: 90%;display: flex;align-items: flex-end;justify-content: center;}
+.calculateBox .ttl{width: 90%;    margin-bottom: 5px;}
+.calculateBox .ymdBox select{width: 100%;height: 35px; margin-left: 10px;border-radius: 4px;}
+.calculateBox .ymdBox .selectArrow{margin-right: 3px;}
+.calculateBox .ymdBox .selectArrow:first-of-type{width: 40%;}
+.calculateBox .ymdBox .selectArrow:first-of-type select{margin-left: 0;}
+.calculateBox .ymdBox select#month,
+.calculateBox .ymdBox select#date{width: 88%;}
+
+.supervise{width: 90%; margin: 0 auto 30px;}
+.supervise .name{font-size: 1.2rem;margin-bottom: 5px;}
+.supervise .biography{font-size: 1rem!important;}
+
+/* レビュー */
+#divination.diagnosis .uranaiReview{width: 100%; margin:30px auto; background: #f2f2f2;padding: 25px 20px; box-sizing: border-box;}
+#divination.diagnosis .uranaiReview .ttl{color: #5c5c5c;font-size:19px;margin-bottom: 7px;font-weight: bold;}
+#divination.diagnosis .uranaiReview .total{display: flex;color: #5c5c5c;font-size: 16px; margin-bottom: 7px;}
+#divination.diagnosis .uranaiReview .total .ratingValue{margin-right: 3px;font-weight: bold;}
+#divination.diagnosis .uranaiReview .total .txt{font-weight: bold;}
+#divination.diagnosis .uranaiReview article{border-top: 1px solid #ccc; padding-top: 10px;}
+#divination.diagnosis .uranaiReview article + article{margin-top: 20px;}
+#divination.diagnosis .uranaiReview article .head{display: flex; align-items: center;}
+#divination.diagnosis .uranaiReview article .head .rating{color: #5c5c5c;margin-right:5px; font-size: 14px;font-weight: bold;}
+#divination.diagnosis .uranaiReview article .head .person{font-size: 16px; font-weight: bold; margin-right:20px;}
+#divination.diagnosis .uranaiReview article .cont{font-size: 14px; line-height: 1.5; margin-top: 7px;}
+
+
+/* レビュー★デザイン */
+.star5_rating{position: relative; z-index: 0; display: inline-block; white-space: nowrap; color: #CCCCCC; /*font-size: 30px; */ margin-right: 20px;}
+.star5_rating:before, .star5_rating:after{content: '★★★★★';}
+.star5_rating:after{position: absolute; z-index: 1; top: 0; left: 0; overflow: hidden; white-space: nowrap; color: #5c5c5c;}
+.star5_rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5_rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5_rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5_rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5_rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
+
+
+/* 2.カード占い */
+#divination.card .txt1{font-size: 3rem;}
+#divination.card .txt2{font-size: 1.1rem;}
+#divination.card .txt3{font-size: 1.8rem;}
+#divination.card .txt4{font-size: 1.7rem;}
+#divination.card .txt5{font-size: 1.6rem;}
+#divination.card .birthNumber{font-size: 12rem;}
+
+/* 2.カードのスライド swiper使用 */
+#slide{max-width:95%; margin:30px auto; }
+#slide .swiper-container{ width:100%; max-width:650px; }
+#slide .swiper-slide-next, #slide .swiper-slide-prev{ opacity: 0.8; }
+#slide .swiper-button-prev::before,.swiper-button-next::before {font-size:32px;color:#fff;font-weight:900;}
+
+
+
+
+/* 3.結果ページ */
+#divination.result .txt1{font-size:2rem; }
+#divination.result .txt2{font-size:2.4rem; }
+#divination.result .mv{margin-bottom: 20px;}
+#divination.result .content{margin: 0 5%;}
+#divination.result .image{margin-bottom: 10px;}
+#divination.result h2{border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding: 10px 0;margin: 0 5% 35px;}
+#divination.result h3{margin-bottom: 10px;line-height: 1.4; font-size: 21px;}
+#divination.result h4{font-size: 1.8rem;margin-bottom: 10px;margin-top: 15px;}
+#divination.result h4:first-of-type{margin-top:0;}
+#divination.result p + h3{margin-top: 50px;}
+#divination.result p + .image{margin-top:10px;}
+#divination.result .content p:last-of-type{margin-bottom: 50px;}
+#divination.result .supervise{margin: 0 5%;background: #fff; border: 1px solid #ccc;padding: 10px 5px; box-sizing: border-box;}
+
+
+
+
+
+
+@media screen and (max-width: 374px) {
+.br-sp-small{display: block;}
+/* ヘッダー */
+header .logoBox .txt{font-size: 1rem;}
+/* フッター */
+footer .left > .innerBox .name{font-size: 2.1rem;}
+footer .adr {font-size: 1rem;}
+footer .gmaps iframe{height: 250px;}
+footer #fixNav li a{font-size: 1.4rem;}
+footer #fixNav li a::after{font-size: 2.4rem;}
+footer .partnerDiagnosis .txt1 {font-size: 1rem;margin-bottom: 5px;}
+
+/* 1.生年月日で診断 */
+#divination.diagnosis .txt2{font-size: 1.8rem;}
+#divination.diagnosis .txt4 {font-size: 1.2rem;}
+#divination.diagnosis .txt6 {font-size: 1.4rem;}
+#divination.diagnosis .txt8 {font-size: 1.4rem;}
+.calculateBox .resultBtn input{font-size: 1.5rem;}
+.calculateBox .ymdBox select{font-size: 1.6rem;}
+/* 2.カード占い */
+#divination.card .txt2{font-size: 1rem;}
+#divination.card .txt3 {font-size: 1.1rem;}
+#divination.card .txt4 {font-size: 1.4rem;}
+#divination.card .txt5 {font-size: 1.4rem;}
+/* 3.結果ページ */
+#divination.result .txt1{font-size:1.8rem; }
+#divination.result .txt2{font-size:2.2rem; }
+#divination.result p {font-size: 1rem;}
+#divination.result h2{font-size: 2.6rem;}
+#divination.result h3{font-size: 1.6rem;}
+#divination.result h4{font-size: 1.4rem;}
+
+}
+
+@media screen and (min-width: 560px) {
+	a[href^="tel:"]{pointer-events: none;}
+	.selectArrow::before {right: 12px; top: 14px;}
+	.selectArrow::after {right: 12px; top: 24px;}
+
+	/* ヘッダー */
+	header{position: relative;height: 140px;padding-top: 25px; box-sizing: border-box;}
+	header .lmrBox{display: flex;justify-content: space-around; align-items: flex-end;}
+	header .lmrBox .left{width: 18%;}
+	header .lmrBox .middle{width: 60%;}
+	header .lmrBox .right{width:17%;}
+	header .lmrBox .right .reserve{background: #ff6b81; color: #fff; display: block;    font-size: 2rem;    line-height: 1; padding: 10px 3px;text-align: center;}
+	header .lmrBox .right .reserve span{display: block;font-size: 1.1rem;line-height: 1;margin-bottom: 5px;}
+	header .telBox{position: absolute;    right: 0;    bottom: 80px;}
+	header .telBox .tel{font-size: 2.2rem;line-height: 1;}
+	header .telBox .tel span{font-size: 1.6rem;margin-right: 5px;}
+	header .telBox .time{font-size: 1.1rem;text-align: right;}
+	header .lmrBox .middle .annualIncome{font-size: 2rem;}
+	header .lmrBox .middle .annualIncome .price{font-size: 4rem; font-weight: bold;margin: 0 3px 0 1px;}
+	header .lmrBox .middle .annualIncome .en{font-size: 2.4rem;}
+	header .lmrBox .middle nav ul{display: flex; justify-content: space-between;}
+	header .lmrBox .middle nav ul li{text-align: center;-webkit-transform: skewX(163deg);-moz-transform: skewX(163deg);transform: skewX(163deg);border-right: 1px solid #58CABE;}
+	header .lmrBox .middle nav ul li a{line-height: 1;display:block;transform: skewX(-163deg);padding:0 5px;font-size: 1.2rem;}
+	header .lmrBox .middle nav ul li:first-of-type a{padding: 0 10px 0 0;}
+	header .lmrBox .middle nav ul li .jp{font-size: 1rem; display: block;line-height: 1;}
+
+	/* フッター */
+	footer nav {display: none;}
+	footer .lmrBox{height: 125px; position: relative; bottom: 22px;padding: 0;justify-content: space-around;}
+	footer .left{width:35%;}
+	footer .middle{width:30%;}
+	footer .right{width:27%;}
+	footer .middle .adr{text-align: left;font-size: 1.1rem;}
+	footer .middle > .name{font-size: 2.6rem;line-height: 1; margin-bottom: 7px;}
+	footer .middle > .tel{text-align: left; font-size: 1.9rem;}
+	footer .left > .innerBox{padding: 0;}
+	footer .left > .innerBox .logo{width:115px; margin-right: 0;}
+	footer .left > .innerBox .name{font-size: 1.6rem;margin-left: 7px;}
+	footer .left > .innerBox .name .headOffice{font-size: 1.2rem;}
+	footer .btnBox{padding:0; margin-top: 10px;justify-content: center;}
+	footer .btnBox li a::after{right: 3%;}
+	footer .btnBox .tel{display: none;}
+	footer .btnBox li{font-size: 1.2rem;}
+	footer .gmaps iframe{height: 294px;}
+	footer .partnerDiagnosis .left {width: 13%;}
+	footer .partnerDiagnosis .right {width: 74%;}
+	footer .partnerDiagnosis .txt1{margin-bottom: 15px;}
+	footer .linkBox {width: 920px;}
+	footer .linkBox br{display: none;}
+
+	/* 1.生年月日で診断 */
+	.calculateBox{background-size: 10% auto,10% auto,10% auto,10% auto,83% 6px,83% 6px;padding: 35px 1px 40px;}
+	.calculateBox .resultBtn {margin-top: 35px;}
+	.calculateBox .resultBtn input{width: 420px;font-size: 3rem;cursor: pointer;}
+	.calculateBox .resultBtn input:hover{opacity: 0.8;}
+	.calculateBox .birthdayBox{align-items: flex-end;margin-top: 10px;}
+	.calculateBox .ttl{margin-bottom: 0; margin-right: 7px; width: auto;font-size: 2rem;}
+	.calculateBox .ymdBox{width: auto;}
+	.calculateBox .ymdBox select{font-size: 2.8rem;    height: 40px;}
+	.calculateBox .ymdBox select#year{width:135px;}
+	.calculateBox .ymdBox select#month{width:110px;}
+	.calculateBox .ymdBox select#date{width:110px;}
+	.calculateBox .ymdBox span{font-size: 1.8rem;}
+	.calculateBox .box{margin: 10px 5% 25px;}
+
+	.supervise{margin: 0 auto 55px;}
+	.supervise .name{font-size: 1.4rem;}
+
+
+
+	/* レビュー */
+	#divination.diagnosis .uranaiReview{width: 100%; margin: 60px auto;}
+	#divination.diagnosis .uranaiReview .ttl{font-size:26px;margin-bottom: 7px;}
+	#divination.diagnosis .uranaiReview .total{font-size: 14px; margin-bottom: 7px;}
+	#divination.diagnosis .uranaiReview .total .ratingValue{margin-right: 5px;}
+	#divination.diagnosis .uranaiReview .total .ratingStar{margin-right: 7px;}
+	#divination.diagnosis .uranaiReview .total .txt{}
+	#divination.diagnosis .uranaiReview article{}
+	#divination.diagnosis .uranaiReview article + article{margin-top: 25px;}
+	#divination.diagnosis .uranaiReview article .head{}
+	#divination.diagnosis .uranaiReview article .head .rating{margin-right: 15px;font-size: 16px;}
+	#divination.diagnosis .uranaiReview article .head .person{font-size: 13px;}
+	#divination.diagnosis .uranaiReview article .cont{font-size: 13px; line-height: 1.6; margin-top:8px;}
+
+
+
+
+}
+
+@media screen and (min-width: 960px) {
+	.br-sp{display: block;}
+	.br-pc{display: none;}
+	a:hover{opacity: 0.8;}
+	.pcNone{display: none;}
+	.spNone{display: block;}
+	small{padding-bottom: 20px;}
+	.w920{width: 920px; margin-left: auto; margin-right: auto;}
+	.snsBox{justify-content: center;align-items: center;}
+	.snsBox li {width: 180px; margin-right: 20px;}
+	.snsBox li.icon {width: 55px; margin-right: 15px;}
+
+	/* ヘッダー */
+	header{height: 163px; padding-top: 30px;}
+	header .telBox{bottom: 90px;}
+	header .telBox .tel{font-size: 3.2rem;}
+	header .lmrBox{justify-content: space-between;}
+	header .lmrBox .left{width: 175px;}
+	header .lmrBox .middle{width: 556px;}
+	header .lmrBox .right{width:138px;}
+	header .lmrBox .right .reserve{ font-size: 3rem;padding: 10px 5px;}
+	header .lmrBox .middle nav ul li a{font-size: 1.6rem;}
+	header .lmrBox .middle nav ul li a{padding:0 10px;}
+
+	/* フッター */
+	footer .lmrBox{height: 170px; justify-content: space-between;}
+	footer .lmrBox .left{width:190px;}
+	footer .lmrBox .middle{width:333px;}
+	footer .lmrBox .right{width:343px;}
+	footer .lmrBox .left > .innerBox .logo{width:190px;}
+	footer .btnBox{justify-content: space-between;}
+	footer .btnBox li{font-size: 1.8rem;}
+	footer .btnBox li.access{width: 31%;}
+	footer .btnBox li a::after {right: 7%;}
+	footer .partnerDiagnosis .txt1 {font-size: 2.3rem;line-height: 1.5;}
+	footer .partnerDiagnosis .left {width: 170px; margin-right: 20px;}
+	footer .partnerDiagnosis .right {width: 570px;}
+	footer .partnerDiagnosis .partnerDiagnosisBtn a{font-size: 2.3rem;}
+	footer .partnerDiagnosis .left img{top: -50px; margin-bottom: -50px;}
+
+
+
+
+	#divination{padding: 0 0 150px 0;}
+	.l-container{width: 760px; margin: 0 auto;}
+	.l-920{width:920px; margin: 0 auto;}
+	.flower2{margin-top: 20px;}
+	.ttlBox{display: flex;align-items: center;justify-content: center;margin: 10px 0;}
+	.ttlBox .mainTtl{font-size: 8rem;margin-right: 25px;}
+	.ttlBox .ask{order:2;text-align: left;font-size: 3rem!important; line-height: 1.4;}
+
+	.ellipsis{font-size: 5rem;}
+
+/* 1.生年月日で診断 */
+#divination.diagnosis .uranaiReview{margin: 50px auto;}
+#divination.diagnosis .txt1{font-size: 1.6rem; text-align: center;}
+#divination.diagnosis .txt2{font-size: 2.6rem;}
+#divination.diagnosis .txt3{font-size: 1.7rem;}
+#divination.diagnosis .txt4{font-size: 2rem;}
+#divination.diagnosis .txt5{font-size: 1.5rem;}
+#divination.diagnosis .txt6{font-size: 2rem;}
+#divination.diagnosis .txt7{font-size: 1.4rem;}
+#divination.diagnosis .txt8{font-size: 2rem;}
+
+
+
+
+/* 2.カード占い */
+#divination.card .txt1{font-size: 3.6rem;}
+#divination.card .txt2{font-size: 1.9rem;}
+#divination.card .txt3{font-size: 1.9rem;}
+#divination.card .txt4{font-size: 2.4rem;}
+#divination.card .txt5{font-size: 1.9rem;}
+
+.hoverType1:hover{filter: saturate(110%);filter: contrast(110%);filter: brightness(110%);}
+.hoverType1::before,
+.hoverType1::after,
+.hoverType1 form::before,
+.hoverType1 form::after {content: ""; display: block; position: absolute; background-color: #58CABE;}
+.hoverType1::before {right: 0; top: 0; height: 5px; width: 0%; transition: width 300ms;}
+.hoverType1::after {right: 0; top: 0; height: 0%; width: 5px; transition: height 300ms;}
+.hoverType1 form::before {left: 0; bottom: 0; height: 5px; width: 0%; transition: width 300ms;}
+.hoverType1 form::after {left: 0; bottom: 0; height: 0%; width: 5px; transition: height 300ms;}
+.hoverType1:hover::before {width: 100%;}
+.hoverType1:hover::after {height: 100%;}
+.hoverType1:hover form::before {width: 100%;}
+.hoverType1:hover form::after {height: 100%;}
+
+
+
+/* 3.結果ページ */
+#divination.result .txt1{font-size:4rem; }
+#divination.result .txt2{font-size:4.6rem; }
+#divination.result .content{margin: 0;}
+#divination.result h2{margin: 0 0 70px; font-size: 4rem;}
+#divination.result h3{font-size: 3rem;}
+#divination.result h4{font-size: 2.4rem;margin-bottom: 15px;margin-top: 30px;}
+#divination.result p {font-size: 1.8rem;}
+#divination.result p + h3 {margin-top: 70px;}
+#divination.result .content p:last-of-type{margin-bottom: 70px;}
+#divination.result .supervise{margin: 0;width: 100%; padding: 15px 5px;}
+}

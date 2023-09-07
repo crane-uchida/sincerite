@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.ct-text a{
+	cursor:pointer;
+	color:#A2824C;
+}
+
+.ct-text a:hover{
+	color:#A2824C;
+}
+
+.ct-text a:link{
+	color:#A2824C;
+}
+
+.ttl-box-2 h3{
+	font-weight:600;
+}
+
+.ct-text{
+}

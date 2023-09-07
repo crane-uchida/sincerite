@@ -1,0 +1,144 @@
+html {
+  font-size: 62.5%;
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    font-size: calc(100vw / 37.5);
+  }
+}
+
+html,
+body {
+  line-break: strict;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.pc {
+  display: block;
+}
+@media screen and (max-width: 767.98px) {
+  .pc {
+    display: none;
+  }
+}
+
+.rwd {
+  display: block;
+}
+@media screen and (min-width: 768px), print {
+  .rwd {
+    display: none;
+  }
+}
+
+.txt_primary {
+  color: #58CABE;
+}
+
+.txt_secondary {
+  color: #FF6C79;
+}
+
+.txt_white {
+  color: #FFF;
+}
+
+.txt_center {
+  text-align: center;
+}
+
+.txt_notosan {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.txt_notosan_16 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .txt_notosan_16 {
+    font-size: 1.8rem;
+  }
+}
+
+.txt_notosan_14 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .txt_notosan_14 {
+    font-size: 1.6rem;
+  }
+}
+
+.txt_notosan_12 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px), print {
+  .txt_notosan_12 {
+    font-size: 1.4rem;
+  }
+}
+
+.txt_notosan_10 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+}
+
+.txt_notoser {
+  font-family: "Noto Serif JP", serif;
+}
+
+.txt_notoser_16 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px), print {
+  .txt_notoser_16 {
+    font-size: 1.8rem;
+  }
+}
+
+.txt_notoser_14 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px), print {
+  .txt_notoser_14 {
+    font-size: 1.6rem;
+  }
+}
+
+.txt_notoser_10 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1rem;
+}
+
+.none {
+  display: none;
+}
+
+.btn a {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: #58CABE;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn a:hover {
+  background-color: #7CD4CA;
+}
+@media screen and (min-width: 768px), print {
+  .btn a {
+    max-width: 540px;
+    padding: 14px 0;
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* CSS Document */
+	
+	article.feature div.profile_box{
+    position: relative;
+	margin: 3% 1% 10%;
+    font-size: 85%;
+    border: 1px solid #A2824C;
+    padding: 2%;
+	}
+
+	article.feature p{
+	line-height: 140%;
+	}
+	
+	div.profile_box .profile_img_pc{
+	width: 37%;
+	float: left;
+    display: block;
+	margin-left: 1.5%;
+    overflow: hidden;
+		
+	}
+	
+	div.profile_box .profile{
+	width: 61.5%;
+	float: left;
+	}
+
+	div.profile_box .profile_img_sp{
+    display: none;		
+	}
+	
+	article.feature .notes{
+	font-size: 12px;
+	}
+
+	article.feature .adjust{
+	padding: 1%;
+	}
+
+	article.feature .header{
+	padding: 0 10px;
+	}
+
+	article.feature h2{
+    padding: 10px 0;
+    margin: 0;
+	}
+	
+	article.feature h3{
+	color: #55c0d5;
+	text-align: center;
+    font-size: 170%;
+	font-family: 'ＭＳ Ｐ明朝', 'MS PMincho','ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'serif';
+    margin: 0 0 3% 0;
+    background: url(http://crane-web.heteml.jp/test_sincerite/wp-content/uploads/2017/01/tl_img.png) no-repeat center bottom;
+    padding: 0 0 14px 0 ;
+	letter-spacing: 0.2em;
+	font-weight: bold;
+	}
+
+	article.feature span.speaker{
+	font-weight: bold;
+	}
+	
+	article.feature .thumbnail_small {
+ 		float: left;
+		width: 194px;
+		height: 110px;	
+		margin: 0 10px 10px 10px;
+	}
+
+	article.feature .thumbnail_oblong{
+		padding: 10px 0;
+	}
+	
+	article.feature section{
+		padding: 0 10px;
+		margin: 0 0 6% 0
+	}
+	.afterword{margin-top: 3%;
+	}

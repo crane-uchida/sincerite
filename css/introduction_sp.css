@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:50px;
+	}
+	
+	.bread-list{
+		margin-left:5%;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+	}
+	
+	.main-sub-left{
+		max-width:640px;
+		width:100%;
+		float:none;
+	}
+	
+	.main-sub-ttl{
+		text-align:start;
+		margin:0;
+	}
+	
+	.main-about h2.about{
+		color:#A2824C;
+		font-size:2.4rem;
+		line-height:1.5;
+		margin:0 auto;
+		background-size:93%;
+	}
+	
+	.main-sub-ttl h2.about{
+	}
+	
+/*	.main-about h3.tsuyomi-about {
+		background-size: 93%;
+		margin:2%;
+		padding:0.5%;
+	}*/
+	
+	.main-sub-ttl img{
+		width:94%;
+		margin:0 3%;
+		height:auto;
+	}
+	
+	.main-sub-ttl p{
+		max-width:640px;
+		width:93%;
+		margin:0 auto;
+/*		color:#000;*/
+		font-size:1.4rem;
+		line-height:1.8;
+		padding-top:15px;
+	}
+	
+	.ttl-text-box{
+		margin:20px 0;
+	}
+	
+	.main-about h3{
+		font-size:2.2rem;
+	}
+	
+	
+	.main-lt-01{
+		text-align:center;
+		background:#9A804C;
+		margin:0;
+	}
+	
+	.main-lt-01 h3{
+		font-size:16px;
+		font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+/*		padding:1% 0 0;*/
+	}
+	
+	.main-article .ttl-box img{
+		width:100%;
+		height:auto;
+	}
+	
+	.main-ct-box{
+		margin:0 1%;
+	}
+
+	.ttl-box-2 h3 {
+		font-size:120%;	
+	}
+	
+	.lt-article{
+		max-width:640px;
+		width:100%;
+	}
+	
+	.lt-article img{
+		float:none;
+	}
+	
+	.lt-article .lt-text{
+		float:none;
+		text-align:start;
+		max-width:640px;
+		width:93%;
+		margin:0 auto;
+	}
+	
+	.contents_img{
+		max-width:230px;
+		width:100%;
+		margin:0 auto;
+		padding-top:10px;
+	}
+	
+	.contents_img img{
+		width:100%;
+		display:block;
+	}
+	
+	.main_cnt_02{
+		padding:0 0 7%;
+	}
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+		margin-top:25px;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	.youtube {
+		border:0;
+	}
+	
+	.omote_p p {
+		text-align:left;
+		letter-spacing:normal;
+	}
+
+	.omote_img img {
+		width:31%;
+	}
+	
+	.reg_document_box h3 {
+		font-size:100%;
+	}
+
+
+}

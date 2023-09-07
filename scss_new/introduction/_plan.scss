@@ -1,0 +1,8 @@
+@use "../common/abstracts/mixins" as *;
+@use "../common/abstracts/variables" as *;
+
+.intro {
+    .plan {
+        padding: 0;
+    }
+}

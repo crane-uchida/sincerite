@@ -1,0 +1,17 @@
+// Required
+// when grid is imported function and variables should not be imported
+@forward "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+// @forward "../../node_modules/bootstrap/scss/functions";
+// @forward "../../node_modules/bootstrap/scss/variables";
+@forward "../../node_modules/bootstrap/scss/mixins";
+
+// optional 
+@forward "../../node_modules/bootstrap/scss/images";
+@forward "../../node_modules/bootstrap/scss/buttons";
+@forward "../../node_modules/bootstrap/scss/utilities";
+@forward "../../node_modules/bootstrap/scss/tables";
+@forward "../../node_modules/bootstrap/scss/forms";
+@forward "../../node_modules/bootstrap/scss/modal";
+
+// debug
+// @forward "../../node_modules/bootstrap/scss/bootstrap";

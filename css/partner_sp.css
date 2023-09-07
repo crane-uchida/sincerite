@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+	.main-contents{
+		max-width:640px;
+		width:100%;
+		padding-bottom:60px;
+	}
+	
+	.bread-list{
+		margin-left:5%;
+	}
+	
+	.main-inner-box{
+		max-width:640px;
+		width:100%;
+	}
+	
+	.main-sub-left{
+		max-width:640px;
+		width:100%;
+		float:none;
+	}
+	
+	.main-sub-ttl img{
+		max-width:640px;
+		width:100%;
+		height:auto;
+	}
+	
+	.main-ct-box{
+		margin:0 1%;
+	}
+	
+	.fs15 input{
+		max-width:300px;
+		width:100% !important;
+	}
+	
+	.body_reserve textarea{
+		max-width:300px;
+		width:100%;
+	}
+	
+	.main-sub-right{
+		float:none;
+		margin:0 auto;
+		margin-top:25px;
+	}
+	
+	.side-nav{
+		margin:0;
+		text-align:center;
+	}
+	
+	.main-sub-right ul li{
+		text-align:center;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,19 @@
+@use "../global"as *;
+
+
+// 文字の禁則処理
+html,
+body {
+  line-break: strict;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+
+// bodyのデフォルトを定義
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.75;
+}

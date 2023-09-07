@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width:640px){
+	
+	body{
+		max-width:640px;
+		width:100%;
+		min-width:inherit;
+	}
+	
+	#page{
+		max-width:640px;
+		width:100%;
+	}
+	
+	#page_position_content{
+		width:100%;
+		overflow:hidden;
+	}
+	
+	
+	
+	
+	/*#page_position_content{
+		width:100%;
+	}
+	
+	#pu87{
+		width:100%;
+		margin-left:0;
+	}
+	
+	#u87_align_to_page{
+		max-width:640px;
+		width:100%;
+	}
+	
+	#u708{
+		max-width:191px;
+		width:40%;
+	}
+	
+	#u708 img{
+		width:100%;
+		height:auto;
+	}
+	*/
+	
+	#u3995{
+		max-width:640px;
+		width:100%;
+	}
+	
+	#u3995 iframe{
+		max-width:640px;
+		width:100%;
+	}
+	
+	#container{
+		width:90% !important;
+	}
+	
+	
+	
+	/*footer*/
+	
+	div#u218_align_to_page{
+		max-width:640px;
+		width:100%;
+		position:static;
+	}
+	
+	#pu237-4{
+		width:auto;
+		top:175px;
+		left:0;
+	}
+	
+	#pu219{
+		width:auto;
+		position:static;
+		margin-bottom:0;
+	}
+	
+	#u219{
+		margin-right:0;
+		float:none;
+		top:-90px;
+	}
+	
+	#u219 img{
+		margin:0 auto;
+	}
+	
+	#ppu5688{
+		max-width:640px;
+		width:100%;
+		margin-right:0;
+		margin-left:0;
+		float:none;
+	}
+	
+	#pu5688{
+		max-width:640px;
+		width:100%;
+		margin-top:80px;
+	}
+	
+	#u5688{
+		width:100%;
+		margin-right:0;
+		margin-top:0;
+	}
+	
+	#u5688:hover{
+		width:100%;
+		margin-right:0;
+		margin-top:0;
+	}
+	
+	#u5688 img{
+		max-width:262px;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	#u5693{
+		width:100%;
+		position:static;
+		margin-right:0;
+		margin-top:10px;
+		margin-bottom:20px;
+	}
+	
+	#u5693:hover{
+		width:100%;
+		position:static;
+		margin-right:0;
+		margin-top:10px;
+		margin-bottom:20px;
+	}
+	
+	#u5693 img{
+		margin:0 auto;
+	}
+	
+	#u3422{
+		width:100%;
+		position:static;
+		float:none;
+		margin-top:25px;
+	}
+	
+	#u3422:hover{
+		width:100%;
+		margin-top:25px;
+	}
+	
+	#u3422 img{
+		margin:0 auto;
+	}
+	
+	#u1053-4{
+		max-width:640px;
+		width:100%;
+		margin-left:0;
+		top:0;
+		text-align:center;
+		margin-top:10px;
+	}
+	
+	#u1057-4{
+		max-width:640px;
+		width:90%;
+		margin-left:0;
+		margin:11px auto 0;
+	}
+	
+	#u259-4{
+		width:auto;
+		position:static;
+	}
+	
+	#u237-4,#u238-4,#u239-4,#u240-4,#u241-4,#u244-4{
+		position:static;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	#u237-4:hover,#u238-4:hover,#u239-4:hover,#u240-4:hover,#u241-4:hover,#u244-4:hover{
+		position:static;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	#u245-4,#u246-4,#u248-4,#u251-4,#u253-4{
+		display:none;
+	}
+	
+	
+	
+	
+}

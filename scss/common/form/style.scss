@@ -1,0 +1,2339 @@
+@charset "UTF-8";
+@use "../defines/index"as *;
+
+
+// ------ form_area 共通パーツ ------ //
+
+.form_area,
+.thanks {
+	@include font-notosans();
+	color: $txt;
+	font-size: 1.4rem;
+	line-height: 2.6rem;
+
+	@media #{$pc} {
+		font-size: 1.6rem;
+	}
+
+	// “\css\common.css:5”の記述が消せれば削除出来る要素
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		@include font-notoserif();
+	}
+
+	.inner {
+
+		@media #{$pc} {
+			max-width: 1080px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.form_sub {
+	margin-bottom: 2rem;
+	color: $primary;
+	font-size: 2.4rem;
+	text-align: center;
+	line-height: 3.4rem;
+
+	@media #{$pc} {
+		margin-bottom: 30px;
+		font-size: 3.2rem;
+		line-height: 4.4rem;
+	}
+}
+
+// ------ form_area 共通パーツ end ------ //
+
+
+// ------ form_area 入力フォーム ------ //
+
+.form_area {
+
+	.form {
+		margin: 0 2rem 3rem;
+
+		@media #{$pc} {
+			width: 700px;
+			margin: 0 auto 60px;
+		}
+
+		dt {
+			margin-bottom: 0.6rem;
+
+			@media #{$pc} {
+				margin-bottom: 8px;
+			}
+
+			span {
+				margin-left: 0.6rem;
+				padding: 0.1rem 0.3rem;
+				background-color: $secondary;
+				border-radius: 0.3rem;
+				color: $white;
+				font-size: 1rem;
+
+				@media #{$pc} {
+					padding: 2px 6px;
+					border-radius: 3px;
+				}
+			}
+		}
+
+		dd {
+			margin-bottom: 2rem;
+
+			@media #{$pc} {
+				margin-bottom: 20px;
+			}
+		}
+
+		input[type="text"],
+		select,
+		input[type="radio"],
+		input[type="email"],
+		input[type="tel"],
+		textarea,
+		input[type="checkbox"], {
+			font-family: "Noto Sans JP", sans-serif;
+			appearance: none;
+			background-color: $white;
+			color: $txt;
+
+			&::placeholder {
+				color: $gray_light;
+			}
+		}
+
+		input[type="date"]{
+			-webkit-appearance: none;
+			position:relative;
+			font-family: "Noto Sans JP", sans-serif;
+			color: $gray_light;
+			background-color: $white;
+			&::-webkit-calendar-picker-indicator{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: auto;
+				height: auto;
+				background: transparent;
+				z-index: 1;
+			}
+			&::after{
+				content: '';
+				background-image: url(../../../images/form/icon_calendar.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: 0 0;
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				transform: translateY(-50%);
+			}
+		}
+
+		.area_default {
+			padding: 1.2rem;
+			border-radius: 0.3rem;
+
+			@media #{$pc} {
+				padding: 14px 20px;
+				border-radius: 3px;
+				font-size: 1.6rem;
+			}
+		}
+
+		.area {
+			background-color: $base;
+		}
+
+		.area_input {
+			width: 100%;
+			border: solid 0.2rem $primary;
+			font-size: 1.4rem;
+			height: 5rem;
+
+			@media #{$pc} {
+				border: solid 2px $primary;
+				font-size: 1.6rem;
+				height: 56px;
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+				outline: 0;
+
+				@media #{$pc} {
+					box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+				}
+			}
+		}
+
+		.area_input_half {
+
+			@media #{$pc} {
+				width: 345px;
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 0.3rem rgba(35, 167, 195, 0.3);
+				outline: 0;
+
+				@media #{$pc} {
+					box-shadow: 0 0 0 3px rgba(35, 167, 195, 0.3);
+				}
+			}
+		}
+
+		.area_select_default {
+
+			ul {
+				display: flex;
+				gap: 1rem;
+
+				@media #{$pc} {
+					gap: 10px;
+				}
+			}
+		}
+
+		.area_select1 {
+
+			ul {
+				margin-top: 1rem;
+
+				@media #{$pc} {
+					margin-top: 14px;
+				}
+
+				li {
+					display: block;
+					flex-grow: 1;
+					width: 50%;
+
+					@media #{$pc} {
+						width: 340px;
+					}
+
+					select {
+						// background-color: $white;
+						color: $gray_light;
+
+						option {
+							color: $txt;
+							font-size: 1.6rem;
+						}
+					}
+				}
+			}
+		}
+
+		.sub_checkbox {
+			margin: 0 0 0.6rem 0.6rem;
+
+			@media #{$pc} {
+				margin: 0 0 6px 6px;
+			}
+		}
+
+		.area_select2 {
+
+			ul {
+				font-size: 1.4rem;
+
+
+				li {
+					flex-grow: 1;
+					width: 50vw;
+
+					@media #{$pc} {
+						flex-grow: 0;
+						width: 168px;
+					}
+				}
+			}
+
+			.wpcf7-form-control {
+				display: flex;
+				gap: 1rem;
+
+				.wpcf7-list-item.first {
+					margin: 0;
+				}
+
+				.wpcf7-list-item {
+					flex-grow: 1;
+					width: 50%;
+					margin: 0;
+					border: solid 0.2rem $primary;
+					border-radius: 0.3rem;
+					line-height: 2.4rem;
+
+					@media #{$pc} {
+						flex-grow: 0;
+						width: 168px;
+						height: 56px;
+						border: solid 2px $primary;
+						line-height: normal;
+					}
+				}
+
+				input[type="radio"] {
+					display: block;
+					opacity: 0;
+					position: absolute;
+					padding: 1rem;
+
+					&:checked+.wpcf7-list-item-label {
+
+						&::before {
+							background-color: #3F968E;
+							box-shadow: inset 0 0 0 0.2rem #fff;
+						}
+					}
+				}
+
+				.wpcf7-list-item-label {
+					cursor: pointer;
+					display: flex;
+					line-height: 2.6rem;
+
+					@media #{$pc} {
+						font-size: 1.6rem;
+						line-height: normal;
+					}
+
+					&::before {
+						content: "";
+						background: #fff;
+						width: 1.2em;
+						height: 1.2em;
+						margin-bottom: auto;
+						margin-right: .5em;
+						margin-top: auto;
+						border: 0.2rem solid $primary;
+						border-radius: 100%;
+						transition: background-color .5s;
+					}
+				}
+			}
+
+			.man_notice,
+			.woman_notice {
+				margin-top: 1rem;
+				padding: 1rem;
+				border-radius: 0.3rem;
+
+				@media #{$pc} {
+					margin: 20px;
+					padding: 14px;
+				}
+			}
+
+			.man_notice {
+				background-color: #CCEFEB;
+			}
+
+			.woman_notice {
+				background-color: #FFD1D5;
+			}
+		}
+
+		.area_select3 {
+
+			.area_select_half {
+				width: calc(48%);
+
+				@media #{$pc} {
+					width: 345px;
+				}
+			}
+
+			select {
+				background-color: $white;
+				color: $gray_light;
+
+				option {
+					color: $txt;
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		span.select_age,
+		span.select_zodiac,
+		span.select_bloodtype,
+		span.select_1,
+		span.select_2,
+		span.select_3,
+		span.select_4,
+		span.select_5,
+		span.select_6,
+		span.select_7,
+		span.select_8,
+		span.select_9,
+		span.select_10,
+		span.select_11,
+		span.select,
+		span.date,
+		span.select_yy,
+		span.select_mm,
+		span.select_dd,
+		span.select_occupation,
+		span[data-name="select"],
+		span[data-name="select_age"],
+		span[data-name="select_zodiac"],
+		span[data-name="select_bloodtype"],
+		span[data-name="select_1"],
+		span[data-name="select_2"],
+		span[data-name="select_3"],
+		span[data-name="select_4"],
+		span[data-name="select_5"],
+		span[data-name="select_6"],
+		span[data-name="select_7"],
+		span[data-name="select_8"],
+		span[data-name="select_9"],
+		span[data-name="select_10"],
+		span[data-name="select_11"]	,
+		span[data-name="select_annualincome"],
+		span[data-name="select_yy"],
+		span[data-name="select_mm"],
+		span[data-name="select_dd"],
+		span[data-name="select_occupation"]
+		{
+			&::after {
+				content: '';
+				position: absolute;
+				right: 1rem;
+				top: 0.5rem;
+				width: 0.8rem;
+				height: 0.8rem;
+				border-top: solid 0.2rem $primary;
+				border-right: solid 0.2rem $primary;
+				transform: rotate(135deg);
+			}
+		}
+
+		label {
+			display: block;
+			padding: 1rem;
+			border-radius: 0.3rem;
+
+			@media #{$pc} {
+				padding: 14px 20px;
+				border-radius: 3px;
+			}
+		}
+		.error_message{
+			margin-top: 1rem;
+			text-indent: 1em;
+			line-height: 2;
+			background-color: $secondary_light;
+			color: #f00;
+			font-size: 1.4rem;
+			border-radius: 3px;
+		}
+	}
+
+	span[data-name="FlexTextarea"]{
+		display: block;
+	}
+
+	.FlexTextarea {
+		display: block;
+		position: relative;
+		font-size: 1.4rem;
+		line-height: 1.8;
+
+		@media #{$pc} {
+			font-size: 1.6rem;
+		}
+	}
+
+	.FlexTextarea__dummy {
+		overflow: hidden;
+		visibility: hidden;
+		box-sizing: border-box;
+		padding: 5px 15px;
+		min-height: 120px;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		border: 1px solid;
+	}
+
+	.FlexTextarea__textarea {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		overflow: hidden;
+		box-sizing: border-box;
+		padding: 5px 15px;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		border: 1px solid #b6c3c6;
+		border-radius: 4px;
+		color: inherit;
+		font: inherit;
+		letter-spacing: inherit;
+		resize: none;
+
+		&:focus {
+			box-shadow: 0 0 0 4px rgba(35, 167, 195, 0.3);
+			outline: 0;
+		}
+	}
+
+	.area_input_text {
+		width: 100%;
+		border: solid 0.2rem $primary;
+		font-size: 1.4rem;
+	}
+
+	.area_email {
+
+		.area_default {
+
+			@media #{$pc} {}
+		}
+
+		.email-notice {
+			display: none;
+			margin: 1rem 0 1.4rem;
+			color: $secondary;
+			font-size: 1.2rem;
+		}
+	}
+
+	.area_checkbox {
+
+		ul {
+
+			li {
+
+				&:nth-of-type(2) {
+					width: calc(50% - 1rem);
+					margin-bottom: 1rem;
+					transition: 0.3s;
+
+					@media #{$pc} {
+						width: 168px;
+						margin-bottom: 10px;
+					}
+
+					.wpcf7-form-control-wrap {
+						position: static;
+					}
+
+					.wpcf7-form-control {
+
+						.wpcf7-list-item {
+							margin: 0;
+							padding: 1.2rem;
+							width: 100%;
+							border: solid 0.2rem #58CABE;
+							border-radius: 0.3rem;
+							font-size: 1.4rem;
+							height: 5rem;
+
+							label {
+								padding: 0;
+
+								input[type="checkbox"] {
+									opacity: 0;
+									position: absolute;
+								}
+							}
+						}
+
+						.wpcf7-list-item-label {
+							position: relative;
+							cursor: pointer;
+							display: flex;
+							color: $txt;
+							transition: 0.3s;
+
+							@media #{$pc} {
+								font-size: 1.6rem;
+							}
+
+							&::before {
+								content: "";
+								background: #fff;
+								width: 1em;
+								height: 1em;
+								margin-bottom: auto;
+								margin-right: .5em;
+								margin-top: auto;
+								border: 0.2rem solid $primary;
+								border-radius: 0.3rem;
+								transition: background-color .5s;
+							}
+						}
+
+						input[type="checkbox"]:checked+.wpcf7-list-item-label {
+
+							&::after {
+								color: $secondary;
+								position: absolute;
+								margin-top: 0.4rem;
+								width: 1.4rem;
+								height: 0.8rem;
+								border-bottom: solid 0.2rem currentColor;
+								border-left: solid 0.2rem currentColor;
+								-webkit-transform: rotate(-45deg);
+								transform: rotate(-45deg);
+
+								@media #{$pc} {
+									margin-top: 6px;
+									width: 16px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.area_default {
+				margin-bottom: 1rem;
+
+				@media #{$pc} {
+					margin-bottom: 10px;
+				}
+
+				&:nth-of-type(2) {
+					padding: 0;
+
+					label {
+						padding: 1rem;
+
+						@media #{$pc} {
+							padding: 14px 20px;
+						}
+					}
+				}
+			}
+
+			.area_input {
+				margin-top: 1.4rem;
+
+				@media #{$pc} {
+					margin-top: 14px;
+				}
+			}
+		}
+	}
+
+	.btn {
+		display: block;
+		width: 30rem;
+		margin: 0 auto;
+		border-radius: 0.3rem;
+		font-size: 2.2rem;
+		text-align: center;
+
+		@media #{$pc} {
+			width: 500px;
+			margin: 0 auto;
+		}
+	}
+
+	.btn_1 {
+		padding: 2rem 0;
+		background-color: $secondary;
+		color: $white;
+	}
+
+	.btn_2 {
+		padding: 1rem 0;
+		background-color: $white;
+		border: solid 0.2rem $primary;
+		color: $primary;
+
+		@media #{$pc} {
+			border: solid 2px $primary;
+		}
+	}
+}
+
+span.wpcf7-not-valid-tip,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+	width: 100%;
+	margin-top: 1rem;
+	padding: 1rem;
+	background-color: $secondary_light;
+	border: 0 !important;
+	color: $secondary;
+	font-size: 1.4rem !important;
+
+	@media #{$pc} {
+		border-radius: 3px;
+		margin-top: 10px;
+		padding: 10px;
+	}
+}
+
+span.wpcf7-not-valid-tip {
+	border-radius: 0.3rem;
+
+	@media #{$pc} {
+		border-radius: 3px;
+	}
+}
+
+div.wpcf7-response-output {
+	margin: 2rem 0 0 0 !important;
+	padding: 1rem !important;
+}
+
+// JavaScript用の記述
+form.custom-wpcf7c-confirmed select.transparent,
+form.custom-wpcf7c-confirmed input.transparent::placeholder {
+	color: transparent !important;
+}
+
+// ------ form_area 入力フォーム end ------ //
+
+
+// ------ form 共通コンテンツ ------ //
+
+.form_request,
+.form_partner,
+.form_online,
+.form_premium,
+.form_doctor,
+.form_status,
+.form_joboffer {
+
+	.form {
+
+		.area_number {
+
+			ul {
+				display: flex;
+				gap: 1rem;
+
+				@media #{$pc} {
+					gap: 10px;
+				}
+
+				li {
+					width: 50%;
+
+					@media #{$pc} {
+						width: 340px;
+					}
+
+					&:nth-of-type(2) {
+						width: fit-content;
+						height: 5rem;
+						background-color: $primary;
+						color: $white;
+						cursor: pointer;
+
+						@media #{$pc} {
+							height: 56px;
+						}
+					}
+				}
+			}
+		}
+
+		.area_address {
+			ul {
+				li {
+					margin-bottom: 1rem;
+
+					@media #{$pc} {
+						margin-bottom: 10px;
+					}
+
+					&:nth-of-type(1) {
+						width: calc(50%);
+					}
+				}
+			}
+		}
+	}
+}
+
+// JSで付与されるクラス（性別/個人情報の取り扱い）
+.male,
+.female,
+.agreement,
+.yes,
+.no {
+	background-color: $base;
+}
+
+// ------ form 共通コンテンツ end ------ //
+
+
+// ------ form_area 入力フォーム 個別 ------ //
+
+// パートナー診断
+.form_partner {
+
+	.form {
+
+		dd {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+// 求人応募
+.form_joboffer {
+	margin-top: 4rem;
+
+	@media #{$pc} {
+		margin-top: 60px;
+	}
+}
+
+// ------ form_area 入力フォーム 個別 end ------ //
+
+
+// ------ form_area 確認フォーム ------ //
+
+.custom-wpcf7c-confirmed {
+
+	.form_appointment,
+	.form_request,
+	.form_partner,
+	.form_online,
+	.form_premium,
+	.form_doctor,
+	.form_status,
+	.form_joboffer {
+
+		.message {
+			margin: 0 2rem 3rem;
+			padding: 1.2rem;
+			border: solid 0.4rem $base;
+			border-radius: 0.3rem;
+			font-size: 1.4rem;
+			text-align: center;
+			line-height: 2.6rem;
+
+			@media #{$pc} {
+				width: 700px;
+				margin: 0 auto 30px;
+				font-size: 1.6rem;
+				line-height: 3.2rem;
+			}
+		}
+
+		.form {
+
+			dd {
+
+				input[type="text"],
+				select,
+				input[type="radio"],
+				input[type="email"],
+				input[type="tel"],
+				textarea,
+				.FlexTextarea__dummy,
+				input[type="checkbox"] {
+					background-color: $base;
+					pointer-events: none;
+				}
+			}
+
+			.area_input,
+			.area_input_half {
+				border: none;
+
+				&:focus {
+					box-shadow: none;
+				}
+			}
+
+			.area_select1 {
+
+				ul {
+
+					li {
+						span.date,
+						span.select {
+
+							&::after {
+								display: none;
+							}
+						}
+
+						&:nth-of-type(2) {
+
+							select {
+								background-color: $base;
+								opacity: 1;
+
+							}
+						}
+					}
+				}
+			}
+
+			.area_select2 {
+
+				.wpcf7-form-control {
+
+					.wpcf7-list-item {
+						border: none;
+					}
+
+					.wpcf7-list-item-label {
+						&::before {
+							display: none;
+						}
+					}
+				}
+
+				.man_notice,
+				.woman_notice {
+					display: none;
+				}
+			}
+
+			span.select_age,
+			span.select_zodiac,
+			span.select_bloodtype,
+			span.select_1,
+			span.select_2,
+			span.select_3,
+			span.select_4,
+			span.select_5,
+			span.select_6,
+			span.select_7,
+			span.select_8,
+			span.select_9,
+			span.select_10,
+			span.select_11,
+			span.select,
+			span.date,
+			span.select_yy,
+			span.select_mm,
+			span.select_dd,
+			span.select_occupation {
+				color: $txt;
+
+				&::after {
+					display: none;
+				}
+			}
+
+			select {
+				color: $txt;
+			}
+
+			.area_input_text {
+				border: none;
+
+				&:focus {
+					box-shadow: none;
+				}
+			}
+
+			.area_checkbox {
+
+				ul {
+
+					li {
+
+						&:nth-of-type(2) {
+
+							.wpcf7-form-control {
+
+								.wpcf7-list-item {
+									border: none;
+
+									.wpcf7-list-item-label {
+
+										&::before {
+											display: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+div.wpcf7-mail-sent-ok {
+	border: none !important;
+}
+
+/* div.wpcf7-response-output {
+	margin: 0 !important;
+	padding: 0 !important;
+} */
+
+
+
+
+.modal-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, 50%);
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+	box-sizing: border-box;
+	z-index: 999999;
+	.modal-position{
+	  max-height: 80vh;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  width: 100%;
+	  @media #{$pc}{
+		width: 800px;
+	  }
+	  .modal-body {
+		position: relative;
+		/* display: inline-block; */
+		vertical-align: middle;
+		.modal-button {
+		  position: absolute;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  top: -40px;
+		  right: 0;
+		  width: 40px;
+		  height: 40px;
+		  font-size: 40px;
+		  color: #fff;
+		  cursor: pointer;
+		}
+		.modal-content {
+		  background: #fff;
+		  text-align: left;
+		  padding: 20px;
+		  overflow: auto;
+		  @include font-notosans();
+		  .text{
+			text-align: center;
+			font-size: clamp(1.3rem, 8vw - 2rem, 1.4rem);
+		  }
+		  .primary{
+			display:flex;
+			align-items: stretch;
+			margin-top:20px;
+			margin-bottom:20px;
+			border: 1px solid #ccc;
+			flex-flow: column;
+			@media #{$pc}{
+				border:none;
+				flex-flow:row nowrap;
+				flex-wrap: wrap;
+			}
+			dt{
+			  flex-basis: 30%;
+			  font-size:1.4rem;
+			  color:$white;
+			  display: flex;
+			  span{
+				background-color: #999;
+				width: 100%;
+				padding: 5px 15px;
+				@media #{$pc}{
+					display: flex;
+					align-items: center;
+				}
+			  }
+			  &:first-of-type{
+				@media #{$pc}{
+				  border-top: 1px solid #ccc;
+				}
+			  }
+			}
+			dd{
+			  flex-basis: 70%;
+			  background-color: $white;
+			  font-size: 1.4rem;
+			  padding: 10px 15px;
+			  min-height: 28px;
+			  line-height: 1.4;
+			  &:first-of-type{
+				@media #{$pc}{
+				  border-top: 1px solid #ccc;
+				}
+			  }
+			  @media #{$pc}{
+				border-right: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			  }
+			}
+		  }
+		  .button-box{
+			text-align: center;
+			button{
+			  display: inline-block;
+			  margin: 5px;
+			  color: $white;
+			  cursor: pointer;
+			  border: 0;
+			  border-radius: 5px;
+			  width: 120px;
+			  padding: 12px;
+			  @media #{$pc}{
+				width: 150px;
+				padding: 15px;
+			  }
+			  &.modal-close{
+				background-color: #999;
+				font-size: clamp(1.4rem, 8vw - 2rem, 1.6rem);
+			  }
+			  &.submit{
+				background-color: $secondary;
+				font-size: clamp(1.6rem, 8vw - 2rem, 1.8rem);
+			  }
+			}
+		  }
+		}
+	  }
+	}
+	&.active{
+	  opacity: 1;
+	  visibility: visible;
+	}
+}
+
+
+
+// ------ form_area 確認フォーム end ------ //
+
+
+// ------ 固定ページ 共通コンテンツ ------ //
+
+.appointment,
+.request,
+.partner,
+.online,
+.premium,
+.doctor,
+.status,
+.joboffer {
+	@include font-notosans();
+	color: $txt;
+	font-size: 1.4rem;
+	line-height: 2.6rem;
+
+	@media #{$pc} {
+		padding-top: 40px;
+	}
+
+	// “\css\common.css:5”の記述が消せれば削除出来る要素
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		@include font-notoserif();
+	}
+
+	.inner {
+
+		@media #{$pc} {
+			max-width: 1080px;
+			margin: 0 auto;
+		}
+	}
+}
+
+// ------ 固定ページ 共通コンテンツ end ------ //
+
+
+// ------ 固定ページ ------ //
+
+.pages {
+
+	// 固定ページ 上部
+	.appointment_header,
+	.request_header,
+	.partner_header,
+	.online_header,
+	.premium_header,
+	.doctor_header,
+	.status_header,
+	.joboffer_header {
+		margin: 3rem 2rem;
+
+		@media #{$pc} {
+			max-width: 920px;
+			margin: 0 auto 40px;
+			text-align: center;
+		}
+
+		dd {
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				@include font-notoserif();
+				font-weight: $bold;
+
+				@media #{$pc} {
+					font-weight: $medium;
+				}
+
+				li {
+					font-size: 1.4rem;
+					line-height: 2.6rem;
+					text-align: justify;
+
+					@media #{$pc} {
+						font-size: 1.6rem;
+						text-align: center;
+						line-height: 3rem;
+					}
+				}
+			}
+		}
+
+		.btn {
+			width: 30rem;
+			margin: 0 auto;
+			padding: 2rem 0;
+			background-color: #FF6C79;
+			border-radius: 0.3rem;
+			color: $white;
+			font-size: 2.2rem;
+			text-align: center;
+
+			@media #{$pc} {
+				width: 500px;
+			}
+		}
+	}
+
+	// 初回予約, 資料請求
+	.appointment_header,
+	.request_header {
+		dd {
+			ul {
+				li {
+					&:nth-of-type(2) {
+
+						ul {
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							gap: 1rem;
+							text-decoration: underline 0.1rem;
+							text-underline-offset: 0.2rem;
+							line-height: 3rem;
+
+							@media #{$pc} {
+								gap: 10px;
+							}
+
+							li {
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// 初回予約
+	.appointment_header {
+		dd {
+			ul {
+				li {
+					&:nth-of-type(2) {
+						ul {
+							@media #{$pc} {
+								flex-direction: row;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// パートナー診断
+	.partner_header {
+		dd {
+			ul {
+				li {
+					&:nth-of-type(1) {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	// オンライン面談, 求人応募
+	.online_header,
+	.joboffer_header {
+		margin-bottom: 3rem;
+
+		.form_sub,
+		.eyecatch {
+			margin-bottom: 2rem;
+
+			@media #{$pc} {
+				margin-bottom: 30px;
+			}
+		}
+
+		.message {
+			margin-bottom: 3rem;
+
+			@media #{$pc} {
+				margin-bottom: 30px;
+			}
+		}
+
+		.list {
+			gap: 1.6rem;
+			padding: 3rem 2rem 4rem;
+			background-color: $base;
+			border-radius: 0.4rem;
+
+			@media #{$pc} {
+				margin: 0 10px;
+				padding: 30px 30px 40px;
+				border-radius: 6px;
+			}
+
+			h2,
+			h3 {
+				color: $primary;
+				text-align: center;
+			}
+
+			dt {
+
+				@media #{$pc} {
+					order: 1;
+					width: 100%;
+				}
+
+				h2 {
+					margin-bottom: 2rem;
+					font-size: 2rem;
+					letter-spacing: 0.1rem;
+
+					@media #{$pc} {
+						margin-bottom: 20px;
+					}
+				}
+			}
+
+			dd {
+
+				&:nth-of-type(1) {
+					margin-bottom: 2rem;
+
+					@media #{$pc} {
+						margin-bottom: 20px;
+					}
+				}
+
+				.containers {
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+
+					@media #{$pc} {
+						flex-direction: row;
+						gap: 20px;
+					}
+
+					.container {
+						width: 100%;
+						padding: 2rem 1.6rem;
+						background-color: $white;
+						border-radius: 0.4rem;
+
+						&:nth-of-type(1) {
+
+							@media #{$pc} {
+								flex-grow: 1;
+							}
+						}
+
+						h3 {
+							margin-bottom: 1.6rem;
+							@include font-notosans();
+							font-weight: $regular;
+
+							@media #{$pc} {
+								font-size: 1.6rem;
+							}
+
+							.list_sub {
+								padding: 0 1rem;
+								background: linear-gradient(transparent 60%, rgba(88, 202, 190, 0.2) 60%);
+							}
+						}
+
+						.icon {
+							margin-bottom: 1.2rem;
+							text-align: center;
+
+							img {
+								width: 16rem;
+							}
+						}
+
+						p {
+							@include font-notosans();
+							font-weight: $regular;
+							text-align: justify;
+
+							@media #{$pc} {
+								font-size: 1.4rem;
+							}
+						}
+					}
+				}
+
+				.notes {
+					gap: 1rem;
+					margin-left: 1em;
+
+					li {
+						list-style-type: '※';
+						@include font-notosans();
+						font-weight: $regular;
+						text-align: left;
+
+						@media #{$pc} {
+							font-size: 1.4rem;
+							line-height: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// 求人応募
+	.joboffer_header {
+		max-width: initial;
+		margin: 0;
+
+		@media #{$pc} {
+			margin: 0 auto;
+		}
+
+		.joboffer_sub {
+			color: $primary;
+			font-size: 2rem;
+			text-align: center;
+			letter-spacing: 0.1rem;
+
+			@media #{$pc} {
+				font-size: 3rem;
+			}
+		}
+
+		.firstview {
+			height: 50rem;
+			background-color: $base;
+			background-image: url(../../../images/form/firstview_sp.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: bottom;
+
+			@media #{$pc} {
+				background-image: url(../../../images/form/firstview_pc.png);
+			}
+
+			h1 {
+				padding-top: 4rem;
+				color: $white;
+				font-size: 2.4rem;
+				font-weight: $regular;
+				text-align: center;
+				letter-spacing: 0.4rem;
+				line-height: 4.4rem;
+
+				@media #{$pc} {
+					padding-top: 60px;
+				}
+			}
+		}
+
+		.introduction,
+		.feature,
+		.flow,
+		.list,
+		.information,
+		.voice {
+			margin: 0 2rem;
+
+			@media #{$pc} {
+				max-width: 920px;
+				margin: 0 auto 0;
+			}
+		}
+
+		.bg_base {
+			background-color: $base;
+		}
+
+		.bg_img {
+			background: linear-gradient(#E9F9F8, #FFFFFF);
+			background-image: url(../../../images/form/feature_sp.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			@media #{$pc} {
+				background-image: url(../../../images/form/feature_pc.jpg);
+			}
+		}
+
+		.introduction {
+			padding: 2rem 0;
+
+			@media #{$pc} {
+				padding-top: 40px;
+			}
+
+			li {
+				font-size: 1.8rem;
+
+				@media #{$pc} {
+					margin-bottom: 20px;
+				}
+
+				&:nth-of-type(4) {
+					display: flex;
+					flex-direction: column;
+					gap: 1rem;
+
+					@media #{$pc} {
+						display: block;
+					}
+				}
+
+				&:nth-of-type(5) {
+					color: $primary;
+					text-align: center;
+					line-height: 3rem;
+
+					@media #{$pc} {
+						margin-bottom: 40px;
+						font-size: 2.4rem;
+						line-height: 4rem;
+					}
+				}
+
+				dt {
+					margin-bottom: 1.6rem;
+					color: $primary;
+					font-size: 1.8rem;
+					text-align: center;
+					line-height: 3rem;
+
+					@media #{$pc} {
+						margin-bottom: 20px;
+						font-size: 2.4rem;
+						line-height: 4rem;
+					}
+				}
+
+				dd {
+					font-weight: $regular;
+
+					@media #{$pc} {
+						font-size: 1.6rem;
+					}
+				}
+			}
+		}
+
+		.feature {
+			padding: 8rem 0;
+
+			@media #{$pc} {
+				padding: 120px 0;
+			}
+
+			.joboffer_sub {
+				margin-bottom: 1rem;
+
+				@media #{$pc} {
+					margin-bottom: 20px;
+				}
+			}
+
+			.container {
+				padding: 2rem 1.6rem;
+				background-color: rgba(255, 255, 255, 0.8);
+				border: solid 0.3rem $base;
+				border-radius: 0.4rem;
+
+				@media #{$pc} {
+					margin: 0 100px;
+					padding: 20px 30px;
+					border: solid 3px $base;
+					border-radius: 4px;
+				}
+
+				h3 {
+					margin-bottom: 1rem;
+					@include font-notosans();
+					font-weight: $regular;
+					text-align: center;
+				}
+
+				p {
+					font-weight: $regular;
+					text-align: start;
+				}
+			}
+		}
+
+		.list {
+			margin-top: 3rem;
+			padding: 3rem 2rem 2rem;
+
+			@media #{$pc} {
+				margin-top: 40px;
+				padding: 50px 30px 40px;
+			}
+
+			dt {
+
+				.joboffer_sub {
+					margin-bottom: 3rem;
+
+					@media #{$pc} {
+						margin-bottom: 40px;
+						font-size: 3rem;
+					}
+				}
+			}
+
+			dd {
+
+				.containers {
+
+					.container {
+
+						h3 {
+							color: $txt;
+
+							.list_txt {
+
+								@media #{$pc} {
+									display: none;
+								}
+							}
+						}
+
+						.tag {
+							display: flex;
+							flex-direction: row;
+							flex-wrap: wrap;
+							justify-content: center;
+							gap: 0.4rem;
+							width: 24rem;
+							margin: 0 auto 1rem;
+
+							@media #{$pc} {
+								width: 240px;
+								margin: 0 auto 10px;
+							}
+
+							li {
+								padding: 0.2rem 0.8rem;
+								background-color: $primary;
+								border-radius: 0.3rem;
+								color: $white;
+								font-size: 1.2rem;
+
+								@media #{$pc} {
+									padding: 0 8px;
+								}
+							}
+						}
+
+						.tag_1 {
+							@media #{$pc} {
+								width: 140px;
+								margin: 0 auto 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.information {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			padding: 4rem 0.6rem;
+
+			@media #{$pc} {
+				gap: 30px;
+				max-width: 790px;
+				margin: 0 auto;
+				padding: 80px 20px;
+			}
+
+			.joboffer_sub {
+				margin-bottom: 1rem;
+
+				@media #{$pc} {
+					margin-bottom: 20px;
+				}
+			}
+
+			.container {
+				gap: 0;
+				background-color: rgba(255, 255, 255, 0.6);
+				cursor: pointer;
+
+				.sub {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 2rem;
+					height: 14rem;
+					background-size: cover;
+					background-repeat: no-repeat;
+					border-radius: 0.3rem 0.3rem 0 0;
+
+					@media #{$pc} {
+						gap: 20px;
+					}
+
+					.ruledline {
+						width: 4rem;
+						border-top: solid 0.1rem $white;
+
+						@media #{$pc} {
+							width: 200px;
+							border-top: solid 1px $white;
+						}
+					}
+
+					h3 {
+						@include font-notosans();
+						color: $white;
+						font-size: 1.8rem;
+						font-weight: $regular;
+
+						@media #{$pc} {
+							font-size: 2rem;
+						}
+					}
+				}
+
+				.sub_1 {
+					background-image: url(../../../images/form/information_sp_1.jpg);
+
+					@media #{$pc} {
+						background-image: url(../../../images/form/information_pc_1.jpg);
+					}
+				}
+
+				.sub_2 {
+					background-image: url(../../../images/form/information_sp_2.jpg);
+
+					@media #{$pc} {
+						background-image: url(../../../images/form/information_pc_2.jpg);
+					}
+				}
+
+				.sub_3 {
+					background-image: url(../../../images/form/information_sp_3.jpg);
+
+					@media #{$pc} {
+						background-image: url(../../../images/form/information_pc_3.jpg);
+					}
+				}
+			}
+
+			.contents {
+				display: none;
+
+				&.active {
+					display: block;
+				}
+
+				dl {
+					display: flex;
+					flex-direction: column;
+					padding: 2rem 2rem 3rem;
+
+					@media #{$pc} {
+						flex-direction: row;
+					}
+
+					div {
+						text-align: start;
+
+						dt {
+							padding: 0 0.6rem;
+						}
+
+						dd {
+							font-weight: $regular;
+						}
+
+						.info_dd {
+							margin: 0 0.6rem;
+						}
+					}
+
+					.item {
+						flex: 1;
+					}
+
+					.ruledline {
+						flex-shrink: 1;
+						margin: 1rem 0;
+						border-top: dotted 0.2rem $primary;
+
+						@media #{$pc} {
+							margin: 0 10px;
+							border-top: none;
+							border-left: dotted 2px $primary;
+						}
+					}
+
+				}
+			}
+
+			.down {
+				padding: 0.4rem 0;
+				background-color: $white;
+				border-radius: 0 0 0.3rem 0.3rem;
+
+				@media #{$pc} {
+					padding: 3px 0;
+
+					border-radius: 0 0 3px 3px;
+				}
+
+				.triangle_open {
+					width: 0;
+					height: 0;
+					margin: 0.6rem auto;
+					border-left: 0.8rem solid transparent;
+					border-right: 0.8rem solid transparent;
+					border-top: 1.2rem solid $primary;
+				}
+
+				.triangle_close {
+					width: 0;
+					height: 0;
+					margin: 0.6rem auto;
+					border-left: 0.8rem solid transparent;
+					border-right: 0.8rem solid transparent;
+					border-bottom: 1.2rem solid $primary;
+				}
+			}
+
+			.txt {
+				text-align: center;
+			}
+
+			.btn {
+				margin: 2rem auto 0;
+
+				@media #{$pc} {
+					margin: 20px auto 0;
+				}
+			}
+		}
+
+		.voice {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+			padding: 4rem 0;
+
+			@media #{$pc} {
+				gap: 30px;
+				width: 670px;
+				margin: 0 auto;
+				padding: 80px 0;
+			}
+
+			.joboffer_sub {
+
+				@media #{$pc} {
+					margin-bottom: 20px;
+				}
+			}
+
+			dd {
+
+				@media #{$pc} {
+					gap: 30px;
+				}
+
+				.speechbabble {
+					gap: 0;
+
+					.voice_txt {
+						display: flex;
+						flex-direction: column;
+						gap: 1rem;
+						position: relative;
+						padding: 2rem;
+						background-color: $base;
+						border-radius: 0.6rem;
+						font-weight: $regular;
+
+						@media #{$pc} {
+							padding: 30px 40px;
+							text-align: start;
+						}
+
+						.tip {
+							position: absolute;
+							bottom: -2.6rem;
+							width: 6rem;
+							transform: scaleX(2);
+
+							@media #{$pc} {
+								bottom: -30px;
+								width: 70px;
+								transform: scaleX(4);
+							}
+						}
+
+						.tip_1 {
+							left: 4rem;
+
+							@media #{$pc} {
+								left: 120px;
+							}
+						}
+
+						.tip_2 {
+							right: 4rem;
+
+							@media #{$pc} {
+								right: 120px;
+							}
+						}
+					}
+
+					.name {
+						font-weight: $regular;
+						line-height: 2.6rem;
+						font-size: 1.2rem;
+
+						@media #{$pc} {
+							font-size: 1.4rem;
+						}
+
+						span {
+							padding: 0 1rem;
+							background: linear-gradient(transparent 60%, rgba(255, 108, 121, 0.2) 60%);
+							font-size: 1.4rem;
+							font-weight: $medium;
+
+							@media #{$pc} {
+								font-size: 1.6rem;
+							}
+						}
+					}
+
+					.name_1 {
+						margin: 0.6rem 0.6rem 0 0;
+						text-align: right;
+
+						@media #{$pc} {
+							margin: 10px 10px 0 0;
+						}
+					}
+
+					.name_2 {
+						margin: 0.6rem 0 0 0.6rem;
+						text-align: left;
+
+						@media #{$pc} {
+							margin: 10px 0 0 10px;
+						}
+					}
+				}
+			}
+		}
+
+		.joboffer_question {
+			background-color: $base;
+			background-image: none;
+
+			h2 {
+				text-shadow: none;
+			}
+
+			.joboffer_sub {
+				font-weight: $medium;
+			}
+
+			.inner {
+
+				.accordion_1 {
+
+					.q_txt,
+					.a_txt {
+						@include font-notosans();
+						font-weight: $regular;
+
+						@media #{$pc} {
+							font-size: 1.8rem;
+						}
+
+						.initial {
+							@include font-notoserif();
+						}
+					}
+
+					.q_txt {
+
+						@media #{$pc} {
+							padding: 10px 60px 10px 15px;
+						}
+					}
+				}
+			}
+		}
+
+		.question {
+
+			.inner {
+				margin-bottom: 0;
+			}
+		}
+
+		.btn {
+			margin: 2rem auto;
+
+			@media #{$pc} {
+				margin: 40px auto;
+			}
+		}
+	}
+
+	// フォーム
+	.plugin {
+		margin-bottom: 6rem;
+
+		@media #{$pc} {
+			margin-bottom: 120px;
+		}
+	}
+
+	// 固定ページ 下部
+	.appointment_footer,
+	.request_footer,
+	.partner_footer,
+	.online_footer {
+		margin: 0 2rem 3rem;
+		padding: 3rem 2rem;
+		background-color: $base;
+		border-radius: 0.3rem;
+
+		@media #{$pc} {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
+			max-width: 800px;
+			margin: 0 auto 110px;
+		}
+
+		.pic {
+			img {
+				height: auto;
+			}
+
+			@media #{$pc} {
+				order: 2;
+				max-width: 48%;
+			}
+		}
+
+		.sub {
+			margin: 2rem 0;
+
+			h3 {
+				color: $primary;
+				font-size: 1.8rem;
+				font-weight: $medium;
+				text-align: center;
+				line-height: 3rem;
+
+				@media #{$pc} {
+					font-size: 2.4rem;
+				}
+			}
+
+			@media #{$pc} {
+				order: 1;
+				width: 100%;
+				margin: 0 0 10px;
+			}
+		}
+
+		.txt {
+			text-align: justify;
+
+			@media #{$pc} {
+				order: 3;
+				max-width: 48%;
+			}
+		}
+	}
+
+	// 資料請求, パートナー診断
+	.request_footer,
+	.partner_footer {
+
+		.txt {
+			margin-bottom: 2rem;
+		}
+
+		.btn {
+			@include font-notoserif();
+
+			@media #{$pc} {
+				order: 4;
+			}
+
+			a {
+
+				@media #{$pc} {
+					padding: 14px 80px;
+				}
+			}
+		}
+	}
+}
+
+// 求人応募
+.joboffer {
+	@media #{$pc} {
+		padding-top: 0;
+	}
+}
+
+// ------ 固定ページ end ------ //
+
+
+// ------ thanks 送信完了画面 ------ //
+
+.thanks {
+
+	.thanks_header,
+	.message {
+
+		@media #{$pc} {
+			width: 800px;
+		}
+	}
+
+	.thanks_header {
+		margin: 3rem 2rem 2rem;
+
+		@media #{$pc} {
+			margin: 0 auto 40px;
+			padding-top: 40px;
+		}
+
+		li {
+			.form_sub {
+				margin-bottom: 3rem;
+
+				@media #{$pc} {
+					margin-bottom: 30px;
+				}
+			}
+
+			.form_sub {
+				font-size: 2.2rem;
+
+				@media #{$pc} {
+					font-size: 3.2rem;
+				}
+			}
+		}
+	}
+
+	.message {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin: 0 2rem 2rem;
+
+		@media #{$pc} {
+			margin: 0 auto 30px;
+			text-align: center;
+		}
+	}
+
+	.tel_area {
+		margin: 0 2rem 3rem;
+		padding: 1rem 1rem 2rem;
+		background-color: $base;
+		border-radius: 0.3rem;
+
+		@media #{$pc} {
+			width: 500px;
+			margin: 0 auto 60px;
+		}
+
+		dt {
+			ul {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 0.6rem;
+				color: $primary;
+
+				li {
+					@include font-notoserif();
+					font-size: 3.8rem;
+					font-weight: $medium;
+
+					img {
+						width: 4rem;
+						margin-top: 1rem;
+					}
+
+					h3 {
+						font-size: 3.6rem;
+
+						@media #{$pc} {
+							font-size: 4.4rem;
+						}
+					}
+				}
+			}
+		}
+
+		dd {
+			margin: 0 2rem;
+			padding: 0.6rem 0;
+			background-color: rgba(255, 255, 255, 0.6);
+			color: $primary;
+			font-weight: $medium;
+			text-align: center;
+
+			@media #{$pc} {
+				margin: 0 40px;
+				padding: 6px 0;
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	.btn {
+		margin: 3rem 4rem 8rem;
+
+		@media #{$pc} {
+			margin-bottom: 120px;
+		}
+
+		a {
+			@include font-notoserif();
+		}
+	}
+
+	.question {
+		background-color: $base;
+		background-image: none;
+
+		h2 {
+			color: $primary;
+			text-shadow: none;
+
+			@media #{$pc} {
+				font-size: 3.2rem;
+			}
+		}
+
+		.inner {
+
+			.accordion_1 {
+
+				.q_txt,
+				.a_txt {
+					@include font-notoserif();
+				}
+			}
+		}
+	}
+}
+
+// オンライン面談
+.online_thanks {
+
+	.thanks_header {
+
+		li {
+
+			.form_sub,
+			.eyecatch {
+				margin-bottom: 2rem;
+
+				@media #{$pc} {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
+
+// 求人応募
+.joboffer_thanks {
+
+	.thanks_header {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+
+		.firstview {
+			margin-bottom: 3rem;
+			background-color: $white;
+
+			@media #{$pc} {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+// ------ thanks 送信完了画面 end ------ //
