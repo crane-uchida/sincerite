@@ -1,4 +1,3 @@
-
 <!-- CONTACT -->
 <div class="contact">
   <div class="container of-vis">
@@ -6,7 +5,7 @@
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/logo.svg" width="150" height="96" loading="lazy" alt="" class="img-fluid contact__logo">
 
     <div class="contact__box">
-      <p class="contact__txt">[ 高収入男性に特化した結婚相談所 ]</p>
+      <p class="contact__txt">東京・表参道で高収入男性に特化した結婚相談所</p>
       <p class="contact__desc">サンセリテ青山は<br class="d-md-none">通常の生活では難しい出会いを実現し<br class="d-md-none">ハイクラス・ハイスペックな婚活を<br class="d-md-none">サポートします</p>
       <a href="<?php echo get_site_url(); ?>/company/" class="contact__link underline-anmi">会社概要はこちら</a>
 
@@ -35,7 +34,7 @@
             </span>
           </p>
           <a href="<?php echo get_site_url(); ?>/access/" class="common__btn-link-two">
-            <p class="common__btn-num common__btn-num-two">表参道本店へ<br class="d-md-none">アクセス</p>
+            <p class="common__btn-num common__btn-num-two">東京・表参道本店へ<br class="d-md-none">アクセス</p>
           </a>
           <p class="common__btn-cont"><span class="common__btn-cont-span">出口</span>表参道駅<span class="common__btn-cont-bg">A1出口徒歩5分</span></p>
         </div>
@@ -54,13 +53,14 @@
 
     <div class="popular__box">
       <div class="popular__swiper">
-       <?php $group_set = SCF::get( '人気のコンテンツグループ', 4024 );	foreach ( $group_set as $field_name => $field_value ) {	?>
-        <div class="popular__swiper-slide">
-          <a href="<?php echo( $field_value['人気コンテンツURL'] ); ?>" class="popular__img" target="<?php echo( $field_value['リンクの種類'] ); ?>">
-            <img src="<?php echo wp_get_attachment_url( $field_value['人気コンテンツ画像'] ); ?>" alt="" width="400" height="115" class="img-fluid" loading="lazy">
-          </a>
-        </div>
-       <?php } ?>
+        <?php $group_set = SCF::get('人気のコンテンツグループ', 4024);
+        foreach ($group_set as $field_name => $field_value) {  ?>
+          <div class="popular__swiper-slide">
+            <a href="<?php echo ($field_value['人気コンテンツURL']); ?>" class="popular__img" target="<?php echo ($field_value['リンクの種類']); ?>">
+              <img src="<?php echo wp_get_attachment_url($field_value['人気コンテンツ画像']); ?>" alt="" width="400" height="115" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+        <?php } ?>
       </div>
 
       <div class="popular__arws b">
@@ -134,8 +134,8 @@
         <a href="./" class="footer__logo">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/common/logo-footer.svg" alt="footer-logo" width="149" height="95" class="img-fluid">
           <p class="footer__logo-ttl">
-          東京 表参道の結婚相談所<br>サンセリテ青山
-        </p>
+            東京 表参道の結婚相談所<br>サンセリテ青山
+          </p>
         </a>
         <ul class="footer__media">
 
@@ -196,23 +196,23 @@
             </a>
           </li>
           <li>
-          <a href="https://www.youtube.com/user/SinceriteAoyama" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.36 14.2" width="25" height="25.001">
-              <defs>
-                <style>
-                  .cls-1 {
-                    fill: #fff;
-                  }
-                </style>
-              </defs>
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="レイヤー_1" data-name="レイヤー 1">
-                  <path class="cls-1" d="M17,0H3.61C1,0,0,2.08,0,4.65V9.56c0,2.56,1.15,4.64,3.72,4.64h13.2c2.56,0,3.44-2.08,3.44-4.64V4.65C20.36,2.08,19.59,0,17,0ZM8.31,9.89V4.32L13.65,7.1Z"></path>
+            <a href="https://www.youtube.com/user/SinceriteAoyama" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.36 14.2" width="25" height="25.001">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="レイヤー_1" data-name="レイヤー 1">
+                    <path class="cls-1" d="M17,0H3.61C1,0,0,2.08,0,4.65V9.56c0,2.56,1.15,4.64,3.72,4.64h13.2c2.56,0,3.44-2.08,3.44-4.64V4.65C20.36,2.08,19.59,0,17,0ZM8.31,9.89V4.32L13.65,7.1Z"></path>
+                  </g>
                 </g>
-              </g>
-            </svg>
-          </a>
-        </li>
+              </svg>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -263,30 +263,30 @@
 <!-- JS -->
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/app.js"></script>
 <script>
-var touch = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  var touch = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 
-if(touch) {
-  try {
-    for (var si in document.styleSheets) {
-      var styleSheet = document.styleSheets[si];
-      if (!styleSheet.rules) continue;
+  if (touch) {
+    try {
+      for (var si in document.styleSheets) {
+        var styleSheet = document.styleSheets[si];
+        if (!styleSheet.rules) continue;
 
-      for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-        if (!styleSheet.rules[ri].selectorText) continue;
+        for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+          if (!styleSheet.rules[ri].selectorText) continue;
 
-        if (styleSheet.rules[ri].selectorText.match(':hover')) {
-          styleSheet.deleteRule(ri);
+          if (styleSheet.rules[ri].selectorText.match(':hover')) {
+            styleSheet.deleteRule(ri);
+          }
         }
       }
-    }
-  } catch (ex) {}
-}
+    } catch (ex) {}
+  }
 </script>
 
 
 <?php if (is_page('form01') || is_page('entry-men') || is_page('woentry-men') || is_page_template('templates/template-form.php') || is_page('form05') || is_page('request') || is_page('form06') || is_page('online') || is_page('counseling') ||  is_page('form02') || is_page('recruit') || is_page('first_matching')) : ?>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/form.js"></script>
+  <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/form.js"></script>
   <link href="<?php echo esc_url(get_template_directory_uri()); ?>/fix_css/form_new.css" rel="stylesheet">
 
 <?php endif; ?>
@@ -296,76 +296,74 @@ if(touch) {
 
 
 <?php if (is_front_page() || is_page('introduction') || is_page('men') ||  is_page('premium01') || is_page('premium02') || is_page('women') || is_page('party') || is_page('recruit')) : ?>
-<!-- Google 構造化データ JSON-LD マークアップ -->
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "FAQPage",
-    "mainEntity":
-    [
-    <?php $group_set = SCF::get( 'よくあるご質問グループ' );	foreach ( $group_set as $field_name => $field_value ) {	?>
+  <!-- Google 構造化データ JSON-LD マークアップ -->
+  <script type="application/ld+json">
     {
-      "@type": "Question",
-      "name": "<?php echo nl2br( $field_value['質問'] ); ?>",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "<?php echo ( $field_value['回答'] ); ?>"
-      }
+      "@context": "http://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        <?php $group_set = SCF::get('よくあるご質問グループ');
+        foreach ($group_set as $field_name => $field_value) {  ?> {
+            "@type": "Question",
+            "name": "<?php echo nl2br($field_value['質問']); ?>",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<?php echo ($field_value['回答']); ?>"
+            }
+          },
+        <?php } ?> {}
+      ]
     }
-    ,<?php } ?>{}
-  ]
-}
-</script>
+  </script>
 <?php elseif (is_page('faq')) : ?>
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "FAQPage",
-    "mainEntity":
-    [
-    <?php $group_set = SCF::get( '質問カテゴリ1グループ' );	foreach ( $group_set as $field_name => $field_value ) {	?>
+  <script type="application/ld+json">
     {
-      "@type": "Question",
-      "name": "<?php echo nl2br( $field_value['質問カテゴリ1 質問'] ); ?>",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "<?php echo ( $field_value['質問カテゴリ1 回答'] ); ?>"
-      }
+      "@context": "http://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        <?php $group_set = SCF::get('質問カテゴリ1グループ');
+        foreach ($group_set as $field_name => $field_value) {  ?> {
+            "@type": "Question",
+            "name": "<?php echo nl2br($field_value['質問カテゴリ1 質問']); ?>",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<?php echo ($field_value['質問カテゴリ1 回答']); ?>"
+            }
+          },
+        <?php } ?>
+        <?php $group_set = SCF::get('質問カテゴリ2グループ');
+        foreach ($group_set as $field_name => $field_value) {  ?> {
+            "@type": "Question",
+            "name": "<?php echo nl2br($field_value['質問カテゴリ2 質問']); ?>",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<?php echo ($field_value['質問カテゴリ2 回答']); ?>"
+            }
+          },
+        <?php } ?>
+        <?php $group_set = SCF::get('質問カテゴリ3グループ');
+        foreach ($group_set as $field_name => $field_value) {  ?> {
+            "@type": "Question",
+            "name": "<?php echo nl2br($field_value['質問カテゴリ3 質問']); ?>",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<?php echo ($field_value['質問カテゴリ3 回答']); ?>"
+            }
+          },
+        <?php } ?>
+        <?php $group_set = SCF::get('質問カテゴリ4グループ');
+        foreach ($group_set as $field_name => $field_value) {  ?> {
+            "@type": "Question",
+            "name": "<?php echo nl2br($field_value['質問カテゴリ4 質問']); ?>",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<?php echo ($field_value['質問カテゴリ4 回答']); ?>"
+            }
+          },
+        <?php } ?> {}
+      ]
     }
-    ,<?php } ?>
-    <?php $group_set = SCF::get( '質問カテゴリ2グループ' );	foreach ( $group_set as $field_name => $field_value ) {	?>
-    {
-      "@type": "Question",
-      "name": "<?php echo nl2br( $field_value['質問カテゴリ2 質問'] ); ?>",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "<?php echo ( $field_value['質問カテゴリ2 回答'] ); ?>"
-      }
-    }
-    ,<?php } ?>
-    <?php $group_set = SCF::get( '質問カテゴリ3グループ' );	foreach ( $group_set as $field_name => $field_value ) {	?>
-    {
-      "@type": "Question",
-      "name": "<?php echo nl2br( $field_value['質問カテゴリ3 質問'] ); ?>",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "<?php echo ( $field_value['質問カテゴリ3 回答'] ); ?>"
-      }
-    }
-    ,<?php } ?>
-    <?php $group_set = SCF::get( '質問カテゴリ4グループ' );	foreach ( $group_set as $field_name => $field_value ) {	?>
-    {
-      "@type": "Question",
-      "name": "<?php echo nl2br( $field_value['質問カテゴリ4 質問'] ); ?>",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "<?php echo ( $field_value['質問カテゴリ4 回答'] ); ?>"
-      }
-    }
-    ,<?php } ?>{}
-  ]
-}
-</script>
+  </script>
 <?php endif; ?>
 </body>
 
