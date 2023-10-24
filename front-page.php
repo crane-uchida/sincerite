@@ -452,7 +452,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/voice/voice-icon01.svg" alt="<?php $myfield = scf::get('年齢'); echo $myfield; ?> <?php $myfield = scf::get('性別'); echo $myfield; ?> / <?php $myfield = scf::get('職業'); echo $myfield; ?> / <?php $myfield = scf::get('出身地'); echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間'); echo $myfield; ?>" loading="lazy" width="101" height="101">
               <?php endif; ?>
               <p class="voice__card-ttl">
-                <?php $myfield = scf::get('年齢'); echo $myfield; ?> <?php $myfield = scf::get('性別'); echo $myfield; ?> / <?php $myfield = scf::get('職業'); echo $myfield; ?><br>
+                <?php $myfield = scf::get('年齢'); echo $myfield; ?> <?php $myfield = scf::get('性別'); echo $myfield; ?> <?php $myfield = scf::get('出身地'); echo $myfield; ?> / <?php $myfield = scf::get('職業'); echo $myfield; ?><br>
                 活動期間<?php $myfield = scf::get('活動期間'); echo $myfield; ?>
               </p>
             </div>

@@ -2,386 +2,376 @@
 @use "../common/abstracts/variables" as *;
 
 .contact {
-    background-color: #b19d7f;
-    padding: 40px 0 60px;
+  background-color: #b19d7f;
+  padding: 40px 0 60px;
+
+  @include mq("tablet") {
+    padding: 50px 0 117px;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 120px;
 
     @include mq("tablet") {
-        padding: 50px 0 117px;
+      max-width: 150px;
+    }
+  }
+
+  &__box {
+    margin-top: 29px;
+    text-align: center;
+  }
+
+  &__txt {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: $color-white;
+    letter-spacing: 0.05em;
+    text-align: center;
+
+    @include mq("tablet") {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    line-height: 1.83;
+    font-weight: 400;
+    color: $color-white;
+    font-family: $font-mincho;
+    margin: 20px 0;
+    text-align: center;
+
+    @include mq("tablet") {
+      font-size: 1.8rem;
+      margin: 18px 0 52px;
+      line-height: 1.94;
+    }
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    line-height: 2.5;
+    font-weight: 400;
+    color: $color-white;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    @include mq("tablet") {
+      font-size: 1.6rem;
     }
 
-    &__logo {
-        display: block;
-        margin: 0 auto;
-        max-width: 120px;
-
-        @include mq("tablet") {
-            max-width: 150px;
-        }
+    &:hover {
+      text-decoration: none;
     }
+  }
 
-    &__box {
-        margin-top: 29px;
-        text-align: center;
+  &__btn-box {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include mq("tablet") {
+      flex-direction: row;
+      margin-top: 50px;
     }
-
-    &__txt {
-        font-size: 1.4rem;
-        line-height: 1.5;
-        font-weight: 600;
-        color: $color-white;
-        letter-spacing: 0.05em;
-        text-align: center;
-
-        @include mq("tablet") {
-            font-size: 1.6rem;
-        }
-    }
-
-    &__desc {
-        font-size: 1.6rem;
-        line-height: 1.83;
-        font-weight: 400;
-        color: $color-white;
-        font-family: $font-mincho;
-        margin: 20px 0;
-        text-align: center;
-
-        @include mq("tablet") {
-            font-size: 1.8rem;
-            margin: 18px 0 52px;
-            line-height: 1.94;
-        }
-    }
-
-    &__link {
-        font-size: 1.4rem;
-        line-height: 2.5;
-        font-weight: 400;
-        color: $color-white;
-        text-align: center;
-        transition: all 0.3s ease;
-
-        @include mq("tablet") {
-            font-size: 1.6rem;
-        }
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    &__btn-box {
-        margin-top: 35px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-        @include mq("tablet") {
-            flex-direction: row;
-            margin-top: 50px;
-        }
-    }
+  }
 }
 
 .info {
-    background-color: #F7F7F4;
-    padding: 18px 0 60px;
+  background-color: #f7f7f4;
+  padding: 18px 0 60px;
 
-    @include mq('tablet') {
-        padding: 60px 0 160px;
+  @include mq("tablet") {
+    padding: 60px 0 160px;
+  }
+
+  .heading-primary-en {
+    &::before {
+      content: none;
     }
+  }
 
-    .heading-primary-en {
-        &::before {
-            content: none;
-        }
-    }
+  &__btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 
-    &__btn-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-
-        @include mq("tablet") {
-            flex-direction: row;
-        }
-
-        .btn-secondary {
-            margin-bottom: 20px;
-
-            @include mq("tablet") {
-                margin-bottom: 0;
-            }
-        }
+    @include mq("tablet") {
+      flex-direction: row;
     }
 
     .btn-secondary {
-        box-shadow: none;
+      margin-bottom: 20px;
+
+      @include mq("tablet") {
+        margin-bottom: 0;
+      }
     }
+  }
+
+  .btn-secondary {
+    box-shadow: none;
+  }
 }
 
 .common {
-    &__contact {
-        margin: 0 auto;
-        background-color: $color-white;
+  &__contact {
+    margin: 0 auto;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 44px;
+
+    @include mq("tablet") {
+      min-width: 1280px;
+      flex-direction: row;
+      margin-top: 60px;
+    }
+
+    &-ttl {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0px;
+
+      @include mq("tablet") {
+        gap: 16px;
+        margin-bottom: 47px;
+      }
+
+      &-bnrtxt {
+        font-size: 2rem;
+        line-height: calc(52 / 20);
+        font-weight: 400;
+        font-family: $font-mincho;
+        letter-spacing: 0.05em;
+        width: 62px;
+        height: 35px;
         display: flex;
-        flex-direction: column;
-        margin-top: 44px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        color: $color-white;
+        background-color: #8d7435;
+      }
+
+      &-nortxt {
+        font-size: 2.2rem;
+        font-family: $font-mincho;
+        line-height: calc(52 / 20);
+        letter-spacing: 0.05em;
+        font-weight: 400;
+        color: #8d7435;
 
         @include mq("tablet") {
-            min-width: 1280px;
-            flex-direction: row;
-            margin-top: 60px;
+          font-size: 3rem;
+          font-family: $font-mincho;
+          line-height: calc(52 / 30);
         }
 
-        &-ttl {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 0px;
-
-            @include mq("tablet") {
-                gap: 16px;
-                margin-bottom: 47px;
-
-            }
-
-            &-bnrtxt {
-                font-size: 2rem;
-                line-height: calc(52 / 20);
-                font-weight: 400;
-                font-family: $font-mincho;
-                letter-spacing: 0.05em;
-                width: 62px;
-                height: 35px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 2px;
-                color: $color-white;
-                background-color: #8D7435;
-
-
-            }
-
-            &-nortxt {
-                font-size: 2.2rem;
-                font-family: $font-mincho;
-                line-height: calc(52 / 20);
-                letter-spacing: 0.05em;
-                font-weight: 400;
-                color: #8D7435;
-
-                @include mq("tablet") {
-                    font-size: 3rem;
-                    font-family: $font-mincho;
-                    line-height: calc(52 / 30);
-                }
-
-                &-span {
-                    color: $color-black;
-                }
-            }
+        &-span {
+          color: $color-black;
         }
-
-        &-btn {
-            flex: 0 0 50%;
-            padding: 20px 15px;
-
-            &:first-child {
-                border-bottom: 1px dotted #705C47;
-
-                @include mq("tablet") {
-                    border-right: 1px dotted #705C47;
-                    border-bottom: unset;
-                }
-
-                .common__btn-link {
-                    .common__btn-cont {
-                        &-span {
-                            padding: 4px 12.5px 6px;
-                            margin-right: 6px;
-                        }
-                    }
-                }
-            }
-
-            @include mq("tablet") {
-                padding: 58px 10px 66px;
-
-            }
-        }
+      }
     }
 
-    &__btn {
+    &-btn {
+      flex: 0 0 50%;
+      padding: 20px 15px;
 
+      &:first-child {
+        border-bottom: 1px dotted #705c47;
 
-        &-link {
-            max-width: 480px;
-            width: 100%;
-            min-height: 188px;
-            border-radius: 2px;
-            background-color: #F7F6F4;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            text-decoration: unset;
-
-            &-two {
-                width: 100%;
-                max-width: 286px;
-                margin: 0 auto;
-                height: 70px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $color-white;
-                text-decoration: unset;
-                background-color: #362D0A;
-                border-radius: 100px;
-                margin-bottom: 12px;
-
-                @include mq("tablet") {
-                    margin-bottom: 38px;
-                    max-width: 422px;
-                    height: 92px;
-                }
-            }
+        @include mq("tablet") {
+          border-right: 1px dotted #705c47;
+          border-bottom: unset;
         }
 
-        &-num {
-            font-size: 3.3rem;
-            font-family: $font-primary;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            line-height: calc(52 / 33);
-            color: #34260B;
-            margin-bottom: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-
-            @include mq("tablet") {
-                font-size: 3.9rem;
-                line-height: calc(52 / 39);
-                gap: 23px;
-                margin-bottom: 28px;
-            }
-
-
-            &::before {
-                content: "";
-                background-image: url("../../images_new/common/contact-phn.svg");
-                width: 44px;
-                height: 44px;
-                display: inline-block;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-
-            &-two {
-                color: $color-white;
-                font-size: 1.8rem;
-                line-height: calc(23 / 18);
-                margin-bottom: unset;
-                width: 100%;
-                gap: 45px;
-
-                @include mq("tablet") {
-                    font-size: 2rem;
-                    line-height: calc(40 / 20);
-                    gap: 45px;
-                }
-
-                &::before {
-                    content: "";
-                    background-image: url("../../images_new/common/contact-map.svg") !important;
-                    width: 44px;
-                    height: 44px;
-                    display: inline-block;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    margin-left: -40px;
-
-                    @include mq("tablet") {
-                        margin-left: unset;
-                    }
-                }
-
-                &::after {
-                    content: "";
-                    background-image: url(../../images_new/icons/btn-arrow-white.svg);
-                    width: 15px;
-                    height: 6px;
-                    display: inline-block;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position-x: right;
-                    margin-right: -40px;
-                    transition: all 0.5s ease;
-
-                    @include mq("tablet") {
-                        width: 30px;
-                        height: 6px;
-                        margin-right: unset;
-                    }
-
-                }
-
-                &:hover {
-                    &::after {
-                        transform: translateX(5px);
-                    }
-                }
-            }
-
-        }
-
-        &-cont {
-            color: #34260B;
-            font-size: 1.6rem;
-            font-weight: 400;
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-
-            @include mq("tablet") {
-                font-size: 1.8rem;
-                font-weight: 400;
-            }
-
+        .common__btn-link {
+          .common__btn-cont {
             &-span {
-                font-size: 1.2rem;
-                background-color: #34260B;
-                border-radius: 2px;
-                color: $color-white;
-                // width           : 100%;
-                padding: 4px 9px 6px;
-                // max-width       : 89px;
-                // height          : 29px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: $font-primary;
-                font-weight: 500;
-                margin-right: 6px;
-
-                @include mq("tablet") {
-                    font-size: 1.6rem;
-                    margin-right: 16px;
-                }
+              padding: 4px 12.5px 6px;
+              margin-right: 6px;
             }
-
-            &-bg {
-                font-weight: 500;
-            }
+          }
         }
+      }
+
+      @include mq("tablet") {
+        padding: 58px 10px 66px;
+      }
+    }
+  }
+
+  &__btn {
+    &-link {
+      max-width: 480px;
+      width: 100%;
+      min-height: 188px;
+      border-radius: 2px;
+      background-color: #f7f6f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      text-decoration: unset;
+
+      &-two {
+        width: 100%;
+        max-width: 286px;
+        margin: 0 auto;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        text-decoration: unset;
+        background-color: #362d0a;
+        border-radius: 100px;
+        margin-bottom: 12px;
+
+        @include mq("tablet") {
+          margin-bottom: 38px;
+          max-width: 422px;
+          height: 92px;
+        }
+      }
     }
 
+    &-num {
+      font-size: 3.3rem;
+      font-family: $font-primary;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: calc(52 / 33);
+      color: #34260b;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      @include mq("tablet") {
+        font-size: 3.9rem;
+        line-height: calc(52 / 39);
+        gap: 23px;
+        margin-bottom: 28px;
+      }
+
+      &::before {
+        content: "";
+        background-image: url("../../images_new/common/contact-phn.svg");
+        width: 44px;
+        height: 44px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &-two {
+        color: $color-white;
+        font-size: 1.8rem;
+        line-height: calc(23 / 18);
+        margin-bottom: unset;
+        width: 100%;
+        gap: 16px;
+
+        @include mq("tablet") {
+          font-size: 2rem;
+          line-height: calc(40 / 20);
+          gap: 24px;
+        }
+
+        &::before {
+          content: "";
+          background-image: url("../../images_new/common/contact-map.svg") !important;
+          width: 44px;
+          height: 44px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin-left: -40px;
+
+          @include mq("tablet") {
+            margin-left: unset;
+          }
+        }
+
+        &::after {
+          content: "";
+          background-image: url(../../images_new/icons/btn-arrow-white.svg);
+          width: 15px;
+          height: 6px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position-x: right;
+          margin-right: -40px;
+          transition: all 0.5s ease;
+
+          @include mq("tablet") {
+            width: 30px;
+            height: 6px;
+            margin-right: unset;
+          }
+        }
+
+        &:hover {
+          &::after {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    &-cont {
+      color: #34260b;
+      font-size: 1.6rem;
+      font-weight: 400;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      @include mq("tablet") {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      &-span {
+        font-size: 1.2rem;
+        background-color: #34260b;
+        border-radius: 2px;
+        color: $color-white;
+        // width           : 100%;
+        padding: 4px 9px 6px;
+        // max-width       : 89px;
+        // height          : 29px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-primary;
+        font-weight: 500;
+        margin-right: 6px;
+
+        @include mq("tablet") {
+          font-size: 1.6rem;
+          margin-right: 16px;
+        }
+      }
+
+      &-bg {
+        font-weight: 500;
+      }
+    }
+  }
 }
