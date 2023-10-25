@@ -7,7 +7,7 @@
     <div class="contact__box">
       <p class="contact__txt">東京・表参道で高収入男性に特化した結婚相談所</p>
       <p class="contact__desc">サンセリテ青山は<br class="d-md-none">通常の生活では難しい出会いを実現し<br class="d-md-none">ハイクラス・ハイスペックな婚活を<br class="d-md-none">サポートします</p>
-      <a href="<?php echo get_site_url(); ?>/company/" class="contact__link underline-anmi">会社概要はこちら</a>
+      <a href="<?php echo get_site_url(); ?>/company/" class="contact__link underline-anmi">運営会社はこちら</a>
 
       <div class="common__contact">
         <div class="common__contact-btn">
@@ -243,7 +243,7 @@
             <a href="<?php echo get_site_url(); ?>/access/" class="footer__link-txt underline-anmi">店舗情報</a>
           </li>
           <li>
-            <a href="<?php echo get_site_url(); ?>/company/" class="footer__link-txt underline-anmi">会社概要</a>
+            <a href="<?php echo get_site_url(); ?>/company/" class="footer__link-txt underline-anmi">運営会社</a>
           </li>
           <li>
             <a href="<?php echo get_site_url(); ?>/recruit/" class="footer__link-txt underline-anmi">採用情報</a>

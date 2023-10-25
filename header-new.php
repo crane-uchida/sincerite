@@ -209,7 +209,7 @@
                     <a href="<?php echo get_site_url(); ?>/news/" class="header__nav-link">お知らせ</a>
                   </li>
                   <li>
-                    <a href="<?php echo get_site_url(); ?>/company/" class="header__nav-link">会社概要</a>
+                    <a href="<?php echo get_site_url(); ?>/company/" class="header__nav-link">運営会社</a>
                   </li>
                   <li>
                     <a href="<?php echo get_site_url(); ?>/party/" class="header__nav-link">お見合いパーティーレポート</a>
@@ -465,7 +465,7 @@
                     <a href="<?php echo get_site_url(); ?>/access/">店舗情報</a>
                   </li>
                   <li>
-                    <a href="<?php echo get_site_url(); ?>/company/">会社概要</a>
+                    <a href="<?php echo get_site_url(); ?>/company/">運営会社</a>
                   </li>
                   <li>
                     <a href="<?php echo get_site_url(); ?>/recruit/">採用情報</a>
