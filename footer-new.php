@@ -93,6 +93,9 @@
   </div>
 </div>
 
+<!-- Google Map -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4579995667577!2d139.7059898764163!3d35.66572313082471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca1059a9ff9%3A0x9de3c25771ca9e74!2z5pel5pys44CB44CSMTUwLTAwMDEg5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmN77yV5LiB55uu77yW4oiS77yR77yTIOODtOOCoeOCpOOCueihqOWPgumBkyBiMQ!5e0!3m2!1sja!2snp!4v1690261279759!5m2!1sja!2snp" width="100%" height="511" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 <!-- footer-banner -->
 <div class="footer__banner hide" id="footer-banner">
   <a href="<?php echo get_site_url(); ?>/counseling/" class="footer__banner-btn d-none d-md-flex">
@@ -217,6 +220,13 @@
       </div>
 
     </div>
+
+    <div class="footer__middle">
+      〈運営会社〉株式会社ランスクリエイト<br>
+      東京都渋谷区神宮前５丁目６−１３ ヴァイス表参道 B1<br class="d-md-none">
+      TEL 03-5468-2181
+    </div>
+
     <div class="footer__rgt">
       <div class="footer__dtls">
         <div class="footer__dtls-left">
@@ -229,6 +239,9 @@
         </div>
         <div class="footer__dtls-img">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/common/notes_mark.png" alt="" width="99" height="75" loading="lazy" class="img-fluid">
+        </div>
+        <div class="footer__dtls-desc footer__dtls-text">
+          サンセリテ青山はIBJ加盟店です。
         </div>
       </div>
       <div class="footer__company">
