@@ -93,6 +93,9 @@
   </div>
 </div>
 
+<!-- Google Map -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4579995667577!2d139.7059898764163!3d35.66572313082471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca1059a9ff9%3A0x9de3c25771ca9e74!2z5pel5pys44CB44CSMTUwLTAwMDEg5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmN77yV5LiB55uu77yW4oiS77yR77yTIOODtOOCoeOCpOOCueihqOWPgumBkyBiMQ!5e0!3m2!1sja!2snp!4v1690261279759!5m2!1sja!2snp" width="100%" height="511" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 <!-- footer-banner -->
 <div class="footer__banner hide" id="footer-banner">
   <a href="<?php echo get_site_url(); ?>/counseling/" class="footer__banner-btn d-none d-md-flex">
@@ -127,7 +130,151 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="footer" id="footer">
+<footer class="l-footer">
+  <div class="l-footer__title">
+    <a href="./" class="l-footer__title--content">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/common/logo-footer.svg" alt="footer-logo" width="160" height="101" class="img-fluid l-footer__title--image">
+      <p class="l-footer__title--text l-footer__headline">
+        東京 表参道の結婚相談所 サンセリテ青山
+      </p>
+    </a>
+  </div>
+  <div class="l-footer__company">
+    <ul class="l-footer__company--media">
+      <li class="l-footer__company--media-list">
+        <a class="l-footer__company--media-link" href="https://www.instagram.com/sincerite_aoyama_official/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25.001" viewBox="0 0 25 25.001">
+            <g id="instagram" transform="translate(-0.005)">
+              <g id="Group_2565" data-name="Group 2565" transform="translate(0.005)">
+                <g id="Group_2564" data-name="Group 2564" transform="translate(0)">
+                  <path id="Path_725" data-name="Path 725" d="M18.755,0H6.255A6.269,6.269,0,0,0,0,6.25v12.5A6.269,6.269,0,0,0,6.255,25h12.5A6.269,6.269,0,0,0,25,18.751V6.25A6.269,6.269,0,0,0,18.755,0Zm4.167,18.751a4.171,4.171,0,0,1-4.167,4.167H6.255a4.172,4.172,0,0,1-4.167-4.167V6.25A4.171,4.171,0,0,1,6.255,2.083h12.5A4.171,4.171,0,0,1,22.922,6.25v12.5Z" transform="translate(-0.005)" fill="#fff" />
+                </g>
+              </g>
+              <g id="Group_2567" data-name="Group 2567" transform="translate(17.714 4.167)">
+                <g id="Group_2566" data-name="Group 2566">
+                  <circle id="Ellipse_11" data-name="Ellipse 11" cx="1.563" cy="1.563" r="1.563" fill="#fff" />
+                </g>
+              </g>
+              <g id="Group_2569" data-name="Group 2569" transform="translate(6.255 6.25)">
+                <g id="Group_2568" data-name="Group 2568">
+                  <path id="Path_726" data-name="Path 726" d="M108.655,102.4a6.25,6.25,0,1,0,6.25,6.25A6.249,6.249,0,0,0,108.655,102.4Zm0,10.417a4.167,4.167,0,1,1,4.167-4.167A4.167,4.167,0,0,1,108.655,112.817Z" transform="translate(-102.405 -102.4)" fill="#fff" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </li>
+      <li class="l-footer__company--media-list">
+        <a class="l-footer__company--media-link" href="https://twitter.com/sinceriteaoyama" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20.313" viewBox="0 0 25 20.313">
+            <g id="twitter" transform="translate(0 -48)">
+              <g id="Group_2563" data-name="Group 2563" transform="translate(0 48)">
+                <path id="Path_724" data-name="Path 724" d="M25,50.4a10.686,10.686,0,0,1-2.953.809A5.1,5.1,0,0,0,24.3,48.381a10.242,10.242,0,0,1-3.25,1.241,5.125,5.125,0,0,0-8.866,3.5A5.277,5.277,0,0,0,12.3,54.3,14.507,14.507,0,0,1,1.741,48.934a5.127,5.127,0,0,0,1.575,6.85A5.062,5.062,0,0,1,1,55.153v.056a5.149,5.149,0,0,0,4.106,5.036,5.115,5.115,0,0,1-1.344.169,4.532,4.532,0,0,1-.97-.087A5.174,5.174,0,0,0,7.581,63.9a10.3,10.3,0,0,1-6.355,2.186A9.6,9.6,0,0,1,0,66.012a14.429,14.429,0,0,0,7.863,2.3A14.487,14.487,0,0,0,22.45,53.728c0-.227-.008-.445-.019-.662A10.224,10.224,0,0,0,25,50.4Z" transform="translate(0 -48)" fill="#fff" />
+              </g>
+            </g>
+          </svg>
+        </a>
+      </li>
+      <li class="l-footer__company--media-list">
+        <a class="l-footer__company--media-link" href="https://www.facebook.com/SinceriteAoyama" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+            <path id="facebook" d="M19.883,7.758a12.388,12.388,0,0,1,6.31,1.717A12.626,12.626,0,0,1,29.35,28.546,12.736,12.736,0,0,1,22.3,32.758V23.772h2.451l.554-3.531H21.591V17.929a2.01,2.01,0,0,1,.427-1.328,1.955,1.955,0,0,1,1.568-.6h2.242V12.911q-.048-.016-.916-.123a18.2,18.2,0,0,0-1.975-.123,4.935,4.935,0,0,0-3.545,1.264,4.887,4.887,0,0,0-1.332,3.628v2.683H15.235v3.531H18.06v8.985a12.43,12.43,0,0,1-7.644-4.212A12.612,12.612,0,0,1,13.573,9.474,12.391,12.391,0,0,1,19.883,7.758Z" transform="translate(-7.383 -7.758)" fill="#fff" fill-rule="evenodd" />
+          </svg>
+        </a>
+      </li>
+      <li class="l-footer__company--media-list">
+        <a class="l-footer__company--media-link" href="https://page.line.me/sincerite?openQrModal=true" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23.421" viewBox="0 0 25 23.421">
+            <g id="Group_125" data-name="Group 125" transform="translate(-7.768 -9.583)">
+              <path id="Path_147" data-name="Path 147" d="M463.134,344.219c1.989-1.932,3.466-4.148,3.466-6.79,0-5.426-5.6-9.83-12.5-9.83s-12.5,4.4-12.5,9.83c0,5,4.46,9.119,10.568,9.744,0,0,1.222-.17.938,1.449s-.483,1.761-.142,2.33S458.731,348.48,463.134,344.219Z" transform="translate(-433.832 -318.016)" fill="#fff" />
+              <g id="Group_125-2" data-name="Group 125" transform="translate(12.2 16.8)" class="letter">
+                <path id="Path_148" data-name="Path 148" d="M458.592,353v4.517h1.989v1.193H457.2V353Z" transform="translate(-457.2 -353)" fill="#3E3322" />
+                <path id="Path_149" data-name="Path 149" d="M473.592,353v5.739H472.2V353Z" transform="translate(-467.939 -353)" fill="#3E3322" />
+                <path id="Path_150" data-name="Path 150" d="M481.249,353l2.443,3.665V353h1.364v5.739h-1.449l-2.443-3.665v3.665H479.8V353Z" transform="translate(-473.379 -353)" fill="#3E3322" />
+                <path id="Path_151" data-name="Path 151" d="M504.922,355.188v1.165h-2.358v1.165h2.67v1.193H501.2V353h3.92v1.193h-2.557v.966h2.358Z" transform="translate(-488.7 -353)" fill="#3E3322" />
+              </g>
+            </g>
+          </svg>
+        </a>
+      </li>
+      <li class="l-footer__company--media-list">
+        <a class="l-footer__company--media-link" href="https://www.youtube.com/user/SinceriteAoyama" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.36 14.2" width="25" height="25.001">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="レイヤー_1" data-name="レイヤー 1">
+                <path class="cls-1" d="M17,0H3.61C1,0,0,2.08,0,4.65V9.56c0,2.56,1.15,4.64,3.72,4.64h13.2c2.56,0,3.44-2.08,3.44-4.64V4.65C20.36,2.08,19.59,0,17,0ZM8.31,9.89V4.32L13.65,7.1Z"></path>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <ul class="l-footer__company--menue">
+      <li class="l-footer__company--list">
+        <a class="l-footer__company--link l-footer__headline" href="https://www.club-sincerite.co.jp/column/" class="footer__link-txt underline-anmi">婚活コラム</a>
+      </li>
+      <li class="l-footer__company--list">
+        <a class="l-footer__company--link l-footer__headline" href="<?php echo get_site_url(); ?>/interview/" class="footer__link-txt underline-anmi">ゲストインタビュー</a>
+      </li>
+      <li class="l-footer__company--list">
+        <a class="l-footer__company--link l-footer__headline" href="<?php echo get_site_url(); ?>/news/" class="footer__link-txt underline-anmi">お知らせ</a>
+      </li>
+      <li class="l-footer__company--list">
+        <a class="l-footer__company--link l-footer__headline" href="<?php echo get_site_url(); ?>/access/" class="footer__link-txt underline-anmi">店舗情報</a>
+      </li>
+      <li class="l-footer__company--list">
+        <a class="l-footer__company--link l-footer__headline" href="<?php echo get_site_url(); ?>/company/" class="footer__link-txt underline-anmi">運営会社</a>
+      </li>
+      <li class="l-footer__company--list">
+        <a class="l-footer__company--link l-footer__headline" href="<?php echo get_site_url(); ?>/recruit/" class="footer__link-txt underline-anmi">採用情報</a>
+      </li>
+    </ul>
+  </div>
+  <div class="l-footer__information">
+    <div class="l-footer__personal">
+      <div class="l-footer__personal--title l-footer__headline">
+        個人情報の取扱いについて
+      </div>
+      <div class="l-footer__personal--text">
+        株式会社ランスクリエイトは、結婚相談所事業およびそれに付帯する事業などの業務を行う上でお客様、並びに従業者の重要な個人情報を保護することを重大な社会的責任であると認識しております。将来に亘って、この大切な個人情報を適正、安全に取り扱うために従業者のすべてが遵守すべき行動基準として本個人情報保護方針を定め、その遵守の徹底を図って参ります。
+      </div>
+    </div>
+    <div class="l-footer__ibj">
+      <div class="l-footer__ibj--title l-footer__headline">
+        【サンセリテ青山はIBJ加盟店です】
+      </div>
+      <div class="l-footer__ibj--mark">
+        <img class="l-footer__ibj--mark-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/common/notes_mark.png" alt="マル適マークCMS" loading="lazy" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <div class="l-footer__store">
+    <div class="l-footer__store--address">
+      <p>
+        〈運営会社〉株式会社ランスクリエイト
+      </p>
+      <p>
+        東京都渋谷区神宮前５丁目６−１３ ヴァイス表参道 B1
+      </p>
+      <p>
+        TEL 03-5468-2181
+      </p>
+    </div>
+    <div class="l-footer__store--copyright">
+      &copy; Sincerite Aoyama. All rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+<!-- <footer class="footer" id="footer">
   <div class="footer__wrapper">
     <div class="footer__left">
       <div class="footer__left-inner">
@@ -217,6 +364,13 @@
       </div>
 
     </div>
+
+    <div class="footer__middle">
+      〈運営会社〉株式会社ランスクリエイト<br>
+      東京都渋谷区神宮前５丁目６−１３ ヴァイス表参道 B1<br class="d-md-none">
+      TEL 03-5468-2181
+    </div>
+
     <div class="footer__rgt">
       <div class="footer__dtls">
         <div class="footer__dtls-left">
@@ -229,6 +383,9 @@
         </div>
         <div class="footer__dtls-img">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/common/notes_mark.png" alt="" width="99" height="75" loading="lazy" class="img-fluid">
+        </div>
+        <div class="footer__dtls-desc footer__dtls-text">
+          サンセリテ青山はIBJ加盟店です。
         </div>
       </div>
       <div class="footer__company">
@@ -257,7 +414,7 @@
   </div>
 
 </footer>
-
+ -->
 
 
 <!-- JS -->
