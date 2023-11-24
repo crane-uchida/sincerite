@@ -94,7 +94,7 @@
 </div>
 
 <!-- Google Map -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4579995667577!2d139.7059898764163!3d35.66572313082471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca1059a9ff9%3A0x9de3c25771ca9e74!2z5pel5pys44CB44CSMTUwLTAwMDEg5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmN77yV5LiB55uu77yW4oiS77yR77yTIOODtOOCoeOCpOOCueihqOWPgumBkyBiMQ!5e0!3m2!1sja!2snp!4v1690261279759!5m2!1sja!2snp" width="100%" height="511" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12965.846278684241!2d139.7084961!3d35.6656352!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b6003f0ffd1%3A0x440e6e43075ece47!2z44K144Oz44K744Oq44OG6Z2S5bGx772c5p2x5Lqs44O76KGo5Y-C6YGT44Gu44OP44Kk44Kv44Op44K557WQ5ama55u46KuH5omA!5e0!3m2!1sja!2sjp!4v1699328403076!5m2!1sja!2sjp" width="100%" height="511" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <!-- footer-banner -->
 <div class="footer__banner hide" id="footer-banner">

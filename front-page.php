@@ -230,6 +230,17 @@ Template Name: トップページ
         <span class="heading-primary-jp">サンセリテ青山について</span>
       </h2>
 
+      <div class="about__text">
+        <p>
+          サンセリテ青山は男性会員様をハイクラスなエリート層に限定することで、かつてない豊かな結婚相手の選択肢を提供しています。
+        </p>
+        <br class="d-md-none">
+        <p>
+          高学歴・お医者様など社会的ステータスをお持ちのエリート男性と、<br class="about__br-pc">
+          自分を磨く聡明でハイクラスな女性とを結びつけるのが結婚相談所サンセリテ青山の婚活プランです。
+        </p>
+      </div>
+
       <div class="about__box">
         <p class="about__desc">サンセリテ青山が創業から<br class="d-md-none">ご提供し続けていること</p>
 
@@ -330,15 +341,15 @@ Template Name: トップページ
               <p class="plan__ttl-sm -pnk">女性向けプラン</p>
 
               <p class="plan__desc">他の結婚相談所では実現できない<br>
-                男性会員が全員高収入という奇跡</p>
+                男性会員が全員高収入エリートという奇跡</p>
 
               <div class="plan__content">
-                <p class="plan__content-desc -pnk">男性会員様の平均年収 </p>
+                <p class="plan__content-desc -pnk">エリートな男性会員様の平均年収 </p>
                 <h3 class="plan__content-ttl -pnk">1,500万円以上</h3>
               </div>
 
               <div class="plan__content">
-                <p class="plan__content-desc -pnk">高収入男性との</p>
+                <p class="plan__content-desc -pnk">高収入エリート男性との</p>
                 <h3 class="plan__content-ttl -pnk">1年以内の成婚率63%以上</h3>
               </div>
 
@@ -346,7 +357,7 @@ Template Name: トップページ
                 <p class="plan__content-desc -pnk">夢を叶えるための、</p>
                 <div class="plan__content-ttl-wpr">
                   <h3 class="plan__content-ttl -pnk">知性・感性・美を磨く</h3>
-                  <h3 class="plan__content-ttl -pnk">プロのサポート</h3>
+                  <h3 class="plan__content-ttl -pnk">ハイクラスなサポート</h3>
                 </div>
               </div>
 
@@ -433,35 +444,51 @@ Template Name: トップページ
     <div class="voice__block">
 
       <div class="slick-slider voice__slider">
-       <?php
-global $post;
-$args = array(
-  'posts_per_page' => 4,
-  'post_type'=> 'voice_page',  
-);
-$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-        <div class="voice__swiper-slide">
-          <div class="voice__card">
-            <p class="voice__card-desc"><?php $customfield = SCF::get('抜粋テキスト'); echo nl2br($customfield);?></p>
-            <div class="voice__card-person">
-             <?php $status = SCF::get('性別'); ?>
-              <?php if($status == '男性'): ?>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/voice/voice-icon02.svg" alt="<?php $myfield = scf::get('年齢'); echo $myfield; ?> <?php $myfield = scf::get('性別'); echo $myfield; ?> / <?php $myfield = scf::get('職業'); echo $myfield; ?> / <?php $myfield = scf::get('出身地'); echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間'); echo $myfield; ?>" loading="lazy" width="101" height="101">
-              <?php elseif($status == '女性'): ?>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/voice/voice-icon01.svg" alt="<?php $myfield = scf::get('年齢'); echo $myfield; ?> <?php $myfield = scf::get('性別'); echo $myfield; ?> / <?php $myfield = scf::get('職業'); echo $myfield; ?> / <?php $myfield = scf::get('出身地'); echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間'); echo $myfield; ?>" loading="lazy" width="101" height="101">
-              <?php endif; ?>
-              <p class="voice__card-ttl">
-                <?php $myfield = scf::get('年齢'); echo $myfield; ?> <?php $myfield = scf::get('性別'); echo $myfield; ?> <?php $myfield = scf::get('出身地'); echo $myfield; ?> / <?php $myfield = scf::get('職業'); echo $myfield; ?><br>
-                活動期間<?php $myfield = scf::get('活動期間'); echo $myfield; ?>
-              </p>
+        <?php
+        global $post;
+        $args = array(
+          'posts_per_page' => 4,
+          'post_type' => 'voice_page',
+        );
+        $myposts = get_posts($args);
+        foreach ($myposts as $post) : setup_postdata($post); ?>
+          <div class="voice__swiper-slide">
+            <div class="voice__card">
+              <p class="voice__card-desc"><?php $customfield = SCF::get('抜粋テキスト');
+                                          echo nl2br($customfield); ?></p>
+              <div class="voice__card-person">
+                <?php $status = SCF::get('性別'); ?>
+                <?php if ($status == '男性') : ?>
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/voice/voice-icon02.svg" alt="<?php $myfield = scf::get('年齢');
+                                                                                                                      echo $myfield; ?> <?php $myfield = scf::get('性別');
+                                                                                                                                        echo $myfield; ?> / <?php $myfield = scf::get('職業');
+                                                                                                                                                            echo $myfield; ?> / <?php $myfield = scf::get('出身地');
+                                                                                                                                                                                echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
+                                                                                                                                                                                                      echo $myfield; ?>" loading="lazy" width="101" height="101">
+                <?php elseif ($status == '女性') : ?>
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/voice/voice-icon01.svg" alt="<?php $myfield = scf::get('年齢');
+                                                                                                                      echo $myfield; ?> <?php $myfield = scf::get('性別');
+                                                                                                                                        echo $myfield; ?> / <?php $myfield = scf::get('職業');
+                                                                                                                                                            echo $myfield; ?> / <?php $myfield = scf::get('出身地');
+                                                                                                                                                                                echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
+                                                                                                                                                                                                      echo $myfield; ?>" loading="lazy" width="101" height="101">
+                <?php endif; ?>
+                <p class="voice__card-ttl">
+                  <?php $myfield = scf::get('年齢');
+                  echo $myfield; ?> <?php $myfield = scf::get('性別');
+                                    echo $myfield; ?> <?php $myfield = scf::get('出身地');
+                                                      echo $myfield; ?> / <?php $myfield = scf::get('職業');
+                                                                          echo $myfield; ?><br>
+                  活動期間<?php $myfield = scf::get('活動期間');
+                      echo $myfield; ?>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-       <?php
-endforeach;
-wp_reset_postdata();
-?>
+        <?php
+        endforeach;
+        wp_reset_postdata();
+        ?>
       </div>
 
 

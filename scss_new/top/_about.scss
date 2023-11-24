@@ -47,6 +47,38 @@
         }
     }
 
+    &__text {
+      margin-bottom: 30px;
+      padding: 0 20px;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: justify;
+      font-family: $font-mincho;
+
+      @include mq("tablet") {
+        margin-bottom: 60px;
+        padding: 0;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+
+    &__br-sp {
+      margin-bottom: 10px;
+
+      @include mq("tablet") {
+        margin: 0;
+      }
+    }
+
+    &__br-pc {
+      display: none;
+
+      @include mq("tablet") {
+        display: block;
+      }
+    }
+
     &__desc {
         font-size: 1.6rem;
         line-height: 1.5;

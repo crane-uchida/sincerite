@@ -357,6 +357,157 @@
 
 // PLAN
 
+.i-plan {
+  padding: 80px 20px;
+  
+  @include mq("tablet") {
+    max-width: 1175px;
+    margin: 0 auto;
+    padding: 80px 0 130px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: $font-mincho;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.6;
+
+    @include mq("tablet") {
+      font-size: 26px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    @include mq("tablet") {
+      flex-direction: row;
+      gap: 40px;
+    }
+  }
+
+  &__item--card {
+    display: flex;
+    height: 242px;
+
+    @include mq("tablet") {
+      flex-direction: row;
+      height: 370px;
+    }
+  }
+
+  &__item--picture {
+
+    &-image {
+      max-width: 137px;
+      height: 100%;
+      border-radius: 4px 0 0 4px;
+
+      @include mq("tablet") {
+        max-width: 230px;
+      }
+    }
+  }
+
+  &__item--list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 30px 10px;
+    border-radius: 0 4px 4px 0;
+
+    @include mq("tablet") {
+      padding: 40px 30px;
+    }
+
+    &-link {
+      opacity: 1;
+      transition: all 1.0s linear;
+
+      :hover{
+        @media (hover: hover) and (pointer: fine) {
+          // opacity: .5;
+          color: rgba($color: $color-white, $alpha: 0.6);
+        }
+      }
+    }
+
+    &-arrow {
+      position: relative;
+
+      @include mq("tablet") {
+        margin-bottom: 10px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-image: url(./../../images_new/introduction/arw-black.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include mq("tablet") {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+
+    &-main,
+    &-sub {
+      color: $color-white;
+      font-family: $font-mincho;
+      font-size: 16px;
+      line-height: 1.4;
+      text-decoration: none;
+
+      @include mq("tablet") {
+        font-size: 24px;
+      }
+    }
+
+    &-main {
+      display: block;
+    }
+
+    &-note {
+      font-size: 12px;
+
+      @include mq("tablet") {
+        font-size: 16px;
+      }
+    }
+
+    &-text {
+      text-decoration: underline;
+    }
+
+    &-dr {
+      letter-spacing: -1px;
+    }
+  }
+
+  &__item--men {
+    background-color: #333333;
+  }
+
+  &__item--women {
+    background-color: #EB88A2;
+  }
+
+}
+
 .intro-plan {
     padding: 80px 0 80px;
 
