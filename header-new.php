@@ -190,7 +190,7 @@
 
             <div class="header__nav-top">
               <div class="header__nav-list-wrapper">
-                <a href="<?php echo get_site_url(); ?>" class="header__nav-list-heading">トップページ</a>
+                <a href="<?php echo get_site_url(); ?>" class="header__nav-list-heading">東京・表参道の結婚相談所 サンセリテ青山</a>
 
                 <ul class="header__nav-list">
                   <li>
@@ -200,19 +200,22 @@
                     <a href="<?php echo get_site_url(); ?>/faq/" class="header__nav-link">よくある質問</a>
                   </li>
                   <li>
-                    <a href="<?php echo get_site_url(); ?>/access/" class="header__nav-link">店舗案内（アクセス）</a>
+                    <a href="<?php echo get_site_url(); ?>/access/" class="header__nav-link">店舗案内（東京・表参道）</a>
                   </li>
                   <li>
-                    <a href="<?php echo get_site_url(); ?>/voice/" class="header__nav-link">ご成婚されたお客様の声</a>
+                    <a href="<?php echo get_site_url(); ?>/voice/" class="header__nav-link">ご成婚されたお客様の体験談</a>
                   </li>
                   <li>
                     <a href="<?php echo get_site_url(); ?>/news/" class="header__nav-link">お知らせ</a>
                   </li>
                   <li>
-                    <a href="<?php echo get_site_url(); ?>/company/" class="header__nav-link">会社概要</a>
+                    <a href="<?php echo get_site_url(); ?>/company/" class="header__nav-link">運営会社</a>
                   </li>
                   <li>
                     <a href="<?php echo get_site_url(); ?>/party/" class="header__nav-link">お見合いパーティーレポート</a>
+                  </li>
+                  <li>
+                    <a href="<?php echo get_site_url(); ?>/seminar/" class="header__nav-link">自分磨きセミナーレポート</a>
                   </li>
                   <li>
                     <a href="https://www.club-sincerite.co.jp/column/" class="header__nav-link">婚活コラム</a>
@@ -465,7 +468,7 @@
                     <a href="<?php echo get_site_url(); ?>/access/">店舗情報</a>
                   </li>
                   <li>
-                    <a href="<?php echo get_site_url(); ?>/company/">会社概要</a>
+                    <a href="<?php echo get_site_url(); ?>/company/">運営会社</a>
                   </li>
                   <li>
                     <a href="<?php echo get_site_url(); ?>/recruit/">採用情報</a>
@@ -515,10 +518,13 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="<?php echo get_site_url(); ?>/voice/"><span>ご成婚されたお客様の声</span></a>
+                  <a href="<?php echo get_site_url(); ?>/voice/"><span>ご成婚されたお客様の体験談</span></a>
                 </li>
                 <li>
                   <a href="<?php echo get_site_url(); ?>/party/"><span>お見合いパーティーレポート</span></a>
+                </li>
+                <li>
+                  <a href="<?php echo get_site_url(); ?>/seminar/"><span>自分磨きセミナーレポート</span></a>
                 </li>
                 <li>
                   <a href="<?php echo get_site_url(); ?>/interview/"><span>ゲストインタビュー</span></a>

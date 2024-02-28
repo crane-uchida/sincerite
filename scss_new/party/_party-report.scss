@@ -88,10 +88,10 @@
         }
 
         &-content {
-            padding: 42px 0 0;
+            padding: 32px 0 0;
 
             @include mq("tablet") {
-                padding: 100px 0 130px;
+                padding: 96px 0 128px;
             }
 
             &-wrapper {
@@ -142,15 +142,15 @@
                 position : relative;
 
                 &:not(:last-of-type) {
-                    margin-bottom: 30px;
+                    margin-bottom: 32px;
                 }
 
                 &-outer {
-                    padding: 20px;
+                    padding: 24px;
                     transition: all 0.3s ease;
 
                     @include mq("tablet") {
-                        padding: 60px 225px 0px 70px;
+                        padding: 64px 225px 0px 64px;
                     }
 
                     &::after {
@@ -561,4 +561,88 @@
             }
         }
     }
+}
+
+.seminar {
+	&__br-sp {
+		display: block;
+		@include mq("tablet") {
+			display: none;
+		}
+	}
+
+	.high-class__wrapper {
+		.report__text--justify {
+			@include mq("tablet") {
+				text-align: center;
+			}
+		}
+	}
+
+	.intro-nav {
+		padding: 32px 0 64px;
+	}
+
+	.high-class__ttl {
+		text-align: center;
+	}
+
+	&__container-1280 {
+		padding: 0 24px;
+
+		@include mq("tablet") {
+			padding: 0;
+		}
+	}
+
+	.party__company-relation-content{
+
+		@include mq("tablet") {
+			padding: 115px 135px 130px 70px;
+		}
+	}
+
+	&__company-relation-content {
+		img {
+			opacity: 0.8;
+		}
+	}
+
+	.strength-point__row {
+		margin: 0;
+	}
+
+	.strength-point__col-sm {
+		margin: 0 0 32px;
+		
+		@include mq("tablet") {
+			margin: 0;
+		}
+	}
+
+	.strength-point__desc {
+		margin: 0;
+	}
+
+	&__report {
+		.party__report-content-details {
+			p {
+				&:not(:last-of-type) {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+}
+
+.report {
+	&__text--justify {
+		text-align: justify;
+	}
 }
