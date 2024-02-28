@@ -2,11 +2,6 @@
 @use "../abstracts/variables" as *;
 
 .interview {
-    margin-top: 20px;
-
-    @include mq("tablet") {
-        margin-top: 130px;
-    }
 
     &__main-ttl-box {
         display        : flex;

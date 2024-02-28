@@ -1,22 +1,27 @@
 <?php
 /*
 Template Name: ゲストインタビュー
-*/?>
+*/ ?>
 <?php get_header('new'); ?>
-    <?php remove_filter('the_content', 'wpautop'); ?>
+<?php remove_filter('the_content', 'wpautop'); ?>
 <div class="breadcrumb">
   <div class="container-1280">
-    <ul class="breadcrumb-ul">
-      <li class="breadcrumb-li">
-        <a href="<?php echo get_site_url(); ?>" class="breadcrumb-link -home">HOME</a>
-      </li>
-      <li class="breadcrumb-li">
-        <a href="<?php echo get_site_url(); ?>/interview/" class="breadcrumb-link ">ゲストインタビュー</a>
-      </li>
-      <li class="breadcrumb-li">
-        <a href="#" class="breadcrumb-link -active"><?php $myfield = scf::get('pankuzu-ttl'); echo $myfield; ?></a>
-      </li>
-    </ul>
+    <div class="breadcrumb-content -interview">
+      <ul class="breadcrumb-ul">
+        <li class="breadcrumb-li">
+          <a href="<?php echo get_site_url(); ?>" class="breadcrumb-link">東京・表参道の結婚相談所 サンセリテ青山</a>
+        </li>
+      </ul>
+      <ul class="breadcrumb-ul">
+        <li class="breadcrumb-li">
+          <a href="<?php echo get_site_url(); ?>/interview/" class="breadcrumb-link ">ゲストインタビュー</a>
+        </li>
+        <li class="breadcrumb-li">
+          <a href="#" class="breadcrumb-link -active"><?php $myfield = scf::get('pankuzu-ttl');
+                                                      echo $myfield; ?></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 <main id="main" class="main">
@@ -33,7 +38,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-01.jpg" width="270" height="180" loading="lazy" alt="第9回 自分をさらけ出せるのが結婚の良さ" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第9回 自分をさらけ出せるのが結婚の良さ</h3>
 
@@ -47,7 +52,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-02.jpg" width="270" height="180" loading="lazy" alt="第8回 「たし算」の出逢いが結婚へとつながる" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第8回 「たし算」の出逢いが結婚へとつながる</h3>
 
@@ -63,7 +68,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-03.jpg" width="270" height="180" loading="lazy" alt="第7回 仕事への本音のアドバイスは夫婦の信頼関係あってこそ" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第7回 仕事への本音のアドバイスは夫婦の信頼関係あってこそ</h3>
 
@@ -77,7 +82,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-04.jpg" width="270" height="180" loading="lazy" alt="第6回 常連のお店が3軒あれば自分のペースで出逢いを演出できる" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第6回 常連のお店が3軒あれば自分のペースで出逢いを演出できる</h3>
 
@@ -93,7 +98,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-05.jpg" width="270" height="180" loading="lazy" alt="第5回 より崇高な、社会的責任を全うできるのが「結婚」です" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第5回 より崇高な、社会的責任を全うできるのが「結婚」です</h3>
 
@@ -109,7 +114,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-06.jpg" width="270" height="180" loading="lazy" alt="第4回 住まい造りと結婚の共通項は「自分を振り返る作業」" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第4回 住まい造りと結婚の共通項は「自分を振り返る作業」</h3>
 
@@ -125,7 +130,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-07.jpg" width="270" height="180" loading="lazy" alt="第3回 相手の心をつかむ「交渉術」" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第3回 相手の心をつかむ「交渉術」</h3>
 
@@ -139,7 +144,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-08.jpg" width="270" height="180" loading="lazy" alt="第2回 出逢いと食の密接な関係" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第2回 出逢いと食の密接な関係</h3>
 
@@ -154,7 +159,7 @@ Template Name: ゲストインタビュー
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/guest/guest-09.jpg" width="270" height="180" loading="lazy" alt="第1回 結婚を決めるとき、決めたい相手とは" class="img-fluid">
               </div>
               <div class="interview__cntn">
-                
+
 
                 <h3 class="gst__ttl">第1回 結婚を決めるとき、決めたい相手とは</h3>
 

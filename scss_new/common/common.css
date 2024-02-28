@@ -1520,6 +1520,31 @@ body {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .breadcrumb .-interview {
+    padding-top: 110px;
+  }
+}
+.breadcrumb-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  padding: 11px 0;
+}
+@media only screen and (min-width: 768px) {
+  .breadcrumb-content {
+    gap: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .breadcrumb-ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1527,7 +1552,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 11px 0;
 }
 .breadcrumb-li {
   display: -webkit-box;
@@ -1593,30 +1617,28 @@ body {
   text-decoration: underline;
   position: relative;
   font-size: 0;
+  /*             &::before {
+                  position: absolute;
+                  content: "";
+                  width: 15px;
+                  height: 12px;
+                  background-image: url(./../../images_new/common/home.svg);
+                  background-position: center;
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  left: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+
+                  @include mq("tablet") {
+                      height: 13px;
+                  }
+              } */
 }
 @media only screen and (min-width: 768px) {
   .breadcrumb-link.-home {
     font-size: 1.2rem;
     padding-left: 23px;
-  }
-}
-.breadcrumb-link.-home::before {
-  position: absolute;
-  content: "";
-  width: 15px;
-  height: 12px;
-  background-image: url(./../../images_new/common/home.svg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-@media only screen and (min-width: 768px) {
-  .breadcrumb-link.-home::before {
-    height: 13px;
   }
 }
 .breadcrumb-link.-home:hover {
@@ -4073,9 +4095,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 0 127px;
@@ -9928,14 +9950,6 @@ body {
   }
 }
 
-.interview {
-  margin-top: 20px;
-}
-@media only screen and (min-width: 768px) {
-  .interview {
-    margin-top: 130px;
-  }
-}
 .interview__main-ttl-box {
   display: -webkit-box;
   display: -ms-flexbox;
