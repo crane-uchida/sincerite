@@ -73,13 +73,14 @@
     &__desc {
         font-size     : 1.4rem;
         letter-spacing: 0.05em;
-        line-height   : 1.7;
-        text-align    : left;
+        line-height   : calc(24 / 14);
+				text-align: justify;
 
         @include mq("tablet") {
             font-size  : 1.6rem;
             line-height: 2;
             text-align : center;
+						line-height   : calc(30 / 16);
         }
 
         strong {

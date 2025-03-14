@@ -107,14 +107,15 @@
 .high-class__desc {
   font-size: 1.4rem;
   letter-spacing: 0.05em;
-  line-height: 1.7;
-  text-align: left;
+  line-height: calc(24 / 14);
+  text-align: justify;
 }
 @media only screen and (min-width: 768px) {
   .high-class__desc {
     font-size: 1.6rem;
     line-height: 2;
     text-align: center;
+    line-height: calc(30 / 16);
   }
 }
 .high-class__desc strong {
@@ -758,9 +759,10 @@
 }
 .strength-point__desc {
   font-size: 1.4rem;
-  line-height: 24px;
+  line-height: calc(30 / 16);
   letter-spacing: 0.05em;
   margin-top: 16px;
+  text-align: justify;
 }
 @media only screen and (min-width: 768px) {
   .strength-point__desc {
@@ -1533,9 +1535,10 @@
 }
 .reason__desc {
   font-size: 1.4rem;
-  line-height: 2;
+  line-height: calc(30 / 16);
   letter-spacing: 0.05em;
   margin-top: 20px;
+  text-align: justify;
 }
 @media only screen and (min-width: 768px) {
   .reason__desc {

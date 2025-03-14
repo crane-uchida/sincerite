@@ -382,6 +382,165 @@ Template Name: トップページ
     </div>
   </div>
 
+  <!-- REVIEW -->
+  <div class="review">
+    <div class="container">
+      <h2 class="heading-primary">
+        <span class="heading-primary-en">REVIEW</span>
+        <span class="heading-primary-jp">クチコミ</span>
+      </h2>
+
+      <div class="review__warapper review__detail">
+        <div class="review__detail-heading">
+          <div class="review__detail-logo">
+            <img class="review__detail-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/review/review-ekiten.svg" alt="エキテンのロゴ">
+          </div>
+          <div class="review__detail-value">
+            3.27
+          </div>
+        </div>
+        <div class="review__detail-evaluate">
+          <div class="review__detail-name">
+            結婚相談所 サンセリテ青山
+          </div>
+          <div class="review__evaluate">
+            <div class="review__star">
+              <span class="review__star-color">★★★</span><span class="review__star-color">★★</span>
+            </div>
+            <div class="review__value">
+              <span class="review__detail-star-value">21</span><span class="review__detail-star-value">件のクチコミ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="review__outer">
+        <li class="review__warapper">
+          <div class="review__information">
+            <div class="review__information-heading">
+              <div class="review__information-icon">
+                <img class="review__information-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/review/review-icon.svg" alt="ユーザーアイコン">
+              </div>
+              <div class="review__information-name">
+                MAI<span class="review__small">さん</span>
+              </div>
+            </div>
+            <div class="review__information-detail">
+              <div class="review__star">
+                <span class="review__star-color">★★★★★</span>
+                <span class="review__star-value">5.00</span>
+              </div>
+              <div class="review__information-date">
+                <span class="review__information-date-bold">投稿日</span>
+                <span class="review__information-date-value">2024/04/15</span>
+              </div>
+            </div>
+          </div>
+          <dl class="review__container">
+            <div class="review__user">
+              <dt class="review__heading">
+                成婚しました。
+              </dt>
+              <dd class="review__text">
+                サンセリテ青山さんにお世話になり、活動７ヶ月で成婚退会することができました。活動中は専属のベテランカウンセラーさんが担当してくれて、お相手に対する不安や不満、直接関係ないようなちょっとした愚痴にまで親身になって聞いてくれました。そんなカウンセラーさんのサポートもあって素敵な方に巡り会えて成婚退会することができたので、サンセリテ青山さんには感謝しかありません。本当にありがとうございました。
+              </dd>
+            </div>
+            <div class="review__reply">
+              <dt class="review__heading">
+                サンセリテ青山<span class="review__small">より</span>
+              </dt>
+              <dd class="review__text">
+                この度はご成婚誠におめでとうございます。コメントを頂戴致しまして誠にありがとうございます。活動中は本当に頑張って活動して頂いたからこそ、素敵なご縁を呼び寄せられたんだと思います。担当を含めスタッフ皆、お二人の結婚式のお写真を楽しみに致しております。また職場や友人の中で結婚を望む方がいらっしゃいましたら、是非ともご紹介下さいませ。お二人で明るく、幸せな家庭を築いてください。
+              </dd>
+            </div>
+          </dl>
+        </li>
+        <li class="review__warapper">
+          <div class="review__information">
+            <div class="review__information-heading">
+              <div class="review__information-icon">
+                <img class="review__information-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/review/review-icon.svg" alt="ユーザーアイコン">
+              </div>
+              <div class="review__information-name">
+                きやん<span class="review__small">さん</span>
+              </div>
+            </div>
+            <div class="review__information-detail">
+              <div class="review__star">
+                <span class="review__star-color">★★★★★</span>
+                <span class="review__star-value">5.00</span>
+              </div>
+              <div class="review__information-date">
+                <span class="review__information-date-bold">投稿日</span>
+                <span class="review__information-date-value">2024/01/08</span>
+              </div>
+            </div>
+          </div>
+          <dl class="review__container">
+            <div class="review__user">
+              <dt class="review__heading">
+                サポート体制が万全
+              </dt>
+              <dd class="review__text">
+                年齢的に結婚を真剣に考え入会しました。女性側の入会費が少々高い結婚相談所ですが、サポート体制が万全でした。カウンセラーの方はとても細かくアドバイスをくださり、本当に些細な会話のとっつき方や服装など、こんなことまで相談していいの？という所まで相談にのってくださいました。最初はなかなかうまくいきませんでしたが、カウンセラーの方がその度にアドバイスをくださり成婚に辿り着きました。その説は本当にありがとうございます。
+              </dd>
+            </div>
+            <div class="review__reply">
+              <dt class="review__heading">
+                サンセリテ青山<span class="review__small">より</span>
+              </dt>
+              <dd class="review__text">
+                口コミの投稿ありがとうございます。異性との出会いについて、些細な事から何でも相談して頂けて、アドバイスを実践して頂けた事が良い結果に繋がったのではないかなと存じます。ご成婚、誠におめでとうございます。
+              </dd>
+            </div>
+          </dl>
+        </li>
+        <li class="review__warapper">
+          <div class="review__information">
+            <div class="review__information-heading">
+              <div class="review__information-icon">
+                <img class="review__information-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/top/review/review-icon.svg" alt="ユーザーアイコン">
+              </div>
+              <div class="review__information-name">
+                umi<span class="review__small">さん</span>
+              </div>
+            </div>
+            <div class="review__information-detail">
+              <div class="review__star">
+                <span class="review__star-color">★★★★</span><span class="review__star-color">★</span>
+                <span class="review__star-value">4.00</span>
+              </div>
+              <div class="review__information-date">
+                <span class="review__information-date-bold">投稿日</span>
+                <span class="review__information-date-value">2024/04/15</span>
+              </div>
+            </div>
+          </div>
+          <dl class="review__container">
+            <div class="review__user">
+              <dt class="review__heading">
+                カウンセラーさんが熱心な結婚相談所
+              </dt>
+              <dd class="review__text">
+                過去にも結婚相談所を利用しましたが、その時は良い出会いが無く、今回は2度目の結婚相談所での活動でした。入会後も都度お見合い料はかかるので、どの程度活動を継続するのか悩みましたが、カウンセラーさんが熱心だったので継続してもうすぐ6ヶ月になります。前の相談所に比べてカウンセラーの方のケアが細かいと感じたので、そういった対応を希望している人には良い結婚相談所だと思います。毎月誰かと出会えるという事ではありませんでしたが、先月出会えた方と交際に発展できたので、このまま良い報告ができることを願っています！
+              </dd>
+            </div>
+            <div class="review__reply">
+              <dt class="review__heading">
+                サンセリテ青山<span class="review__small">より</span>
+              </dt>
+              <dd class="review__text">
+                umiさん嬉しいコメントを投稿頂きありがとうございました。良い出会いに巡り合えますように、引き続き活動サポートを尽力致します。またいつでも面談へお越しくださいませ。どうぞよろしくお願い致します。
+              </dd>
+            </div>
+          </dl>
+        </li>
+      </ul>
+
+      <a href="<?php echo get_site_url(); ?>#" class="btn-primary">もっと見る</a>
+    </div>
+  </div>
+
   <!-- DATA -->
   <div class="data">
     <div class="container">
