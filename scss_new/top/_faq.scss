@@ -196,7 +196,7 @@
         flex-basis: 94%;
         font-size: 1.4rem;
         color: $color-black;
-        line-height: 1.6;
+        line-height: calc(30 / 16);
         letter-spacing: 0.05em;
 
         span {

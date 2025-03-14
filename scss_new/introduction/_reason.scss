@@ -340,9 +340,10 @@
 
     &__desc {
         font-size: 1.4rem;
-        line-height: 2;
+        line-height: calc(30 / 16);
         letter-spacing: 0.05em;
         margin-top: 20px;
+				text-align: justify;
 
         @include mq("tablet") {
             font-size: 1.6rem;
