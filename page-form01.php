@@ -24,8 +24,8 @@ get_header('new'); ?>
 </div>
 
 <div class="request-mv">
-  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/reserve-main-sp.jpg" alt="無料カウンセリング、マッチングのご体験" class="only-sp" width="900" hieght="510">
-  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/reserve-main.jpg" alt="無料カウンセリング、マッチングのご体験" class="pc" width="900" hieght="510" style="margin: auto">
+  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/reserve-main_sp.jpg" alt="無料カウンセリング、マッチングのご体験" class="only-sp" width="900" hieght="510">
+  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/reserve-main_pc.jpg" alt="無料カウンセリング、マッチングのご体験" class="pc" width="900" hieght="510" style="margin: auto">
 </div>
 <div class="form-flow">
   <img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/form/nyuryoku-sp.png" alt="01情報のご入力" class="only-sp">
