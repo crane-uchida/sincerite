@@ -1366,7 +1366,7 @@ body {
   background: #FFF;
 }
 .p-lp2504__difference-headline-text {
-  font-size: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+  font-size: clamp(1.125rem, 1.061rem + 0.3vw, 1.25rem);
 }
 .p-lp2504__difference-text {
   position: relative;
