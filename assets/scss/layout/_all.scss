@@ -1,0 +1,23 @@
+@use "../foundation/"as *;
+@use "../global/"as *;
+
+
+// ---------- all ---------- //
+
+.l-sp {
+  display: none;
+
+  @media #{$rwd} {
+    display: block;
+  }
+}
+
+.l-pc {
+  display: block;
+
+  @media #{$rwd} {
+    display: none;
+  }
+}
+
+// ---------- all end ---------- //

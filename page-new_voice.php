@@ -92,29 +92,31 @@ Template Name: NEW_お客様の声
 															<?php if ($status == '男性') : ?>
 																<img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/gratitude/person-male.png" alt="<?php $myfield = scf::get('年齢');
 																																																																		echo $myfield; ?> <?php $myfield = scf::get('性別');
-																																																																											echo $myfield; ?> / <?php $myfield = scf::get('職業');
-																																																																																					echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
-																																																																																																																echo $myfield; ?>" loading="lazy" width="107" height="107">
+																																																																																											echo $myfield; ?> / <?php $myfield = scf::get('職業');
+																																																																																																																						echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
+																																																																																																																																																	echo $myfield; ?>" loading="lazy" width="107" height="107">
 															<?php elseif ($status == '女性') : ?>
 																<img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/gratitude/person-01.png" alt="<?php $myfield = scf::get('年齢');
 																																																																	echo $myfield; ?> <?php $myfield = scf::get('性別');
-																																																																										echo $myfield; ?> / <?php $myfield = scf::get('職業');
-																																																																																				echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
-																																																																																																																echo $myfield; ?>" loading="lazy" width="107" height="107">
+																																																																																										echo $myfield; ?> / <?php $myfield = scf::get('職業');
+																																																																																																																					echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
+																																																																																																																																																echo $myfield; ?>" loading="lazy" width="107" height="107">
 															<?php endif; ?>
+
 															<div class="grat__detail">
 																<h3 class="grat__date">
 																	<?php $myfield = scf::get('ご成婚日');
 																	echo $myfield; ?> ご成婚<br>
 																	<?php $myfield = scf::get('年齢');
 																	echo $myfield; ?> <?php $myfield = scf::get('性別');
-																										echo $myfield; ?> <?php $myfield = scf::get('出身地');
-																																			echo $myfield; ?>
+																																											echo $myfield; ?> <?php $myfield = scf::get('出身地');
+																																																																				echo $myfield; ?>
 																</h3>
 																<p class="grat__txt">ご職業：<?php $myfield = scf::get('職業');
 																													echo $myfield; ?><span>活動期間：<?php $myfield = scf::get('活動期間');
-																																											echo $myfield; ?></span></p>
+																																																											echo $myfield; ?></span></p>
 															</div>
+
 														</div>
 														<p class="grat__desc"><?php $customfield = SCF::get('本文テキスト');
 																									echo nl2br($customfield); ?>
@@ -123,29 +125,37 @@ Template Name: NEW_お客様の声
 														<?php $customfield = get_post_meta($post->ID, '手書き画像', true) ?>
 														<?php if (!empty($customfield)) : ?>
 															<div class="grat__tabs-col-sm">
+
 																<figure class="grat__fig d-none d-md-flex">
 																	<?php $status = SCF::get('性別'); ?>
 																	<?php if ($status == '男性') : ?>
 																		<figcaption class="grat__fig-capt men">
-																			実際の<br class="d-none d-md-block">喜びの声
+																			実際の<br class="d-none d-md-block">
+																			喜びの声
 																		</figcaption>
 																	<?php elseif ($status == '女性') : ?>
 																		<figcaption class="grat__fig-capt">
-																			実際の<br class="d-none d-md-block">喜びの声
+																			実際の<br class="d-none d-md-block">
+																			喜びの声
 																		</figcaption>
 																	<?php endif; ?>
 																	<img src="<?php $myfield = scf::get('手書き画像');
 																						echo wp_get_attachment_url($myfield); ?>" width="299" height="424" loading="lazy" alt="" class="img-fluid">
 																</figure>
+
 																<div class="grat__modal-btn-wpr">
 																	<a class="grat__modal-btn btn-pic-modal d-md-none">直筆のお手紙を見る</a>
 																</div>
+
+
 															</div>
 															<?php else : ?><?php endif; ?>
 													</div>
+
 													<div class="grat__msg-box">
 														<p class="grat__msg acc-btn">
-															カウンセラー<br class="d-none d-md-block">メッセージ
+															カウンセラー<br class="d-none d-md-block">
+															メッセージ
 															<?php $status = SCF::get('性別'); ?>
 															<?php if ($status == '男性') : ?>
 																<span class="mn">
@@ -155,6 +165,7 @@ Template Name: NEW_お客様の声
 																</span>
 															<?php endif; ?>
 														</p>
+
 														<p class="grat__msg-txt acc-cnt">
 															<span class="grat__msg-txt-span">
 																<?php $customfield = SCF::get('コンシェルジュメッセージ');
@@ -215,15 +226,15 @@ Template Name: NEW_お客様の声
 																<?php if ($status == '男性') : ?>
 																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/gratitude/person-male.png" alt="<?php $myfield = scf::get('年齢');
 																																																																			echo $myfield; ?> <?php $myfield = scf::get('性別');
-																																																																												echo $myfield; ?> / <?php $myfield = scf::get('職業');
-																																																																																						echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
-																																																																																																																		echo $myfield; ?>" loading="lazy" width="107" height="107">
+																																																																																												echo $myfield; ?> / <?php $myfield = scf::get('職業');
+																																																																																																																							echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
+																																																																																																																																																		echo $myfield; ?>" loading="lazy" width="107" height="107">
 																<?php elseif ($status == '女性') : ?>
 																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/gratitude/person-01.png" alt="<?php $myfield = scf::get('年齢');
 																																																																		echo $myfield; ?> <?php $myfield = scf::get('性別');
-																																																																											echo $myfield; ?> / <?php $myfield = scf::get('職業');
-																																																																																					echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
-																																																																																																																		echo $myfield; ?>" loading="lazy" width="107" height="107">
+																																																																																											echo $myfield; ?> / <?php $myfield = scf::get('職業');
+																																																																																																																						echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
+																																																																																																																																																	echo $myfield; ?>" loading="lazy" width="107" height="107">
 																<?php endif; ?>
 
 																<div class="grat__detail">
@@ -232,12 +243,12 @@ Template Name: NEW_お客様の声
 																		echo $myfield; ?> ご成婚<br>
 																		<?php $myfield = scf::get('年齢');
 																		echo $myfield; ?> <?php $myfield = scf::get('性別');
-																											echo $myfield; ?> <?php $myfield = scf::get('出身地');
-																																				echo $myfield; ?>
+																																												echo $myfield; ?> <?php $myfield = scf::get('出身地');
+																																																																					echo $myfield; ?>
 																	</h3>
 																	<p class="grat__txt">ご職業：<?php $myfield = scf::get('職業');
 																														echo $myfield; ?><span>活動期間：<?php $myfield = scf::get('活動期間');
-																																												echo $myfield; ?></span></p>
+																																																												echo $myfield; ?></span></p>
 																</div>
 
 															</div>
@@ -332,15 +343,15 @@ Template Name: NEW_お客様の声
 																	<?php if ($status == '男性') : ?>
 																		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/gratitude/person-male.png" alt="<?php $myfield = scf::get('年齢');
 																																																																				echo $myfield; ?> <?php $myfield = scf::get('性別');
-																																																																													echo $myfield; ?> / <?php $myfield = scf::get('職業');
-																																																																																							echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
-																																																																																																																				echo $myfield; ?>" loading="lazy" width="107" height="107">
+																																																																																													echo $myfield; ?> / <?php $myfield = scf::get('職業');
+																																																																																																																								echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
+																																																																																																																																																			echo $myfield; ?>" loading="lazy" width="107" height="107">
 																	<?php elseif ($status == '女性') : ?>
 																		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images_new/gratitude/person-01.png" alt="<?php $myfield = scf::get('年齢');
 																																																																			echo $myfield; ?> <?php $myfield = scf::get('性別');
-																																																																												echo $myfield; ?> / <?php $myfield = scf::get('職業');
-																																																																																						echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
-																																																																																																																				echo $myfield; ?>" loading="lazy" width="107" height="107">
+																																																																																												echo $myfield; ?> / <?php $myfield = scf::get('職業');
+																																																																																																																							echo $myfield; ?> 活動期間<?php $myfield = scf::get('活動期間');
+																																																																																																																																																		echo $myfield; ?>" loading="lazy" width="107" height="107">
 																	<?php endif; ?>
 
 																	<div class="grat__detail">
@@ -349,12 +360,12 @@ Template Name: NEW_お客様の声
 																			echo $myfield; ?> ご成婚<br>
 																			<?php $myfield = scf::get('年齢');
 																			echo $myfield; ?> <?php $myfield = scf::get('性別');
-																												echo $myfield; ?> <?php $myfield = scf::get('出身地');
-																																					echo $myfield; ?>
+																																													echo $myfield; ?> <?php $myfield = scf::get('出身地');
+																																																																						echo $myfield; ?>
 																		</h3>
 																		<p class="grat__txt">ご職業：<?php $myfield = scf::get('職業');
 																															echo $myfield; ?><span>活動期間：<?php $myfield = scf::get('活動期間');
-																																													echo $myfield; ?></span></p>
+																																																													echo $myfield; ?></span></p>
 																	</div>
 
 																</div>

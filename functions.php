@@ -779,6 +779,7 @@ function add_prev_post_link_class($output) {
 return str_replace('<a href=', '<a class="news-detail__arw -prev" href=', $output); 
 }
 add_filter( 'previous_post_link', 'add_prev_post_link_class' );
+include('images/form/firstview_sp.svg');
 function add_next_post_link_class($output) {
 return str_replace('<a href=', '<a class="news-detail__arw -next" href=', $output); 
 }

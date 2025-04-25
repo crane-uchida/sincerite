@@ -672,7 +672,9 @@ input.wpcf7-not-valid, textarea.wpcf7-not-valid, select.wpcf7-not-valid {
 <script>
  // 完了ページ
 document.addEventListener( 'wpcf7mailsent', function( event ) {
-    location = 'https://www.club-sincerite.co.jp/partnertest/partnertest-thanks/';
+
+    location = 'https://www.club-sincerite.co.jp/partnertest/partnertest-thanks/?<?php echo ($post->post_name === 'partnertest-woman') ? 'women' : 'men'; ?>';
+	
 }, false );
  
 	//【リニューアル】メールアドレス入力欄をクリックすると、注意事項を表示させる。

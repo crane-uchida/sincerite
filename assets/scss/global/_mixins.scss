@@ -1,0 +1,17 @@
+@use "color" as *;
+
+// lp2504
+// 背景（方眼紙）
+@mixin bg-graphpaper {
+  background-color: $c_white;
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  background-position: center center;
+  border: 2px solid #D0D0D0;
+  border-radius: 10px;
+}
+// 背景（ストライプ）
+@mixin bg-stripe {
+  background: repeating-linear-gradient(90deg, $lp2504_base, $lp2504_base 20px, $c_white 20px, $c_white 40px);
+}

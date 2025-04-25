@@ -1,0 +1,1322 @@
+@use "../foundation/"as *;
+@use "../global/"as *;
+
+
+// ---------- all ---------- //
+
+  body{
+    overflow-x:hidden;
+    height: 100%;
+    touch-action: pan-y;
+  }
+
+.p-lp2504 {
+  
+  &__sp {
+    display: none;
+    
+    @media #{$p-lp_sp} {
+      display: block;
+    }
+  }
+  
+  &__pc {
+    display: block;
+    
+    @media #{$p-lp_sp} {
+      display: none;
+    }
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  img{
+    vertical-align:top;
+  }
+
+  &__left,
+  &__right,
+  &__header,
+  &__main,
+  &__footer {
+    // font-family: $font-gothic;
+    color: $t_gray;
+    font-size: responsiveFontSizeClamp(14, 16, 340, 1000);
+    font-weight: $fw_medium;
+    line-height: 2.1;
+  }
+
+  &__outer {
+    position: relative;
+    display: grid;
+    // grid-template-columns: 1fr 414px 1fr;
+  }
+
+  &__left, &__right {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: calc(50% - 201px);
+    height: 100vh;
+    padding: clamp(1.25rem, 0.606rem + 3.03vw, 2.5rem);
+    
+    @media screen and (max-width:1030px){
+      padding: 0;
+    }
+  }
+
+  // PC版 左側
+  &__left {
+    left: 0;
+    justify-content: right;
+    background: url(../images/lp2504/bg_pattern.png) repeat top left / 600px 600px, linear-gradient(to bottom, #a1d8db, #edf3f5);
+    
+    @media #{$p-lp_sp} {
+      display: none;
+    }
+  }
+
+  &__contents {
+    position: relative;
+    width: 310px;
+    margin-top: 10px;
+    padding: 40px 30px 30px;
+    @include bg-graphpaper;
+
+    @media screen and (max-width:1030px){
+      display: none;
+    }
+
+    &-headline {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &-image {
+        width: 127px;
+        transform: rotate(-4deg);
+      }
+    }
+  }
+
+  &__menu {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
+
+    &-item {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: left;
+      align-items: center;
+      font-size: responsiveFontSizeClamp(14, 14, 340, 1000);
+      font-weight: $fw_bold;
+
+      &-odd, &-even {
+        &::before {
+          content:"";
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+      }
+
+      &-odd {
+        &::before {
+          background: url(../images/lp2504/menu_icon-1.png) no-repeat;
+          background-size: 18px;
+        }
+      }
+
+      &-even {
+        &::before {
+          background: url(../images/lp2504/menu_icon-2.png) no-repeat;
+          background-size: 18px;
+        }
+      }
+    }
+
+    &-link {
+      display: block;
+      
+      @media (hover: hover) {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          // color: $lp2504_primary;
+          opacity: 0.5; 
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+
+  // PC版 右側
+  &__right {
+    right: 0;
+    justify-content: center;
+    background: url(../images/lp2504/bg_pattern.png) repeat top right / 600px 600px, linear-gradient(to bottom, #ffced0, #f5eded);
+
+    @media #{$p-lp_sp} {
+      display: none;
+    }
+
+    &-headline {
+      &-image {
+        width: 325px;
+      }
+
+      @media screen and (max-width:1030px){
+        display: none;
+      }
+    }
+  }
+
+  // PC版 メインコンテンツ
+  &__center {
+    width: 402px;
+    margin: 0 auto;
+    // background-color: #c5c5c5;
+    border-right: 6px solid $c_white;
+    border-left: 6px solid $c_white;
+    
+    @media #{$p-lp_sp} {
+      width: 100%;
+      border: none;
+    }
+  }
+
+  &__headline {
+    text-align: center;
+  }
+  
+  &__phrase {
+    font-size: responsiveFontSizeClamp(16, 16, 340, 1000);
+    font-weight: $fw_bold;
+    text-align: center;
+    
+    &-marker {
+      font-size: responsiveFontSizeClamp(18, 18, 340, 1000);
+      background: linear-gradient(transparent 50%, rgba(247, 209, 98, 0.5) 50%);
+    }
+  }
+
+  &__decoration {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 50px;
+    clip-path: polygon(0 0,100% 0, 50% 100%);
+
+    &-cta {
+      background-color: $lp2504_base;
+    }
+
+    &-form {
+      @include bg-stripe;
+    }
+  }
+
+  &__flow {
+    padding-bottom: 30px;
+  }
+}
+
+// ---------- all end ---------- //
+
+
+// ---------- header ---------- //
+
+.p-lp2504 {
+  &__header {
+    background-color: $lp2504_base;
+    // position: relative;
+
+    // ハンバーガーメニュー
+    .nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 390px;
+      margin: 0 auto;
+      z-index: 1;
+      
+      @media screen and (max-width:1030px){
+        display: block;
+      }
+      
+      @media #{$p-lp_sp} {
+        width: fit-content;
+        margin: 0 0;
+      }
+
+      // メニューのデザイン
+      &_content {
+        // width: 100%;
+        // height: 100%;
+        position: fixed;
+        top: 0;
+        left: 102%; // メニューを画面の外に飛ばす
+        z-index: 99;
+        background: #fff;
+        transition: .5s;
+        //
+        width: 390px;
+        height: 100svh;
+        padding: 90px 40px;
+        @include bg-graphpaper;
+        border: none;
+        border-radius: 0;
+        
+        @media #{$p-lp_sp} {
+          width: 100%;
+        }
+      }
+
+      &_list {
+        list-style: none;
+      }
+    }
+
+    // チェックボックスを非表示にする
+    .drawer_hidden {
+      display: none;
+    }
+    
+    // ハンバーガーアイコンの設置スペース
+    .drawer_open {
+      display: flex;
+      // height: 60px;
+      // width: 60px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 100; // 重なり順を一番上にする
+      cursor: pointer;
+      //
+      width: 46px;
+      height: 46px;
+      margin: 16px;
+      border: solid 2px #fff;
+      border-radius: 6px;
+      background-color: rgba(137, 206, 210, 0.6);
+
+      span {
+        // 三本線の一番上の棒の位置調整
+        &::before {
+          bottom: 8px;
+        }
+        
+        // 三本線の一番下の棒の位置調整
+        &::after {
+          top: 8px;
+        }
+      }
+    }
+    
+    // ハンバーガーメニューのアイコン
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 25px;
+      border-radius: 3px;
+      background: $c_white;
+      transition: 0.5s;
+      position: absolute;
+    }
+    
+    // メニューが開かれた時のアイコンの色
+    #drawer_input:checked ~ .drawer_open {
+      transition: 0.5s;
+      border: solid 2px #D0D0D0;
+      background-color: rgba(137, 206, 210, 0);
+    }
+    
+    //アイコンがクリックされたら真ん中の線を透明にする
+    #drawer_input:checked ~ .drawer_open span {
+      background: rgba(255, 255, 255, 0);
+    }
+    
+    // アイコンがクリックされたらアイコンが×印になように上下の線を回転
+    #drawer_input:checked ~ .drawer_open span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+      background-color: #D0D0D0;
+    }
+    
+    #drawer_input:checked ~ .drawer_open span::after {
+      top: 0;
+      transform: rotate(-45deg);
+      background-color: #D0D0D0;
+    }
+    
+    // アイコンがクリックされたらメニューを表示
+    #drawer_input:checked ~ .nav_content {
+      // left: 0; // メニューを画面に入れる
+      //
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      }
+
+}
+}
+// ---------- header end ---------- //
+
+
+// ---------- main ---------- //
+
+.p-lp2504 {
+  // メッセージ - message
+  &__message {
+    padding: 40px 30px 60px;
+    background-color: $lp2504_base;
+
+    .p-lp2504__headline {
+      margin-bottom: 30px;
+
+      &-image {
+        width: 276px;
+        
+        @media #{$p-lp_sp} {
+          width: 84%;
+        }
+      }
+    }
+
+    &-contents {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 10px;
+    }
+
+    &-text {
+      text-align: justify;
+    }
+
+    &-keyword {
+      text-align: center;
+    }
+
+    &-decoration {
+      font-size: responsiveFontSizeClamp(18, 18, 340, 1000);
+      font-weight: $fw_bold;
+
+      &-primary {
+        background: linear-gradient(transparent 50%, rgba(137, 206, 210, 0.5) 50%);
+      }
+
+      &-secondary {
+        background: linear-gradient(transparent 50%, rgba(255, 182, 185, 0.5) 50%);
+      }
+    }
+  }
+  
+  // そもそも結婚相談所って？婚活アプリって？ - instruction
+  &__instruction {
+    padding: 60px 0;
+    @include bg-stripe;
+    
+    .p-lp2504__headline {
+      margin-bottom: 40px;
+      
+      &-image {
+        width: 282px;
+        
+        @media #{$p-lp_sp} {
+          width: 72%;
+        }
+      }
+    }
+    
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    &-item {
+      position: relative;
+      display: flex;
+
+      &-odd {
+        justify-content: flex-end;
+      }
+
+      &-even {
+        justify-content: flex-start;
+      }
+    }
+
+    &-decoration {
+      position: absolute;
+      bottom: 0;
+
+      &-odd {
+        left: 0;
+        
+        @media #{$p-lp_sp} {
+          left: clamp(0rem, -4.405rem + 20.73vw, 2.125rem);
+        }
+      }
+
+      &-even {
+        right: 0;
+        
+        @media #{$p-lp_sp} {
+          right: clamp(0rem, -3.887rem + 18.29vw, 1.875rem);
+        }
+      }
+
+      &-image {
+        height: 460px;
+        
+        @media #{$p-lp_sp} {
+          height: 100%;
+          max-height: 390px;
+        }
+      }
+    }
+
+    &-contents {
+      width: 270px;
+      min-height: 480px;
+      padding: 40px 30px;
+      text-align: justify;
+      
+      @media #{$p-lp_sp} {
+        width: 70%;
+        height: 100%;
+        min-height: 390px;
+      }
+
+      &-odd {
+        background-color: $lp2504_secondary;
+        border-radius: 30px 0 0 30px;
+      }
+
+      &-even {
+        background-color: $lp2504_tertiary;
+        border-radius: 0 30px 30px 0;
+      }
+    }
+
+    &-headline {
+      width: fit-content;
+      margin-bottom: 10px;
+      padding: 4px 14px 0;
+      background-color: $c_white;
+      font-size: responsiveFontSizeClamp(18, 18, 340, 1000);
+      font-weight: $fw_bold;
+      border-radius: 4px;
+
+      &-odd {
+        color: #399CA1;
+      }
+
+      &-even {
+        color: #FF434A;
+      }
+    }
+
+    &-subheadline {
+      margin-bottom: 20px;
+      color: $c_white;
+      font-size: responsiveFontSizeClamp(16, 16, 340, 1000);
+      font-weight: $fw_bold;
+    }
+
+    &-text {
+      color: $c_white;
+      text-align: justify;
+    }
+  }
+
+  // もっと知りたい！結婚相談所と婚活アプリの違い - difference
+  &__difference {
+    padding: 60px 20px 30px;
+    background-color: $lp2504_base;
+
+    .p-lp2504__headline {
+      margin-bottom: 40px;
+
+      &-image {
+        width: 333px;
+        
+        @media #{$p-lp_sp} {
+          width: 84%;
+        }
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    &-headline {
+      position: relative;
+      padding: 30px 20px 80px;
+      border-radius: 10px;
+
+      &::after {
+        position: absolute;
+        top: 35%;
+        right: 16px;
+        color: rgba(255, 255, 255, 0.3);
+        font-size: responsiveFontSizeClamp(80, 80, 340, 1000);
+        font-weight: $fw_black;
+        line-height: 0;
+      }
+
+      &-odd {
+        background-color: $lp2504_secondary;
+      }
+
+      &-even {
+        background-color: $lp2504_tertiary;
+      }
+
+      &-01 {
+        &::after {
+          content: '01';
+        }
+      }
+
+      &-02 {
+        &::after {
+          content: '02';
+        }
+      }
+
+      &-03 {
+        &::after {
+          content: '03';
+        }
+      }
+
+      &-04 {
+        &::after {
+          content: '04';
+        }
+      }
+
+      &-05 {
+        &::after {
+          content: '05';
+        }
+      }
+
+      &-subheadline, &-text {
+        color: $c_white;
+        font-weight: $fw_bold;
+      }
+
+      &-subheadline {
+        position: relative;
+        font-size: responsiveFontSizeClamp(16, 16, 340, 1000);
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(50% - 1px);
+          left: 140px;
+          width: 40px;
+          height: 1px;
+          background: $c_white;
+        }
+      }
+
+      &-text {
+        font-size: responsiveFontSizeClamp(18, 20, 340, 1000);
+      }
+    }
+
+    &-text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 95%;
+      margin: -60px auto 0;
+      padding: 30px;
+      @include bg-graphpaper;
+      border-radius: 10px;
+      text-align: justify;
+    }
+  }
+
+    // CTAエリア - cta
+  &__cta {
+    padding: 0 0 60px;
+    @include bg-stripe;
+    
+    .p-lp2504__headline {
+      margin-bottom: 30px;
+
+      &-image {
+        width: 245px;
+        
+        @media #{$p-lp_sp} {
+          width: 63%;
+        }
+      }
+    }
+
+    &-wrapper {
+      margin: 0 20px 0;
+    }
+
+    &-contents {
+      margin-bottom: 10px;
+      padding: 30px;
+      background-color: $lp2504_quaternary;
+      border-radius: 10px;
+    }
+
+    &-exterior {
+      margin-bottom: 20px;
+
+      &-image {
+        border-radius: 10px;
+      }
+    }
+
+    &-headline, &-text {
+      color: $c_white;
+    }
+
+    &-headline {
+      margin-bottom: 10px;
+      font-size: responsiveFontSizeClamp(20, 20, 340, 1000);
+      font-weight: $fw_bold;
+      text-align: center;
+    }
+
+    &-text {
+      text-align: justify;
+    }
+
+    &-link {
+      display: block;
+      
+      @media (hover: hover) {
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+          opacity: 0.8; 
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    &-secondary {
+      padding: 60px 0 30px;
+
+      .p-lp2504__cta-contents {
+        margin-bottom: 30px;
+      }
+
+      .p-lp2504__cta-headline-text {
+        line-height: 1.6;
+      }
+    }
+  }
+  
+  // 男女それぞれから見たサンセリテ青山の魅力 - voice
+  &__voice {
+    padding: 60px 20px;
+    background-color: $lp2504_base;
+    
+    .p-lp2504__headline {
+      margin-bottom: 40px;
+
+      &-image {
+        width: 251px;
+        
+        @media #{$p-lp_sp} {
+          width: 72%;
+        }
+      }
+    }
+
+    &-man, &-woman {
+      text-align: center;
+      &-image {
+        width: 332px;
+        
+        @media #{$p-lp_sp} {
+          width: 95%;
+        }
+      }
+      
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        border-radius: 10px;
+      }
+
+      &-item {
+        padding: 0 10px;
+        color: $c_white;
+        text-align: left;
+      }
+
+      &-headline {
+        display: inline;
+        background: linear-gradient(transparent 50%, rgba(247, 209, 98, 0.5) 50%);
+        font-size: responsiveFontSizeClamp(18, 18, 340, 1000);
+        font-weight: $fw_bold;
+      }
+
+      &-text {
+        margin-bottom: 10px;
+        text-align: justify;
+      }
+
+      &-status {
+        font-size: responsiveFontSizeClamp(12, 12, 340, 1000);
+        text-align: right;
+      }
+
+      &-line {
+        border-bottom: 2px dashed $c_white;
+      }
+    }
+
+    &-man {
+      margin-bottom: 30px;
+
+      &-list {
+        background-color: $lp2504_secondary;
+      }
+    }
+
+        &-woman {
+      &-list {
+        background-color: $lp2504_tertiary;
+      }
+    }
+  }
+  
+  // サンセリテ青山は全力で婚活をサポートいたします！ - strength
+  &__strength {
+    padding: 60px 15px;
+    @include bg-stripe;
+    
+    .p-lp2504__headline {
+      margin-bottom: 20px;
+
+      &-image {
+        width: 296px;
+        
+        @media #{$p-lp_sp} {
+          width: 82%;
+        }
+      }
+    }
+
+    &-list, .p-lp2504__cta-button {
+      padding: 0 5px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    &-headline {
+      margin-bottom: 10px;
+    }
+
+    &-contents {
+      @include bg-graphpaper;
+      padding: 30px;
+    }
+
+    &-sample {
+      margin-bottom: 20px;
+      
+      &-image {
+        border-radius: 10px;
+      }
+    }
+
+    &-text {
+      text-align: justify;
+    }
+  }
+  
+  // サンセリテ青山は全力で婚活をサポートいたします！ - strength
+  &__case {
+    padding: 60px 20px 60px;
+    background-color: $lp2504_base;
+    
+    .p-lp2504__headline {
+      margin-bottom: 20px;
+
+      &-image {
+        width: 341px;
+        
+        @media #{$p-lp_sp} {
+          width: 98%;
+        }
+      }
+    }
+
+    &-message {
+      margin: 0 10px 40px;
+      text-align: justify;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &-headline {
+      width: fit-content;
+      margin-bottom: 10px;
+      padding: 0 14px;
+      color: #8A6939;
+      font-weight: $fw_bold;
+      background-color: $c_white;
+      border-radius: 4px;
+    }
+
+    &-couple {
+      &-image {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+
+    &-contents {
+      padding: 30px;
+      background: repeating-linear-gradient(90deg, $lp2504_quaternary, $lp2504_quaternary 20px, #d5c5a9 20px, #d5c5a9 40px);
+      color: $c_white;
+      border-radius: 0 0 10px 10px;
+    }
+
+    &-status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-weight: $fw_bold;
+    }
+
+    &-item {
+      font-size: responsiveFontSizeClamp(14, 14, 504, 1000);
+      
+      @media #{$p-lp_sp} {
+        font-size: responsiveFontSizeClamp(14, 16, 340, 504);
+      }
+    }
+
+    &-image {
+      width: 18px;
+      height: 18px;
+    }
+
+    &-text {
+      text-align: justify;
+    }
+  }
+
+  // フォームエリア - form
+  &__form {
+    background-color: $c_white;
+
+    .p-lp2504__headline {
+      margin-bottom: 40px;
+      
+      &-image {
+        width: 271px;
+        
+        @media #{$p-lp_sp} {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+// ---------- main end ---------- //
+
+
+// ---------- footer ---------- //
+
+.p-lp2504 {
+  &__footer {
+    padding: 40px 20px 10px;
+    background-color: $lp2504_quaternary;
+    color: $c_white;
+    text-align: center;
+
+    &-name {
+      margin-bottom: 40px;
+    }
+
+    &-logo {
+
+      &-link {
+        margin-bottom: 10px;
+      }
+
+      &-image {
+        width: 128px;
+        
+/*         @media #{$p-lp_sp} {
+          width: 36%;
+        } */
+      }
+    }
+
+    &-text, &-copyright {
+      font-size: responsiveFontSizeClamp(10, 10, 340, 1000);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    &-link {
+      display: block;
+      @media (hover: hover) {
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+          opacity: 0.6; 
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    &-copyright {
+      text-transform: capitalize;
+    }
+  }
+}
+
+// ---------- footer end ---------- //
+
+// ---------- SP版 固定フッター - sp-footer ---------- //
+
+.p-lp2504 {
+  &__sp {
+    &-footer {
+      display: none;
+      
+      @media #{$p-lp_sp} {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 5;
+      }
+    }
+  }
+}
+
+// ---------- SP版 固定フッター - sp-footer end ---------- //
+
+// ---------- フォーム ---------- //
+
+.p-lp2504 {
+  &__form {
+    .form_area {
+      .form {
+        width: 390px;
+        margin: 0;
+        padding: 0 20px;
+        
+        @media #{$p-lp_sp} {
+          width: 100%;
+        }
+
+        dt {
+          margin: 0;
+        }
+
+        dd {
+          margin-bottom: 20px;
+
+          textarea {
+            font-size: responsiveFontSizeClamp(14, 16, 340, 1000);
+          }
+        }
+
+        label {
+          padding: 0;
+        }
+
+        .area_select1 {
+          ul {
+            margin: 0;
+          }
+        }
+
+        .area_select2 {
+          .wpcf7-form-control{
+            .wpcf7-list-item {
+              height: 50px;
+            }
+          }
+
+          .man_notice, .woman_notice {
+            margin: 10px 0 0 0;
+            padding: 14px 14px 20px;
+            font-size: responsiveFontSizeClamp(14, 14, 340, 1000);
+            text-align: justify;
+          }
+        }
+      }
+
+      .area_email {
+        .email-notice {
+          margin: 10px 0;
+          font-size: responsiveFontSizeClamp(12, 12, 340, 1000);
+          text-align: justify;
+          line-height: 1.6;
+        }
+      }
+
+      .doui {
+        margin: 0;
+      }
+
+      .area_checkbox {
+        ul {
+          &:nth-of-type(2) {
+            background-color: #fff;
+          }
+        }
+
+        .agreement {
+          background-color: $c_white;
+        }
+      }
+    }
+
+    .modal-container {
+      .modal-position {
+        top: 72%;
+        width: 390px;
+        max-width: none;
+        max-height: fit-content;
+        
+        @media #{$p-lp_sp} {
+          top: 58%;
+          width: 100%;
+          max-height: 100vh;
+        }
+
+        .modal-body {
+          .modal-content {
+            margin: 0 10px;
+            padding: 50px 4px 60px;
+            border-radius: 10px;
+
+            .mdl {
+              margin: 0;
+              padding: 40px 16px;
+
+              .modal-table {
+                width: 100%;
+                padding: 0 10px;
+
+                .hissu {
+                  margin-left: 10px;
+                  padding: 2px 6px;
+                  background-color: #FF434A;
+                }
+
+                tbody {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                }
+
+                tr {
+                  display: flex;
+                  flex-direction: column;
+                }
+
+                th {
+                  width: 100%;
+                  margin-bottom: 4px;
+                  padding: 0;
+                }
+
+                td {
+                  padding: 10px 20px;
+                  background-color: $lp2504_base;
+                  border-radius: 3px;
+                }
+              }
+            }
+
+            .button-box {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              gap: 10px;
+              margin: 0 30px;
+
+              #entry_send, .modoru {
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+                font-weight: bold;
+                border-radius: 100vh;
+                font-size: responsiveFontSizeClamp(16, 16, 340, 1000);
+                width: 100%;
+              }
+
+              #entry_send {
+                margin-bottom: 10px;
+                background: url(../images/lp2504/form_arw-white.svg) right 20px center no-repeat #FF434A;
+                background-size: 14px;
+              }
+
+              .modoru {
+                border: 2px solid $lp2504_quaternary;
+                color: $lp2504_quaternary;
+              }
+
+              button {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ---------- フォーム end ---------- //
+
+// ---------- フォーム / 送信完了画面 ---------- //
+
+.p-lp2504 {
+  &__thanks {
+    .p-lp2504__headline {
+      padding-top: 50px;
+    }
+
+    &-headline {
+      text-align: center;
+    }
+
+    .thanks-area {
+      max-width: 390px;
+      padding: 0 0 40px 0;
+      
+      @media #{$p-lp_sp} {
+        max-width: 100%;
+        padding: 0 0 60px 0;
+      }
+    }
+
+    .thanks-txt {
+      max-width: 390px;
+      padding: 40px 20px;
+      background-color: $lp2504_base;
+      
+      @media #{$p-lp_sp} {
+        max-width: 100%;
+      }
+      
+      h2 {
+        font-size: responsiveFontSizeClamp(18, 20, 504, 1000);
+        line-height: 2;
+        
+        @media #{$p-lp_sp} {
+          font-size: responsiveFontSizeClamp(16, 22, 340, 503);
+        }
+      }
+    }
+
+    .thanks-txt-sub {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 30px;
+      padding: 0 20px;
+      text-align: justify;
+    }
+
+    &-tel {
+      @include bg-graphpaper;
+      margin: 0 20px;
+      text-align: center;
+    }
+
+    &-link {
+      display: block;
+      padding: 10px 20px;
+      font-size: responsiveFontSizeClamp(16, 16, 340, 1000);
+      font-weight: $fw_bold;
+    }
+
+    &-number {
+      font-size: responsiveFontSizeClamp(24, 24, 340, 1000);
+      background: linear-gradient(transparent 50%, rgba(247, 209, 98, 0.5) 50%);
+    }
+
+    &-text {
+      font-size: responsiveFontSizeClamp(12, 12, 340, 1000);
+      font-weight: $fw_medium;
+    }
+
+    &-button {
+      margin: 0 30px 80px;
+      text-align: center;
+
+      .p-lp2504__thanks-link {
+        display: inline-block;
+        width: 100%;
+        padding: 20px;
+        border: 2px solid $lp2504_quaternary;
+        border-radius: 100vh;
+        color: $lp2504_quaternary;
+        font-size: responsiveFontSizeClamp(16, 16, 340, 1000);
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        
+        @media #{$p-lp_sp} {
+          padding: 12px;
+        }
+      }
+    }
+
+    .p-lp2504__sp-footer {
+      display: none;
+    }
+  }
+}
+
+// ---------- フォーム / 送信完了画面 end ---------- //
